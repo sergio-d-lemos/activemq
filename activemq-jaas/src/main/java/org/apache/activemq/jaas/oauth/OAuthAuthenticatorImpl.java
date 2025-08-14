@@ -75,12 +75,13 @@ public class OAuthAuthenticatorImpl implements OAuthAuthenticator {
 
     private List<String> tryParseScopes(final JWTClaimsSet claims) throws FailedLoginException {
         try {
-            final String[] scopes = claims.getStringArrayClaim("scope");
-            if (scopes == null || scopes.length == 0) {
+            // TODO: Handle multiple scopes
+            final String scope = claims.getStringClaim("scope");
+            if (scope == null || scope.isBlank()) {
                 LOG.warn("Token does not contain any scope claim");
                 return Collections.emptyList();
             }
-            return List.of(scopes);
+            return List.of(scope);
         } catch (ParseException parseException) {
             LOG.error("Failed to parse Scope claim from token: {}", parseException.getMessage());
             throw new FailedLoginException();
@@ -121,7 +122,7 @@ public class OAuthAuthenticatorImpl implements OAuthAuthenticator {
             throw new FailedLoginException();
         }
 
-        if (expirationTime.after(new Date())) { // TODO(lemoss@): better handle time
+        if (expirationTime.before(new Date())) { // TODO(lemoss@): better handle time
             LOG.error("Token is expired");
             throw new CredentialExpiredException();
         }

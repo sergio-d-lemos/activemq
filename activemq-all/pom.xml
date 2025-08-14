@@ -118,6 +118,7 @@
                   <include>org.apache.camel:camel-spring</include>
                   <include>com.sun.xml.bind:jaxb-core</include>
                   <include>com.sun.xml.bind:jaxb-impl</include>
+                  <include>com.nimbusds:nimbus-jose-jwt</include>
                 </includes>
               </artifactSet>
 
@@ -183,6 +184,14 @@
       <id>apache-release</id>
 
       <dependencies>
+
+        <dependency>
+          <groupId>com.nimbusds</groupId>
+          <artifactId>nimbus-jose-jwt</artifactId>
+          <version>9.37.3</version>
+          <classifier>sources</classifier>
+          <optional>true</optional>
+        </dependency>
 
         <dependency>
           <groupId>${project.groupId}</groupId>
