@@ -97,9 +97,14 @@ public class OAuthLoginModule implements LoginModule {
             throw new LoginException("Error handling callbacks: " + e.getMessage());
         }
 
-        final String token = new String(passwordCallback.getPassword());
-        if (token.isBlank()) {
+        final char[] password = passwordCallback.getPassword();
+        if (password == null) {
             throw new FailedLoginException("No OAuth token provided");
+        }
+
+        final String token = new String(password);
+        if (token.isBlank()) {
+            throw new FailedLoginException("OAuth token is empty");
         }
 
         LOG.info("login(): token is '{}'", token);

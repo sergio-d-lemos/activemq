@@ -30,10 +30,14 @@ public class InMemoryJWKCachedProvider implements JWKProvider {
 
     @Override
     public Optional<RSAPublicKey> getKey(String kid) {
-        if (knownKeys.isEmpty()) {
-            LOG.info("There are no cached known public keys");
-            loadKeys();
+        final RSAPublicKey publicKey = knownKeys.get(kid);
+        if (publicKey != null) {
+            return Optional.of(publicKey);
         }
+
+        LOG.info("Key ID {} not found in the local cache, will download the JWKS document from {}", kid, jwksUri);
+        loadKeys();
+
         return Optional.ofNullable(knownKeys.get(kid));
     }
 
