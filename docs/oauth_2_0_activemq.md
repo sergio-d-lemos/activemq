@@ -4,7 +4,7 @@
 
 In this document, we propose a design for ActiveMQ to support OAuth 2.0. The goal is to develop an open-source auth plugin for ActiveMQ classic console and direct access,
 which will allow developers to authenticate and authorize clients using OAuth 2.0. The plugin will accept OAuth 2 Access Tokens in the JWT format and will authenticate these tokens
-by validating their signature and claims. A set of plugin configurations is proposed, together with a way to map OAuth 2 `scope` claims to ActiveMQ Roles.
+by validating their signature and claims. A set of plugin configurations is proposed, together with a way to authorize access by mapping OAuth 2 `scope` claims to ActiveMQ Roles.
 
 ## **Background**
 
@@ -93,7 +93,7 @@ The following items are not part of this document's scope:
 
 1. Make use of Token Introspection ([RFC 7662](https://datatracker.ietf.org/doc/html/rfc7662)) or OpenID Connect (OIDC) APIs.
 2. Validate "opaque" OAuth Access Tokens, tokens which are not in a JWT format or validating tokens against an Authorization Server.
-3. Propose a sign-in flow using a third party Authorization Server in the ActiveMq Web Console.
+3. Propose a sign-in flow using a third party Authorization Server in the ActiveMQ Web Console.
 4. Support for non-standard claims.
 5. Detect revoked tokens (or detecting "signed out" users whose token is still not expired)
 6. Refresh expired OAuth Access Tokens
@@ -183,7 +183,7 @@ The OAuth Plugin will be configured using the following Broker configurations:
                 "aud" claim.
                 -->
                 audience="likelyBrokerName"
-            > <!-- Scope Based authentication configuration follows ... --> </oauthAuthorizationMap>
+            > <!-- Scope Based authorization configuration follows ... --> </oauthAuthorizationMap>
         </map>
     </authorizationPlugin>
     ...
@@ -206,7 +206,7 @@ configuration:
     <authorizationPlugin>
         <map>
             <oauthAuthorizationMap ... >
-                <!-- Map an OAuth 2 scope claim value to an ActiveMq Group. --> 
+                <!-- Map an OAuth 2 scope claim value to an ActiveMQ Group. --> 
                 <oauthScopeEntry 
                     <!-- The OAuth 2 scope name. This attribute is MANDATORY -->
                     scope="default-m2m-resource-server/read" 
@@ -216,7 +216,7 @@ configuration:
                 <oauthScopeEntry scope="default-m2m-resource-server/write" groups="users,admins" />
             </oauthAuthorizationMap>
             
-            <!-- ActiveMq Authorization Map using the previous defined groups -->
+            <!-- ActiveMQ Authorization Map using the previous defined groups -->
             <authorizationMap> 
                 <authorizationEntries> 
                   <authorizationEntry queue="TEST.Q" read="users" write="users" admin="users" /> 
@@ -289,3 +289,51 @@ The OAuth Plugin will execute the following procedure in order to authentication
     1. `exp`: The Token's Expiration Time must be in the future in relation to the Broker's time.
     2. `iss`: The Token's Issuer claim must match the expected Issuer set in the plugin configuration.
     3. `aud`: If an expected Audience is set in the plugin configuration, the Token's Audience must match this value.
+
+## Appendix A - Examples of OAuth 2.0 Access Tokens
+
+1. An Auth0 Access Token
+
+```
+Header:
+{
+  "alg": "RS256",
+  "typ": "JWT",
+  "kid": "abc123"
+}
+
+Payload:
+{
+  "iss": "https://dev-xyz123.us.auth0.com/",
+  "sub": "abc123@clients",
+  "aud": "https://dev-xyz123.us.auth0.com/api/v2/",
+  "iat": 123456789,
+  "exp": 123456900,
+  "gty": "client-credentials",
+  "azp": "abcde1234fghi567"
+}
+```
+
+2. An AWS Cognito Access Token
+
+```
+Header:
+{
+  "kid": "abc/abc123=",
+  "alg": "RS256"
+}
+
+Payload:
+{
+  "sub": "abc123",
+  "token_use": "access",
+  "scope": "default-m2m-resource-server-xyz/read",
+  "auth_time": 123456789,
+  "iss": "https://cognito-idp.us-west-2.amazonaws.com/us-west-2_xyz",
+  "exp": 123456999,
+  "iat": 123456789,
+  "version": 2,
+  "jti": "abc-123-def-456",
+  "client_id": "abc123"
+}
+```

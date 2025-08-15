@@ -97,7 +97,7 @@ public class InMemoryJWKCachedProvider implements JWKProvider {
                 case "EC": // likely incorrect
                     knownKeys.put(key.getKeyID(), key.toECKey().toPublicKey());
                 default:
-                    LOG.warn("Unknown key algorithm: '{}'", algorithm);
+                    LOG.warn("Unsupported key algorithm: '{}'", algorithm);
             }
         } catch (JOSEException joseEx) {
             LOG.error("Failed to parse key: {}", joseEx.getMessage());

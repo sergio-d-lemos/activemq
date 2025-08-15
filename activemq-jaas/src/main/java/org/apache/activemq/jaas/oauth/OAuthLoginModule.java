@@ -44,7 +44,7 @@ public class OAuthLoginModule implements LoginModule {
 
     // Obtained from the OAuthAuthenticator
     private boolean loginSucceeded = false;
-    private Set<GroupPrincipal> groups = new HashSet<>();
+    final private Set<GroupPrincipal> groups = new HashSet<>();
     private UserPrincipal userPrincipal;
 
     // Dependencies
@@ -99,11 +99,13 @@ public class OAuthLoginModule implements LoginModule {
 
         final char[] password = passwordCallback.getPassword();
         if (password == null) {
+            // TODO: maybe we should return false instead
             throw new FailedLoginException("No OAuth token provided");
         }
 
         final String token = new String(password);
         if (token.isBlank()) {
+            // TODO: maybe we should return false instead
             throw new FailedLoginException("OAuth token is empty");
         }
 
