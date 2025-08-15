@@ -2,8 +2,8 @@ package org.apache.activemq.jaas.oauth;
 
 import com.nimbusds.jose.JOSEException;
 import com.nimbusds.jose.JWSVerifier;
+import com.nimbusds.jose.crypto.ECDSAVerifier;
 import com.nimbusds.jose.crypto.RSASSAVerifier;
-import com.nimbusds.jose.jwk.RSAKey;
 import com.nimbusds.jwt.JWT;
 import com.nimbusds.jwt.JWTClaimsSet;
 import com.nimbusds.jwt.SignedJWT;
@@ -12,6 +12,8 @@ import org.slf4j.LoggerFactory;
 
 import javax.security.auth.login.CredentialExpiredException;
 import javax.security.auth.login.FailedLoginException;
+import java.security.PublicKey;
+import java.security.interfaces.ECPublicKey;
 import java.security.interfaces.RSAPublicKey;
 import java.text.ParseException;
 import java.util.Collections;
@@ -28,6 +30,9 @@ public class OAuthAuthenticatorImpl implements OAuthAuthenticator {
     private final String audience;
 
     public OAuthAuthenticatorImpl(final JWKProvider keyProvider, final String issuer, final String audience) {
+
+        // TODO: keyProvider should be a singleton
+
         this.keyProvider = keyProvider;
         this.issuer = issuer;
         this.audience = audience;
@@ -95,16 +100,14 @@ public class OAuthAuthenticatorImpl implements OAuthAuthenticator {
             throw new FailedLoginException();
         }
 
-        final Optional<RSAPublicKey> publicKey = keyProvider.getKey(kid);
+        final Optional<PublicKey> publicKey = keyProvider.getKey(kid);
         if (publicKey.isEmpty()) {
             LOG.error("Could not find Public Key with ID {}", kid);
             throw new FailedLoginException();
         }
 
-        final RSAKey nimbusRSAKey = new RSAKey.Builder(publicKey.get()).build();
-
         try {
-            final JWSVerifier verifier = new RSASSAVerifier(nimbusRSAKey);
+            final JWSVerifier verifier = getVerifier(publicKey.get());
             if (!jwt.verify(verifier)) {
                 LOG.error("Token had an invalid signature");
                 throw new FailedLoginException();
@@ -113,6 +116,20 @@ public class OAuthAuthenticatorImpl implements OAuthAuthenticator {
             LOG.error("There was a problem verifying the token signature: {}", joseException.getMessage());
             throw new FailedLoginException();
         }
+    }
+
+    private JWSVerifier getVerifier(final PublicKey key) throws JOSEException {
+        final String algorithm = key.getAlgorithm();
+
+        if ("RSA".equals(algorithm)) {
+            return new RSASSAVerifier((RSAPublicKey) key);
+        }
+
+        if ("EC".equals(algorithm)) {
+            return new ECDSAVerifier((ECPublicKey) key);
+        }
+
+        throw new IllegalArgumentException(String.format("Key algorithm '%s' is not supported", algorithm));
     }
 
     private void verifyClaims(final JWTClaimsSet claims) throws FailedLoginException, CredentialExpiredException {

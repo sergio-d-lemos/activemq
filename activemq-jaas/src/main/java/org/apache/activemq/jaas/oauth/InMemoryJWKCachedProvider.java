@@ -1,6 +1,7 @@
 package org.apache.activemq.jaas.oauth;
 
 import com.nimbusds.jose.JOSEException;
+import com.nimbusds.jose.jwk.JWK;
 import com.nimbusds.jose.jwk.JWKSet;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -10,7 +11,7 @@ import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
-import java.security.interfaces.RSAPublicKey;
+import java.security.PublicKey;
 import java.text.ParseException;
 import java.time.Duration;
 import java.util.HashMap;
@@ -19,18 +20,20 @@ import java.util.Optional;
 
 public class InMemoryJWKCachedProvider implements JWKProvider {
 
+    // TODO: This class should be thread safe
+
     private static final Logger LOG = LoggerFactory.getLogger(InMemoryJWKCachedProvider.class);
 
     private final URI jwksUri;
-    private final Map<String, RSAPublicKey> knownKeys = new HashMap<>();
+    private final Map<String, PublicKey> knownKeys = new HashMap<>();
 
     public InMemoryJWKCachedProvider(final URI jwksUri) {
         this.jwksUri = jwksUri;
     }
 
     @Override
-    public Optional<RSAPublicKey> getKey(String kid) {
-        final RSAPublicKey publicKey = knownKeys.get(kid);
+    public Optional<PublicKey> getKey(String kid) {
+        final PublicKey publicKey = knownKeys.get(kid);
         if (publicKey != null) {
             return Optional.of(publicKey);
         }
@@ -43,17 +46,12 @@ public class InMemoryJWKCachedProvider implements JWKProvider {
 
     private void loadKeys() {
         try {
-            final String response = getJwksResponse();
+            final String response = downloadJwksDocument();
             LOG.info("Got JWKS '{}'", response);
 
-            final JWKSet jwkSet = JWKSet.parse(response);
-            jwkSet.getKeys().forEach(key -> {
-                try {
-                    knownKeys.put(key.getKeyID(), key.toRSAKey().toRSAPublicKey());
-                } catch (JOSEException joseEx) {
-                    LOG.error("Failed to parse the an RSA key: {}", joseEx.getMessage());
-                }
-            });
+            JWKSet.parse(response)
+                .getKeys()
+                .forEach(this::storeKey);
         } catch (IOException | InterruptedException ex) {
             LOG.error("Failed to get the JWKS from '{}': {}", jwksUri, ex.getMessage());
         } catch (ParseException parseEx) {
@@ -61,7 +59,7 @@ public class InMemoryJWKCachedProvider implements JWKProvider {
         }
     }
 
-    private String getJwksResponse() throws IOException, InterruptedException {
+    private String downloadJwksDocument() throws IOException, InterruptedException {
         final HttpClient httpClient = HttpClient
                 .newBuilder()
                 .connectTimeout(Duration.ofSeconds(10))
@@ -74,6 +72,8 @@ public class InMemoryJWKCachedProvider implements JWKProvider {
 
         LOG.info("Downloading JWKS from '{}'", jwksUri);
 
+        // TODO: let timeout be configurable, implement a retry strategy
+
         final HttpResponse<String> response = httpClient.send(request, HttpResponse.BodyHandlers.ofString());
 
         if (response.statusCode() != 200) {
@@ -84,5 +84,23 @@ public class InMemoryJWKCachedProvider implements JWKProvider {
         }
 
         return response.body();
+    }
+
+    private void storeKey(final JWK key) {
+        try {
+            final String algorithm = key.getAlgorithm().getName();
+            switch (algorithm) {
+                // TODO: align on the correct algorithm names
+                case "RS256":
+                    knownKeys.put(key.getKeyID(), key.toRSAKey().toPublicKey());
+                    break;
+                case "EC": // likely incorrect
+                    knownKeys.put(key.getKeyID(), key.toECKey().toPublicKey());
+                default:
+                    LOG.warn("Unknown key algorithm: '{}'", algorithm);
+            }
+        } catch (JOSEException joseEx) {
+            LOG.error("Failed to parse key: {}", joseEx.getMessage());
+        }
     }
 }
