@@ -1,3 +1,19 @@
+/**
+ * Licensed to the Apache Software Foundation (ASF) under one or more
+ * contributor license agreements.  See the NOTICE file distributed with
+ * this work for additional information regarding copyright ownership.
+ * The ASF licenses this file to You under the Apache License, Version 2.0
+ * (the "License"); you may not use this file except in compliance with
+ * the License.  You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 package org.apache.activemq.jaas.oauth;
 
 import com.nimbusds.jose.JOSEException;
@@ -30,9 +46,6 @@ public class OAuthAuthenticatorImpl implements OAuthAuthenticator {
     private final String audience;
 
     public OAuthAuthenticatorImpl(final JWKProvider keyProvider, final String issuer, final String audience) {
-
-        // TODO: keyProvider should be a singleton
-
         this.keyProvider = keyProvider;
         this.issuer = issuer;
         this.audience = audience;
@@ -54,10 +67,10 @@ public class OAuthAuthenticatorImpl implements OAuthAuthenticator {
 
         LOG.info("Claims are valid");
 
-        final String subject = claims.getSubject(); // May be null
+        final String user = getUser(claims); // May be null
         final List<String> scopes = tryParseScopes(claims); // May be empty, but not null
 
-        return new AuthenticationResult(subject, scopes);
+        return new AuthenticationResult(user, scopes);
     }
 
     private SignedJWT tryParse(final String token) throws FailedLoginException {
@@ -78,9 +91,15 @@ public class OAuthAuthenticatorImpl implements OAuthAuthenticator {
         }
     }
 
+    private String getUser(final JWTClaimsSet claims) {
+        // TODO: the "user" identification might come from different claims
+        // (see https://github.com/apache/activemq/pull/1035)
+        return claims.getSubject();
+    }
+
     private List<String> tryParseScopes(final JWTClaimsSet claims) throws FailedLoginException {
         try {
-            // TODO: Handle multiple scopes
+            // TODO: This code is incomplete, it must parse a list of scopes.
             final String scope = claims.getStringClaim("scope");
             if (scope == null || scope.isBlank()) {
                 LOG.warn("Token does not contain any scope claim");
@@ -139,7 +158,7 @@ public class OAuthAuthenticatorImpl implements OAuthAuthenticator {
             throw new FailedLoginException();
         }
 
-        if (expirationTime.before(new Date())) { // TODO(lemoss@): better handle time
+        if (expirationTime.before(new Date())) { // TODO: have a way to inject a specific time (useful for tests)
             LOG.error("Token is expired");
             throw new CredentialExpiredException();
         }
@@ -155,7 +174,7 @@ public class OAuthAuthenticatorImpl implements OAuthAuthenticator {
             throw new FailedLoginException();
         }
 
-        final boolean shouldValidateAudience = (audience != null && !audience.isEmpty());
+        final boolean shouldValidateAudience = (audience != null && !audience.isEmpty()); // Expected audience is optional
         if (shouldValidateAudience) {
             final List<String> tokenAudiences = claims.getAudience();
             if (tokenAudiences == null || tokenAudiences.isEmpty()) {

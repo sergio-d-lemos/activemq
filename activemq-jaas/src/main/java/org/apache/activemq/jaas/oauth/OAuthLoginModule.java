@@ -38,55 +38,100 @@ import org.slf4j.LoggerFactory;
 public class OAuthLoginModule implements LoginModule {
     private static final Logger LOG = LoggerFactory.getLogger(OAuthLoginModule.class);
 
-    // Shared across Login Modules
-    private Subject subject;
-    private CallbackHandler callbackHandler;
+    // TODO: Need a better way to inject a singleton JWKProvider, probably needs to be configurable
+    private static JWKProvider jwkProvider;
 
-    // Obtained from the OAuthAuthenticator
     private boolean loginSucceeded = false;
-    final private Set<GroupPrincipal> groups = new HashSet<>();
+    private boolean commitSucceeded = false;
+    private final Set<GroupPrincipal> groups = new HashSet<>();
     private UserPrincipal userPrincipal;
 
-    // Dependencies
-    private JWKProvider keyProvider;
     private OAuthAuthenticator authenticator;
+    private GroupResolver groupResolver;
+
+    // Shared across the Login Modules chain
+    private Subject subject;
+    private CallbackHandler callbackHandler;
 
     @Override
     public void initialize(Subject subject, CallbackHandler callbackHandler, Map<String, ?> sharedState, Map<String, ?> options) {
         this.subject = subject;
         this.callbackHandler = callbackHandler;
 
+        try {
+            throw new RuntimeException("Test");
+        } catch (Exception ex) {
+            Arrays.stream(ex.getStackTrace())
+                    .forEach(st -> LOG.info(st.toString()));
+        }
+
         // Setup configurations
 
         final String issuer = (String) options.get("issuer");
         final String audience = (String) options.get("audience");
-        final URI jwksUri = getJwksUri( (String) options.get("jwks_uri"), issuer);
+        final String maybeJwksUri = (String) options.get("jwks_uri");
+        final String groupResolverClass = (String) options.get("group_resolver_class");
+
+        validateConfigurations(issuer, audience, maybeJwksUri, groupResolverClass);
+
+        URI jwksUri;
+        try {
+            final boolean hasJwksConfiguration = (maybeJwksUri != null && !maybeJwksUri.isBlank());
+            if (hasJwksConfiguration) {
+                jwksUri = new URI(maybeJwksUri);
+            } else {
+                jwksUri = getDefaultJwksUri(issuer);
+            }
+        } catch (URISyntaxException uriEx) {
+            // TODO: handle malformed URLs in the configuration validation
+            throw new RuntimeException(uriEx);
+        }
 
         LOG.info("Initializing plugin with issuer='{}', audience='{}', jwksUri='{}'", issuer, audience, jwksUri);
 
-        // TODO(lemoss@): better handle null configurations
+        // Setup dependencies
 
-        keyProvider = new InMemoryJWKCachedProvider(jwksUri);
+        JWKProvider keyProvider;
+        synchronized(OAuthLoginModule.class) { // TODO: Avoid serializing all calls to initialize() if the jwkProvider is already initialized
+            keyProvider = getKeyProvider(jwksUri);
+        }
+
         authenticator = new OAuthAuthenticatorImpl(keyProvider, issuer, audience);
+        groupResolver = getGroupResolver(groupResolverClass);
     }
 
-    private URI getJwksUri(final String configuration, final String issuer) {
+    private void validateConfigurations(final String issuer, final String audience, final String jwksUri, final String groupResolverClass) {
+        // TODO: implement validation for the config values.
+    }
+
+    private URI getDefaultJwksUri(final String issuer) throws URISyntaxException {
+        final URI issuerUrl = new URI(issuer);
+        return issuerUrl.resolve(new URI(".well-known/jwks.json"));
+    }
+
+    private JWKProvider getKeyProvider(final URI jwksUri) {
+        if (jwkProvider == null) {
+            // TODO: This is not testable, need to inject in runtime. Do the same as for the GroupResolver.
+            jwkProvider = new CachedJWKProvider(jwksUri);
+        }
+        return jwkProvider;
+    }
+
+    private GroupResolver getGroupResolver(final String className) {
         try {
-            final boolean hasJwksConfiguration = (configuration != null && !configuration.isBlank());
-            if (hasJwksConfiguration) {
-                return new URI(configuration);
-            }
-            final URI issuerUrl = new URI(issuer);
-            return issuerUrl.resolve(new URI(".well-known/jwks.json"));
-        } catch (URISyntaxException uriEx) {
-            // TODO(lemoss@): handle malformed URLs
-            throw new RuntimeException(uriEx);
+            // TODO: Double check if this is the best way to inject the right implementation
+            final Class<?> clazz = Thread.currentThread().getContextClassLoader().loadClass(className);
+            return (GroupResolver) clazz.getDeclaredConstructor().newInstance();
+        } catch(final Exception ex) {
+            // TODO: Double check if IllegalStateException is the best exception to throw here
+            LOG.error("Cannot load Group Resolver \"{}\": {}", className, ex.getMessage());
+            throw new IllegalStateException("Cannot load Group Resolver", ex);
         }
     }
 
     @Override
     public boolean login() throws LoginException {
-        LOG.info("login()");
+        LOG.info("Executing login()");
 
         final NameCallback usernameCallback = new NameCallback("username:");
         final PasswordCallback passwordCallback = new PasswordCallback("password:", false);
@@ -113,12 +158,23 @@ public class OAuthLoginModule implements LoginModule {
 
         final AuthenticationResult result = authenticator.authenticate(token);
         LOG.info("Token successfully authenticated: {}", result);
+
         loginSucceeded = true;
+
+        userPrincipal = new UserPrincipal(
+                result.getUser().orElse(
+                        usernameCallback.getName()));
+
+        groups.addAll(
+                groupResolver.getGroups(result));
+
         return true;
     }
 
     @Override
     public boolean commit() throws LoginException {
+        LOG.info("Executing commit()");
+
         if (!loginSucceeded) {
             return false;
         }
@@ -127,57 +183,47 @@ public class OAuthLoginModule implements LoginModule {
             subject.getPrincipals().add(userPrincipal);
         }
         subject.getPrincipals().addAll(groups);
-        return true;
-    }
 
-    @Override
-    public boolean abort() throws LoginException {
-        clear();
+        commitSucceeded = true;
         return true;
     }
 
     @Override
     public boolean logout() throws LoginException {
+        LOG.info("Executing logout()");
+
+        if (userPrincipal != null) {
+            subject.getPrincipals().remove(userPrincipal);
+        }
+        subject.getPrincipals().removeAll(groups);
+
         clear();
+        return true;
+    }
+
+    @Override
+    public boolean abort() throws LoginException {
+        LOG.info("Executing abort()");
+
+        if (!loginSucceeded) {
+            return false;
+        }
+
+        if (commitSucceeded) {
+            // we succeeded, but another required module failed
+            logout();
+        } else {
+            // our commit failed
+            clear();
+        }
+
         return true;
     }
 
     private void clear() {
         loginSucceeded = false;
+        commitSucceeded = false;
         userPrincipal = null;
         groups.clear();
     }
-
-//    private void extractUserAndGroups(JWTClaimsSet claims) {
-//        // Extract user principal
-//        String sub = claims.getSubject();
-//
-//        if (sub != null && !sub.isEmpty()) {
-//            userPrincipal = new UserPrincipal(sub);
-//        } else if (username != null && !username.isEmpty()) {
-//            userPrincipal = new UserPrincipal(username);
-//        } else {
-//            userPrincipal = new UserPrincipal("");
-//        }
-//
-//        // Extract groups from scope
-//        try {
-//            String scopeStr = claims.getStringClaim("scope");
-//            if (scopeStr != null) {
-//                String[] scopes = scopeStr.split("\\s+");
-//
-//                for (String scope : scopes) {
-//                    String groupsStr = getScopeGroups(scope);
-//                    if (groupsStr != null) {
-//                        String[] groupNames = groupsStr.split(",");
-//                        for (String groupName : groupNames) {
-//                            groups.add(new GroupPrincipal(groupName.trim()));
-//                        }
-//                    }
-//                }
-//            }
-//        } catch (Exception e) {
-//            LOG.debug("Error extracting scope claim", e);
-//        }
-//    }
 }

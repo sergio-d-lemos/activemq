@@ -1,3 +1,19 @@
+/**
+ * Licensed to the Apache Software Foundation (ASF) under one or more
+ * contributor license agreements.  See the NOTICE file distributed with
+ * this work for additional information regarding copyright ownership.
+ * The ASF licenses this file to You under the Apache License, Version 2.0
+ * (the "License"); you may not use this file except in compliance with
+ * the License.  You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 package org.apache.activemq.jaas.oauth;
 
 import com.nimbusds.jose.JOSEException;
@@ -17,31 +33,52 @@ import java.time.Duration;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
+import java.util.concurrent.locks.ReadWriteLock;
+import java.util.concurrent.locks.ReentrantReadWriteLock;
 
-public class InMemoryJWKCachedProvider implements JWKProvider {
+public class CachedJWKProvider implements JWKProvider {
 
-    // TODO: This class should be thread safe
-
-    private static final Logger LOG = LoggerFactory.getLogger(InMemoryJWKCachedProvider.class);
+    private static final Logger LOG = LoggerFactory.getLogger(CachedJWKProvider.class);
 
     private final URI jwksUri;
     private final Map<String, PublicKey> knownKeys = new HashMap<>();
+    private final ReadWriteLock knownKeysLock = new ReentrantReadWriteLock();
 
-    public InMemoryJWKCachedProvider(final URI jwksUri) {
+    public CachedJWKProvider(final URI jwksUri) {
         this.jwksUri = jwksUri;
     }
 
     @Override
     public Optional<PublicKey> getKey(String kid) {
-        final PublicKey publicKey = knownKeys.get(kid);
+        knownKeysLock.readLock().lock();
+        PublicKey publicKey = knownKeys.get(kid);
+        knownKeysLock.readLock().unlock();
+
         if (publicKey != null) {
+            // Key is present in the cache
+            LOG.info("Key ID {} found in the local cache", kid);
             return Optional.of(publicKey);
         }
 
         LOG.info("Key ID {} not found in the local cache, will download the JWKS document from {}", kid, jwksUri);
-        loadKeys();
 
-        return Optional.ofNullable(knownKeys.get(kid));
+        // TODO: It would be better to avoid holding the lock while downloading the document.
+        knownKeysLock.writeLock().lock();
+
+        // Optimistically check again in case the key was downloaded by a different thread by a previously in-flight
+        // request.
+        publicKey = knownKeys.get(kid);
+        if (publicKey == null) {
+            // No, the key was no populated and has to be downloaded.
+            loadKeys();
+            publicKey = knownKeys.get(kid);
+        } else {
+            LOG.info("Key ID {} is now present in the local cache, will skip downloading the JWKS document again", kid);
+        }
+
+        knownKeysLock.writeLock().unlock();
+
+        return Optional.ofNullable(publicKey);
     }
 
     private void loadKeys() {
@@ -52,10 +89,10 @@ public class InMemoryJWKCachedProvider implements JWKProvider {
             JWKSet.parse(response)
                 .getKeys()
                 .forEach(this::storeKey);
-        } catch (IOException | InterruptedException ex) {
-            LOG.error("Failed to get the JWKS from '{}': {}", jwksUri, ex.getMessage());
         } catch (ParseException parseEx) {
             LOG.error("Failed to parse the JWKS from '{}': {}", jwksUri, parseEx.getMessage());
+        } catch (Exception ex) {
+            LOG.error("Failed to get the JWKS from '{}': {}", jwksUri, ex.getMessage());
         }
     }
 
@@ -90,7 +127,7 @@ public class InMemoryJWKCachedProvider implements JWKProvider {
         try {
             final String algorithm = key.getAlgorithm().getName();
             switch (algorithm) {
-                // TODO: align on the correct algorithm names
+                // TODO: Double check the correct algorithm names
                 case "RS256":
                     knownKeys.put(key.getKeyID(), key.toRSAKey().toPublicKey());
                     break;

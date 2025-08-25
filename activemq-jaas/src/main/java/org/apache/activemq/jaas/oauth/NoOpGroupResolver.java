@@ -16,9 +16,20 @@
  */
 package org.apache.activemq.jaas.oauth;
 
-import javax.security.auth.login.CredentialExpiredException;
-import javax.security.auth.login.FailedLoginException;
+import org.apache.activemq.jaas.GroupPrincipal;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-public interface OAuthAuthenticator {
-    AuthenticationResult authenticate(String token) throws FailedLoginException, CredentialExpiredException;
+import java.util.Collections;
+import java.util.List;
+
+// TODO: One option is to have a resolver that maps OAuth Scopes to Groups. Other resolver might query an external service.
+public class NoOpGroupResolver implements GroupResolver{
+    private static final Logger LOG = LoggerFactory.getLogger(NoOpGroupResolver.class);
+
+    @Override
+    public List<GroupPrincipal> getGroups(final AuthenticationResult authentication) {
+        LOG.info("NoOpGroupResolver won't return any Group");
+        return Collections.emptyList();
+    }
 }

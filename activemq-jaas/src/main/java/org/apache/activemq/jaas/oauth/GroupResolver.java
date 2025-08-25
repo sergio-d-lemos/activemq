@@ -16,9 +16,10 @@
  */
 package org.apache.activemq.jaas.oauth;
 
-import javax.security.auth.login.CredentialExpiredException;
-import javax.security.auth.login.FailedLoginException;
+import org.apache.activemq.jaas.GroupPrincipal;
 
-public interface OAuthAuthenticator {
-    AuthenticationResult authenticate(String token) throws FailedLoginException, CredentialExpiredException;
+import java.util.List;
+
+public interface GroupResolver {
+    List<GroupPrincipal> getGroups(AuthenticationResult authentication);
 }
