@@ -19,6 +19,10 @@ package org.apache.activemq.jaas.oauth;
 import java.security.PublicKey;
 import java.util.Optional;
 
+/**
+ * A JWKProvider implementation is responsible to provide Public Keys used to validate an OAuth JWT Access Token's
+ * signature.
+ */
 public interface JWKProvider {
     Optional<PublicKey> getKey(final String kid);
 }

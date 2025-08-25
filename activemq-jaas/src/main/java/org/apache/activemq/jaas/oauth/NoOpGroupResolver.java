@@ -21,15 +21,15 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.Collections;
-import java.util.List;
+import java.util.Set;
 
 // TODO: One option is to have a resolver that maps OAuth Scopes to Groups. Other resolver might query an external service.
 public class NoOpGroupResolver implements GroupResolver{
     private static final Logger LOG = LoggerFactory.getLogger(NoOpGroupResolver.class);
 
     @Override
-    public List<GroupPrincipal> getGroups(final AuthenticationResult authentication) {
+    public Set<GroupPrincipal> getGroups(final AuthenticationResult authentication) {
         LOG.info("NoOpGroupResolver won't return any Group");
-        return Collections.emptyList();
+        return Collections.emptySet();
     }
 }

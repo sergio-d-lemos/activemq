@@ -18,8 +18,13 @@ package org.apache.activemq.jaas.oauth;
 
 import org.apache.activemq.jaas.GroupPrincipal;
 
-import java.util.List;
+import java.util.Set;
 
+/**
+ * A GroupResolver implementation is responsible for the authorization logic after an OAuth Access Token has been
+ * successfully authenticated. It maps the Authentication Result (and possible other pieces of information) to a set of
+ * Groups.
+ */
 public interface GroupResolver {
-    List<GroupPrincipal> getGroups(AuthenticationResult authentication);
+    Set<GroupPrincipal> getGroups(AuthenticationResult authentication);
 }
