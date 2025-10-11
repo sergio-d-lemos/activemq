@@ -24,13 +24,10 @@ import org.apache.activemq.web.BrokerFacade;
 import org.apache.activemq.web.DestinationFacade;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.web.servlet.ModelAndView;
-import org.springframework.web.servlet.mvc.Controller;
-
 /**
  * Copies a message from one to another queue
  */
-public class CopyMessage extends DestinationFacade implements Controller {
+public class CopyMessage extends DestinationFacade {
     private String messageId;
     private String destination;
     private static final Logger log = LoggerFactory.getLogger(CopyMessage.class);
@@ -39,7 +36,7 @@ public class CopyMessage extends DestinationFacade implements Controller {
         super(brokerFacade);
     }
 
-    public ModelAndView handleRequest(HttpServletRequest request, HttpServletResponse response) throws Exception {
+    public void handleRequest(HttpServletRequest request, HttpServletResponse response) throws Exception {
         if (messageId != null) {
             QueueViewMBean queueView = getQueueView();
             if (queueView != null) {
@@ -49,7 +46,7 @@ public class CopyMessage extends DestinationFacade implements Controller {
             	log.warn("No queue named: " + getPhysicalDestinationName());
             }
         }
-        return redirectToDestinationView();
+        response.sendRedirect("browse.jsp?JMSDestination=" + getJMSDestination());
     }
 
     public String getMessageId() {
@@ -59,8 +56,6 @@ public class CopyMessage extends DestinationFacade implements Controller {
     public void setMessageId(String messageId) {
         this.messageId = messageId;
     }
-    
-    
 
     public String getDestination() {
 		return destination;

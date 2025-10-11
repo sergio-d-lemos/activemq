@@ -87,12 +87,10 @@ public class ActionServlet extends HttpServlet {
             ServletRequestDataBinder binder = new ServletRequestDataBinder(controller);
             binder.bind(request);
             
-            // Handle request
-            if (controller instanceof org.springframework.web.servlet.mvc.Controller) {
-                org.springframework.web.servlet.mvc.Controller springController = 
-                    (org.springframework.web.servlet.mvc.Controller) controller;
-                springController.handleRequest(request, response);
-            }
+            // Handle request using reflection
+            java.lang.reflect.Method handleMethod = controller.getClass().getMethod("handleRequest", 
+                HttpServletRequest.class, HttpServletResponse.class);
+            handleMethod.invoke(controller, request, response);
             
         } catch (Exception e) {
             throw new ServletException(e);

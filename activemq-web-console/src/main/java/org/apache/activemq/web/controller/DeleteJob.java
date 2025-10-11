@@ -23,13 +23,10 @@ import org.apache.activemq.web.BrokerFacade;
 import org.apache.activemq.web.DestinationFacade;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.web.servlet.ModelAndView;
-import org.springframework.web.servlet.mvc.Controller;
-
 /**
  * 
  */
-public class DeleteJob extends DestinationFacade implements Controller {
+public class DeleteJob extends DestinationFacade {
     private String jobId;
     private static final Logger LOG = LoggerFactory.getLogger(DeleteJob.class);
 
@@ -37,7 +34,7 @@ public class DeleteJob extends DestinationFacade implements Controller {
         super(brokerFacade);
     }
 
-    public ModelAndView handleRequest(HttpServletRequest request, HttpServletResponse response) throws Exception {
+    public void handleRequest(HttpServletRequest request, HttpServletResponse response) throws Exception {
         if (jobId != null) {
             JobSchedulerViewMBean jobScheduler = getBrokerFacade().getJobScheduler();
             if (jobScheduler != null) {
@@ -47,7 +44,7 @@ public class DeleteJob extends DestinationFacade implements Controller {
             	LOG.warn("Scheduler not configured");
             }
         }
-        return new ModelAndView("redirect:scheduled.jsp");
+        response.sendRedirect("scheduled.jsp");
     }
 
     public String getJobId() {

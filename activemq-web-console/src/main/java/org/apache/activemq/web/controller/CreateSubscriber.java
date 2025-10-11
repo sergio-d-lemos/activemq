@@ -21,14 +21,11 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import org.apache.activemq.web.BrokerFacade;
 import org.apache.activemq.web.DurableSubscriberFacade;
-import org.springframework.web.servlet.ModelAndView;
-import org.springframework.web.servlet.mvc.Controller;
-
 /**
  * 
  * 
  */
-public class CreateSubscriber extends DurableSubscriberFacade implements Controller {
+public class CreateSubscriber extends DurableSubscriberFacade {
     private String selector;
 
     public CreateSubscriber(BrokerFacade brokerFacade) {
@@ -46,12 +43,12 @@ public class CreateSubscriber extends DurableSubscriberFacade implements Control
         this.selector = selector;
     }
 
-    public ModelAndView handleRequest(HttpServletRequest request, HttpServletResponse response) throws Exception {
+    public void handleRequest(HttpServletRequest request, HttpServletResponse response) throws Exception {
         if (selector != null && selector.length() == 0) {
             selector = null;
         }
         getBrokerAdmin().createDurableSubscriber(getClientId(), getSubscriberName(), getValidDestination(), selector);
-        return new ModelAndView("redirect:subscribers.jsp");
+        response.sendRedirect("subscribers.jsp");
     }
     
 	public String[] getSupportedHttpMethods() {

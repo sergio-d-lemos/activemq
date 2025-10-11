@@ -242,8 +242,6 @@
       <artifactId>spring-web</artifactId>
     </dependency>
 
-
-
     <!-- web container -->
     <dependency>
       <groupId>org.eclipse.jetty</groupId>

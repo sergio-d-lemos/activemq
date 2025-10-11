@@ -18,8 +18,7 @@ package org.apache.activemq.web.controller;
 
 import org.apache.activemq.web.BrokerFacade;
 import org.apache.activemq.web.DestinationFacade;
-import org.springframework.web.servlet.ModelAndView;
-import org.springframework.web.servlet.mvc.Controller;
+
 
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -28,15 +27,15 @@ import jakarta.servlet.http.HttpServletResponse;
  *
  *
  */
-public class PauseDestination extends DestinationFacade implements Controller {
+public class PauseDestination extends DestinationFacade {
 
     public PauseDestination(BrokerFacade brokerFacade) {
         super(brokerFacade);
     }
 
-    public ModelAndView handleRequest(HttpServletRequest request, HttpServletResponse response) throws Exception {
+    public void handleRequest(HttpServletRequest request, HttpServletResponse response) throws Exception {
         pauseDestination();
-        return redirectToBrowseView();
+        response.sendRedirect(isQueue() ? "queues.jsp" : "topics.jsp");
     }
 
     public void pauseDestination() throws Exception {

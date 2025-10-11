@@ -21,22 +21,19 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import org.apache.activemq.web.BrokerFacade;
 import org.apache.activemq.web.DurableSubscriberFacade;
-import org.springframework.web.servlet.ModelAndView;
-import org.springframework.web.servlet.mvc.Controller;
-
 /**
  *
  * 
  */
-public class DeleteSubscriber extends DurableSubscriberFacade implements Controller {
+public class DeleteSubscriber extends DurableSubscriberFacade {
 
     public DeleteSubscriber(BrokerFacade brokerFacade) {
         super(brokerFacade);
     }
 
-    public ModelAndView handleRequest(HttpServletRequest request, HttpServletResponse response) throws Exception {
+    public void handleRequest(HttpServletRequest request, HttpServletResponse response) throws Exception {
         getBrokerAdmin().destroyDurableSubscriber(getClientId(), getSubscriberName());
-        return new ModelAndView("redirect:subscribers.jsp");
+        response.sendRedirect("subscribers.jsp");
     }
 
 }
