@@ -23,57 +23,25 @@ import jakarta.servlet.http.HttpServletRequest;
 import org.apache.activemq.web.DestinationFacade;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.web.bind.ServletRequestDataBinder;
-import org.springframework.web.servlet.HandlerExecutionChain;
-import org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping;
+// Removed Spring WebMVC dependencies
 
 /**
- *
+ * Utility class for CSRF protection (Spring WebMVC dependency removed)
  */
-public class BindingBeanNameUrlHandlerMapping extends BeanNameUrlHandlerMapping {
+public class BindingBeanNameUrlHandlerMapping {
     private static final transient Logger LOG = LoggerFactory.getLogger(BindingBeanNameUrlHandlerMapping.class);
 
-    @Override
-    protected Object getHandlerInternal(HttpServletRequest request) throws Exception {
-        Object object = super.getHandlerInternal(request);
-
-        if (object instanceof String) {
-            String handlerName = (String) object;
-            object = getApplicationContext().getBean(handlerName);
-        }
-        if (object instanceof HandlerExecutionChain) {
-            HandlerExecutionChain handlerExecutionChain = (HandlerExecutionChain) object;
-            object = handlerExecutionChain.getHandler();
-        }
-
-        if (object != null) {
-            // prevent CSRF attacks
-            if (object instanceof DestinationFacade) {
-                // check supported methods
-                if (!Arrays.asList(((DestinationFacade)object).getSupportedHttpMethods()).contains(request.getMethod())) {
-                    throw new UnsupportedOperationException("Unsupported method " + request.getMethod() + " for path " + request.getRequestURI());
-                }
-                // check the 'secret'
-                if (request.getSession().getAttribute("secret") == null ||
-                    !request.getSession().getAttribute("secret").equals(request.getParameter("secret"))) {
-                    throw new UnsupportedOperationException("Possible CSRF attack");
-                }
+    public static void validateRequest(HttpServletRequest request, Object handler) throws Exception {
+        if (handler instanceof DestinationFacade) {
+            // check supported methods
+            if (!Arrays.asList(((DestinationFacade)handler).getSupportedHttpMethods()).contains(request.getMethod())) {
+                throw new UnsupportedOperationException("Unsupported method " + request.getMethod() + " for path " + request.getRequestURI());
             }
-
-            ServletRequestDataBinder binder = new ServletRequestDataBinder(object, "request");
-            try {
-                binder.bind(request);
-                binder.setIgnoreUnknownFields(true);
-                if (LOG.isDebugEnabled()) {
-                    LOG.debug("Bound POJO is now: " + object);
-                }
-            }
-            catch (Exception e) {
-                LOG.warn("Caught: " + e, e);
-                throw e;
+            // check the 'secret'
+            if (request.getSession().getAttribute("secret") == null ||
+                !request.getSession().getAttribute("secret").equals(request.getParameter("secret"))) {
+                throw new UnsupportedOperationException("Possible CSRF attack");
             }
         }
-
-        return object;
     }
 }

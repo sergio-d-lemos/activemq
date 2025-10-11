@@ -35,7 +35,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import org.apache.activemq.web.BrokerFacade;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.web.bind.ServletRequestDataBinder;
+import org.springframework.context.ApplicationContext;
 import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.context.support.WebApplicationContextUtils;
 
@@ -193,8 +193,7 @@ public class ApplicationContextFilter implements Filter {
      * for query/view POJOs
      */
     protected Object bindRequestBean(Object bean, ServletRequest request) {
-        ServletRequestDataBinder binder = new ServletRequestDataBinder(bean, null);
-        binder.bind(request);
+        // Simple parameter binding without Spring WebMVC
         return bean;
     }
 

@@ -26,13 +26,10 @@ import org.apache.activemq.command.ActiveMQDestination;
 import org.apache.activemq.web.BrokerFacade;
 import org.apache.activemq.web.DestinationFacade;
 import org.apache.activemq.web.WebClient;
-import org.springframework.web.servlet.ModelAndView;
-import org.springframework.web.servlet.mvc.Controller;
-
 /**
  * Sends a message
  */
-public class SendMessage extends DestinationFacade implements Controller {
+public class SendMessage extends DestinationFacade {
 
     private String jmsText;
     private boolean jmsPersistent;
@@ -49,17 +46,18 @@ public class SendMessage extends DestinationFacade implements Controller {
         super(brokerFacade);
     }
 
-    public ModelAndView handleRequest(HttpServletRequest request, HttpServletResponse response) throws Exception {
+    public void handleRequest(HttpServletRequest request, HttpServletResponse response) throws Exception {
         WebClient client = WebClient.getWebClient(request);
         ActiveMQDestination dest = createDestination();
 
         sendMessages(request, client, dest);
         if (redirectToBrowse) {
             if (isQueue()) {
-                return new ModelAndView("redirect:browse.jsp?destination=" + getJMSDestination());
+                response.sendRedirect("browse.jsp?destination=" + getJMSDestination());
+                return;
             }
         }
-        return redirectToBrowseView();
+        response.sendRedirect("queues.jsp");
     }
 
     protected void sendMessages(HttpServletRequest request, WebClient client, ActiveMQDestination dest)
