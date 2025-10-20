@@ -26,11 +26,11 @@ import org.apache.activemq.web.DestinationFacade;
  */
 public class PurgeDestination extends DestinationFacade {
 
-    public PurgeDestination(BrokerFacade brokerFacade) {
+    public PurgeDestination(final BrokerFacade brokerFacade) {
         super(brokerFacade);
     }
 
-    public void handleRequest(HttpServletRequest request, HttpServletResponse response) throws Exception {
+    public void handleRequest(final HttpServletRequest request, final HttpServletResponse response) throws Exception {
         purgeDestination();
         response.sendRedirect(isQueue() ? "queues.jsp" : "topics.jsp");
     }
@@ -39,7 +39,7 @@ public class PurgeDestination extends DestinationFacade {
         if (isQueue()) {
             getBrokerFacade().purgeQueue(createDestination());
         } else {
-            throw new UnsupportedOperationException("Purge supported for queues only. Receieved JMSDestinationType=" + getJMSDestinationType());
+            throw new UnsupportedOperationException("Purge supported for queues only. Received JMSDestinationType=" + getJMSDestinationType());
         }
     }
 }

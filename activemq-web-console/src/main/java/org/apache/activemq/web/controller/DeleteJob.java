@@ -23,23 +23,21 @@ import org.apache.activemq.web.BrokerFacade;
 import org.apache.activemq.web.DestinationFacade;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-/**
- * 
- */
+
 public class DeleteJob extends DestinationFacade {
     private String jobId;
     private static final Logger LOG = LoggerFactory.getLogger(DeleteJob.class);
 
-    public DeleteJob(BrokerFacade brokerFacade) {
+    public DeleteJob(final BrokerFacade brokerFacade) {
         super(brokerFacade);
     }
 
-    public void handleRequest(HttpServletRequest request, HttpServletResponse response) throws Exception {
+    public void handleRequest(final HttpServletRequest request, final HttpServletResponse response) throws Exception {
         if (jobId != null) {
             JobSchedulerViewMBean jobScheduler = getBrokerFacade().getJobScheduler();
             if (jobScheduler != null) {
                 jobScheduler.removeJob(jobId);
-                LOG.info("Removed scheduled Job " + jobId);
+                LOG.info("Removed scheduled Job {}", jobId);
             } else {
             	LOG.warn("Scheduler not configured");
             }
@@ -51,8 +49,7 @@ public class DeleteJob extends DestinationFacade {
         return jobId;
     }
 
-    public void setJobId(String id) {
-        this.jobId=id;
+    public void setJobId(final String id) {
+        this.jobId = id;
     }
-
 }

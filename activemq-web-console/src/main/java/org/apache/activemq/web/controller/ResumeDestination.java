@@ -29,11 +29,11 @@ import jakarta.servlet.http.HttpServletResponse;
  */
 public class ResumeDestination extends DestinationFacade {
 
-    public ResumeDestination(BrokerFacade brokerFacade) {
+    public ResumeDestination(final BrokerFacade brokerFacade) {
         super(brokerFacade);
     }
 
-    public void handleRequest(HttpServletRequest request, HttpServletResponse response) throws Exception {
+    public void handleRequest(final HttpServletRequest request, final HttpServletResponse response) throws Exception {
         resumeDestination();
         response.sendRedirect(isQueue() ? "queues.jsp" : "topics.jsp");
     }
@@ -42,7 +42,7 @@ public class ResumeDestination extends DestinationFacade {
         if (isQueue()) {
             getQueueView().resume();
         } else {
-            throw new UnsupportedOperationException("Resume supported for queues only. Receieved JMSDestinationType=" + getJMSDestinationType());
+            throw new UnsupportedOperationException("Resume supported for queues only. Received JMSDestinationType=" + getJMSDestinationType());
         }
     }
 }

@@ -21,14 +21,11 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import org.apache.activemq.web.BrokerFacade;
 import org.apache.activemq.web.DurableSubscriberFacade;
-/**
- * 
- * 
- */
+
 public class CreateSubscriber extends DurableSubscriberFacade {
     private String selector;
 
-    public CreateSubscriber(BrokerFacade brokerFacade) {
+    public CreateSubscriber(final BrokerFacade brokerFacade) {
         super(brokerFacade);
     }
 
@@ -43,8 +40,8 @@ public class CreateSubscriber extends DurableSubscriberFacade {
         this.selector = selector;
     }
 
-    public void handleRequest(HttpServletRequest request, HttpServletResponse response) throws Exception {
-        if (selector != null && selector.length() == 0) {
+    public void handleRequest(final HttpServletRequest request, final HttpServletResponse response) throws Exception {
+        if (selector != null && selector.isEmpty()) {
             selector = null;
         }
         getBrokerAdmin().createDurableSubscriber(getClientId(), getSubscriberName(), getValidDestination(), selector);
@@ -54,5 +51,4 @@ public class CreateSubscriber extends DurableSubscriberFacade {
 	public String[] getSupportedHttpMethods() {
 		return new String[]{"POST"};
 	}
-
 }

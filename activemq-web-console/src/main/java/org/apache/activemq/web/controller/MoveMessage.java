@@ -24,6 +24,7 @@ import org.apache.activemq.web.BrokerFacade;
 import org.apache.activemq.web.DestinationFacade;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
 /**
  * Moves a message from one to another queue
  */
@@ -36,14 +37,14 @@ public class MoveMessage extends DestinationFacade {
         super(brokerFacade);
     }
 
-    public void handleRequest(HttpServletRequest request, HttpServletResponse response) throws Exception {
+    public void handleRequest(final HttpServletRequest request, final HttpServletResponse response) throws Exception {
         if (messageId != null) {
-            QueueViewMBean queueView = getQueueView();
+            final QueueViewMBean queueView = getQueueView();
             if (queueView != null) {
-            	log.info("Moving message " + getJMSDestination() + "(" + messageId + ")" + " to " + destination);
+            	log.info("Moving message {} ({}) to {}", getJMSDestination(), messageId, destination);
                 queueView.moveMessageTo(messageId, destination);
             } else {
-            	log.warn("No queue named: " + getPhysicalDestinationName());
+            	log.warn("No queue named: {}", getPhysicalDestinationName());
             }
         }
         response.sendRedirect("browse.jsp?JMSDestination=" + getJMSDestination());
@@ -64,5 +65,4 @@ public class MoveMessage extends DestinationFacade {
 	public void setDestination(String destination) {
 		this.destination = destination;
 	}
-
 }

@@ -30,21 +30,22 @@ import jakarta.servlet.http.HttpServletResponse;
  * Retry a message on a queue.
  */
 public class RetryMessage extends DestinationFacade {
-    private String messageId;
     private static final Logger log = LoggerFactory.getLogger(MoveMessage.class);
 
-    public RetryMessage(BrokerFacade brokerFacade) {
+    private String messageId;
+
+    public RetryMessage(final BrokerFacade brokerFacade) {
         super(brokerFacade);
     }
 
-    public void handleRequest(HttpServletRequest request, HttpServletResponse response) throws Exception {
+    public void handleRequest(final HttpServletRequest request, final HttpServletResponse response) throws Exception {
         if (messageId != null) {
             QueueViewMBean queueView = getQueueView();
             if (queueView != null) {
-                log.info("Retrying message " + getJMSDestination() + "(" + messageId + ")");
+                log.info("Retrying message {} ({})", getJMSDestination(), messageId);
                 queueView.retryMessage(messageId);
             } else {
-                log.warn("No queue named: " + getPhysicalDestinationName());
+                log.warn("No queue named: {}", getPhysicalDestinationName());
             }
         }
         response.sendRedirect("browse.jsp?JMSDestination=" + getJMSDestination());
@@ -54,7 +55,7 @@ public class RetryMessage extends DestinationFacade {
         return messageId;
     }
 
-    public void setMessageId(String messageId) {
+    public void setMessageId(final String messageId) {
         this.messageId = messageId;
     }
 

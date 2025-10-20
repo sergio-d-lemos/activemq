@@ -32,6 +32,7 @@ import jakarta.servlet.ServletResponse;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.web.bind.ServletRequestDataBinder;
 import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.context.support.WebApplicationContextUtils;
 
@@ -73,7 +74,7 @@ public class ApplicationContextFilter implements Filter {
 
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
         // lets register a requestContext in the requestScope
-        request.setAttribute(requestContextName, createRequestContextWrapper());
+        request.setAttribute(requestContextName, createRequestContextWrapper(request));
         chain.doFilter(request, response);
     }
 
@@ -83,19 +84,32 @@ public class ApplicationContextFilter implements Filter {
      * accessed easily from inside JSP EL (or other expression languages in
      * other view technologies).
      */
-    private Map createRequestContextWrapper() {
+    private Map createRequestContextWrapper(final ServletRequest request) {
         final WebApplicationContext context = WebApplicationContextUtils.getWebApplicationContext(servletContext);
         return new AbstractMap<>() {
             public Object get(Object key) {
                 if (key == null) {
                     return null;
                 }
-                return context.getBean(key.toString());
+
+                final Object emptyBean = context.getBean(key.toString());
+                return bindRequestBean(emptyBean, request);
             }
 
             public Set entrySet() {
                 return Collections.EMPTY_SET;
             }
         };
+    }
+
+    /**
+     * Binds properties from the request parameters to the given POJO which is
+     * useful for POJOs which are configurable via request parameters such as
+     * for query/view POJOs
+     */
+    protected Object bindRequestBean(Object bean, ServletRequest request) {
+        ServletRequestDataBinder binder = new ServletRequestDataBinder(bean, null);
+        binder.bind(request);
+        return bean;
     }
 }

@@ -16,7 +16,6 @@
  */
 package org.apache.activemq.web.controller;
 
-import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 import org.apache.activemq.broker.jmx.QueueViewMBean;
@@ -24,6 +23,7 @@ import org.apache.activemq.web.BrokerFacade;
 import org.apache.activemq.web.DestinationFacade;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
 /**
  * Copies a message from one to another queue
  */
@@ -32,18 +32,18 @@ public class CopyMessage extends DestinationFacade {
     private String destination;
     private static final Logger log = LoggerFactory.getLogger(CopyMessage.class);
 
-    public CopyMessage(BrokerFacade brokerFacade) {
+    public CopyMessage(final BrokerFacade brokerFacade) {
         super(brokerFacade);
     }
 
-    public void handleRequest(HttpServletRequest request, HttpServletResponse response) throws Exception {
+    public void handleRequest(final HttpServletResponse response) throws Exception {
         if (messageId != null) {
             QueueViewMBean queueView = getQueueView();
             if (queueView != null) {
-            	log.info(getJMSDestination() + "(" + messageId + ")" + " copy to " + destination);
+            	log.info("{} ({}) copy to {}", getJMSDestination(), messageId, destination);
                 queueView.copyMessageTo(messageId, destination);
             } else {
-            	log.warn("No queue named: " + getPhysicalDestinationName());
+            	log.warn("No queue named: {}", getPhysicalDestinationName());
             }
         }
         response.sendRedirect("browse.jsp?JMSDestination=" + getJMSDestination());

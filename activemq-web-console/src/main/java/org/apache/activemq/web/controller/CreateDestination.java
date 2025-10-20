@@ -21,17 +21,14 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import org.apache.activemq.web.BrokerFacade;
 import org.apache.activemq.web.DestinationFacade;
-/**
- * 
- * 
- */
+
 public class CreateDestination extends DestinationFacade {
 
     public CreateDestination(BrokerFacade brokerFacade) {
         super(brokerFacade);
     }
 
-    public void handleRequest(HttpServletRequest request, HttpServletResponse response) throws Exception {
+    public void handleRequest(final HttpServletRequest request, final HttpServletResponse response) throws Exception {
         addDestination();
         response.sendRedirect(isQueue() ? "queues.jsp" : "topics.jsp");
     }
@@ -39,7 +36,4 @@ public class CreateDestination extends DestinationFacade {
 	public String[] getSupportedHttpMethods() {
 		return new String[]{"POST"};
 	}
-    
-    
-
 }

@@ -16,33 +16,22 @@
  */
 package org.apache.activemq.web;
 
-import jakarta.servlet.http.HttpServletRequest;
-
 import org.apache.activemq.broker.jmx.BrokerViewMBean;
 import org.apache.activemq.broker.jmx.QueueViewMBean;
 import org.apache.activemq.command.ActiveMQDestination;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-
-import java.util.Arrays;
 
 /**
  *
  */
 public class DestinationFacade {
 
-    private static final Logger LOG = LoggerFactory.getLogger(DestinationFacade.class);
-
     private String jmsDestination;
     private String jmsDestinationType;
-    private BrokerFacade brokerFacade;
+
+    private final BrokerFacade brokerFacade;
 
     public DestinationFacade(BrokerFacade brokerFacade) {
         this.brokerFacade = brokerFacade;
-
-        LOG.info("lemoss@: DestinationFacade constructor: {}", brokerFacade);
-        Arrays.stream(Thread.currentThread().getStackTrace()).map(StackTraceElement::toString).forEach(LOG::info);
     }
 
     public String toString() {
@@ -127,8 +116,6 @@ public class DestinationFacade {
         String name = getPhysicalDestinationName();
         return getBrokerFacade().getQueue(name);
     }
-
-
 
     protected String getPhysicalDestinationName() {
         return createDestination().getPhysicalName();

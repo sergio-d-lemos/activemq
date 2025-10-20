@@ -21,20 +21,15 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import org.apache.activemq.web.BrokerFacade;
 import org.apache.activemq.web.DestinationFacade;
-/**
- * 
- * 
- */
+
 public class DeleteDestination extends DestinationFacade {
 
-    public DeleteDestination(BrokerFacade brokerFacade) {
+    public DeleteDestination(final BrokerFacade brokerFacade) {
         super(brokerFacade);
     }
 
-    public void handleRequest(HttpServletRequest request, HttpServletResponse response) throws Exception {
+    public void handleRequest(final HttpServletRequest request, final HttpServletResponse response) throws Exception {
         removeDestination();
         response.sendRedirect(isQueue() ? "queues.jsp" : "topics.jsp");
     }
-
-    
 }
