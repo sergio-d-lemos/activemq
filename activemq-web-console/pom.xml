@@ -216,10 +216,13 @@
         <groupId>${project.groupId}</groupId>
         <artifactId>activemq-stomp</artifactId>
     </dependency>
+
+    <!--
     <dependency>
         <groupId>${project.groupId}</groupId>
         <artifactId>activemq-spring</artifactId>
     </dependency>
+    -->
 
     <dependency>
       <groupId>${project.groupId}</groupId>
@@ -237,10 +240,12 @@
       <artifactId>xbean-spring</artifactId>
     </dependency>
 
+    <!--
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-web</artifactId>
     </dependency>
+    -->
 
     <!-- web container -->
     <dependency>

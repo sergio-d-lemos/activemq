@@ -21,12 +21,18 @@ import jakarta.servlet.http.HttpServletRequest;
 import org.apache.activemq.broker.jmx.BrokerViewMBean;
 import org.apache.activemq.broker.jmx.QueueViewMBean;
 import org.apache.activemq.command.ActiveMQDestination;
-import org.springframework.web.servlet.ModelAndView;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+
+import java.util.Arrays;
 
 /**
  *
  */
 public class DestinationFacade {
+
+    private static final Logger LOG = LoggerFactory.getLogger(DestinationFacade.class);
 
     private String jmsDestination;
     private String jmsDestinationType;
@@ -34,6 +40,9 @@ public class DestinationFacade {
 
     public DestinationFacade(BrokerFacade brokerFacade) {
         this.brokerFacade = brokerFacade;
+
+        LOG.info("lemoss@: DestinationFacade constructor: {}", brokerFacade);
+        Arrays.stream(Thread.currentThread().getStackTrace()).map(StackTraceElement::toString).forEach(LOG::info);
     }
 
     public String toString() {
@@ -119,18 +128,7 @@ public class DestinationFacade {
         return getBrokerFacade().getQueue(name);
     }
 
-    protected ModelAndView redirectToRequest(HttpServletRequest request) {
-        String view = "redirect:" + request.getRequestURI();
-        return new ModelAndView(view);
-    }
 
-    protected ModelAndView redirectToBrowseView() {
-        return new ModelAndView("redirect:" + (isQueue() ? "queues.jsp" : "topics.jsp"));
-    }
-
-    protected ModelAndView redirectToDestinationView() {        
-        return new ModelAndView("redirect:browse.jsp?JMSDestination=" + jmsDestination);
-    }
 
     protected String getPhysicalDestinationName() {
         return createDestination().getPhysicalName();
