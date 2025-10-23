@@ -19,10 +19,15 @@ package org.apache.activemq.web.controller;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
+import org.apache.activemq.web.ActionHandler;
 import org.apache.activemq.web.BrokerFacade;
 import org.apache.activemq.web.DurableSubscriberFacade;
+import org.springframework.stereotype.Component;
+import org.springframework.web.context.annotation.RequestScope;
 
-public class CreateSubscriber extends DurableSubscriberFacade {
+@Component
+@RequestScope
+public class CreateSubscriber extends DurableSubscriberFacade implements ActionHandler {
     private String selector;
 
     public CreateSubscriber(final BrokerFacade brokerFacade) {

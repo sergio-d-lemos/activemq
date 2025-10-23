@@ -23,14 +23,19 @@ import jakarta.jms.Message;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.apache.activemq.command.ActiveMQDestination;
+import org.apache.activemq.web.ActionHandler;
 import org.apache.activemq.web.BrokerFacade;
 import org.apache.activemq.web.DestinationFacade;
 import org.apache.activemq.web.WebClient;
+import org.springframework.stereotype.Component;
+import org.springframework.web.context.annotation.RequestScope;
 
 /**
  * Sends a message
  */
-public class SendMessage extends DestinationFacade {
+@Component
+@RequestScope
+public class SendMessage extends DestinationFacade implements ActionHandler {
 
     private String jmsText;
     private boolean jmsPersistent;

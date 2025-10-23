@@ -19,7 +19,9 @@ package org.apache.activemq.web;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
+import java.util.Optional;
+
+import static java.util.Map.entry;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
@@ -33,67 +35,66 @@ import org.springframework.web.context.support.WebApplicationContextUtils;
 
 public class ActionServlet extends HttpServlet {
     
-    private final Map<String, Class<?>> actionMap = new ConcurrentHashMap<>();
-    
+    private static final Map<String, Class<? extends ActionHandler>> routes = Map.ofEntries(
+        entry("/createDestination.action", CreateDestination.class),
+        entry("/deleteDestination.action", DeleteDestination.class),
+        entry("/createSubscriber.action", CreateSubscriber.class),
+        entry("/deleteSubscriber.action", DeleteSubscriber.class),
+        entry("/sendMessage.action", SendMessage.class),
+        entry("/purgeDestination.action", PurgeDestination.class),
+        entry("/deleteMessage.action", DeleteMessage.class),
+        entry("/copyMessage.action", CopyMessage.class),
+        entry("/moveMessage.action", MoveMessage.class),
+        entry("/deleteJob.action", DeleteJob.class),
+        entry("/retryMessage.action", RetryMessage.class),
+        entry("/pauseDestination.action", PauseDestination.class),
+        entry("/resumeDestination.action", ResumeDestination.class)
+    );
+
+    final WebApplicationContext context = WebApplicationContextUtils.getWebApplicationContext(getServletContext());
+
     @Override
     public void init() throws ServletException {
-        actionMap.put("/createDestination.action", CreateDestination.class);
-        actionMap.put("/deleteDestination.action", DeleteDestination.class);
-        actionMap.put("/createSubscriber.action", CreateSubscriber.class);
-        actionMap.put("/deleteSubscriber.action", DeleteSubscriber.class);
-        actionMap.put("/sendMessage.action", SendMessage.class);
-        actionMap.put("/purgeDestination.action", PurgeDestination.class);
-        actionMap.put("/deleteMessage.action", DeleteMessage.class);
-        actionMap.put("/copyMessage.action", CopyMessage.class);
-        actionMap.put("/moveMessage.action", MoveMessage.class);
-        actionMap.put("/deleteJob.action", DeleteJob.class);
-        actionMap.put("/retryMessage.action", RetryMessage.class);
-        actionMap.put("/pauseDestination.action", PauseDestination.class);
-        actionMap.put("/resumeDestination.action", ResumeDestination.class);
+        super.init();
+        if (context == null) {
+            throw new IllegalStateException("Failed to initialize Web Application Context");
+        }
     }
-    
+
     @Override
     protected void service(HttpServletRequest request, HttpServletResponse response) 
             throws ServletException, IOException {
-        
+
         String path = request.getRequestURI();
         if (path.contains("/")) {
             path = path.substring(path.lastIndexOf("/"));
         }
-        
-        Class<?> controllerClass = actionMap.get(path);
-        if (controllerClass == null) {
-            response.sendError(HttpServletResponse.SC_NOT_FOUND);
-            return;
-        }
-        
+
         try {
-            WebApplicationContext context = WebApplicationContextUtils.getWebApplicationContext(getServletContext());
-            Object controller = context.getBean(controllerClass);
-            
-            // CSRF protection
-            if (controller instanceof DestinationFacade) {
-                DestinationFacade facade = (DestinationFacade) controller;
-                if (!Arrays.asList(facade.getSupportedHttpMethods()).contains(request.getMethod())) {
+            // Routes the path to a Controller class, returning a 404 if the no route is found
+            final Optional<ActionHandler> maybeHandler = getHandler(path);
+            if (maybeHandler.isEmpty()) {
+                response.sendError(HttpServletResponse.SC_NOT_FOUND);
+                return;
+            }
+
+            final ActionHandler handler = maybeHandler.get();
+            if (handler instanceof DestinationFacade destination) {
+                if (!Arrays.asList(destination.getSupportedHttpMethods()).contains(request.getMethod())) {
                     throw new UnsupportedOperationException("Unsupported method " + request.getMethod());
                 }
-                if (request.getSession().getAttribute("secret") == null ||
-                    !request.getSession().getAttribute("secret").equals(request.getParameter("secret"))) {
-                    throw new UnsupportedOperationException("Possible CSRF attack");
-                }
             }
-            
-            // Bind request parameters
-            ServletRequestDataBinder binder = new ServletRequestDataBinder(controller);
+
+            ServletRequestDataBinder binder = new ServletRequestDataBinder(handler);
             binder.bind(request);
-            
-            // Handle request using reflection
-            java.lang.reflect.Method handleMethod = controller.getClass().getMethod("handleRequest", 
-                HttpServletRequest.class, HttpServletResponse.class);
-            handleMethod.invoke(controller, request, response);
-            
+
+            handler.handleRequest(request, response);
         } catch (Exception e) {
             throw new ServletException(e);
         }
+    }
+
+    private Optional<ActionHandler> getHandler(final String path) {
+        return Optional.ofNullable(routes.get(path)).map(context::getBean);
     }
 }

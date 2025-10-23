@@ -20,15 +20,20 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 import org.apache.activemq.broker.jmx.QueueViewMBean;
+import org.apache.activemq.web.ActionHandler;
 import org.apache.activemq.web.BrokerFacade;
 import org.apache.activemq.web.DestinationFacade;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Component;
+import org.springframework.web.context.annotation.RequestScope;
 
 /**
  * 
  */
-public class DeleteMessage extends DestinationFacade {
+@Component
+@RequestScope
+public class DeleteMessage extends DestinationFacade implements ActionHandler {
     private String messageId;
     private static final Logger log = LoggerFactory.getLogger(DeleteMessage.class);
 

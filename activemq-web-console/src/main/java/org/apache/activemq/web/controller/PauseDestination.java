@@ -16,9 +16,11 @@
  */
 package org.apache.activemq.web.controller;
 
+import org.apache.activemq.web.ActionHandler;
 import org.apache.activemq.web.BrokerFacade;
 import org.apache.activemq.web.DestinationFacade;
-
+import org.springframework.stereotype.Component;
+import org.springframework.web.context.annotation.RequestScope;
 
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -27,7 +29,9 @@ import jakarta.servlet.http.HttpServletResponse;
  *
  *
  */
-public class PauseDestination extends DestinationFacade {
+@Component
+@RequestScope
+public class PauseDestination extends DestinationFacade implements ActionHandler {
 
     public PauseDestination(final BrokerFacade brokerFacade) {
         super(brokerFacade);

@@ -19,15 +19,20 @@ package org.apache.activemq.web.controller;
 import jakarta.servlet.http.HttpServletResponse;
 
 import org.apache.activemq.broker.jmx.QueueViewMBean;
+import org.apache.activemq.web.ActionHandler;
 import org.apache.activemq.web.BrokerFacade;
 import org.apache.activemq.web.DestinationFacade;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Component;
+import org.springframework.web.context.annotation.RequestScope;
 
 /**
  * Copies a message from one to another queue
  */
-public class CopyMessage extends DestinationFacade {
+@Component
+@RequestScope
+public class CopyMessage extends DestinationFacade implements ActionHandler {
     private String messageId;
     private String destination;
     private static final Logger log = LoggerFactory.getLogger(CopyMessage.class);

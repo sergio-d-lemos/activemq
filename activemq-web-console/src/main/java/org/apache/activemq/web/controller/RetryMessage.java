@@ -17,11 +17,13 @@
 package org.apache.activemq.web.controller;
 
 import org.apache.activemq.broker.jmx.QueueViewMBean;
+import org.apache.activemq.web.ActionHandler;
 import org.apache.activemq.web.BrokerFacade;
 import org.apache.activemq.web.DestinationFacade;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
+import org.springframework.stereotype.Component;
+import org.springframework.web.context.annotation.RequestScope;
 
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -29,7 +31,9 @@ import jakarta.servlet.http.HttpServletResponse;
 /**
  * Retry a message on a queue.
  */
-public class RetryMessage extends DestinationFacade {
+@Component
+@RequestScope
+public class RetryMessage extends DestinationFacade implements ActionHandler {
     private static final Logger log = LoggerFactory.getLogger(MoveMessage.class);
 
     private String messageId;

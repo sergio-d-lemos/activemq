@@ -17,6 +17,8 @@
 package org.apache.activemq.web;
 
 import org.springframework.beans.factory.DisposableBean;
+import org.springframework.stereotype.Component;
+import org.springframework.web.context.annotation.RequestScope;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
@@ -29,6 +31,8 @@ import jakarta.jms.Session;
  *
  *
  */
+@Component("queueBrowser")
+@RequestScope
 public class QueueBrowseQuery extends DestinationFacade implements DisposableBean {
     private String selector;
     private Queue queue;
