@@ -16,10 +16,10 @@
  */
 package org.apache.activemq.web.controller;
 
+import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 import org.apache.activemq.broker.jmx.QueueViewMBean;
-import org.apache.activemq.web.ActionHandler;
 import org.apache.activemq.web.BrokerFacade;
 import org.apache.activemq.web.DestinationFacade;
 import org.slf4j.Logger;
@@ -32,7 +32,7 @@ import org.springframework.web.context.annotation.RequestScope;
  */
 @Component
 @RequestScope
-public class CopyMessage extends DestinationFacade implements ActionHandler {
+public class CopyMessage extends DestinationFacade implements Controller {
     private String messageId;
     private String destination;
     private static final Logger log = LoggerFactory.getLogger(CopyMessage.class);
@@ -41,7 +41,8 @@ public class CopyMessage extends DestinationFacade implements ActionHandler {
         super(brokerFacade);
     }
 
-    public void handleRequest(final HttpServletResponse response) throws Exception {
+    @Override
+    public void handleRequest(final HttpServletRequest request, final HttpServletResponse response) throws Exception {
         if (messageId != null) {
             QueueViewMBean queueView = getQueueView();
             if (queueView != null) {
@@ -69,5 +70,4 @@ public class CopyMessage extends DestinationFacade implements ActionHandler {
 	public void setDestination(String destination) {
 		this.destination = destination;
 	}
-
 }

@@ -19,7 +19,6 @@ package org.apache.activemq.web.controller;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-import org.apache.activemq.web.ActionHandler;
 import org.apache.activemq.web.BrokerFacade;
 import org.apache.activemq.web.DestinationFacade;
 import org.springframework.stereotype.Component;
@@ -29,7 +28,7 @@ import org.springframework.web.context.annotation.RequestScope;
  */
 @Component
 @RequestScope
-public class PurgeDestination extends DestinationFacade implements ActionHandler {
+public class PurgeDestination extends DestinationFacade implements Controller {
 
     public PurgeDestination(final BrokerFacade brokerFacade) {
         super(brokerFacade);

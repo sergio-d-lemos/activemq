@@ -65,6 +65,8 @@ public class ApplicationContextFilter implements Filter {
     public void init(FilterConfig config) throws ServletException {
         this.servletContext = config.getServletContext();
         this.requestContextName = getInitParameter(config, "requestContextName", requestContextName);
+
+        LOG.info("Application Context Filter initialized. Request context is available in '{}'", requestContextName);
     }
 
     private String getInitParameter(final FilterConfig config, final String key, final String defaultValue) {
@@ -91,7 +93,6 @@ public class ApplicationContextFilter implements Filter {
                 if (key == null) {
                     return null;
                 }
-
                 final Object emptyBean = context.getBean(key.toString());
                 return bindRequestBean(emptyBean, request);
             }

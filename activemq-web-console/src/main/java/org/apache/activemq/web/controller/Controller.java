@@ -14,11 +14,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.apache.activemq.web;
+package org.apache.activemq.web.controller;
 
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-public interface ActionHandler {
+public interface Controller {
     void handleRequest(HttpServletRequest request, HttpServletResponse response) throws Exception;
 }

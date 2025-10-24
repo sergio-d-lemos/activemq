@@ -17,7 +17,6 @@
 package org.apache.activemq.web.controller;
 
 import org.apache.activemq.broker.jmx.QueueViewMBean;
-import org.apache.activemq.web.ActionHandler;
 import org.apache.activemq.web.BrokerFacade;
 import org.apache.activemq.web.DestinationFacade;
 import org.slf4j.Logger;
@@ -33,7 +32,7 @@ import jakarta.servlet.http.HttpServletResponse;
  */
 @Component
 @RequestScope
-public class RetryMessage extends DestinationFacade implements ActionHandler {
+public class RetryMessage extends DestinationFacade implements Controller {
     private static final Logger log = LoggerFactory.getLogger(MoveMessage.class);
 
     private String messageId;

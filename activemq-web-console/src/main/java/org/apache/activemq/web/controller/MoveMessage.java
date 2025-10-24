@@ -20,7 +20,6 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 import org.apache.activemq.broker.jmx.QueueViewMBean;
-import org.apache.activemq.web.ActionHandler;
 import org.apache.activemq.web.BrokerFacade;
 import org.apache.activemq.web.DestinationFacade;
 import org.slf4j.Logger;
@@ -33,7 +32,7 @@ import org.springframework.web.context.annotation.RequestScope;
  */
 @Component
 @RequestScope
-public class MoveMessage extends DestinationFacade implements ActionHandler {
+public class MoveMessage extends DestinationFacade implements Controller {
     private String messageId;
     private String destination;
     private static final Logger log = LoggerFactory.getLogger(MoveMessage.class);

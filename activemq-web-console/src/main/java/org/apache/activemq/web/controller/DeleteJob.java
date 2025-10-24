@@ -19,7 +19,6 @@ package org.apache.activemq.web.controller;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.apache.activemq.broker.jmx.JobSchedulerViewMBean;
-import org.apache.activemq.web.ActionHandler;
 import org.apache.activemq.web.BrokerFacade;
 import org.apache.activemq.web.DestinationFacade;
 import org.slf4j.Logger;
@@ -29,7 +28,7 @@ import org.springframework.web.context.annotation.RequestScope;
 
 @Component
 @RequestScope
-public class DeleteJob extends DestinationFacade implements ActionHandler {
+public class DeleteJob extends DestinationFacade implements Controller {
     private String jobId;
     private static final Logger LOG = LoggerFactory.getLogger(DeleteJob.class);
 
