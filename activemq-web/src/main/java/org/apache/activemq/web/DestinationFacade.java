@@ -20,9 +20,6 @@ import org.apache.activemq.broker.jmx.BrokerViewMBean;
 import org.apache.activemq.broker.jmx.QueueViewMBean;
 import org.apache.activemq.command.ActiveMQDestination;
 
-/**
- *
- */
 public class DestinationFacade {
 
     private String jmsDestination;

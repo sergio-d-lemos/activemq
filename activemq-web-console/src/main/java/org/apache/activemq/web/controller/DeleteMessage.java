@@ -27,9 +27,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.annotation.RequestScope;
 
-/**
- * 
- */
 @Component
 @RequestScope
 public class DeleteMessage extends DestinationFacade implements Controller {

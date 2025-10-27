@@ -23,9 +23,7 @@ import org.apache.activemq.web.BrokerFacade;
 import org.apache.activemq.web.DestinationFacade;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.annotation.RequestScope;
-/**
- * 
- */
+
 @Component
 @RequestScope
 public class PurgeDestination extends DestinationFacade implements Controller {

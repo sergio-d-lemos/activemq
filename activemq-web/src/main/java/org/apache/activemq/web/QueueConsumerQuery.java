@@ -26,7 +26,7 @@ import org.springframework.web.context.annotation.RequestScope;
 
 /**
  * Query for Queue consumers.
- * 
+ *
  * 
  */
 @Component("queueConsumerQuery")

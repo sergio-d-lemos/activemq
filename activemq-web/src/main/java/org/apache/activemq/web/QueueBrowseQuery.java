@@ -27,10 +27,6 @@ import jakarta.jms.Queue;
 import jakarta.jms.QueueBrowser;
 import jakarta.jms.Session;
 
-/**
- *
- *
- */
 @Component("queueBrowser")
 @RequestScope
 public class QueueBrowseQuery extends DestinationFacade implements DisposableBean {

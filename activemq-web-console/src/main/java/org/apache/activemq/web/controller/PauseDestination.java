@@ -24,10 +24,6 @@ import org.springframework.web.context.annotation.RequestScope;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-/**
- *
- *
- */
 @Component
 @RequestScope
 public class PauseDestination extends DestinationFacade implements Controller {
