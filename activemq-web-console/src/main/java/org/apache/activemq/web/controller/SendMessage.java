@@ -55,7 +55,7 @@ public class SendMessage extends DestinationFacade implements Controller {
         ActiveMQDestination dest = createDestination();
 
         sendMessages(request, client, dest);
-        response.sendRedirect("queues.jsp");
+        response.sendRedirect(isQueue() ? "queues.jsp" : "topics.jsp");
     }
 
     protected void sendMessages(final HttpServletRequest request, final WebClient client, final ActiveMQDestination dest)

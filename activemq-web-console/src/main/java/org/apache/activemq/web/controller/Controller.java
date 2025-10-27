@@ -19,6 +19,9 @@ package org.apache.activemq.web.controller;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
+/**
+ * Controller implementations contain the logic responsible for handling an HTTP Request.
+ */
 public interface Controller {
     void handleRequest(HttpServletRequest request, HttpServletResponse response) throws Exception;
 }
