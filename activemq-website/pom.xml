@@ -24,8 +24,21 @@
         <configuration>
           <workingDirectory>website</workingDirectory>
           <nodeVersion>v22.16.0</nodeVersion>
+          <environmentVariables>
+            <CI>true</CI>
+          </environmentVariables>
         </configuration>
         <executions>
+          <execution>
+            <id>pnpm clear</id>
+            <goals>
+              <goal>pnpm</goal>
+            </goals>
+            <phase>clean</phase>
+            <configuration>
+              <arguments>run clear</arguments>
+            </configuration>
+          </execution>
           <execution>
             <id>install pnpm</id>
             <goals>
@@ -64,6 +77,27 @@
             <phase>none</phase>
             <configuration>
               <arguments>start</arguments>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <artifactId>maven-resources-plugin</artifactId>
+        <version>3.3.1</version>
+        <executions>
+          <execution>
+            <id>copy-website</id>
+            <phase>prepare-package</phase>
+            <goals>
+              <goal>copy-resources</goal>
+            </goals>
+            <configuration>
+              <outputDirectory>${project.build.directory}/website</outputDirectory>
+              <resources>
+                <resource>
+                  <directory>website/build</directory>
+                </resource>
+              </resources>
             </configuration>
           </execution>
         </executions>
