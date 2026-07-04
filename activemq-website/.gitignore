@@ -1,0 +1,7 @@
+website/.docusaurus
+website/.docusaurus/*
+website/node
+website/node/*
+website/node_modules
+website/node_modules/*
+website/build
