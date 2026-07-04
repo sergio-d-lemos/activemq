@@ -1,0 +1,29 @@
+import ClassicRelease from '@site/src/components/ClassicRelease';
+
+export default function Release() {
+  return (
+    <ClassicRelease
+      version="5.19.1"
+      releaseDate="2025-10-11"
+      javaVersion="11+"
+      releaseNotes="https://issues.apache.org/jira/secure/ReleaseNote.jspa?projectId=12311210&version=12355592"
+    >
+      <div dangerouslySetInnerHTML={{__html: `Apache ActiveMQ Classic 5.19.1 was released on 2025-10-11.
+
+This is a maintenance release on the 5.19.x series, including:
+- fix on the network of broker TTL management
+- fix expiration of persistent messages on durable subscriptions
+- fix maxMessageSize behavior changed for value -1 (since 5.19.0)
+- fix performance issues with non-persistent message removal from
+topic/durable subscriptions
+- fix FilePendingMessageCursor clear() method
+- fix Kahadb checkpoint runner thread dies without catching exception
+- fix backup only recovers one message
+- fix KahaDB error while recovering topics with no pending acks and
+TRACE logging enabled
+- several dependency updates
+
+You can find details on the [release notes](https://issues.apache.org/jira/secure/ReleaseNote.jspa?projectId=12311210&version=12355592).`}} />
+    </ClassicRelease>
+  );
+}

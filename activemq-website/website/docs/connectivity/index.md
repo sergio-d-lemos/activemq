@@ -1,0 +1,45 @@
+---
+title: "Connectivity"
+---
+
+
+Apache ActiveMQ Classic is designed to support a large number if [Cross Language Clients](cross-language-clients), speak a wide range of [Protocols](protocols) and be usable in a wide variety of [Containers](containers) in addition to being usable in a stand alone Java SE platform.
+
+*   [Ajax](ajax)
+*   [Containers](containers)
+    *   [Axis and CXF Support](containers/axis-and-cxf-support)
+    *   [BlazeDS](containers/blazeds)
+    *   [Geronimo](containers/geronimo)
+    *   [Integrating Apache ActiveMQ Classic with Glassfish](containers/integrating-apache-activemq-classic-with-glassfish)
+    *   [Integrating Apache ActiveMQ Classic with JBoss](containers/integrating-apache-activemq-classic-with-jboss)
+    *   [J2EE](containers/j2ee)
+    *   [JBoss Integration](containers/jboss-integration)
+    *   [JCA Container](containers/jca-container)
+    *   [JNDI Support](containers/jndi-support)
+    *   [Old OSGi Integration](containers/old-osgi-integration)
+    *   [OSGi Integration](containers/osgi-integration)
+    *   [Resource Adapter](containers/resource-adapter)
+    *   [SJSAS with GenericJMSRA](containers/sjsas-with-genericjmsra)
+    *   [Spring Support](containers/spring-support)
+    *   [Sun JNDI](containers/sun-jndi)
+    *   [Tomcat](containers/tomcat)
+    *   [WebLogic Integration](containers/weblogic-integration)
+    *   [zOS](containers/zos)
+*   [Cross Language Clients](cross-language-clients)
+    *   [ActiveMQ Classic C++ Clients](./cross-language-clients/activemq-c-clients)
+    *   [C Integration](cross-language-clients/c-integration)
+    *   [Delphi and FreePascal](cross-language-clients/delphi-and-freepascal)
+*   [JMS to JMS Bridge](jms-to-jms-bridge)
+*   [Protocols](protocols)
+    *   [AMQP](../amqp)
+    *   [AUTO](protocols/auto)
+    *   [MQTT](protocols/mqtt)
+    *   [OpenWire](protocols/openwire)
+    *   [REST](protocols/rest)
+    *   [RSS and Atom](protocols/rss-and-atom)
+    *   [Stomp](protocols/stomp)
+    *   [WSIF](protocols/wsif)
+    *   [WS Notification](protocols/ws-notification)
+    *   [XMPP](protocols/xmpp)
+*   [WebSockets](websockets)
+
