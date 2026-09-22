@@ -1,0 +1,151 @@
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+
+import React from 'react';
+import Layout from '@theme/Layout';
+import Link from '@docusaurus/Link';
+import TagsListInline from '@theme/TagsListInline';
+import type {Content} from '@theme/BlogPostPage';
+import type {Props as TagsListInlineProps} from '@theme/TagsListInline';
+import styles from './styles.module.css';
+
+const MONTHS = [
+  'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+  'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec',
+];
+
+function ordinal(day: number): string {
+  if (day % 100 >= 11 && day % 100 <= 13) {
+    return `${day}th`;
+  }
+  switch (day % 10) {
+    case 1: return `${day}st`;
+    case 2: return `${day}nd`;
+    case 3: return `${day}rd`;
+    default: return `${day}th`;
+  }
+}
+
+/** Formats a date the way the Jekyll `date_to_string: "ordinal", "US"` filter did. */
+export function formatNewsDate(date: Date | string): string {
+  // The blog plugin serializes `metadata.date` to an ISO string for the client.
+  const iso = typeof date === 'string' ? date : date.toISOString();
+  const [year, month, day] = iso.slice(0, 10).split('-').map(Number);
+  return `${MONTHS[month - 1]} ${ordinal(day)}, ${year}`;
+}
+
+export type Crumb = {
+  label: string;
+  /** Omitted for the current page, which is rendered as plain text. */
+  href?: string;
+};
+
+type NewsPageProps = {
+  title: string;
+  crumbs: Crumb[];
+  children: React.ReactNode;
+};
+
+/** The title band, breadcrumbs and container shared by every /news page. */
+export function NewsPage({title, crumbs, children}: NewsPageProps): JSX.Element {
+  return (
+    <Layout>
+      <header className={styles.newsBanner}>
+        <div className="container">
+          <h1>{title}</h1>
+        </div>
+      </header>
+      <main className="container margin-vert--lg">
+        <nav aria-label="Breadcrumbs">
+          <ul className="breadcrumbs">
+            {crumbs.map(({label, href}) => (
+              <li
+                key={label}
+                className={
+                  href
+                    ? 'breadcrumbs__item'
+                    : 'breadcrumbs__item breadcrumbs__item--active'
+                }>
+                {href ? (
+                  <Link className="breadcrumbs__link" to={href}>{label}</Link>
+                ) : (
+                  <span className="breadcrumbs__link">{label}</span>
+                )}
+              </li>
+            ))}
+          </ul>
+        </nav>
+        {children}
+      </main>
+    </Layout>
+  );
+}
+
+type NewsItemProps = {
+  title: string;
+  date: string;
+  description: string;
+  permalink: string;
+  tags: TagsListInlineProps['tags'];
+};
+
+function NewsItem({title, date, description, permalink, tags}: NewsItemProps): JSX.Element {
+  return (
+    <article className={styles.newsItem}>
+      <h3 className={styles.newsTitle}>{title}</h3>
+      <p className={styles.newsDate}>{date}</p>
+      {description && <p className={styles.newsSummary}>{description}</p>}
+      {/*
+        TagsListInline lays "Tags:" and the pills out as inline content so they
+        share a baseline; the wrapper must stay a plain block for that to hold.
+      */}
+      {tags.length > 0 && (
+        <div>
+          <TagsListInline tags={tags} />
+        </div>
+      )}
+      <Link to={permalink}>Read More</Link>
+    </article>
+  );
+}
+
+type NewsListProps = {
+  items: readonly {readonly content: Content}[];
+};
+
+/** A flat, reverse-chronological list of news entries. */
+export function NewsList({items}: NewsListProps): JSX.Element {
+  return (
+    <div className={styles.newsList}>
+      {items.map(({content}) => {
+        const {title, date, description, permalink, tags} = content.metadata;
+        return (
+          <NewsItem
+            key={permalink}
+            title={title}
+            date={formatNewsDate(date)}
+            description={description}
+            permalink={permalink}
+            tags={tags}
+          />
+        );
+      })}
+    </div>
+  );
+}

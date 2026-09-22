@@ -41,18 +41,6 @@ type ComponentCard = {
 
 const componentCards: ComponentCard[] = [
     {
-        title: 'Messaging for .NET',
-        subtitle: 'Simple Messaging API for .NET',
-        description: (
-            <>
-                The NMS API allows you to build .NET applications in C#, VB, or any other .NET
-                language, using a single API to connect to multiple different providers using a
-                JMS style API.
-            </>
-        ),
-        moreUrl: '/components/nms/documentation/nms-api',
-    },
-    {
         title: 'Apache.NMS.AMQP',
         subtitle: 'AMQP 1.0 the ISO and OASIS Standard Messaging Protocol',
         description: (
@@ -158,13 +146,11 @@ export default function NmsHome(): JSX.Element {
             <main>
                 <section className={styles.description}>
                     <div className="container">
+                        <h3>Simple Messaging API for .NET</h3>
                         <p>
-                            The NMS API is a .NET Messaging API, allowing you to build .NET applications
-                            in C#, VB, or any other .NET language, using a single API to connect to
-                            multiple different providers using a JMS style API. NMS API currently supports
-                            all of the features of JMS in a simple pure .NET API, with provider
-                            implementations for <strong>AMQP 1.0</strong>, ActiveMQ's native
-                            <strong> OpenWire</strong> protocol and <strong>STOMP</strong>.
+                            The NMS API allows you to build .NET applications in C#, VB, or any other .NET
+                            language, using a single API to connect to multiple different providers using a
+                            JMS style API.
                         </p>
                     </div>
                 </section>

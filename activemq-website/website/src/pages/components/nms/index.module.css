@@ -59,6 +59,11 @@
   margin: 0;
 }
 
+.description h3 {
+  color: var(--activemq-orange);
+  margin-bottom: 0.25rem;
+}
+
 .component {
   padding: 0.5rem 0;
 }

@@ -54,9 +54,13 @@ const config: Config = {
         },
         blog: {
           routeBasePath: 'news',
+          blogTitle: 'News',
+          blogDescription: 'The latest Apache ActiveMQ releases, CVEs, and announcements',
           blogSidebarTitle: 'News',
           blogSidebarCount: 'ALL',
           showReadingTime: false,
+          // The swizzled BlogListPage renders a single flat list with no paginator.
+          postsPerPage: 'ALL',
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -73,6 +77,16 @@ const config: Config = {
         path: 'nms-docs',
         routeBasePath: 'components/nms/documentation',
         sidebarPath: './nms-docs/sidebars.ts',
+        editUrl: 'https://github.com/apache/activemq-website/tree/main/',
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'cms',
+        path: 'cms-docs',
+        routeBasePath: 'components/cms/documentation',
+        sidebarPath: './cms-docs/sidebars.ts',
         editUrl: 'https://github.com/apache/activemq-website/tree/main/',
       },
     ],
