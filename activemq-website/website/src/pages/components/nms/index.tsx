@@ -1,0 +1,204 @@
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+
+import clsx from 'clsx';
+import Layout from '@theme/Layout';
+import Link from '@docusaurus/Link';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faDownload, faInfoCircle, faBook} from '@fortawesome/free-solid-svg-icons';
+import styles from './index.module.css';
+import {
+    currentReleases,
+    formatReleaseDate,
+    nmsAmqpCurrentPrefixes,
+    nmsAmqpReleases,
+    nmsApiCurrentPrefixes,
+    nmsApiReleases,
+} from '@site/src/data/nmsReleases';
+
+type ComponentCard = {
+    title: string;
+    subtitle: string;
+    description: JSX.Element;
+    downloadUrl?: string;
+    moreUrl: string;
+    docsUrl: string;
+};
+
+const componentCards: ComponentCard[] = [
+    {
+        title: 'Messaging for .NET',
+        subtitle: 'Simple Messaging API for .NET',
+        description: (
+            <>
+                The NMS API allows you to build .NET applications in C#, VB, or any other .NET
+                language, using a single API to connect to multiple different providers using a
+                JMS style API.
+            </>
+        ),
+        downloadUrl: '/components/nms/nms-api-downloads',
+        moreUrl: '/components/nms/documentation/nms-api',
+        docsUrl: '/components/nms/documentation',
+    },
+    {
+        title: 'Apache.NMS.AMQP',
+        subtitle: 'AMQP 1.0 the ISO and OASIS Standard Messaging Protocol',
+        description: (
+            <>
+                Apache.NMS.AMQP provides AMQP 1.0 connectivity with .NET Standard 2.0 support,
+                enabling connectivity to ActiveMQ 5.x, ActiveMQ Artemis and any other AMQP 1.0
+                compatible broker.
+            </>
+        ),
+        downloadUrl: '/components/nms/providers/amqp/downloads',
+        moreUrl: '/components/nms/documentation/providers/amqp',
+        docsUrl: '/components/nms/documentation/providers/amqp',
+    },
+    {
+        title: 'Apache.NMS.ActiveMQ',
+        subtitle: "ActiveMQ 5.x's native OpenWire protocol",
+        description: (
+            <>
+                Apache.NMS.ActiveMQ provides OpenWire connectivity using ActiveMQ's native
+                protocol, with .NET Framework support.
+            </>
+        ),
+        downloadUrl: '/components/nms/providers/activemq/downloads',
+        moreUrl: '/components/nms/documentation/providers/activemq',
+        docsUrl: '/components/nms/documentation/providers/activemq',
+    },
+];
+
+type LatestRelease = {
+    title: string;
+    shortDescription?: string;
+    releaseDate: string;
+    url: string;
+};
+
+const apiRelease = currentReleases(nmsApiReleases, nmsApiCurrentPrefixes)[0];
+const amqpRelease = currentReleases(nmsAmqpReleases, nmsAmqpCurrentPrefixes)[0];
+
+const latestReleases: LatestRelease[] = [
+    {
+        title: `Apache.NMS ${apiRelease.version} Release`,
+        shortDescription: apiRelease.shortDescription,
+        releaseDate: formatReleaseDate(apiRelease.releaseDate),
+        url: '/components/nms/nms-api-downloads',
+    },
+    {
+        title: `Apache.NMS.AMQP ${amqpRelease.version} Release`,
+        shortDescription: amqpRelease.shortDescription,
+        releaseDate: formatReleaseDate(amqpRelease.releaseDate),
+        url: `/components/nms/providers/amqp/downloads/${amqpRelease.slug}`,
+    },
+];
+
+function ComponentSection({title, subtitle, description, downloadUrl, moreUrl, docsUrl}: ComponentCard) {
+    return (
+        <section className={styles.component}>
+            <div className="container">
+                <div className={styles.componentCard}>
+                    <h3>{title}</h3>
+                    <h4>{subtitle}</h4>
+                    <p>{description}</p>
+                    <div className={styles.componentButtons}>
+                        {downloadUrl && (
+                            <Link className={clsx('button button--secondary button--md', styles.decoratedButtons, styles.downloadButton)} to={downloadUrl}>
+                                Download Latest <FontAwesomeIcon icon={faDownload} />
+                            </Link>
+                        )}
+                        <Link className={clsx('button button--secondary button--md', styles.decoratedButtons)} to={moreUrl}>
+                            Find out more <FontAwesomeIcon icon={faInfoCircle} />
+                        </Link>
+                        <Link className={clsx('button button--secondary button--md', styles.decoratedButtons)} to={docsUrl}>
+                            Read the Docs <FontAwesomeIcon icon={faBook} />
+                        </Link>
+                    </div>
+                </div>
+            </div>
+        </section>
+    );
+}
+
+function ReleaseCard({title, shortDescription, releaseDate, url}: LatestRelease) {
+    return (
+        <div className={styles.releaseCard}>
+            <h6><Link to={url}>{title}</Link></h6>
+            <p>{shortDescription} <Link to={url}>...more</Link></p>
+            <p className={styles.releaseDate}>{releaseDate}</p>
+        </div>
+    );
+}
+
+export default function NmsHome(): JSX.Element {
+    return (
+        <Layout title="NMS Clients" description=".NET Messaging API">
+            <header className={clsx('hero', styles.heroBanner)}>
+                <div className="container">
+                    <div className={styles.heroContent}>
+                        <div className={styles.heroText}>
+                            <h1 className="hero__title">NMS Clients</h1>
+                            <p className={styles.heroTagline}>.NET Messaging API</p>
+                            <div className={styles.componentButtons}>
+                                <Link className="button button--secondary button--md" to="/components/nms/download">
+                                    Download <FontAwesomeIcon icon={faDownload} />
+                                </Link>
+                                <Link className="button button--secondary button--md" to="/components/nms/documentation">
+                                    Read the Docs <FontAwesomeIcon icon={faBook} />
+                                </Link>
+                            </div>
+                        </div>
+                        <div className={styles.heroLogo}>
+                            <img src="/img/activemq_logo_white_vertical.png" alt="Apache ActiveMQ" />
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <main>
+                <section className={styles.description}>
+                    <div className="container">
+                        <p>
+                            The NMS API is a .NET Messaging API, allowing you to build .NET applications
+                            in C#, VB, or any other .NET language, using a single API to connect to
+                            multiple different providers using a JMS style API. NMS API currently supports
+                            all of the features of JMS in a simple pure .NET API, with provider
+                            implementations for <strong>AMQP 1.0</strong>, ActiveMQ's native
+                            <strong> OpenWire</strong> protocol and <strong>STOMP</strong>.
+                        </p>
+                    </div>
+                </section>
+
+                <section className={styles.latestReleases}>
+                    <div className="container">
+                        <div className={styles.releaseCards}>
+                            {latestReleases.map((props, idx) => (
+                                <ReleaseCard key={idx} {...props} />
+                            ))}
+                        </div>
+                    </div>
+                </section>
+
+                {componentCards.map((props, idx) => (
+                    <ComponentSection key={idx} {...props} />
+                ))}
+            </main>
+        </Layout>
+    );
+}
