@@ -82,11 +82,6 @@
   color: var(--ifm-color-emphasis-700);
 }
 
-.downloadButton {
-  background-color: var(--activemq-orange);
-  color: white !important;
-}
-
 .componentButtons {
   display: flex;
   gap: 1rem;

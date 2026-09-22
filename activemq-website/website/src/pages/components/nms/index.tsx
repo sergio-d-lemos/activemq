@@ -36,9 +36,7 @@ type ComponentCard = {
     title: string;
     subtitle: string;
     description: JSX.Element;
-    downloadUrl?: string;
     moreUrl: string;
-    docsUrl: string;
 };
 
 const componentCards: ComponentCard[] = [
@@ -52,9 +50,7 @@ const componentCards: ComponentCard[] = [
                 JMS style API.
             </>
         ),
-        downloadUrl: '/components/nms/nms-api-downloads',
         moreUrl: '/components/nms/documentation/nms-api',
-        docsUrl: '/components/nms/documentation',
     },
     {
         title: 'Apache.NMS.AMQP',
@@ -66,9 +62,7 @@ const componentCards: ComponentCard[] = [
                 compatible broker.
             </>
         ),
-        downloadUrl: '/components/nms/providers/amqp/downloads',
         moreUrl: '/components/nms/documentation/providers/amqp',
-        docsUrl: '/components/nms/documentation/providers/amqp',
     },
     {
         title: 'Apache.NMS.ActiveMQ',
@@ -79,9 +73,7 @@ const componentCards: ComponentCard[] = [
                 protocol, with .NET Framework support.
             </>
         ),
-        downloadUrl: '/components/nms/providers/activemq/downloads',
         moreUrl: '/components/nms/documentation/providers/activemq',
-        docsUrl: '/components/nms/documentation/providers/activemq',
     },
 ];
 
@@ -110,7 +102,7 @@ const latestReleases: LatestRelease[] = [
     },
 ];
 
-function ComponentSection({title, subtitle, description, downloadUrl, moreUrl, docsUrl}: ComponentCard) {
+function ComponentSection({title, subtitle, description, moreUrl}: ComponentCard) {
     return (
         <section className={styles.component}>
             <div className="container">
@@ -119,16 +111,8 @@ function ComponentSection({title, subtitle, description, downloadUrl, moreUrl, d
                     <h4>{subtitle}</h4>
                     <p>{description}</p>
                     <div className={styles.componentButtons}>
-                        {downloadUrl && (
-                            <Link className={clsx('button button--secondary button--md', styles.decoratedButtons, styles.downloadButton)} to={downloadUrl}>
-                                Download Latest <FontAwesomeIcon icon={faDownload} />
-                            </Link>
-                        )}
                         <Link className={clsx('button button--secondary button--md', styles.decoratedButtons)} to={moreUrl}>
                             Find out more <FontAwesomeIcon icon={faInfoCircle} />
-                        </Link>
-                        <Link className={clsx('button button--secondary button--md', styles.decoratedButtons)} to={docsUrl}>
-                            Read the Docs <FontAwesomeIcon icon={faBook} />
                         </Link>
                     </div>
                 </div>
