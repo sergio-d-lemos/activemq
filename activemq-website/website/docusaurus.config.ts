@@ -33,7 +33,8 @@ const config: Config = {
   onBrokenMarkdownLinks: 'warn',
 
   markdown: {
-    format: 'md',
+    // .md files are plain CommonMark, .mdx files may use JSX and imports.
+    format: 'detect',
   },
 
   i18n: {
@@ -61,6 +62,19 @@ const config: Config = {
           customCss: './src/css/custom.css',
         },
       } satisfies Preset.Options,
+    ],
+  ],
+
+  plugins: [
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'nms',
+        path: 'nms-docs',
+        routeBasePath: 'components/nms/documentation',
+        sidebarPath: './nms-docs/sidebars.ts',
+        editUrl: 'https://github.com/apache/activemq-website/tree/main/',
+      },
     ],
   ],
 

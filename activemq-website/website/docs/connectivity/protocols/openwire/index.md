@@ -5,7 +5,7 @@ title: "OpenWire"
 
 OpenWire is our cross language [Wire Protocol](../../../developers/wire-protocol) to allow native access to ActiveMQ Classic from a number of different languages and platforms. The Java OpenWire transport is the default transport in ActiveMQ Classic 4.x or later. For other languages see the following...
 
-*   [NMS](components/nms/) for the C# API to Messaging and the OpenWire implementation in C#
+*   [NMS](/components/nms) for the C# API to Messaging and the OpenWire implementation in C#
 *   [CMS](../../cross-language-clients/cms) for the C++ API to Messaging and the OpenWire implementation in C++
 
 **Note** that you can also use [Stomp](../stomp) to access ActiveMQ Classic from many different languages as well as use [GCJ](../../../overview/faq/using-apache-activemq-classic/how-do-i-access-activemq-classic-from-c) or [IKVM](http://activemq.apache.org/nms/) to access the Java code for ActiveMQ Classic from C/C++ or .Net respectively without using OpenWire.
