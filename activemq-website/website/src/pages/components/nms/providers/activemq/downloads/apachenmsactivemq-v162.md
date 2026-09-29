@@ -16,7 +16,7 @@ This release addresses some issue in the DTC support and a fix for long delays w
 API Documentation
 -----------------
 
-Refer to the API for this release [here](/components/nms/documentation/nms-api)
+Refer to the API for this release [here](/components/nms/nms-api)
 
 Download Here
 -------------

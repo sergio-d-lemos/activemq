@@ -1,5 +1,6 @@
 ---
 title: "How does JMS compare with email"
+slug: /how-does-jms-compare-with-email
 ---
 
  [FAQ](..) > [JMS](.) > [How does JMS compare with email](how-does-jms-compare-with-email)

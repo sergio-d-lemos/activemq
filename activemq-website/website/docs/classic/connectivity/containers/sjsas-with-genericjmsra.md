@@ -1,5 +1,6 @@
 ---
 title: "SJSAS with GenericJMSRA"
+slug: /sjsas-with-genericjmsra
 ---
 
 

@@ -1,5 +1,6 @@
 ---
 title: "How do I find the Size of a Queue"
+slug: /how-do-i-find-the-size-of-a-queue
 ---
 
  [FAQ](..) > [Using Apache ActiveMQ Classic](.) > [How do I find the Size of a Queue](how-do-i-find-the-size-of-a-queue)

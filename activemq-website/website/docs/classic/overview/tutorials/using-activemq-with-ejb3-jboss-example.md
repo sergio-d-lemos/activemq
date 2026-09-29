@@ -1,5 +1,6 @@
 ---
 title: "Using ActiveMQ Classic with EJB3 (JBoss Example)"
+slug: /using-activemq-with-ejb3-jboss-example
 ---
 
   

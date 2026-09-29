@@ -1,5 +1,6 @@
 ---
 title: "ActiveMQ Classic Message Properties"
+slug: /activemq-classic-message-properties
 ---
 
 
@@ -19,7 +20,7 @@ Property Name|Type|Default Value|Description
 `JMSTimestamp`|`long`|_Time the message was sent_|Time in milliseconds.
 `JMSCorrelationID`|`String`|`null`|User defined.
 `JMSExpiration`|`long`|`0`|Time in milliseconds to expire the message. A value of `0` means never expire.
-`JMSRedelivered`|`boolean`|`false`|`true` if the message is being resent to the consumer, persisted via [persistJMSRedelivered](../destination-features/per-destination-policies)
+`JMSRedelivered`|`boolean`|`false`|`true` if the message is being resent to the consumer, persisted via [persistJMSRedelivered](per-destination-policies)
 
 JMS Defined:
 ------------

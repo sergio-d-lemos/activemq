@@ -1,5 +1,6 @@
 ---
 title: "How to deal with large number of threads in clients"
+slug: /how-to-deal-with-large-number-of-threads-in-clients
 ---
 
  [FAQ](..) > [Using Apache ActiveMQ Classic](.) > [How to deal with large number of threads in clients](how-to-deal-with-large-number-of-threads-in-clients)

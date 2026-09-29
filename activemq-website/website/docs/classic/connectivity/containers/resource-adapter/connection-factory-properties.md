@@ -1,5 +1,6 @@
 ---
 title: "Connection Factory Properties"
+slug: /connection-factory-properties
 ---
 
 

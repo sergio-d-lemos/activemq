@@ -1,5 +1,6 @@
 ---
 title: "How do I set the message expiration"
+slug: /how-do-i-set-the-message-expiration
 ---
 
  [FAQ](..) > [Using Apache ActiveMQ Classic](.) > [How do I set the message expiration](how-do-i-set-the-message-expiration)

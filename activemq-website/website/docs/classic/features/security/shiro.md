@@ -1,5 +1,6 @@
 ---
 title: "Shiro"
+slug: /shiro
 ---
 
 

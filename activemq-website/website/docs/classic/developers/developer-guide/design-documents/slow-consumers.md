@@ -1,5 +1,6 @@
 ---
 title: "Slow Consumers"
+slug: /slow-consumers
 ---
 
 

@@ -1,5 +1,6 @@
 ---
 title: "JmsTemplate Gotchas"
+slug: /jmstemplate-gotchas
 ---
 
 
@@ -9,7 +10,7 @@ The thing to remember is JmsTemplate is designed for use in EJBs using the EJB c
 > 
 > We had a bug once in ActiveMQ Classic where if you created 65535 MessageProducer instances within the space of a few seconds, we'd get an exception thrown in the broker. Its a kinda silly thing to do, to create that many producers in a small space of time (one for each message to be sent) - JMS is designed for resources like producers and consumers to be created up front and reused across many message exchanges. The bug was highlighted by a user using JmsTemplate without a JMS pool underneath. Well at least it helped find our bug which I'm glad to say is now fixed, but it didn't help their performance too much.
 
-You should only use JmsTemplate with a pooled JMS provider. In J2EE 1.4 or later that typically means a JCA based JMS ConnectionFactory. If you are in an EJB then make sure you use your J2EE containers ConnectionFactory, never a plain-old-connection factory. If you are not inside an EJB Then you should use our [PooledConnectionFactory](http://activemq.apache.org/maven/activemq-core/apidocs/org/apache/activemq/pool/PooledConnectionFactory.html), then things will be nicely pooled. If you need to take part in XA transactions then look into our spring based [JCA Container](../jca-container).
+You should only use JmsTemplate with a pooled JMS provider. In J2EE 1.4 or later that typically means a JCA based JMS ConnectionFactory. If you are in an EJB then make sure you use your J2EE containers ConnectionFactory, never a plain-old-connection factory. If you are not inside an EJB Then you should use our [PooledConnectionFactory](http://activemq.apache.org/maven/activemq-core/apidocs/org/apache/activemq/pool/PooledConnectionFactory.html), then things will be nicely pooled. If you need to take part in XA transactions then look into our spring based [JCA Container](jca-container).
 
 Another gotcha I've seen folks do is to create a MessageConsumer inside one of the SessionCallback methods then wonder why messages are not being received. After the SessionCallback is called, the session will be closed; which will close your consumers too. So if you want to create a MessageConsumer you should create a connection, session and consumer yourself.
 
@@ -17,7 +18,7 @@ Another problem I've seen is folks using the JmsTemplate.receive() method; as I'
 
 > New in 4.x
 > 
-> In ActiveMQ Classic [4.x](../../../overview/new-features/changes-in-40) we have a new feature called [Subscription Recovery Policy](../../../features/consumer-features/subscription-recovery-policy) which even in non-durable delivery mode allows a new consumer to go back in time and receive messages delivered within a window (a fixed amount of RAM or time window). e.g. if your broker dies you have 2 minutes to reconnect to another broker and not miss any messages - even without durable delivery.
+> In ActiveMQ Classic [4.x](changes-in-40) we have a new feature called [Subscription Recovery Policy](subscription-recovery-policy) which even in non-durable delivery mode allows a new consumer to go back in time and receive messages delivered within a window (a fixed amount of RAM or time window). e.g. if your broker dies you have 2 minutes to reconnect to another broker and not miss any messages - even without durable delivery.
 
 ### Recommendations for using JmsTemplate
 

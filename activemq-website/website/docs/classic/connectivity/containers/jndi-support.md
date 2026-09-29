@@ -1,5 +1,6 @@
 ---
 title: "JNDI Support"
+slug: /jndi-support
 ---
 
 
@@ -25,7 +26,7 @@ queue.MyQueue = example.MyQueue
 # topic.[jndiName] = [physicalName]
 topic.MyTopic = example.MyTopic
 ```
-You can edit the `jndi.properties` file to configure the `ActiveMQConnectionFactory`'s properties such as `brokerURL` and whether or not there should be an embedded broker etc. See [how to embed a broker in a connection](../../overview/faq/using-apache-activemq-classic/how-do-i-embed-a-broker-inside-a-connection) for more details.
+You can edit the `jndi.properties` file to configure the `ActiveMQConnectionFactory`'s properties such as `brokerURL` and whether or not there should be an embedded broker etc. See [how to embed a broker in a connection](how-do-i-embed-a-broker-inside-a-connection) for more details.
 
 ### ActiveMQ Classic JNDI Tutorial
 
@@ -86,9 +87,9 @@ you will get back an `ActiveMQQueue` of the name `FOO.BAR`. This can be very ha
 
 ### Working With Embedded Brokers
 
-It is often useful to use an embedded broker in the same JVM as the JMS client. For this see [How do I embed a Broker inside a Connection](../../overview/faq/using-apache-activemq-classic/how-do-i-embed-a-broker-inside-a-connection).
+It is often useful to use an embedded broker in the same JVM as the JMS client. For this see [How do I embed a Broker inside a Connection](how-do-i-embed-a-broker-inside-a-connection).
 
-If you want to use an embedded broker with your JNDI provider you can just use the [VM Transport](../../using-activemq-classic/configuring-transports/activemq-classic-connection-uris/vm-transport-reference) to connect to the broker in your URL. e.g. to create a purely in JVM broker use this URI
+If you want to use an embedded broker with your JNDI provider you can just use the [VM Transport](vm-transport-reference) to connect to the broker in your URL. e.g. to create a purely in JVM broker use this URI
 ```
 vm://locahost
 ```
@@ -96,7 +97,7 @@ If you want to customize the broker use something like this:
 ```
 vm:broker:(tcp://localhost:61616)
 ```
-More options are available in the [VM Transport Reference](../../using-activemq-classic/configuring-transports/activemq-classic-connection-uris/vm-transport-reference)
+More options are available in the [VM Transport Reference](vm-transport-reference)
 
 ### Example Java Code
 

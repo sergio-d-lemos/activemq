@@ -1,5 +1,6 @@
 ---
 title: "Geronimo"
+slug: /geronimo
 ---
 
 

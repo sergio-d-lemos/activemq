@@ -1,5 +1,6 @@
 ---
 title: "How to deploy activemq-ra-version.rar to weblogic"
+slug: /how-to-deploy-activemq-ra-versionrar-to-weblogic
 ---
 
  [FAQ](..) > [Configuration](.) > [How to deploy activemq-ra-version.rar to weblogic](how-to-deploy-activemq-ra-versionrar-to-weblogic)

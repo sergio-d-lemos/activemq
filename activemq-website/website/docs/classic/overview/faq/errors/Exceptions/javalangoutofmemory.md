@@ -1,5 +1,6 @@
 ---
 title: "java.lang.OutOfMemory"
+slug: /javalangoutofmemory
 ---
 
  [FAQ](../..) > [Errors](..) > [Exceptions](.) > [java.lang.OutOfMemory](javalangoutofmemory)
@@ -22,26 +23,26 @@ If you are running an embedded broker or in a third party container, ensure that
 
 ##### Broker Memory
 
-The memory that the broker is allowed to use is not determined by the amount of memory allocated to the JVM. Although the broker is constrained by the amount of memory given to the JVM, the broker manages its memory independently. That is, the broker does not just simply use up all of the memory in the JVM and then die with an OutOfMemory exception. This is where you need to understand the [systemUsage](../../../../features/message-dispatching-features/producer-flow-control) memory limit and the per destination memory limit.
+The memory that the broker is allowed to use is not determined by the amount of memory allocated to the JVM. Although the broker is constrained by the amount of memory given to the JVM, the broker manages its memory independently. That is, the broker does not just simply use up all of the memory in the JVM and then die with an OutOfMemory exception. This is where you need to understand the [systemUsage](producer-flow-control) memory limit and the per destination memory limit.
 
 The memory in ActiveMQ Classic works in a tiered fashion that flows from the JVM -> Broker -> broker features. E.g., the total amount of destination memory limits placed cannot exceed the memory limit of the broker.
 
 #### Consumer
 
-Along with message size, the [prefetch limit](../../../../features/what-is-the-prefetch-limit-for) is main reason a consumer will [run out of memory](../../../../features/what-is-the-prefetch-limit-for). Reducing the prefetch value will reduce the amount of messages queued/stored in memory on the Consumer.
+Along with message size, the [prefetch limit](what-is-the-prefetch-limit-for) is main reason a consumer will [run out of memory](what-is-the-prefetch-limit-for). Reducing the prefetch value will reduce the amount of messages queued/stored in memory on the Consumer.
 
 #### Producer
 
-Unless message size exceeds resource limits, a producer should not run out of memory. A producer may notice the effect of memory limit enforcement by the broker in the form of [blocking](../my-producer-blocks).
+Unless message size exceeds resource limits, a producer should not run out of memory. A producer may notice the effect of memory limit enforcement by the broker in the form of [blocking](my-producer-blocks).
 
 #### Other
 
 ##### Spooling Messages to Disk
 
 Fast dispatch of messages is only possible when messages are stored in memory. When consumers are slow or absent, memory can quickly become exhausted.  
-The Broker (using [Message Cursors](../../../../features/message-dispatching-features/message-cursors)) will spool non-persistent messages to disk when the default memory usage threshold for a destination is reached. This threshold value is specified to the Broker via the <memoryUsage> section of the <systemUsage> configuration in [activemq.xml](../../../../using-activemq-classic/xml-configuration). This feature allows producers to continue sending messages when there are slow consumers without exhausting available memory or reverting to [producer flow control](../../../../features/message-dispatching-features/producer-flow-control). In the case of multiple destinations, the combined default memory thresholds may be excessive and they may exceed available memory. In such a case it may make sense to reduce the memory usage 'limit' threshold at which messages are spooled to disk. An alternative option is to configure the 'precentUsage' rather than the absolute usage 'limit'. In this way, memory usage can be confined to a fixed percentage of available memory.
+The Broker (using [Message Cursors](message-cursors)) will spool non-persistent messages to disk when the default memory usage threshold for a destination is reached. This threshold value is specified to the Broker via the <memoryUsage> section of the <systemUsage> configuration in [activemq.xml](xml-configuration). This feature allows producers to continue sending messages when there are slow consumers without exhausting available memory or reverting to [producer flow control](producer-flow-control). In the case of multiple destinations, the combined default memory thresholds may be excessive and they may exceed available memory. In such a case it may make sense to reduce the memory usage 'limit' threshold at which messages are spooled to disk. An alternative option is to configure the 'precentUsage' rather than the absolute usage 'limit'. In this way, memory usage can be confined to a fixed percentage of available memory.
 
-More specific per destination memoryUsage limits can be specified in [activemq.xml](../../../../using-activemq-classic/xml-configuration) using [Per Destination Policies](../../../../features/destination-features/per-destination-policies). Some further examples of <destinationPolicy> map entries can be found in the [Message Cursors](../../../../features/message-dispatching-features/message-cursors) reference.
+More specific per destination memoryUsage limits can be specified in [activemq.xml](xml-configuration) using [Per Destination Policies](per-destination-policies). Some further examples of <destinationPolicy> map entries can be found in the [Message Cursors](message-cursors) reference.
 
 ##### Number of Threads
 
@@ -49,7 +50,7 @@ By default, ActiveMQ Classic uses a dedicated thread per destination. If there a
 
 ##### Really Large Messages
 
-When your message are really large such that you can only allow a few messages in memory at at time, the [Per Destination Policies](../../../../features/destination-features/per-destination-policies) maxPageSize and lazyDispatch can help. maxPageSize controls the amount of messages that are paged into memory for dispatch while lazyDispatch augments that value using the prefetch capacity of the current consumer list. With a prefetch of 1, a single consumer and lazyDispatch, only one message at a time would be loaded into memory at a time.
+When your message are really large such that you can only allow a few messages in memory at at time, the [Per Destination Policies](per-destination-policies) maxPageSize and lazyDispatch can help. maxPageSize controls the amount of messages that are paged into memory for dispatch while lazyDispatch augments that value using the prefetch capacity of the current consumer list. With a prefetch of 1, a single consumer and lazyDispatch, only one message at a time would be loaded into memory at a time.
 
 ##### Leaking JMS resources
 
@@ -64,5 +65,5 @@ try
     releaseJmsResource(); 
 } 
 ```
-If you are using ActiveMQ Classic via [Spring Support](../../../../connectivity/containers/spring-support) or with JMSTemplates, be sure to check you are not falling for any of the [JmsTemplate Gotchas](../../../../connectivity/containers/spring-support/jmstemplate-gotchas). It may also be worth recapping on [How do I use JMS efficiently](../../jms/how-do-i-use-jms-efficiently).
+If you are using ActiveMQ Classic via [Spring Support](spring-support) or with JMSTemplates, be sure to check you are not falling for any of the [JmsTemplate Gotchas](jmstemplate-gotchas). It may also be worth recapping on [How do I use JMS efficiently](how-do-i-use-jms-efficiently).
 

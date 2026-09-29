@@ -1,11 +1,12 @@
 ---
 title: "Apollo 1.7.1 Management API"
+slug: /management-api
 ---
 
         /\* <![CDATA[ */ table.reference tr th { text-align:left; } tr.even { background-color: #eee; } table.reference tr td { text-align:left; padding: .4em; vertical-align:top; font-size:90%; } table.reference tr td p { margin: 0 0 .5em 0; } td.methods { font-weight:bold; } /* ]]> */  
 
 *   [Apollo 1.7.1](index.html)
-*   [Developers](../../developers)
+*   [Developers](developers)
 *   [Community](Community/index.html)
 *   [Download](../../overview/download)
 

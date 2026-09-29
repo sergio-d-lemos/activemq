@@ -1,12 +1,13 @@
 ---
 title: "Xml Configuration"
+slug: /xml-configuration
 ---
 
 We support an XML deployment descriptor for configuring the ActiveMQ Classic Message Broker. There are many things which can be configured such as
 
-*   [transport connectors](../using-activemq-classic-5/configuring-version-5-transports) which consist of transport channels and wire formats
-*   [network connectors](../features/clustering/networks-of-brokers) using network channels or discovery agents
-*   [persistence providers](../features/persistence) & locations
+*   [transport connectors](configuring-version-5-transports) which consist of transport channels and wire formats
+*   [network connectors](networks-of-brokers) using network channels or discovery agents
+*   [persistence providers](persistence) & locations
 *   custom message containers (such as last image caching etc)
 
 So we decided that using XML would make this configuration much easier. From version 4.0 onwards we use [XBean](https://geronimo.apache.org/xbean/) to perform the XML configuration.
@@ -203,7 +204,7 @@ java org.apache.activemq.broker.Main xbean:file:src/release/conf/activemq.xml
 Configuring embedded brokers
 ----------------------------
 
-You can also use the XML Configuration to configure [embedded brokers](../overview/faq/using-apache-activemq-classic/how-do-i-embed-a-broker-inside-a-connection). For example using the JNDI configuration mechanism you can do the following  
+You can also use the XML Configuration to configure [embedded brokers](how-do-i-embed-a-broker-inside-a-connection). For example using the JNDI configuration mechanism you can do the following  
 [BrokerXmlConfigFromJNDITest](http://svn.apache.org/repos/asf/activemq/trunk/activemq-unit-tests/src/test/java/org/apache/activemq/config/BrokerXmlConfigFromJNDITest.java)  
 Or of you want to explicitly configure the embedded broker via Java code you can do the following  
 [BrokerXmlConfigStartTest](https://github.com/apache/activemq/tree/main/assembly/src/test/java/org/apache/activemq/config/BrokerXmlConfigStartTest.java)

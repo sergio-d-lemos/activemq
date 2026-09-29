@@ -1,5 +1,6 @@
 ---
 title: "XMPP"
+slug: /xmpp
 ---
 
 
@@ -32,7 +33,7 @@ ActiveMQ Classic provides a bidirectional bridge between ActiveMQ Classic messag
 
 *   if a client joins a chatroom / conference room, the name of the conference room is mapped to a JMS topic of the same name
 *   typing into a chatroom sends a message to the topic
-*   presence in a chatroom maintains a subscription on the JMS topic (using noLocal to avoid getting copies of things you say) so that messages sent by other clients (via [XMPP](xmpp), the [Web Console](../../tools/web-console), the [Examples](../../using-activemq-classic/examples) or any other [Cross Language Clients](../cross-language-clients)) are then sent to the chatroom.
+*   presence in a chatroom maintains a subscription on the JMS topic (using noLocal to avoid getting copies of things you say) so that messages sent by other clients (via [XMPP](xmpp), the [Web Console](web-console), the [Examples](examples) or any other [Cross Language Clients](cross-language-clients)) are then sent to the chatroom.
 
 ### Using a Jabber Client
 
@@ -40,7 +41,7 @@ Basically, you should be able to connect from any Jabber-compatible client to th
 
 To connect to Apache ActiveMQ Classic try the following...
 
-1. Run the [Web Console](../../tools/web-console)  
+1. Run the [Web Console](web-console)  
 2. Start [Spark](http://jivesoftware.com/products/spark/) or whatever Jabber Client you wish  
 3. Login to localhost:61222
 
@@ -98,5 +99,5 @@ Tested version 4.0.7 works fine, but it insists you use _username@host_ format f
 #### Adium
 
 Url: [http://www.adiumx.com/](http://www.adiumx.com/)  
-Tested version 1.3.3 works fine. The only spotted issue is reconnecting to [Command Agent](../../features/command-agent) topic. We recommend that you restart the Adium if you need to do this
+Tested version 1.3.3 works fine. The only spotted issue is reconnecting to [Command Agent](command-agent) topic. We recommend that you restart the Adium if you need to do this
 

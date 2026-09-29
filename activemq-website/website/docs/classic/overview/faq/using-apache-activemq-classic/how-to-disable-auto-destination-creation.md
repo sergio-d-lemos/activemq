@@ -1,5 +1,6 @@
 ---
 title: "How to disable auto destination creation"
+slug: /how-to-disable-auto-destination-creation
 ---
 
  [FAQ](..) > [Using Apache ActiveMQ Classic](.) > [How to disable auto destination creation](how-to-disable-auto-destination-creation)

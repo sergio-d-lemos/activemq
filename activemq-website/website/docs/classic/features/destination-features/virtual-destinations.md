@@ -1,5 +1,6 @@
 ---
 title: "Virtual Destinations"
+slug: /virtual-destinations
 ---
 
 _Virtual Destinations_ allow us to create logical destinations that clients can use to produce and consume from but which map onto one or more _physical destinations_. It allows us to provide more flexible loosely coupled messaging configurations.
@@ -16,9 +17,9 @@ A JMS durable subscriber MessageConsumer is created with a unique JMS clientID a
 *   load balancing of messages.
 *   fast failover of the subscriber if that one process running that one consumer thread dies.
 
-Now _queue_ semantics in JMS offer the ability to load balance work across a number of consumers in a reliable way - allowing many threads, processes and machines to be used to process messages. Then we have sophisticated sticky load balancing techniques like [Message Groups](../consumer-features/message-groups) to load balance and parallelise work while maintaining ordering.
+Now _queue_ semantics in JMS offer the ability to load balance work across a number of consumers in a reliable way - allowing many threads, processes and machines to be used to process messages. Then we have sophisticated sticky load balancing techniques like [Message Groups](message-groups) to load balance and parallelise work while maintaining ordering.
 
-Another added benefit of having physical queues for each logical topic subscriber is we can them monitor the queue depths via [JMX](../jmx) to monitor system performance together with being able to browse these physical queues.
+Another added benefit of having physical queues for each logical topic subscriber is we can them monitor the queue depths via [JMX](jmx) to monitor system performance together with being able to browse these physical queues.
 
 ### Virtual Topics to the rescue
 

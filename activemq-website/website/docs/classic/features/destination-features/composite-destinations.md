@@ -1,5 +1,6 @@
 ---
 title: "Composite Destinations"
+slug: /composite-destinations
 ---
 
 As of version 1.1, ActiveMQ Classic supports a technology we call _composite destinations_. This allows a single virtual JMS Destination to be used to represent a collection of JMS Destinations.

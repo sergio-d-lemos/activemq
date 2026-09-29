@@ -1,5 +1,6 @@
 ---
 title: "JMeter System Tests"
+slug: /jmeter-system-tests
 ---
 
 

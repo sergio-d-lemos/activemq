@@ -1,5 +1,6 @@
 ---
 title: "Are messages read directly from the journal"
+slug: /are-messages-read-directly-from-the-journal
 ---
 
  [FAQ](..) > [Persistence Questions](.) > [Are messages read directly from the journal](are-messages-read-directly-from-the-journal)

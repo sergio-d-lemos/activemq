@@ -1,5 +1,6 @@
 ---
 title: "Journal is already opened by this application"
+slug: /journal-is-already-opened-by-this-application
 ---
 
  [FAQ](../..) > [Errors](..) > [Exceptions](.) > [Journal is already opened by this application](journal-is-already-opened-by-this-application)
@@ -30,5 +31,5 @@ Be careful with broker names and URIs
 
 Make sure you do not use any strange characters in the names of brokers as they are converted to URIs which [do not allow things like underscores](http://java.sun.com/j2se/1.4.2/docs/api/java/net/URI.html) in them etc.
 
-This problem could also be caused by [a bad OS and JVM combination](../the-broker-will-not-start)
+This problem could also be caused by [a bad OS and JVM combination](the-broker-will-not-start)
 

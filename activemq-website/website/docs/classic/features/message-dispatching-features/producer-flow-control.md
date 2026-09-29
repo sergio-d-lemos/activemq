@@ -1,5 +1,6 @@
 ---
 title: "Producer Flow Control"
+slug: /producer-flow-control
 ---
 
 
@@ -32,7 +33,7 @@ If you like, you can disable flow control for specific JMS queues and topics on 
   </policyMap>
 </destinationPolicy>
 ```
-see [Broker Configuration](../../using-activemq-classic/xml-configuration).
+see [Broker Configuration](xml-configuration).
 
 Note that, since the introduction of the new file cursor in ActiveMQ Classic 5.x, non-persisted messages are shunted into the temporary file store to reduce the amount of memory used for non-persistent messaging. As a result, you may find that a queue's memoryLimit is never reached, as the cursor doesn't use very much memory. If you really do want to keep all your non-persistent messages in memory, and stop producers when the limit is reached, you should configure the `<vmQueueCursor>`.
 ```
@@ -46,7 +47,7 @@ The fragment above will ensure that all non-persistent queue messages are kept i
 
 ### How Producer Flow Control works
 
-If you are sending a persistent message (so that a response of the [OpenWire](../../connectivity/protocols/openwire) Message is expected then the broker will send the producer a [ProducerAck](http://activemq.apache.org/maven/5.9.0/apidocs/index.html) message. This informs the producer that the previous sending window has been processed, so that it can now send another window. Its kinda like consumer acks but in reverse.
+If you are sending a persistent message (so that a response of the [OpenWire](openwire) Message is expected then the broker will send the producer a [ProducerAck](http://activemq.apache.org/maven/5.9.0/apidocs/index.html) message. This informs the producer that the previous sending window has been processed, so that it can now send another window. Its kinda like consumer acks but in reverse.
 
 #### Advantage
 
@@ -80,7 +81,7 @@ Starting in version 5.3.1 the `sendFailIfNoSpaceAfterTimeout` property has been 
 ```
 The timeout is defined in milliseconds so the example above waits for three seconds before failing the `send()` operation with an exception to the client-side. The advantage of this property is that it will block for the configured amount of time instead of failing immediately or blocking indefinitely. This property offers not only an improvement on the broker-side, but also an improvement for the client so it can catch the exception, wait a bit and retry the `send()` operation.
 
-Starting in version 5.16.0 the `sendFailIfNoSpace` and `sendFailIfNoSpaceAfterTimeout` can be configured on a per destination basis via [destination policies](../destination-features/per-destination-policies).
+Starting in version 5.16.0 the `sendFailIfNoSpace` and `sendFailIfNoSpaceAfterTimeout` can be configured on a per destination basis via [destination policies](per-destination-policies).
 
 Disabling Flow Control
 ----------------------

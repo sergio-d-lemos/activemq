@@ -1,5 +1,6 @@
 ---
 title: "Message Redelivery and DLQ Handling"
+slug: /message-redelivery-and-dlq-handling
 ---
 
 
@@ -20,7 +21,7 @@ policy.setBackOffMultiplier(2);
 policy.setUseExponentialBackOff(true);
 policy.setMaximumRedeliveries(2);
 ```
-Once a message's redelivery attempts exceeds the `maximumRedeliveries` configured for the [Redelivery Policy](../../../features/consumer-features/redelivery-policy), a "Poison ACK" is sent back to the broker letting him know that the message was considered a poison pill. The Broker then takes the message and sends it to a Dead Letter Queue so that it can be analyzed later on.
+Once a message's redelivery attempts exceeds the `maximumRedeliveries` configured for the [Redelivery Policy](redelivery-policy), a "Poison ACK" is sent back to the broker letting him know that the message was considered a poison pill. The Broker then takes the message and sends it to a Dead Letter Queue so that it can be analyzed later on.
 
 The default Dead Letter Queue in ActiveMQ Classic is called `ActiveMQ.DLQ`; all un-deliverable messages will get sent to this queue and this can be difficult to manage. So, you can set an `individualDeadLetterStrategy` in the destination policy map of the `activemq.xml` configuration file, which allows you to specify a specific dead letter queue prefix for a given queue or topic. You can apply this strategy using wild card if you like so that all queues get their own dead-letter queue, as is shown in the example below.
 ```
@@ -45,7 +46,7 @@ The default Dead Letter Queue in ActiveMQ Classic is called `ActiveMQ.DLQ`; all 
   
 </broker>
 ```
-See the [Redelivery Policy](../../../features/consumer-features/redelivery-policy) section for some more detail on the policy options.
+See the [Redelivery Policy](redelivery-policy) section for some more detail on the policy options.
 
 ### Automatically Discard Expired Messages
 
@@ -142,7 +143,7 @@ The dead letter strategy has an message audit that is enabled by default. This p
 > ```
 > This does the same thing as the plugin but on a per destination basis. The matching based on regular expressions of the plugin is a bit more powerful than destination matching so the plugin may still be useful in some cases.
 
-A very simple yet very useful plugin to the broker. This plugin allows the configuration of queues and topics, all or matched based on [Java SE regular expressions](http://java.sun.com/j2se/1.5.0/docs/api/java/util/regex/Pattern.html), to drop messages that have been sent to the DLQ. This is extremely useful when using [constant pending message limit strategy](../../../features/consumer-features/slow-consumer-handling) or the other eviction rules, but you don't want to incur the overhead of yet another consumer to clear the DLQ.
+A very simple yet very useful plugin to the broker. This plugin allows the configuration of queues and topics, all or matched based on [Java SE regular expressions](http://java.sun.com/j2se/1.5.0/docs/api/java/util/regex/Pattern.html), to drop messages that have been sent to the DLQ. This is extremely useful when using [constant pending message limit strategy](slow-consumer-handling) or the other eviction rules, but you don't want to incur the overhead of yet another consumer to clear the DLQ.
 
 Below is an example of a basic configuration to drop everything:
 ```
@@ -215,7 +216,7 @@ The feature is enabled via XML configuration as follows:
         
 </broker> 
 ```
-The familiar [Redelivery Policy](../../../features/consumer-features/redelivery-policy) has been extended to take a matching destination. `fallbackToDeadLetter`controls the action when there is no matching redeliver policy for a destination. Defaults to `true` so regular DLQ processing ensues. `sendToDlqIfMaxRetriesExceeded` controls the action when the retry limit is exceeded. Defaults to true so regular DLQ processing ensues. When `false`, the message is dropped.
+The familiar [Redelivery Policy](redelivery-policy) has been extended to take a matching destination. `fallbackToDeadLetter`controls the action when there is no matching redeliver policy for a destination. Defaults to `true` so regular DLQ processing ensues. `sendToDlqIfMaxRetriesExceeded` controls the action when the retry limit is exceeded. Defaults to true so regular DLQ processing ensues. When `false`, the message is dropped.
 
 > ActiveMQ Classic's `schedulerSupport` must be enabled for this feature to work.
 

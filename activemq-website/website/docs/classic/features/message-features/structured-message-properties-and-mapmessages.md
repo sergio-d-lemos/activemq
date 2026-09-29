@@ -1,5 +1,6 @@
 ---
 title: "Structured Message Properties and MapMessages"
+slug: /structured-message-properties-and-mapmessages
 ---
 
 

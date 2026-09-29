@@ -1,8 +1,9 @@
 ---
 title: "Web Samples"
+slug: /web-samples
 ---
 
-There are a few example programs demonstrating the [REST](../connectivity/protocols/rest), [Ajax](../connectivity/ajax) and [WebSockets](../connectivity/websockets) messaging that comes with the ActiveMQ Classic distribution.
+There are a few example programs demonstrating the [REST](rest), [Ajax](ajax) and [WebSockets](websockets) messaging that comes with the ActiveMQ Classic distribution.
 
 Up until version 5.8 web demos were included in the default configuration and could be accessed directly using [http://localhost:8161/demo](http://localhost:8161/demo) url after starting the broker.
 
@@ -14,6 +15,6 @@ See Also
 --------
 
 *   [Examples](examples)
-*   [JMX](../features/jmx)
-*   [Web Console](../tools/web-console)
+*   [JMX](jmx)
+*   [Web Console](web-console)
 

@@ -1,5 +1,6 @@
 ---
 title: "Use Cases"
+slug: /use-cases
 ---
 
 
@@ -37,7 +38,7 @@ This is similar to using a JMS provider as an RMI layer in EJB-style or WS style
 Web Streaming of data
 ---------------------
 
-This use case focusses on [Ajax](../connectivity/ajax) support in ActiveMQ Classic.
+This use case focusses on [Ajax](ajax) support in ActiveMQ Classic.
 
 Increasingly folks want to stream data real time right into web browsers. For example streaming financial stock prices, to show live IM conversations, live auctions or to dynamically update live content and news.
 

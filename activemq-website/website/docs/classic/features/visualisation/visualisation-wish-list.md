@@ -1,5 +1,6 @@
 ---
 title: "Visualisation Wish List"
+slug: /visualisation-wish-list
 ---
 
 

@@ -1,5 +1,6 @@
 ---
 title: "The Proxy Connector"
+slug: /the-proxy-connector
 ---
 
 

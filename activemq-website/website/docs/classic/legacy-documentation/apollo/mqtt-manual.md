@@ -1,11 +1,12 @@
 ---
 title: "Apollo 1.7.1 MQTT Protocol Manual"
+slug: /mqtt-manual
 ---
 
        
 
 *   [Apollo 1.7.1](index.html)
-*   [Developers](../../developers)
+*   [Developers](developers)
 *   [Community](Community/index.html)
 *   [Download](../../overview/download)
 

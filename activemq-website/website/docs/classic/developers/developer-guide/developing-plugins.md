@@ -1,9 +1,10 @@
 ---
 title: "Developing Plugins"
+slug: /developing-plugins
 ---
 
 
-Apache ActiveMQ Classic is based on the model of POJOs and _Dependency Injection_. If you are developing [Interceptors](../../features/interceptors) or additional components or plugins for ActiveMQ Classic then the first thing you should do is develop the code as if you are writing any other Spring component, using dependency injection.
+Apache ActiveMQ Classic is based on the model of POJOs and _Dependency Injection_. If you are developing [Interceptors](interceptors) or additional components or plugins for ActiveMQ Classic then the first thing you should do is develop the code as if you are writing any other Spring component, using dependency injection.
 
 ### Dependency Injection
 
@@ -63,6 +64,6 @@ Not that this mechanism will not work in case that you have some XBean plugins c
 The easiest way to get a feel for how to extend ActiveMQ Classic is maybe to look at some concrete examples of features and how those are implemented and configured. Here are some examples
 
 *   [XBeanBrokerService](https://github.com/apache/activemq/tree/main/activemq-spring/src/main/java/org/apache/activemq/xbean/XBeanBrokerService.java) deals with most of the core configuration of the <broker> tag in the XML
-*   [Security](../../features/security) has an [example](http://svn.apache.org/repos/asf/activemq/trunk/activemq-unit-tests/src/test/resources/org/apache/activemq/security/jaas-broker.xml) XML configuration file using the [AuthorizationPlugin](http://svn.apache.org/repos/asf/activemq/trunk/activemq-broker/src/main/java/org/apache/activemq/security/AuthorizationPlugin.java)
-*   The [Discarding DLQ Plugin](design-documents/message-redelivery-and-dlq-handling) is used to discard messages from the DLQ.
+*   [Security](security) has an [example](http://svn.apache.org/repos/asf/activemq/trunk/activemq-unit-tests/src/test/resources/org/apache/activemq/security/jaas-broker.xml) XML configuration file using the [AuthorizationPlugin](http://svn.apache.org/repos/asf/activemq/trunk/activemq-broker/src/main/java/org/apache/activemq/security/AuthorizationPlugin.java)
+*   The [Discarding DLQ Plugin](message-redelivery-and-dlq-handling) is used to discard messages from the DLQ.
 

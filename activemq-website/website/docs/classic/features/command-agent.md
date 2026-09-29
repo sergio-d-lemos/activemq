@@ -1,5 +1,6 @@
 ---
 title: "Command Agent"
+slug: /command-agent
 ---
 
 
@@ -33,7 +34,7 @@ The broker will then have a command agent connected which will listen on the top
 
 ### Using Jabber (XMPP) to talk to the Broker
 
-You can use the [XMPP](../connectivity/protocols/xmpp) support to talk with the broker. For example follow the instructions in [XMPP](../connectivity/protocols/xmpp) to connect via a Jabber client, then just join the room **ActiveMQ.Agent** and talk to the broker!
+You can use the [XMPP](xmpp) support to talk with the broker. For example follow the instructions in [XMPP](xmpp) to connect via a Jabber client, then just join the room **ActiveMQ.Agent** and talk to the broker!
 
 The following image shows the [Spark](http://jivesoftware.com/products/spark/) client in action talking to the broker
 

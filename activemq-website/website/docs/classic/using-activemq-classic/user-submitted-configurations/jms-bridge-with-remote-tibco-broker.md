@@ -1,5 +1,6 @@
 ---
 title: "JMS Bridge With Remote TIBCO Broker"
+slug: /jms-bridge-with-remote-tibco-broker
 ---
 
 

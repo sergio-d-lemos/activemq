@@ -1,5 +1,6 @@
 ---
 title: "Total Ordering"
+slug: /total-ordering
 ---
 
 
@@ -20,7 +21,7 @@ consumer2: P1 P2 Q1 P3 Q2
 Configuring Total Ordering
 --------------------------
 
-Enable the **`<strictOrderDispatchPolicy/>`** on the [Per Destination Policies](../destination-features/per-destination-policies). Here's an example
+Enable the **`<strictOrderDispatchPolicy/>`** on the [Per Destination Policies](per-destination-policies). Here's an example
 
 <destinationPolicy>
   <policyMap>

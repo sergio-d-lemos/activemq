@@ -1,5 +1,6 @@
 ---
 title: "In Progress"
+slug: /in-progress
 ---
 
 Releases In Progress

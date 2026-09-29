@@ -1,5 +1,6 @@
 ---
 title: "TimeStampPlugin"
+slug: /timestampplugin
 ---
 
 

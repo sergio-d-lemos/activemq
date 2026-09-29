@@ -1,5 +1,6 @@
 ---
 title: "Multicast Transport"
+slug: /multicast-transport
 ---
 
 

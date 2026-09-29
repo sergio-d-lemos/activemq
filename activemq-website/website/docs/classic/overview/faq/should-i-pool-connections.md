@@ -1,11 +1,12 @@
 ---
 title: "Should I pool connections"
+slug: /should-i-pool-connections
 ---
 
 Should I pool connections?
 --------------------------
 
-The Java documentation talks about [how to use JMS efficiently](jms/how-do-i-use-jms-efficiently). So when using .NET should you worry about pooling?
+The Java documentation talks about [how to use JMS efficiently](how-do-i-use-jms-efficiently). So when using .NET should you worry about pooling?
 
 Its worth thinking about - but it depends a little on your application. If its a client UI then just have a single connection and a few sessions and you'll be fine.
 

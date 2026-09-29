@@ -1,5 +1,6 @@
 ---
 title: "Multiple consumers on a queue"
+slug: /multiple-consumers-on-a-queue
 ---
 
  [FAQ](..) > [JMS](.) > [Multiple consumers on a queue](multiple-consumers-on-a-queue)

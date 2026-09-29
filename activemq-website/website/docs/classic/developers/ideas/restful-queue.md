@@ -1,5 +1,6 @@
 ---
 title: "RESTful Queue"
+slug: /restful-queue
 ---
 
 
@@ -105,7 +106,7 @@ So we introduce a resource for a _subscription_ to a queue. The subscription rem
 
 When a subscription is created it can be given a variety of different pieces of data such as
 
-*   the [prefetch buffer](../../features/what-is-the-prefetch-limit-for)
+*   the [prefetch buffer](what-is-the-prefetch-limit-for)
 *   what destinations it applies to (for example we could use wildcards)
 *   whether a selector/filter is applied
 
@@ -156,7 +157,7 @@ Deltas with APP
 
 Almost all of the above could be just pure APP really. The only real difference is that each consumer has its own feed of messages which are to be consumed.
 
-In ActiveMQ Classic's case, we use a [prefetch value per consumer](../../features/what-is-the-prefetch-limit-for) to define how many messages each consumer gets in its buffer, before messages must be acknowledged to get more messages.
+In ActiveMQ Classic's case, we use a [prefetch value per consumer](what-is-the-prefetch-limit-for) to define how many messages each consumer gets in its buffer, before messages must be acknowledged to get more messages.
 
 So the idea is that we have a per-consumer feed which is created; it can then be browsed (by anyone with sufficient karma).
 

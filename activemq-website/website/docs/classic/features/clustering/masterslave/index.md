@@ -1,5 +1,6 @@
 ---
 title: "MasterSlave"
+slug: /masterslave
 ---
 
 Introduction to Master / Slave

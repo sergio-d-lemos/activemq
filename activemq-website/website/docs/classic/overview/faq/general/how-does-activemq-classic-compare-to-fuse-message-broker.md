@@ -1,5 +1,6 @@
 ---
 title: "How does ActiveMQ Classic compare to Fuse Message Broker"
+slug: /how-does-activemq-classic-compare-to-fuse-message-broker
 ---
 
  [FAQ](..) > [General](.) > [How does ActiveMQ Classic compare to Fuse Message Broker](how-does-activemq-classic-compare-to-fuse-message-broker)

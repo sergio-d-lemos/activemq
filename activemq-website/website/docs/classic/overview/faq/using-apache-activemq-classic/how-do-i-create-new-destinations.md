@@ -1,5 +1,6 @@
 ---
 title: "How do I create new destinations"
+slug: /how-do-i-create-new-destinations
 ---
 
  [FAQ](..) > [Using Apache ActiveMQ Classic](.) > [How do I create new destinations](how-do-i-create-new-destinations)
@@ -14,15 +15,15 @@ This means that a client can create a new Queue or Topic dynamically either by
 
 and the broker will automatically create the physical destinations for you. This avoids spending large amounts of time creating every individual destination you wish to use and possibly then exposing it in some JNDI provider.
 
-In addition, if you are using JNDI to lookup connection factory and destinations, you can specify which destinations you wish to create by default using the properties file. See the [JNDI Support](../../../connectivity/containers/jndi-support) for more details.
+In addition, if you are using JNDI to lookup connection factory and destinations, you can specify which destinations you wish to create by default using the properties file. See the [JNDI Support](jndi-support) for more details.
 
 ### Creating destinations on startup
 
-Its completely optional but as of 4.1 you can [Configure Startup Destinations](../../../features/destination-features/configure-startup-destinations) to specify which destinations are automatically created when the broker starts.
+Its completely optional but as of 4.1 you can [Configure Startup Destinations](configure-startup-destinations) to specify which destinations are automatically created when the broker starts.
 
 ### Limiting creation of destinations
 
-If you need to restrict access or creation of destinations then please use the [Security](../../../features/security) option to disable destinations being auto-created for certain users.
+If you need to restrict access or creation of destinations then please use the [Security](security) option to disable destinations being auto-created for certain users.
 
 Client side destination objects are not the same as server side resources
 
@@ -31,5 +32,5 @@ Note that the ActiveMQ Classic Broker will only create server side resources for
 Think of the ActiveMQQueue and ActiveMQTopic classes as like java.net.URL. They are just names which refer to server side resources which are auto-created when they are used.  
 This means that different clients creating different ActiveMQQueue instances will communicate with the same physical queue on a JMS broker if the name is the same.
 
-You can browse the currently available queues and topics using [JMX](../../../features/jmx). You can also use the [JMX](../../../features/jmx) MBeans to create the destinations you require.
+You can browse the currently available queues and topics using [JMX](jmx). You can also use the [JMX](jmx) MBeans to create the destinations you require.
 

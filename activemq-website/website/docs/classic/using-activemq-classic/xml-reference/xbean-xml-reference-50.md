@@ -1,5 +1,6 @@
 ---
 title: "XBean XML Reference 5.0"
+slug: /xbean-xml-reference-50
 ---
 
 
@@ -170,11 +171,11 @@ Pending messages
 
 _\<connectionFactory>_
 
-A [Spring](http://www.springframework.org/) enhanced connection factory which will automatically use the Spring bean name as the clientIDPrefix property so that connections created have client IDs related to your Spring.xml file for easier comprehension from [JMX](../../features/jmx).
+A [Spring](http://www.springframework.org/) enhanced connection factory which will automatically use the Spring bean name as the clientIDPrefix property so that connections created have client IDs related to your Spring.xml file for easier comprehension from [JMX](jmx).
 
 _\<xaConnectionFactory>_
 
-A [Spring](http://www.springframework.org/) enhanced XA connection factory which will automatically use the Spring bean name as the clientIDPrefix property so that connections created have client IDs related to your Spring.xml file for easier comprehension from [JMX](../../features/jmx).
+A [Spring](http://www.springframework.org/) enhanced XA connection factory which will automatically use the Spring bean name as the clientIDPrefix property so that connections created have client IDs related to your Spring.xml file for easier comprehension from [JMX](jmx).
 
 #### The _org.apache.activemq.broker.region.virtual.VirtualDestination_ Type Implementations
 
@@ -188,7 +189,7 @@ Represents a virtual topic which forwards to a number of other destinations.
 
 _\<virtualTopic>_
 
-Creates [Virtual Topics](../../features/destination-features/virtual-destinations) using a prefix and postfix. The virtual destination creates a wildcard that is then used to look up all active queue subscriptions which match.
+Creates [Virtual Topics](virtual-destinations) using a prefix and postfix. The virtual destination creates a wildcard that is then used to look up all active queue subscriptions which match.
 
 #### The _org.apache.activemq.broker.region.policy.PolicyMap_ Type Implementations
 
@@ -262,11 +263,11 @@ This implementation of {@link SubscriptionRecoveryPolicy} will keep a timed buff
 
 _\<connectionFactory>_
 
-A [Spring](http://www.springframework.org/) enhanced connection factory which will automatically use the Spring bean name as the clientIDPrefix property so that connections created have client IDs related to your Spring.xml file for easier comprehension from [JMX](../../features/jmx).
+A [Spring](http://www.springframework.org/) enhanced connection factory which will automatically use the Spring bean name as the clientIDPrefix property so that connections created have client IDs related to your Spring.xml file for easier comprehension from [JMX](jmx).
 
 _\<xaConnectionFactory>_
 
-A [Spring](http://www.springframework.org/) enhanced XA connection factory which will automatically use the Spring bean name as the clientIDPrefix property so that connections created have client IDs related to your Spring.xml file for easier comprehension from [JMX](../../features/jmx).
+A [Spring](http://www.springframework.org/) enhanced XA connection factory which will automatically use the Spring bean name as the clientIDPrefix property so that connections created have client IDs related to your Spring.xml file for easier comprehension from [JMX](jmx).
 
 #### The _org.apache.activemq.broker.jmx.ManagementContext_ Type Implementations
 
@@ -316,11 +317,11 @@ Pending
 
 _\<messageGroupHashBucketFactory>_
 
-A factory to create instances of {@link SimpleMessageGroupMap} when implementing the [Message Groups](../../features/consumer-features/message-groups) functionality.
+A factory to create instances of {@link SimpleMessageGroupMap} when implementing the [Message Groups](message-groups) functionality.
 
 _\<simpleMessageGroupMapFactory>_
 
-A factory to create instances of {@link SimpleMessageGroupMap} when implementing the [Message Groups](../../features/consumer-features/message-groups) functionality.
+A factory to create instances of {@link SimpleMessageGroupMap} when implementing the [Message Groups](message-groups) functionality.
 
 #### The _org.apache.activemq.usage.StoreUsage_ Type Implementations
 
@@ -484,11 +485,11 @@ Dispatch policy that causes every subscription to see messages in the same order
 
 _\<connectionFactory>_
 
-A [Spring](http://www.springframework.org/) enhanced connection factory which will automatically use the Spring bean name as the clientIDPrefix property so that connections created have client IDs related to your Spring.xml file for easier comprehension from [JMX](../../features/jmx).
+A [Spring](http://www.springframework.org/) enhanced connection factory which will automatically use the Spring bean name as the clientIDPrefix property so that connections created have client IDs related to your Spring.xml file for easier comprehension from [JMX](jmx).
 
 _\<xaConnectionFactory>_
 
-A [Spring](http://www.springframework.org/) enhanced XA connection factory which will automatically use the Spring bean name as the clientIDPrefix property so that connections created have client IDs related to your Spring.xml file for easier comprehension from [JMX](../../features/jmx).
+A [Spring](http://www.springframework.org/) enhanced XA connection factory which will automatically use the Spring bean name as the clientIDPrefix property so that connections created have client IDs related to your Spring.xml file for easier comprehension from [JMX](jmx).
 
 #### The _javax.jms.Queue_ Type Implementations
 
@@ -546,7 +547,7 @@ A Flow provides different dispatch policies within the NMR
 
 _\<masterConnector>_
 
-Connects a Slave Broker to a Master when using [Master Slave](../../features/clustering/masterslave) for High Availability of messages.
+Connects a Slave Broker to a Master when using [Master Slave](masterslave) for High Availability of messages.
 
 _\<memoryUsage>_
 
@@ -598,11 +599,11 @@ Create an Outbound Topic Bridge
 
 _\<mirroredQueue>_
 
-Creates [Mirrored Queue](../../features/destination-features/mirrored-queues) using a prefix and postfix to define the topic name on which to mirror the queue to.
+Creates [Mirrored Queue](mirrored-queues) using a prefix and postfix to define the topic name on which to mirror the queue to.
 
 _\<virtualDestinationInterceptor>_
 
-Implements [Virtual Topics](../../features/destination-features/virtual-destinations).
+Implements [Virtual Topics](virtual-destinations).
 
 #### The _org.apache.activemq.filter.DestinationMap_ Type Implementations
 
@@ -1184,7 +1185,7 @@ useMirroredQueues
 
 _boolean_
 
-Sets whether or not [Mirrored Queues](../../features/destination-features/mirrored-queues) should be supported by default if they have not been explicitly configured.
+Sets whether or not [Mirrored Queues](mirrored-queues) should be supported by default if they have not been explicitly configured.
 
 useShutdownHook
 
@@ -1196,7 +1197,7 @@ useVirtualTopics
 
 _boolean_
 
-Sets whether or not [Virtual Topics](../../features/destination-features/virtual-destinations) should be supported by default if they have not been explicitly configured.
+Sets whether or not [Virtual Topics](virtual-destinations) should be supported by default if they have not been explicitly configured.
 
 vmConnectorURI
 
@@ -1394,7 +1395,7 @@ Sets the destination file name to create the destination diagram
 
 ### The _\<connectionFactory>_ Element
 
-A [Spring](http://www.springframework.org/) enhanced connection factory which will automatically use the Spring bean name as the clientIDPrefix property so that connections created have client IDs related to your Spring.xml file for easier comprehension from [JMX](../../features/jmx).
+A [Spring](http://www.springframework.org/) enhanced connection factory which will automatically use the Spring bean name as the clientIDPrefix property so that connections created have client IDs related to your Spring.xml file for easier comprehension from [JMX](jmx).
 
 #### Properties
 
@@ -1430,7 +1431,7 @@ brokerURL
 
 _java.lang.String_
 
-Sets the [connection URL](../configuring-transports) used to connect to the ActiveMQ Classic broker.
+Sets the [connection URL](configuring-transports) used to connect to the ActiveMQ Classic broker.
 
 clientID
 
@@ -1470,19 +1471,19 @@ dispatchAsync
 
 _boolean_
 
-Enables or disables the default setting of whether or not consumers have their messages [dispatched synchronously or asynchronously by the broker](../../features/consumer-features/consumer-dispatch-async). For non-durable topics for example we typically dispatch synchronously by default to minimize context switches which boost performance. However sometimes its better to go slower to ensure that a single blocked consumer socket does not block delivery to other consumers.
+Enables or disables the default setting of whether or not consumers have their messages [dispatched synchronously or asynchronously by the broker](consumer-dispatch-async). For non-durable topics for example we typically dispatch synchronously by default to minimize context switches which boost performance. However sometimes its better to go slower to ensure that a single blocked consumer socket does not block delivery to other consumers.
 
 exclusiveConsumer
 
 _boolean_
 
-Enables or disables whether or not queue consumers should be exclusive or not for example to preserve ordering when not using [Message Groups](../../features/consumer-features/message-groups)
+Enables or disables whether or not queue consumers should be exclusive or not for example to preserve ordering when not using [Message Groups](message-groups)
 
 nestedMapAndListEnabled
 
 _boolean_
 
-Enables/disables whether or not Message properties and MapMessage entries support [Nested Structures](../../features/message-features/structured-message-properties-and-mapmessages) of Map and List objects
+Enables/disables whether or not Message properties and MapMessage entries support [Nested Structures](structured-message-properties-and-mapmessages) of Map and List objects
 
 objectMessageSerializationDefered
 
@@ -1510,7 +1511,7 @@ prefetchPolicy
 
 _org.apache.activemq.ActiveMQPrefetchPolicy_
 
-Sets the [prefetch policy](../../features/what-is-the-prefetch-limit-for) for consumers created by this connection.
+Sets the [prefetch policy](what-is-the-prefetch-limit-for) for consumers created by this connection.
 
 producerWindowSize
 
@@ -1548,7 +1549,7 @@ useAsyncSend
 
 _boolean_
 
-Forces the use of [Async Sends](../../features/message-dispatching-features/async-sends) which adds a massive performance boost; but means that the send() method will return immediately whether the message has been sent or not which could lead to message loss.
+Forces the use of [Async Sends](async-sends) which adds a massive performance boost; but means that the send() method will return immediately whether the message has been sent or not which could lead to message loss.
 
 useBeanNameAsClientIdPrefix
 
@@ -1576,7 +1577,7 @@ warnAboutUnstartedConnectionTimeout
 
 _long_
 
-Enables the timeout from a connection creation to when a warning is generated if the connection is not properly started via {@link Connection#start()} and a message is received by a consumer. It is a very common gotcha to forget to [start the connection](../../overview/faq/errors/i-am-not-receiving-any-messages-what-is-wrong) so this option makes the default case to create a warning if the user forgets. To disable the warning just set the value to < 0 (say -1).
+Enables the timeout from a connection creation to when a warning is generated if the connection is not properly started via {@link Connection#start()} and a message is received by a consumer. It is a very common gotcha to forget to [start the connection](i-am-not-receiving-any-messages-what-is-wrong) so this option makes the default case to create a warning if the user forgets. To disable the warning just set the value to < 0 (say -1).
 
 watchTopicAdvisories
 
@@ -2917,7 +2918,7 @@ _boolean_
 
 ### The _\<masterConnector>_ Element
 
-Connects a Slave Broker to a Master when using [Master Slave](../../features/clustering/masterslave) for High Availability of messages.
+Connects a Slave Broker to a Master when using [Master Slave](masterslave) for High Availability of messages.
 
 #### Properties
 
@@ -3035,7 +3036,7 @@ _float_
 
 ### The _\<messageGroupHashBucketFactory>_ Element
 
-A factory to create instances of {@link SimpleMessageGroupMap} when implementing the [Message Groups](../../features/consumer-features/message-groups) functionality.
+A factory to create instances of {@link SimpleMessageGroupMap} when implementing the [Message Groups](message-groups) functionality.
 
 #### Properties
 
@@ -3053,7 +3054,7 @@ Sets the number of hash buckets to use for the message group functionality. This
 
 ### The _\<mirroredQueue>_ Element
 
-Creates [Mirrored Queue](../../features/destination-features/mirrored-queues) using a prefix and postfix to define the topic name on which to mirror the queue to.
+Creates [Mirrored Queue](mirrored-queues) using a prefix and postfix to define the topic name on which to mirror the queue to.
 
 #### Properties
 
@@ -3611,7 +3612,7 @@ messageGroupMapFactory
 
 _org.apache.activemq.broker.region.group.MessageGroupMapFactory_
 
-Sets the factory used to create new instances of {MessageGroupMap} used to implement the [Message Groups](../../features/consumer-features/message-groups) functionality.
+Sets the factory used to create new instances of {MessageGroupMap} used to implement the [Message Groups](message-groups) functionality.
 
 optimizedDispatch
 
@@ -3975,7 +3976,7 @@ _javax.jms.Connection_
 
 ### The _\<simpleMessageGroupMapFactory>_ Element
 
-A factory to create instances of {@link SimpleMessageGroupMap} when implementing the [Message Groups](../../features/consumer-features/message-groups) functionality.
+A factory to create instances of {@link SimpleMessageGroupMap} when implementing the [Message Groups](message-groups) functionality.
 
 ### The _\<statements>_ Element
 
@@ -4589,7 +4590,7 @@ _long_
 
 ### The _\<virtualDestinationInterceptor>_ Element
 
-Implements [Virtual Topics](../../features/destination-features/virtual-destinations).
+Implements [Virtual Topics](virtual-destinations).
 
 #### Properties
 
@@ -4605,7 +4606,7 @@ virtualDestinations
 
 ### The _\<virtualTopic>_ Element
 
-Creates [Virtual Topics](../../features/destination-features/virtual-destinations) using a prefix and postfix. The virtual destination creates a wildcard that is then used to look up all active queue subscriptions which match.
+Creates [Virtual Topics](virtual-destinations) using a prefix and postfix. The virtual destination creates a wildcard that is then used to look up all active queue subscriptions which match.
 
 #### Properties
 
@@ -4645,7 +4646,7 @@ Pending messages
 
 ### The _\<xaConnectionFactory>_ Element
 
-A [Spring](http://www.springframework.org/) enhanced XA connection factory which will automatically use the Spring bean name as the clientIDPrefix property so that connections created have client IDs related to your Spring.xml file for easier comprehension from [JMX](../../features/jmx).
+A [Spring](http://www.springframework.org/) enhanced XA connection factory which will automatically use the Spring bean name as the clientIDPrefix property so that connections created have client IDs related to your Spring.xml file for easier comprehension from [JMX](jmx).
 
 #### Properties
 
@@ -4681,7 +4682,7 @@ brokerURL
 
 _java.lang.String_
 
-Sets the [connection URL](../configuring-transports) used to connect to the ActiveMQ Classic broker.
+Sets the [connection URL](configuring-transports) used to connect to the ActiveMQ Classic broker.
 
 clientID
 
@@ -4721,19 +4722,19 @@ dispatchAsync
 
 _boolean_
 
-Enables or disables the default setting of whether or not consumers have their messages [dispatched synchronously or asynchronously by the broker](../../features/consumer-features/consumer-dispatch-async). For non-durable topics for example we typically dispatch synchronously by default to minimize context switches which boost performance. However sometimes its better to go slower to ensure that a single blocked consumer socket does not block delivery to other consumers.
+Enables or disables the default setting of whether or not consumers have their messages [dispatched synchronously or asynchronously by the broker](consumer-dispatch-async). For non-durable topics for example we typically dispatch synchronously by default to minimize context switches which boost performance. However sometimes its better to go slower to ensure that a single blocked consumer socket does not block delivery to other consumers.
 
 exclusiveConsumer
 
 _boolean_
 
-Enables or disables whether or not queue consumers should be exclusive or not for example to preserve ordering when not using [Message Groups](../../features/consumer-features/message-groups)
+Enables or disables whether or not queue consumers should be exclusive or not for example to preserve ordering when not using [Message Groups](message-groups)
 
 nestedMapAndListEnabled
 
 _boolean_
 
-Enables/disables whether or not Message properties and MapMessage entries support [Nested Structures](../../features/message-features/structured-message-properties-and-mapmessages) of Map and List objects
+Enables/disables whether or not Message properties and MapMessage entries support [Nested Structures](structured-message-properties-and-mapmessages) of Map and List objects
 
 objectMessageSerializationDefered
 
@@ -4761,7 +4762,7 @@ prefetchPolicy
 
 _org.apache.activemq.ActiveMQPrefetchPolicy_
 
-Sets the [prefetch policy](../../features/what-is-the-prefetch-limit-for) for consumers created by this connection.
+Sets the [prefetch policy](what-is-the-prefetch-limit-for) for consumers created by this connection.
 
 producerWindowSize
 
@@ -4799,7 +4800,7 @@ useAsyncSend
 
 _boolean_
 
-Forces the use of [Async Sends](../../features/message-dispatching-features/async-sends) which adds a massive performance boost; but means that the send() method will return immediately whether the message has been sent or not which could lead to message loss.
+Forces the use of [Async Sends](async-sends) which adds a massive performance boost; but means that the send() method will return immediately whether the message has been sent or not which could lead to message loss.
 
 useBeanNameAsClientIdPrefix
 
@@ -4827,7 +4828,7 @@ warnAboutUnstartedConnectionTimeout
 
 _long_
 
-Enables the timeout from a connection creation to when a warning is generated if the connection is not properly started via {@link Connection#start()} and a message is received by a consumer. It is a very common gotcha to forget to [start the connection](../../overview/faq/errors/i-am-not-receiving-any-messages-what-is-wrong) so this option makes the default case to create a warning if the user forgets. To disable the warning just set the value to < 0 (say -1).
+Enables the timeout from a connection creation to when a warning is generated if the connection is not properly started via {@link Connection#start()} and a message is received by a consumer. It is a very common gotcha to forget to [start the connection](i-am-not-receiving-any-messages-what-is-wrong) so this option makes the default case to create a warning if the user forgets. To disable the warning just set the value to < 0 (say -1).
 
 watchTopicAdvisories
 
@@ -4897,7 +4898,7 @@ A [DOT](http://www.graphviz.org/) file creator plugin which creates a DOT file s
 
 _\<connectionFactory>_
 
-A [Spring](http://www.springframework.org/) enhanced connection factory which will automatically use the Spring bean name as the clientIDPrefix property so that connections created have client IDs related to your Spring.xml file for easier comprehension from [JMX](../../features/jmx).
+A [Spring](http://www.springframework.org/) enhanced connection factory which will automatically use the Spring bean name as the clientIDPrefix property so that connections created have client IDs related to your Spring.xml file for easier comprehension from [JMX](jmx).
 
 _\<constantPendingMessageLimitStrategy>_
 
@@ -5034,7 +5035,7 @@ A Flow provides different dispatch policies within the NMR
 
 _\<masterConnector>_
 
-Connects a Slave Broker to a Master when using [Master Slave](../../features/clustering/masterslave) for High Availability of messages.
+Connects a Slave Broker to a Master when using [Master Slave](masterslave) for High Availability of messages.
 
 _\<memoryPersistenceAdapter>_
 
@@ -5044,11 +5045,11 @@ Used to keep track of how much of something is being used so that a productive w
 
 _\<messageGroupHashBucketFactory>_
 
-A factory to create instances of {@link SimpleMessageGroupMap} when implementing the [Message Groups](../../features/consumer-features/message-groups) functionality.
+A factory to create instances of {@link SimpleMessageGroupMap} when implementing the [Message Groups](message-groups) functionality.
 
 _\<mirroredQueue>_
 
-Creates [Mirrored Queue](../../features/destination-features/mirrored-queues) using a prefix and postfix to define the topic name on which to mirror the queue to.
+Creates [Mirrored Queue](mirrored-queues) using a prefix and postfix to define the topic name on which to mirror the queue to.
 
 _\<multicastNetworkConnector>_
 
@@ -5148,7 +5149,7 @@ Converts Message from one JMS to another
 
 _\<simpleMessageGroupMapFactory>_
 
-A factory to create instances of {@link SimpleMessageGroupMap} when implementing the [Message Groups](../../features/consumer-features/message-groups) functionality.
+A factory to create instances of {@link SimpleMessageGroupMap} when implementing the [Message Groups](message-groups) functionality.
 
 _\<statements>_
 
@@ -5210,11 +5211,11 @@ Identify if a limit has been reached
 
 _\<virtualDestinationInterceptor>_
 
-Implements [Virtual Topics](../../features/destination-features/virtual-destinations).
+Implements [Virtual Topics](virtual-destinations).
 
 _\<virtualTopic>_
 
-Creates [Virtual Topics](../../features/destination-features/virtual-destinations) using a prefix and postfix. The virtual destination creates a wildcard that is then used to look up all active queue subscriptions which match.
+Creates [Virtual Topics](virtual-destinations) using a prefix and postfix. The virtual destination creates a wildcard that is then used to look up all active queue subscriptions which match.
 
 _\<vmCursor>_
 
@@ -5230,5 +5231,5 @@ Pending messages
 
 _\<xaConnectionFactory>_
 
-A [Spring](http://www.springframework.org/) enhanced XA connection factory which will automatically use the Spring bean name as the clientIDPrefix property so that connections created have client IDs related to your Spring.xml file for easier comprehension from [JMX](../../features/jmx).
+A [Spring](http://www.springframework.org/) enhanced XA connection factory which will automatically use the Spring bean name as the clientIDPrefix property so that connections created have client IDs related to your Spring.xml file for easier comprehension from [JMX](jmx).
 

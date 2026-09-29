@@ -1,5 +1,6 @@
 ---
 title: "PMC Templates"
+slug: /pmc-templates
 ---
 
  

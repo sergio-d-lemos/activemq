@@ -1,5 +1,6 @@
 ---
 title: "What is the difference between discovery, multicast and zeroconf"
+slug: /what-is-the-difference-between-discovery-multicast-and-zeroconf
 ---
 
  [FAQ](..) > [Using Apache ActiveMQ Classic](.) > [What is the difference between discovery, multicast and zeroconf](what-is-the-difference-between-discovery-multicast-and-zeroconf)
@@ -32,6 +33,6 @@ An example usage of discovery on the client side (using the transport 'discovery
       <transportConnector name="default" uri="discovery:(multicast://default)"/>
    </transportConnectors>
 
-ps: discovery (which is a confusing name) is just like a 'reliable' transport such as [failover](../../../using-activemq-classic/configuring-transports/activemq-classic-connection-uris/failover-transport-reference). If it is unable to connect to a broker, it will try another broker (assuming it  
+ps: discovery (which is a confusing name) is just like a 'reliable' transport such as [failover](failover-transport-reference). If it is unable to connect to a broker, it will try another broker (assuming it  
 heard its advertisement over multicast).
 

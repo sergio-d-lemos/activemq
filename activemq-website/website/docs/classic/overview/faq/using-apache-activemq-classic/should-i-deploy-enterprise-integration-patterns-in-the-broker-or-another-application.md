@@ -1,5 +1,6 @@
 ---
 title: "Should I deploy Enterprise Integration Patterns in the broker or another application"
+slug: /should-i-deploy-enterprise-integration-patterns-in-the-broker-or-another-application
 ---
 
  [FAQ](..) > [Using Apache ActiveMQ Classic](.) > [Should I deploy Enterprise Integration Patterns in the broker or another application](should-i-deploy-enterprise-integration-patterns-in-the-broker-or-another-application)
@@ -8,12 +9,12 @@ title: "Should I deploy Enterprise Integration Patterns in the broker or another
 Should I deploy Enterprise Integration Patterns in the broker or another application
 ------------------------------------------------------------------------------------
 
-Whether you deploy the [Enterprise Integration Patterns](../../../features/enterprise-integration-patterns) inside the ActiveMQ Classic Broker or in a separate application depends on your requirements.
+Whether you deploy the [Enterprise Integration Patterns](enterprise-integration-patterns) inside the ActiveMQ Classic Broker or in a separate application depends on your requirements.
 
 ### Advantages of deploying EIP inside the broker
 
 *   Its a single JVM so less moving parts and you're less likely to forget to deploy something
-*   if you are doing things like polling resources such as files, databases and bridging them to queues or topics then its usually more efficient to host in the broker; as there's less contention and there's no network communication between the EIP rules and the message broker as its all in the same JVM (so you can use the [VM Transport](../../../using-activemq-classic/configuring-transports/activemq-classic-connection-uris/vm-transport-reference) to avoid network overhead.
+*   if you are doing things like polling resources such as files, databases and bridging them to queues or topics then its usually more efficient to host in the broker; as there's less contention and there's no network communication between the EIP rules and the message broker as its all in the same JVM (so you can use the [VM Transport](vm-transport-reference) to avoid network overhead.
 
 ### Advantages of deploying EIP inside a separate application
 

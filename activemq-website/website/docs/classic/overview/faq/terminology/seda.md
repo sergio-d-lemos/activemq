@@ -1,5 +1,6 @@
 ---
 title: "SEDA"
+slug: /seda
 ---
 
  [FAQ](..) > [Terminology](.) > [SEDA](seda)

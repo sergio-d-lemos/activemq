@@ -1,5 +1,6 @@
 ---
 title: "JavaDocs"
+slug: /javadocs
 ---
 
 

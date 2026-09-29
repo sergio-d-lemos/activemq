@@ -1,5 +1,6 @@
 ---
 title: "User Submitted Configurations"
+slug: /user-submitted-configurations
 ---
 
 

@@ -1,5 +1,6 @@
 ---
 title: "How does ActiveMQ Classic compare to Mule"
+slug: /how-does-activemq-classic-compare-to-mule
 ---
 
  [FAQ](..) > [General](.) > [How does ActiveMQ Classic compare to Mule](how-does-activemq-classic-compare-to-mule)

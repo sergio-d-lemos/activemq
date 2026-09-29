@@ -1,5 +1,6 @@
 ---
 title: "Performance report"
+slug: /performance-report
 ---
 
 

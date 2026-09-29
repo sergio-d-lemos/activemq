@@ -1,5 +1,6 @@
 ---
 title: "SSL Transport Reference"
+slug: /ssl-transport-reference
 ---
 
 
@@ -69,7 +70,7 @@ ssl://localhost:61616?verifyHostName=false
 ```
 #### Other Links
 
-* [How do I use SSL](../../../overview/faq/using-apache-activemq-classic/how-do-i-use-ssl)
+* [How do I use SSL](how-do-i-use-ssl)
 
 You can also turn on SSL debug informations this way by adding:
 ```

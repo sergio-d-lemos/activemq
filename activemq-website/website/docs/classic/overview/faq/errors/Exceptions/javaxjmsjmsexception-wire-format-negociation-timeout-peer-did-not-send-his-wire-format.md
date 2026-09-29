@@ -1,5 +1,6 @@
 ---
 title: "javax.jms.JMSException - Wire format negociation timeout - peer did not send his wire format."
+slug: /javaxjmsjmsexception-wire-format-negociation-timeout-peer-did-not-send-his-wire-format
 ---
 
  [FAQ](../..) > [Errors](..) > [Exceptions](.) > [javax.jms.JMSException - Wire format negociation timeout - peer did not send his wire format.](javaxjmsjmsexception-wire-format-negociation-timeout-peer-did-not-send-his-wire-format)
@@ -23,12 +24,12 @@ Make sure to check that you're connecting to the appropriate `host:port`
 2. You're using log4j JMS appender and doesn't filter out ActiveMQ Classic log messages
 ================================================================================
 
-Be sure to read [How do I use log4j JMS appender with ActiveMQ Classic](../../using-apache-activemq-classic/how-do-i-use-log4j-jms-appender-with-activemq-classic) and more importantly to never send ActiveMQ Classic log messages to JMS appender
+Be sure to read [How do I use log4j JMS appender with ActiveMQ Classic](how-do-i-use-log4j-jms-appender-with-activemq-classic) and more importantly to never send ActiveMQ Classic log messages to JMS appender
 
 3. Your broker is probably under heavy load (or network connection is unreliable), so connection setup cannot be completed in a reasonable time
 ================================================================================================================================================
 
-If you experience sporadic exceptions like this, the best solution is to use [failover transport](../../../../using-activemq-classic/configuring-transports/activemq-classic-connection-uris/failover-transport-reference), so that your clients can try connecting again if the first attempt fails. If you're getting these kind of exceptions more frequently you can also try extending wire format negotiation period (default 10 sec). You can do that by using `wireFormat.maxInactivityDurationInitalDelay` property on the connection URL in your client. For example
+If you experience sporadic exceptions like this, the best solution is to use [failover transport](failover-transport-reference), so that your clients can try connecting again if the first attempt fails. If you're getting these kind of exceptions more frequently you can also try extending wire format negotiation period (default 10 sec). You can do that by using `wireFormat.maxInactivityDurationInitalDelay` property on the connection URL in your client. For example
 ```
 tcp://localhost:61616?wireFormat.maxInactivityDurationInitalDelay=30000
 ```

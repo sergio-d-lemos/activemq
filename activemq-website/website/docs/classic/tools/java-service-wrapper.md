@@ -1,5 +1,6 @@
 ---
 title: "Java Service Wrapper"
+slug: /java-service-wrapper
 ---
 
 

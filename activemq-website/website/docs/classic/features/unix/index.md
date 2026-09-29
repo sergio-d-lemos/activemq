@@ -1,5 +1,6 @@
 ---
 title: "Unix"
+slug: /unix
 ---
 
 

@@ -1,5 +1,6 @@
 ---
 title: "Compile ActiveMQ Classic with GCJ"
+slug: /compile-activemq-with-gcj
 ---
 
 

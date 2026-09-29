@@ -1,5 +1,6 @@
 ---
 title: "Configurable IOException Handling"
+slug: /configurable-ioexception-handling
 ---
 
 Starting with 5.3.1, ActiveMQ Classic provides configurable IOException handling for its file-based message stores. From version 5.5 the handler is also invoked when the JDBC persistence adapter gets a failure on `getConnection()`.

@@ -1,12 +1,13 @@
 ---
 title: "Example Testing Scenario"
+slug: /example-testing-scenario
 ---
 
 
 ActiveMQ Classic Performance Module
 ---------------------------
 
-*   [Users Manual](../../features/performance/activemq-classic-performance-module-users-manual)
+*   [Users Manual](activemq-classic-performance-module-users-manual)
 
 Example Testing Scenario
 ------------------------

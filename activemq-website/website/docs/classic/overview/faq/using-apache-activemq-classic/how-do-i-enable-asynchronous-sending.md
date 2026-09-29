@@ -1,5 +1,6 @@
 ---
 title: "How do I enable asynchronous sending"
+slug: /how-do-i-enable-asynchronous-sending
 ---
 
  [FAQ](..) > [Using Apache ActiveMQ Classic](.) > [How do I enable asynchronous sending](how-do-i-enable-asynchronous-sending)

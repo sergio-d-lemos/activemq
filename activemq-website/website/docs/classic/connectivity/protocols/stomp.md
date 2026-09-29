@@ -1,5 +1,6 @@
 ---
 title: "Stomp"
+slug: /stomp
 ---
 
 ActiveMQ Classic supports the [Stomp](http://stomp.github.com/) protocol and the Stomp - JMS mapping. This makes it easy to write a client in pure [Ruby](#), [Perl](#), [Python](#) or [PHP](#) for working with ActiveMQ Classic.
@@ -24,7 +25,7 @@ To see a full example, try [this XML](http://svn.apache.org/repos/asf/activemq/t
 ```
 activemq xbean:foo.xml
 ```
-For more help see [Run Broker](../../using-activemq-classic/run-broker).
+For more help see [Run Broker](run-broker).
 
 ### The Stomp Wire Format
 
@@ -46,7 +47,7 @@ Example:
 
 ### Security
 
-**From ActiveMQ Classic 5.1**: Stomp fully supports [ActiveMQ Classic's security](../../features/security) mechanism. This means that the `CONNECT` command will return an `ERROR` STOMP frame on unsuccessful authentication. Also, the authorization policies will be applied when you try to access (read/write) certain destinations. If you use synchronous operations (by using [receipts](http://stomp.github.com/stomp-specification-1.1.html#RECEIPT)), you can expect an `ERROR` frame in case of unauthorized access attempt. In other case, operations will be discarded but the client will not be informed of errors. This applies to all errors that can occur broker-side.
+**From ActiveMQ Classic 5.1**: Stomp fully supports [ActiveMQ Classic's security](security) mechanism. This means that the `CONNECT` command will return an `ERROR` STOMP frame on unsuccessful authentication. Also, the authorization policies will be applied when you try to access (read/write) certain destinations. If you use synchronous operations (by using [receipts](http://stomp.github.com/stomp-specification-1.1.html#RECEIPT)), you can expect an `ERROR` frame in case of unauthorized access attempt. In other case, operations will be discarded but the client will not be informed of errors. This applies to all errors that can occur broker-side.
 
 > **SSL**
 > 
@@ -54,7 +55,7 @@ Example:
 
 ### Enabling Stomp over NIO
 
-**From ActiveMQ Classic 5.3**: for better scalability and performance the Stomp protocol can be configured to be run over the NIO transport. The [NIO transport](../../using-activemq-classic/configuring-transports) will use far fewer threads than the corresponding TCP connector. This can help when support for a [large number of queues](../../overview/faq/configuration/how-do-i-configure-10s-of-1000s-of-queues-in-a-single-broker) is required. To use NIO change the URI scheme of the transport connector to `stomp+nio`.
+**From ActiveMQ Classic 5.3**: for better scalability and performance the Stomp protocol can be configured to be run over the NIO transport. The [NIO transport](configuring-transports) will use far fewer threads than the corresponding TCP connector. This can help when support for a [large number of queues](how-do-i-configure-10s-of-1000s-of-queues-in-a-single-broker) is required. To use NIO change the URI scheme of the transport connector to `stomp+nio`.
 
 Example:
 ```
@@ -254,8 +255,8 @@ STOMP Header|JMS Header|Description
 ---|---|---
 `correlation-id`|`JMSCorrelationID`|Good consumers will add this header to any responses they send.
 `expires`|`JMSExpiration`|Expiration time of the message.
-`JMSXGroupID`|`JMSXGroupID`|Specifies the [Message Groups.](../../features/consumer-features/message-groups)
-`JMSXGroupSeq`|`JMSXGroupSeq`|Optional header that specifies the sequence number in the [Message Groups.](../../features/consumer-features/message-groups)
+`JMSXGroupID`|`JMSXGroupID`|Specifies the [Message Groups.](message-groups)
+`JMSXGroupSeq`|`JMSXGroupSeq`|Optional header that specifies the sequence number in the [Message Groups.](message-groups)
 `persistent`|`JMSDeliveryMode`|Whether or not the message is persistent.
 `priority`|`JMSPriority`|Priority on the message.
 `reply-to`|`JMSReplyTo`|Destination you should send replies to.
@@ -269,12 +270,12 @@ Verb|Header|Type|Description
 ---|---|---
 `CONNECT`|`client-id`|`string`|Specifies the JMS clientID which is used in combination with the `activemq.subcriptionName` to denote a durable subscriber.
 `SUBSCRIBE`|`activemq.dispatchAsync`|`boolean`|Should messages be dispatched synchronously or asynchronously from the producer thread for non-durable topics in the broker? For fast consumers set this to `false`. For slow consumers set it to `true` so that dispatching will not block fast consumers.
-`SUBSCRIBE`|`activemq.exclusive`|`boolean`|I would like to be an [Exclusive Consumer](../../features/consumer-features/exclusive-consumer) on the queue.
-`SUBSCRIBE`|`activemq.maximumPendingMessageLimit`|`int`|For [Slow Consumer Handling](../../features/consumer-features/slow-consumer-handling) on non-durable topics by dropping old messages - we can set a maximum-pending limit, such that once a slow consumer backs up to this high water mark we begin to discard old messages.
+`SUBSCRIBE`|`activemq.exclusive`|`boolean`|I would like to be an [Exclusive Consumer](exclusive-consumer) on the queue.
+`SUBSCRIBE`|`activemq.maximumPendingMessageLimit`|`int`|For [Slow Consumer Handling](slow-consumer-handling) on non-durable topics by dropping old messages - we can set a maximum-pending limit, such that once a slow consumer backs up to this high water mark we begin to discard old messages.
 `SUBSCRIBE`|`activemq.noLocal`|`boolean`|Specifies whether or not locally sent messages should be ignored for subscriptions. Set to `true` to filter out locally sent messages.
 `SUBSCRIBE`|`activemq.prefetchSize`|`int`|Specifies the maximum number of pending messages that will be dispatched to the client. Once this maximum is reached no more messages are dispatched until the client acknowledges a message. Set to a low value > **1** for fair distribution of messages across consumers when processing messages can be slow. **Note**: if your STOMP client is implemented using a dynamic scripting language like Ruby, say, then this parameter **_must_** be set to `1` as there is no notion of a client-side message size to be sized. STOMP does not support a value of `0`.
 `SUBSCRIBE`|`activemq.priority`|`byte`|Sets the priority of the consumer so that dispatching can be weighted in priority order.
-`SUBSCRIBE`|`activemq.retroactive`|`boolean`|For non-durable topics make this subscription [retroactive](../../features/consumer-features/retroactive-consumer).
+`SUBSCRIBE`|`activemq.retroactive`|`boolean`|For non-durable topics make this subscription [retroactive](retroactive-consumer).
 `SUBSCRIBE`|`activemq.subscriptionName`|`string`|For durable topic subscriptions you must specify the same `activemq.client-id` on the connection and `activemq.subcriptionName` on the subscribe prior to v5.7.0. **Note**: the spelling `subcriptionName` NOT `subscriptionName`. This is not intuitive, but it is how it is implemented in ActiveMQ Classic 4.x. For the 5.0 release of ActiveMQ Classic, both `subcriptionName` and `subscriptionName` will be supported (`subcriptionName` was removed as of v5.6.0).
 `SUBSCRIBE`|`selector`|`string`|Specifies a JMS Selector using SQL 92 syntax as specified in the JMS 1.1 specification. This allows a filter to be applied to each message as part of the subscription.
 

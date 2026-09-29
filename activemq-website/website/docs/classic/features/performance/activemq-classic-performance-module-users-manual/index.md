@@ -1,5 +1,6 @@
 ---
 title: "ActiveMQ Classic Performance Module Users Manual"
+slug: /activemq-classic-performance-module-users-manual
 ---
 
 
@@ -105,7 +106,7 @@ Configuration Key|Default Value|Description
 `consumer.recvType`|time|Receive either time-based or message-count-based. Available values are: 'time' - keep receiving messages until a specific time interval has elapsed. 'count' - keep receiving until N messages has been received.
 `consumer.recvCount`|1000000 msgs (1 million)|If recvType=count, receive this much messages.
 `consumer.recvDuration`|300000 ms (5 mins)|If recvType=time, receive messages for this specific time duration.
-`consumer.messageSelector`|none|Specify [message selector](../../consumer-features/selectors) for all consumers. E.g. consumer.messageSelector="MyHeader = 'MyValue' AND JMSType = 'car'"
+`consumer.messageSelector`|none|Specify [message selector](selectors) for all consumers. E.g. consumer.messageSelector="MyHeader = 'MyValue' AND JMSType = 'car'"
 
 > **Note**: If you have more than one consumer receiving from multiple destinations, it is a good idea to change the sysTest.destDistro to 'equal', since by default it uses 'all' and a consumer can only receive from a single destination, hence all consumers will receive from the first destination in the list only.
 

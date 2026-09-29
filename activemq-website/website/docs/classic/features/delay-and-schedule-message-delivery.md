@@ -1,8 +1,9 @@
 ---
 title: "Delay and Schedule Message Delivery"
+slug: /delay-and-schedule-message-delivery
 ---
 
-ActiveMQ Classic from version **5.4** has an optional persistent scheduler built into the ActiveMQ Classic message broker. It is enabled by setting the broker **schedulerSupport** attribute to true in the [Xml Configuration](../using-activemq-classic/xml-configuration).
+ActiveMQ Classic from version **5.4** has an optional persistent scheduler built into the ActiveMQ Classic message broker. It is enabled by setting the broker **schedulerSupport** attribute to true in the [Xml Configuration](xml-configuration).
 An ActiveMQ Classic client can take advantage of a delayed delivery by using the following message properties:
 
 > **Check your Message Properties**

@@ -1,5 +1,6 @@
 ---
 title: "XBean XML Reference 4.1"
+slug: /xbean-xml-reference-41
 ---
 
 
@@ -100,7 +101,7 @@ Represents a virtual topic which forwards to a number of other destinations.
 
 _\<virtualTopic>_
 
-Creates [Virtual Topics](../../features/destination-features/virtual-destinations) using a prefix and postfix. The virtual destination creates a wildcard that is then used to look up all active queue subscriptions which match.
+Creates [Virtual Topics](virtual-destinations) using a prefix and postfix. The virtual destination creates a wildcard that is then used to look up all active queue subscriptions which match.
 
 #### The _org.apache.activemq.broker.region.policy.PolicyMap_ Type Implementations
 
@@ -2883,7 +2884,7 @@ virtualDestinations
 
 ### The _\<virtualTopic>_ Element
 
-Creates [Virtual Topics](../../features/destination-features/virtual-destinations) using a prefix and postfix. The virtual destination creates a wildcard that is then used to look up all active queue subscriptions which match.
+Creates [Virtual Topics](virtual-destinations) using a prefix and postfix. The virtual destination creates a wildcard that is then used to look up all active queue subscriptions which match.
 
 #### Properties
 
@@ -3178,9 +3179,9 @@ Used to keep track of how much of something is being used so that a productive w
 
 _\<virtualDestinationInterceptor>_
 
-Implements [Virtual Topics](../../features/destination-features/virtual-destinations).
+Implements [Virtual Topics](virtual-destinations).
 
 _\<virtualTopic>_
 
-Creates [Virtual Topics](../../features/destination-features/virtual-destinations) using a prefix and postfix. The virtual destination creates a wildcard that is then used to look up all active queue subscriptions which match.
+Creates [Virtual Topics](virtual-destinations) using a prefix and postfix. The virtual destination creates a wildcard that is then used to look up all active queue subscriptions which match.
 

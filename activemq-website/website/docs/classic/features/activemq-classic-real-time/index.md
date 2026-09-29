@@ -1,5 +1,6 @@
 ---
 title: "ActiveMQ Classic Real Time"
+slug: /activemq-classic-real-time
 ---
 
 

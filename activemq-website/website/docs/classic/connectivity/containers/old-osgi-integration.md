@@ -1,5 +1,6 @@
 ---
 title: "Old OSGi Integration"
+slug: /old-osgi-integration
 ---
 
 
@@ -66,7 +67,7 @@ For more information on ActiveMQ Classic feature take a look at the [ServiceMix 
 Web console
 ===========
 
-[Web console](../../tools/web-console) is included in ActiveMQ Classic distribution and you'll probably want to have it to monitor your broker. First of all you'll have to install the `web` feature, so that you have a web container ready to deploy our web application. To do that you should first add the ServiceMix features url, like we did above (if you didn't already). Now, you can just run
+[Web console](web-console) is included in ActiveMQ Classic distribution and you'll probably want to have it to monitor your broker. First of all you'll have to install the `web` feature, so that you have a web container ready to deploy our web application. To do that you should first add the ServiceMix features url, like we did above (if you didn't already). Now, you can just run
 ```
 smx@root:/> features/install web
 ```

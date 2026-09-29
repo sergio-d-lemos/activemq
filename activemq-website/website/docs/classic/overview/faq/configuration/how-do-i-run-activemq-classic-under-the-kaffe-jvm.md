@@ -1,5 +1,6 @@
 ---
 title: "How do I run ActiveMQ Classic under the Kaffe JVM"
+slug: /how-do-i-run-activemq-classic-under-the-kaffe-jvm
 ---
 
  [FAQ](..) > [Configuration](.) > [How do I run ActiveMQ Classic under the Kaffe JVM](how-do-i-run-activemq-classic-under-the-kaffe-jvm)

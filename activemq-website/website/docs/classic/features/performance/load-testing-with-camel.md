@@ -1,5 +1,6 @@
 ---
 title: "Load Testing with Camel"
+slug: /load-testing-with-camel
 ---
 
 

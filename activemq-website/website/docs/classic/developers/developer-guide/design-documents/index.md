@@ -1,5 +1,6 @@
 ---
 title: "Design Documents"
+slug: /design-documents
 ---
 
 

@@ -1,5 +1,6 @@
 ---
 title: "Sandbox"
+slug: /sandbox
 ---
 
 

@@ -1,5 +1,6 @@
 ---
 title: "Advisory Message"
+slug: /advisory-message
 ---
 
 
@@ -11,7 +12,7 @@ ActiveMQ Classic supports advisory messages which allows you to watch the system
 *   brokers sending messages to destinations with no consumers.
 *   connections starting and stopping
 
-Advisory messages can be thought as some kind of administrative channel where you receive information regarding what is happening on your JMS provider along with what's happening with producers, consumers and destinations. When you look at a broker via [JMX](../jmx) you will see the advisory topics prefixed with `ActiveMQ.Advisory.`.
+Advisory messages can be thought as some kind of administrative channel where you receive information regarding what is happening on your JMS provider along with what's happening with producers, consumers and destinations. When you look at a broker via [JMX](jmx) you will see the advisory topics prefixed with `ActiveMQ.Advisory.`.
 
 Every Advisory has the message **type** `Advisory` and some predefined message properties:
 
@@ -128,7 +129,7 @@ The advisories that are not turned on by default (see the last column) can be en
 
 > Hint
 > 
-> The `>` character matches all topics - you can use wild-card matches for setting a destination policy - see [Wildcards](../destination-features/wildcards)
+> The `>` character matches all topics - you can use wild-card matches for setting a destination policy - see [Wildcards](wildcards)
 
 ### Disabling Advisory Messages
 
@@ -157,11 +158,11 @@ factory.setWatchTopicAdvisories(false);
 
 > **Warning**
 > 
-> Advisory messages are required for [dynamic network broker topologies](../clustering/networks-of-brokers) as `NetworkConnectors` subscribe to advisory messages. In the absence of advisories, a network must be statically configured.
+> Advisory messages are required for [dynamic network broker topologies](networks-of-brokers) as `NetworkConnectors` subscribe to advisory messages. In the absence of advisories, a network must be statically configured.
 
 ### Using the Destinations
 
-All of the above destinations are really prefixes which are appended with important information (like the actual topic or queue, the client ID, producer ID, consumer ID etc). This allows you to reuse the power of publish/subscribe, [Wildcards](../destination-features/wildcards) and [Selectors](../consumer-features/selectors) to filter the advisory messages as you see fit.
+All of the above destinations are really prefixes which are appended with important information (like the actual topic or queue, the client ID, producer ID, consumer ID etc). This allows you to reuse the power of publish/subscribe, [Wildcards](wildcards) and [Selectors](selectors) to filter the advisory messages as you see fit.
 
 For example if you want to subscribe to expired messages on a topic `FOO.BAR` you could subscribe to `ActiveMQ.Advisory.Expired.Topic.FOO.BAR`. To subscribe to all messages of a certain kind of advisory just append `.>` to the topic, e.g., to subscribe to all the consumers starting and stopping to topics and queues subscribe to `ActiveMQ.Advisory.Consumer..>`.
 

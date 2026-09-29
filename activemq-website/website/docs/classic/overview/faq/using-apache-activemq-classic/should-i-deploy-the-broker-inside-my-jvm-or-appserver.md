@@ -1,5 +1,6 @@
 ---
 title: "Should I deploy the broker inside my JVM or AppServer"
+slug: /should-i-deploy-the-broker-inside-my-jvm-or-appserver
 ---
 
  [FAQ](..) > [Using Apache ActiveMQ Classic](.) > [Should I deploy the broker inside my JVM or AppServer](should-i-deploy-the-broker-inside-my-jvm-or-appserver)
@@ -19,10 +20,10 @@ If you have lots of JVMs (say 100s of them) and have very stringent requirements
 
 Having an embdded broker inside each JVM could result in large number of sets of files to manage. So it may be simpler to separate the two out, so that your 100s of JVMs talk to a relatively small cluster of brokers (say 2-10 of them) so that you can avoid worrying about persistent state in each JVM and just focus on backing up and managing the files/databases used by the brokers.
 
-Also its typically easier to run and manage ActiveMQ Classic brokers when they are separate; you can have some ClassLoader issues when trying to embed ActiveMQ Classic inside an application server. e.g. you can sometimes get [ClassPath Errors](../errors/Exceptions/javalangnosuchmethoderror)
+Also its typically easier to run and manage ActiveMQ Classic brokers when they are separate; you can have some ClassLoader issues when trying to embed ActiveMQ Classic inside an application server. e.g. you can sometimes get [ClassPath Errors](javalangnosuchmethoderror)
 
 ### See
 
 *   [How do I embed a Broker inside a Connection](how-do-i-embed-a-broker-inside-a-connection)
-*   [Run Broker](../../../using-activemq-classic/run-broker)
+*   [Run Broker](run-broker)
 

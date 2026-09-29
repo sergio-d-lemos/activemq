@@ -1,5 +1,6 @@
 ---
 title: "ActiveMQ Classic Download Archives"
+slug: /download-archives
 ---
 
 You can use the Apache Archives to download previous Apache ActiveMQ Classic releases.

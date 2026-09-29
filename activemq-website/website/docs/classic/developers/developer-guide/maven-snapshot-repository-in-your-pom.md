@@ -1,5 +1,6 @@
 ---
 title: "Maven SNAPSHOT Repository in your POM"
+slug: /maven-snapshot-repository-in-your-pom
 ---
 
 

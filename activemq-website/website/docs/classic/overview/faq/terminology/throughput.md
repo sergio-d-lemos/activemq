@@ -1,5 +1,6 @@
 ---
 title: "Throughput"
+slug: /throughput
 ---
 
  [FAQ](..) > [Terminology](.) > [Throughput](throughput)

@@ -1,5 +1,6 @@
 ---
 title: "Async Sends"
+slug: /async-sends
 ---
 
 
@@ -16,7 +17,7 @@ Many high performance applications are designed to tolerate a small amount of me
 
 ### Configuring Async Send using a Connection URI
 
-You can use the [Connection Configuration URI](../../using-activemq-classic/configuring-transports/activemq-classic-connection-uris/connection-configuration-uri) to configure async sends as follows
+You can use the [Connection Configuration URI](connection-configuration-uri) to configure async sends as follows
 ```
 cf = new ActiveMQConnectionFactory("tcp://locahost:61616?jms.useAsyncSend=true");
 ```
@@ -39,7 +40,7 @@ You can enable this feature on the [ActiveMQConnection](http://incubator.apache.
 
 ### Also see
 
-*   [Connection Configuration URI](../../using-activemq-classic/configuring-transports/activemq-classic-connection-uris/connection-configuration-uri)
-*   [Should I use transactions](../../overview/faq/jms/should-i-use-transactions)
-*   [Consumer Dispatch Async](../consumer-features/consumer-dispatch-async)
+*   [Connection Configuration URI](connection-configuration-uri)
+*   [Should I use transactions](should-i-use-transactions)
+*   [Consumer Dispatch Async](consumer-dispatch-async)
 

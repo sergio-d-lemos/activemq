@@ -1,5 +1,6 @@
 ---
 title: "Articles"
+slug: /articles
 ---
 
 This page captures resources and articles outside the ActiveMQ project which may assist your development. Please add any new resources that you come across by clicking the edit link at the bottom of the page. If you do this, please make sure to attach a date to the article as well so users are aware of how recent it is.

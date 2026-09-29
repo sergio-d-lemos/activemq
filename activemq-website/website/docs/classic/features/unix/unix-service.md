@@ -1,5 +1,6 @@
 ---
 title: "Unix Service"
+slug: /unix-service
 ---
 
 

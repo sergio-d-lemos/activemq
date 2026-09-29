@@ -1,5 +1,6 @@
 ---
 title: "What version should I use"
+slug: /what-version-should-i-use
 ---
 
  [FAQ](..) > [General](.) > [What version should I use](what-version-should-i-use)

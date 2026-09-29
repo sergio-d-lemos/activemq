@@ -1,5 +1,6 @@
 ---
 title: "Retroactive Consumer"
+slug: /retroactive-consumer
 ---
 
 

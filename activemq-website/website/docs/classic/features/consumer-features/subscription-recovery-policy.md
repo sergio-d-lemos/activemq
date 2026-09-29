@@ -1,5 +1,6 @@
 ---
 title: "Subscription Recovery Policy"
+slug: /subscription-recovery-policy
 ---
 
 

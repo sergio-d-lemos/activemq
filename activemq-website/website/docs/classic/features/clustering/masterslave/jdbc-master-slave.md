@@ -1,5 +1,6 @@
 ---
 title: "JDBC Master Slave"
+slug: /jdbc-master-slave
 ---
 
 JDBC Master Slave
@@ -15,7 +16,7 @@ When using just JDBC as the data source you can use a Master Slave approach, run
 
 ![](/img/Startup.png)
 
-Clients should be using the [Failover Transport](../../../using-activemq-classic/configuring-transports/activemq-classic-connection-uris/failover-transport-reference) to connect to the available brokers. e.g. using a URL something like the following
+Clients should be using the [Failover Transport](failover-transport-reference) to connect to the available brokers. e.g. using a URL something like the following
 ```
 failover:(tcp://broker1:61616,tcp://broker2:61616,tcp://broker3:61616)
 ```

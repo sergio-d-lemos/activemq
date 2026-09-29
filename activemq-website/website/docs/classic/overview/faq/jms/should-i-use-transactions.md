@@ -1,5 +1,6 @@
 ---
 title: "Should I use transactions"
+slug: /should-i-use-transactions
 ---
 
  [FAQ](..) > [JMS](.) > [Should I use transactions](should-i-use-transactions)

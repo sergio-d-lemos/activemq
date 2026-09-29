@@ -1,5 +1,6 @@
 ---
 title: "Message Transformation"
+slug: /message-transformation
 ---
 
 

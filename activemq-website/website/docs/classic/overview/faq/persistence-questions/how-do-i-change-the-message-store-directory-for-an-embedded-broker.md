@@ -1,5 +1,6 @@
 ---
 title: "How do I change the message store directory for an embedded broker"
+slug: /how-do-i-change-the-message-store-directory-for-an-embedded-broker
 ---
 
  [FAQ](..) > [Persistence Questions](.) > [How do I change the message store directory for an embedded broker](how-do-i-change-the-message-store-directory-for-an-embedded-broker)

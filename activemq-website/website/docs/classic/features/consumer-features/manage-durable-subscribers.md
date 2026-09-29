@@ -1,17 +1,18 @@
 ---
 title: "Manage Durable Subscribers"
+slug: /manage-durable-subscribers
 ---
 
 
-[Durable topic subscribers](../../overview/faq/jms/how-do-durable-queues-and-topics-work) that are offline for a long period of time are usually not desired in the system. The reason for that is that broker needs to keep all the messages sent to those topics for the said subscribers. And this message piling can over time exhaust broker store limits for example and lead to the overall slowdown of the system.
+[Durable topic subscribers](how-do-durable-queues-and-topics-work) that are offline for a long period of time are usually not desired in the system. The reason for that is that broker needs to keep all the messages sent to those topics for the said subscribers. And this message piling can over time exhaust broker store limits for example and lead to the overall slowdown of the system.
 
-You can always manually unsubscribe inactive durable subscriber using management tools like [JConsole](../jmx) or [Web Console](../../tools/web-console), but clearly there's more that can be done to help manage systems that use durable subscribers (perhaps coming from environments that they don't control)
+You can always manually unsubscribe inactive durable subscriber using management tools like [JConsole](jmx) or [Web Console](web-console), but clearly there's more that can be done to help manage systems that use durable subscribers (perhaps coming from environments that they don't control)
 
 Staring with version 5.6 we introduced a few improvements in this area.
 
 ### Expiring messages
 
-Some applications send message with specified time to live. If those messages are kept on the broker for the offline durable subscriber we need to remove them when they reach their expiry time. Just as we do with queues, now we check for those messages every 30 seconds by default, which can be tuned with the appropriate [destination policy](../destination-features/per-destination-policies). For example, the following entry
+Some applications send message with specified time to live. If those messages are kept on the broker for the offline durable subscriber we need to remove them when they reach their expiry time. Just as we do with queues, now we check for those messages every 30 seconds by default, which can be tuned with the appropriate [destination policy](per-destination-policies). For example, the following entry
 ```
 <policyEntry topic=">" expireMessagesPeriod="300000"/>
 ```

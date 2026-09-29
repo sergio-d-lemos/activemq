@@ -1,5 +1,6 @@
 ---
 title: "How do I change the logging"
+slug: /how-do-i-change-the-logging
 ---
 
  [FAQ](..) > [Using Apache ActiveMQ Classic](.) > [How do I change the logging](how-do-i-change-the-logging)

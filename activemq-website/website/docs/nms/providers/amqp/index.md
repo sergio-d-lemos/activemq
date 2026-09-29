@@ -21,7 +21,7 @@ See here for [downloads](/components/nms/providers/amqp/downloads)
 
 ### Configuration
 
-See here for [configuration](/components/nms/documentation/providers/amqp/uri-configuration) details
+See here for [configuration](/components/nms/providers/amqp/uri-configuration) details
 
 
 ### Contributing

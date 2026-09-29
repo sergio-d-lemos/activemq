@@ -10,11 +10,11 @@ ActiveMQ supports advisory messages which allows you to watch the system using r
 *   Observe brokers sending messages to destinations with no consumers.
 *   See connections starting and stopping
 
-Advisory messages can be thought as some kind of administrative channel where you receive information regarding what is happening on your JMS provider along with what's happening with producers, consumers and destinations. To learn more about the broker's advisory message support see this [article](/components/classic/documentation/features/message-features/advisory-message).
+Advisory messages can be thought as some kind of administrative channel where you receive information regarding what is happening on your JMS provider along with what's happening with producers, consumers and destinations. To learn more about the broker's advisory message support see this [article](/components/classic/documentation/advisory-message).
 
 ### **Before You Begin**
 
-This tutorial assumes that the reader has a working knowledge of the CMS API and knows how to build basic applications using the ActiveMQ-CPP Library. If you aren't sure how to use the CMS API then you should first read the [CMS API Overview](/components/cms/documentation/overview). The tutorial is written against the ActiveMQ-CPP 3.0 release API and while it is possible to handle advisory messages using the older ActiveMQ-CPP 2.x clients there may be some code differences which are not shown in this article.
+This tutorial assumes that the reader has a working knowledge of the CMS API and knows how to build basic applications using the ActiveMQ-CPP Library. If you aren't sure how to use the CMS API then you should first read the [CMS API Overview](/components/cms/overview). The tutorial is written against the ActiveMQ-CPP 3.0 release API and while it is possible to handle advisory messages using the older ActiveMQ-CPP 2.x clients there may be some code differences which are not shown in this article.
 
 ### **Subscribing to Advisory Topics**
 
@@ -230,9 +230,9 @@ void AdvisoryProducer::onMessage( const cms::Message* message ) {
 ```
 ### ***Advanced Topic*** Dealing with Command Objects in Advisories
 
-If you read the ActiveMQ Advisory Message [article](/components/classic/documentation/features/message-features/advisory-message) mentioned at the start of this tutorial then you know that certain advisory messages can contain an embedded command object. If you didn't read that [article](/components/classic/documentation/features/message-features/advisory-message) then this section is going to be very confusing, so go read it. We can access those command object in CMS with a little work which means we can take full advantage of the Advisory Message feature.
+If you read the ActiveMQ Advisory Message [article](/components/classic/documentation/advisory-message) mentioned at the start of this tutorial then you know that certain advisory messages can contain an embedded command object. If you didn't read that [article](/components/classic/documentation/advisory-message) then this section is going to be very confusing, so go read it. We can access those command object in CMS with a little work which means we can take full advantage of the Advisory Message feature.
 
-All Advisory Messages are sent as a basic ActiveMQMessage to your client. The underlying type hierarchy in ActiveMQ-CPP is the same as that of ActiveMQ so the names of the embedded command objects you saw in the Advisory [article](/components/classic/documentation/features/message-features/advisory-message) are the same and they contain mostly the same information, although sometimes the information is encoded in a more C++ friendly or unfriendly way depending on your point of view.
+All Advisory Messages are sent as a basic ActiveMQMessage to your client. The underlying type hierarchy in ActiveMQ-CPP is the same as that of ActiveMQ so the names of the embedded command objects you saw in the Advisory [article](/components/classic/documentation/advisory-message) are the same and they contain mostly the same information, although sometimes the information is encoded in a more C++ friendly or unfriendly way depending on your point of view.
 
 To demonstrate how we can access the command objects lets try and create a client application that listens to the Broker for advisories that indicate that Temporary Destinations have either been created or destroyed. The Broker will publish advisory messages to the "ActiveMQ.Advisory.TempTopic" and "ActiveMQ.Advisory.TempQueue" Topics whenever the corresponding Temporary Destination is created or destroyed and the command object will be of type DestinationInfo. The DestinationInfo object contains a Destination object describing the Destination in question and an Operation Type value telling whether the command is a create or destroy command. First lets look at how we subscribe to this Advisory Topic:
 

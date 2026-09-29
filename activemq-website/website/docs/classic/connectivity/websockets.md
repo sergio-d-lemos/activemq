@@ -1,5 +1,6 @@
 ---
 title: "WebSockets"
+slug: /websockets
 ---
 
 

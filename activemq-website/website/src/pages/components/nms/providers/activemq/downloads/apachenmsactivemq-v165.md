@@ -12,7 +12,7 @@ This is a small bugfix release that corrects an issue found in the OpenWire tigh
 API Documentation
 -----------------
 
-Refer to the API for this release [here](/components/nms/documentation/nms-api)
+Refer to the API for this release [here](/components/nms/nms-api)
 
 Download Here
 -------------

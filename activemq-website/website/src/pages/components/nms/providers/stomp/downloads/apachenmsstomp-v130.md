@@ -16,7 +16,7 @@ This release adds some great new features to the NMS Stomp library and fixes sev
 
 ##### API
 
-Refer to the API for this release [here](/components/nms/documentation/nms-api)
+Refer to the API for this release [here](/components/nms/nms-api)
 
 ##### Apache.NMS.Stomp Downloads
 

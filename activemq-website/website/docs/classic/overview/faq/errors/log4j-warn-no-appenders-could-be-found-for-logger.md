@@ -1,5 +1,6 @@
 ---
 title: "log4j-WARN No appenders could be found for logger"
+slug: /log4j-warn-no-appenders-could-be-found-for-logger
 ---
 
  [FAQ](..) > [Errors](.) > [log4j-WARN No appenders could be found for logger](log4j-warn-no-appenders-could-be-found-for-logger)

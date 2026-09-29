@@ -1,5 +1,6 @@
 ---
 title: "New Features in ActiveMQ"
+slug: /new-features
 ---
 
 This page documents the various new features we add in each major release

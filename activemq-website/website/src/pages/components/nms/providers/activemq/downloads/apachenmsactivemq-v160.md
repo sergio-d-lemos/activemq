@@ -25,7 +25,7 @@ This release adds several new features to the ActiveMQ client and fixes many bug
 API Documentation
 -----------------
 
-Refer to the API for this release [here](/components/nms/documentation/nms-api)
+Refer to the API for this release [here](/components/nms/nms-api)
 
 Download Here
 -------------

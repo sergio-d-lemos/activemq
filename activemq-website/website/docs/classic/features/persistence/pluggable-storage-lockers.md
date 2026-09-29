@@ -1,5 +1,6 @@
 ---
 title: "Pluggable storage lockers"
+slug: /pluggable-storage-lockers
 ---
 
 As of the 5.7.0 release of ActiveMQ Classic the choice of storage locking mechanism, as used by a persistence adapter, has been made pluggable. This feature is only meaningful to brokers configured in a shared storage master/slave topology. Prior to release 5.7.0 the storage locking mechanism (and thus master election) was dictated by the choice of persistence adapter. With the KahaDB persistence adapter, for example, the storage locking mechanism was based on a shared file lock. Similarly, the JDBC persistence adapter used a database backed storage lock.

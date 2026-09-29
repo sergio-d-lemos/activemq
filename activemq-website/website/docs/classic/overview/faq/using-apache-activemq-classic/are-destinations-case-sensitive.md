@@ -1,5 +1,6 @@
 ---
 title: "Are destinations case sensitive"
+slug: /are-destinations-case-sensitive
 ---
 
  [FAQ](..) > [Using Apache ActiveMQ Classic](.) > [Are destinations case sensitive](are-destinations-case-sensitive)

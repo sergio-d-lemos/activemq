@@ -1,5 +1,6 @@
 ---
 title: "Group Membership"
+slug: /group-membership
 ---
 
 

@@ -1,5 +1,6 @@
 ---
 title: "Performance"
+slug: /performance
 ---
 
 
@@ -8,14 +9,14 @@ Performance
 
 Performance differs greatly depending on many different factors
 
-*   the network [topology](../../using-activemq-classic/topologies)
-*   transport [protocols](../../connectivity/protocols) used
-*   [quality of service](../../overview/faq/terminology/qos)
+*   the network [topology](topologies)
+*   transport [protocols](protocols) used
+*   [quality of service](qos)
 *   hardware, network, JVM and operating system
 *   number of producers, number of consumers
 *   distribution of messages across destinations along with message size
 
-To give you an idea of the kinds of performance you can expect from ActiveMQ Classic we have a bunch of [JMeter Performance Tests](../../developers/jmeter-performance-tests) that you can run on your hardware with the protocols of your choice.
+To give you an idea of the kinds of performance you can expect from ActiveMQ Classic we have a bunch of [JMeter Performance Tests](jmeter-performance-tests) that you can run on your hardware with the protocols of your choice.
 
 The last test run we ran was on a small network of 2 dual CPU opteron linux boxes (64 bit) running SuSe and with Java 5 from Sun.
 
@@ -27,7 +28,7 @@ We have a few tools to help you evaluate performance.
 
 *   [ActiveMQ Classic Performance Module Users Manual](activemq-classic-performance-module-users-manual)
 *   [Load Testing with Camel](load-testing-with-camel)
-*   [JMeter Performance Tests](../../developers/jmeter-performance-tests)
+*   [JMeter Performance Tests](jmeter-performance-tests)
 
 Performance guides
 ------------------

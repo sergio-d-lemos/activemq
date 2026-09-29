@@ -1,5 +1,6 @@
 ---
 title: "ActiveMQ Classic InactivityMonitor"
+slug: /activemq-classic-inactivitymonitor
 ---
 
 
@@ -57,5 +58,5 @@ Setting `transport.useInactivityMonitor=false` will disable the InactivityMonito
 
 ### Potential Issues
 
-[slow-networks-drop-large-messages](../../overview/faq/errors/slow-networks-drop-large-messages)
+[slow-networks-drop-large-messages](slow-networks-drop-large-messages)
 

@@ -1,5 +1,6 @@
 ---
 title: "Known Bad OS and JVM Combinations"
+slug: /known-bad-os-and-jvm-combinations
 ---
 
 

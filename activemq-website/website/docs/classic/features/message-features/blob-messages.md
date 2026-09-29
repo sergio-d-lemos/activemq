@@ -1,5 +1,6 @@
 ---
 title: "Blob Messages"
+slug: /blob-messages
 ---
 
 
@@ -51,7 +52,7 @@ public class MyListener implements MessageListener {
 
 You can explicitly configure the BlobTransferPolicy on an ActiveMQConnectionFactory, ActiveMQConnection or ActiveMQSession. Typically its done on the factory either via Java code or Spring.
 
-You can use the [Connection Configuration URI](../../using-activemq-classic/configuring-transports/activemq-classic-connection-uris/connection-configuration-uri) to configure these things via a URI.
+You can use the [Connection Configuration URI](connection-configuration-uri) to configure these things via a URI.
 
 For example you can connect to a broker also specifying the uploadUrl to use via
 ```

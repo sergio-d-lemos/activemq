@@ -1,5 +1,6 @@
 ---
 title: "Resource Adapter does not seem to pool connections"
+slug: /resource-adapter-does-not-seem-to-pool-connections
 ---
 
  [FAQ](..) > [Errors](.) > [Resource Adapter does not seem to pool connections](resource-adapter-does-not-seem-to-pool-connections)

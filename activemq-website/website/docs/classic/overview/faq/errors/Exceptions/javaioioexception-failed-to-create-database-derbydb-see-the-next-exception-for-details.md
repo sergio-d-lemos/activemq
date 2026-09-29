@@ -1,5 +1,6 @@
 ---
 title: "java.io.IOException Failed to create database 'derbydb', see the next exception for details"
+slug: /javaioioexception-failed-to-create-database-derbydb-see-the-next-exception-for-details
 ---
 
  [FAQ](../..) > [Errors](..) > [Exceptions](.) > [java.io.IOException Failed to create database 'derbydb', see the next exception for details](javaioioexception-failed-to-create-database-derbydb-see-the-next-exception-for-details)
@@ -57,5 +58,5 @@ or in XML use
 
 ### See
 
-*   [How do I embed a Broker inside a Connection](../../using-apache-activemq-classic/how-do-i-embed-a-broker-inside-a-connection)
+*   [How do I embed a Broker inside a Connection](how-do-i-embed-a-broker-inside-a-connection)
 

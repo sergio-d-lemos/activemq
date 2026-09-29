@@ -1,5 +1,6 @@
 ---
 title: "Fanout Transport Reference"
+slug: /fanout-transport-reference
 ---
 
 

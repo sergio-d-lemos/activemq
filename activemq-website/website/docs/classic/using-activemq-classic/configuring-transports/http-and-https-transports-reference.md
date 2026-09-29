@@ -1,5 +1,6 @@
 ---
 title: "HTTP and HTTPs Transports Reference"
+slug: /http-and-https-transports-reference
 ---
 
 
@@ -7,7 +8,7 @@ title: "HTTP and HTTPs Transports Reference"
 
 The HTTP and HTTPS transports are used to tunnel over HTTP or HTTPS using XML payloads. This allows the ActiveMQ Classic client and broker to tunnel over HTTP avoiding any firewall issues.
 
-If the client is not JMS you might want to look at [REST](../../connectivity/protocols/rest) or [Ajax](../../connectivity/ajax) support instead.
+If the client is not JMS you might want to look at [REST](rest) or [Ajax](ajax) support instead.
 
 Note that the HTTP Transport is located in the activemq-optional jar.
 

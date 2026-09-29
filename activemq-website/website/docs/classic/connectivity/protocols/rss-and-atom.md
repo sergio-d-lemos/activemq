@@ -1,9 +1,10 @@
 ---
 title: "RSS and Atom"
+slug: /rss-and-atom
 ---
 
 
-We have added support for the [REST](rest)ful browsing of message queues in the **activemq-web** module. To try out this feature try the [Web Samples](../../using-activemq-classic/web-samples).
+We have added support for the [REST](rest)ful browsing of message queues in the **activemq-web** module. To try out this feature try the [Web Samples](web-samples).
 
 Browsing of queues is implemented by a servlet, **QueueBrowseServlet** which allows queues to be browsed using pluggable views. The current views supported are
 

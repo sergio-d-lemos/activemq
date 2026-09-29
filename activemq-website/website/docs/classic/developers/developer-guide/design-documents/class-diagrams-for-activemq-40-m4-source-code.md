@@ -1,5 +1,6 @@
 ---
 title: "Class Diagrams for activemq-4.0-M4 source code"
+slug: /class-diagrams-for-activemq-40-m4-source-code
 ---
 
 

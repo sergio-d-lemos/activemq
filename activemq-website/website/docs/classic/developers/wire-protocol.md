@@ -1,9 +1,10 @@
 ---
 title: "Wire Protocol"
+slug: /wire-protocol
 ---
 
 
-This page describes the logical [OpenWire](../connectivity/protocols/openwire) protocol for users developing clients in other languages than Java such as C# or C native clients. Note that OpenWire is designed for maximum performance and features; its the protocol used inside ActiveMQ Classic. If you want a simpler protocol to work with to get started with a cross language client then try [Stomp](../connectivity/protocols/stomp) which is designed for ease-of-implementation so its easy to support many clients.
+This page describes the logical [OpenWire](openwire) protocol for users developing clients in other languages than Java such as C# or C native clients. Note that OpenWire is designed for maximum performance and features; its the protocol used inside ActiveMQ Classic. If you want a simpler protocol to work with to get started with a cross language client then try [Stomp](stomp) which is designed for ease-of-implementation so its easy to support many clients.
 
 Protocol overview
 =================

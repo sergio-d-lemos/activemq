@@ -76,11 +76,11 @@ Connection options can either be set via the `connection.*` prefix or the `nms.*
 |connection.AsyncClose|true|Should the close command be sent Asynchronously|
 |connection.AlwaysSyncSend|false|Causes all messages a Producer sends to be sent Asynchronously.|
 |connection.CopyMessageOnSend|true|Copies the Message objects a Producer sends so that the client can reuse Message objects without affecting an in-flight message.|
-|connection.ProducerWindowSize|0|The ProducerWindowSize is the maximum number of bytes in memory that a producer will transmit to a broker before waiting for acknowledgement messages from the broker that it has accepted the previously sent messages. In other words, this how you configure the producer flow control window that is used for async sends where the client is responsible for managing memory usage. The default value of 0 means no flow control at the client. See also [Producer Flow Control](/components/classic/documentation/features/message-dispatching-features/producer-flow-control)|
+|connection.ProducerWindowSize|0|The ProducerWindowSize is the maximum number of bytes in memory that a producer will transmit to a broker before waiting for acknowledgement messages from the broker that it has accepted the previously sent messages. In other words, this how you configure the producer flow control window that is used for async sends where the client is responsible for managing memory usage. The default value of 0 means no flow control at the client. See also [Producer Flow Control](/components/classic/documentation/producer-flow-control)|
 |connection.useCompression|false|Should message bodies be compressed before being sent.
 |connection.sendAcksAsync|false|Should message acks be sent asynchronously|
 |connection.messagePrioritySupported|true|Should messages be delivered to the client based on the value of the Message Priority header.|
-|connection.dispatchAsync|false|Should the broker [dispatch messages asynchronously](/components/nms/documentation/providers/activemq/advanced-features/consumer-dispatch-async) to the connection's consumers.|
+|connection.dispatchAsync|false|Should the broker [dispatch messages asynchronously](/components/nms/providers/activemq/advanced-features/consumer-dispatch-async) to the connection's consumers.|
 |connection.watchTopicAdvisories|true|Should the client watch for advisory messages from the broker to track the creation and deletion of temporary destinations.|
 
 ### OpenWire Options
@@ -108,14 +108,14 @@ d = session.CreateTopic("com.foo?consumer.prefetchSize=2000&consumer.noLocal=tru
 
 |Option|Default|Description|
 |-----|-----|-----|
-|consumer.prefetchSize|1000|The number of message the consumer will [prefetch](/components/classic/documentation/features/what-is-the-prefetch-limit-for).  **Removed in v1.7.0 use connection prefetch policy instead.**|
-|consumer.maximumPendingMessageLimit|0|Use to control if messages are dropped if a [slow consumer](/components/classic/documentation/features/consumer-features/slow-consumer-handling) situation exists.|
+|consumer.prefetchSize|1000|The number of message the consumer will [prefetch](/components/classic/documentation/what-is-the-prefetch-limit-for).  **Removed in v1.7.0 use connection prefetch policy instead.**|
+|consumer.maximumPendingMessageLimit|0|Use to control if messages are dropped if a [slow consumer](/components/classic/documentation/slow-consumer-handling) situation exists.|
 |consumer.noLocal|false|Same as the noLocal flag on a Topic consumer. Exposed here so that it can be used with a queue.|
-|consumer.dispatchAsync|false|Should the broker [dispatch messages asynchronously](/components/nms/documentation/providers/activemq/advanced-features/consumer-dispatch-async) to the consumer.|
-|consumer.retroactive|false|Is this a [Retroactive Consumer](/components/nms/documentation/providers/activemq/advanced-features/retroactive-consumers).|
+|consumer.dispatchAsync|false|Should the broker [dispatch messages asynchronously](/components/nms/providers/activemq/advanced-features/consumer-dispatch-async) to the consumer.|
+|consumer.retroactive|false|Is this a [Retroactive Consumer](/components/nms/providers/activemq/advanced-features/retroactive-consumers).|
 |consumer.selector|null|JMS Selector used with the consumer.|
-|consumer.exclusive|false|Is this an [Exclusive Consumer](/components/nms/documentation/providers/activemq/advanced-features/exclusive-consumers).|
-|consumer.priority|0|Allows you to configure a [Consumer Priority](/components/nms/documentation/providers/activemq/advanced-features/consumer-priority).
+|consumer.exclusive|false|Is this an [Exclusive Consumer](/components/nms/providers/activemq/advanced-features/exclusive-consumers).|
+|consumer.priority|0|Allows you to configure a [Consumer Priority](/components/nms/providers/activemq/advanced-features/consumer-priority).
 
 ### OpenWire-only Options
 ---

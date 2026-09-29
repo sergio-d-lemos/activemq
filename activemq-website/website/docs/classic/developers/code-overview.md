@@ -1,5 +1,6 @@
 ---
 title: "Code Overview"
+slug: /code-overview
 ---
 
 

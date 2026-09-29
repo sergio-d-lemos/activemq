@@ -1,5 +1,6 @@
 ---
 title: "JMS Bridge With Local Broker"
+slug: /jms-bridge-with-local-broker
 ---
 
 

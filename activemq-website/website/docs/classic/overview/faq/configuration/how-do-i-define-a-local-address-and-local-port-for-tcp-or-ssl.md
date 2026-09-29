@@ -1,5 +1,6 @@
 ---
 title: "How do I define a local address and local port for TCP or SSL"
+slug: /how-do-i-define-a-local-address-and-local-port-for-tcp-or-ssl
 ---
 
  [FAQ](..) > [Configuration](.) > [How do I define a local address and local port for TCP or SSL](how-do-i-define-a-local-address-and-local-port-for-tcp-or-ssl)

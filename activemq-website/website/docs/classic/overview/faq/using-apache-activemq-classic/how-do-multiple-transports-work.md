@@ -1,5 +1,6 @@
 ---
 title: "How do multiple transports work"
+slug: /how-do-multiple-transports-work
 ---
 
  [FAQ](..) > [Using Apache ActiveMQ Classic](.) > [How do multiple transports work](how-do-multiple-transports-work)

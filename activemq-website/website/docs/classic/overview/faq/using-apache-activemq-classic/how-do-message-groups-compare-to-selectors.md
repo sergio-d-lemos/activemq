@@ -1,5 +1,6 @@
 ---
 title: "How do Message Groups compare to Selectors"
+slug: /how-do-message-groups-compare-to-selectors
 ---
 
  [FAQ](..) > [Using Apache ActiveMQ Classic](.) > [How do Message Groups compare to Selectors](how-do-message-groups-compare-to-selectors)

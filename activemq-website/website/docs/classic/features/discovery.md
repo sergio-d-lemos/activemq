@@ -1,12 +1,13 @@
 ---
 title: "Discovery"
+slug: /discovery
 ---
 
 
 Discovery Agents
 ----------------
 
-ActiveMQ Classic uses an abstraction called a [Discovery Agent](http://actievmq.apache.org/maven/activemq-core/apidocs/org/apache/activemq/transport/discovery/DiscoveryAgent.html) to detect remote services such as remote brokers. We can use discovery for JMS clients to auto-detect a Message Broker to connect to, or to provide [Networks of Brokers](clustering/networks-of-brokers)
+ActiveMQ Classic uses an abstraction called a [Discovery Agent](http://actievmq.apache.org/maven/activemq-core/apidocs/org/apache/activemq/transport/discovery/DiscoveryAgent.html) to detect remote services such as remote brokers. We can use discovery for JMS clients to auto-detect a Message Broker to connect to, or to provide [Networks of Brokers](networks-of-brokers)
 
 There are currently two kinds of discovery agent.
 
@@ -14,15 +15,15 @@ There are currently two kinds of discovery agent.
 
 The Discovery transport uses our own Multicast based discovery agent to locate the list of URIs to connect to.
 
-For more information see the [Discovery Transport Reference](../using-activemq-classic/configuring-transports/activemq-classic-connection-uris/discovery-transport-reference).
+For more information see the [Discovery Transport Reference](discovery-transport-reference).
 
 ### Zeroconf
 
-[ZeroConf](../using-activemq-classic/configuring-transports/zeroconf-transport-reference/zeroconf) is a standard discovery specification that uses UDP / multicast to discovery devices. Its used by Apple's Rendezvous services.  
+[ZeroConf](zeroconf) is a standard discovery specification that uses UDP / multicast to discovery devices. Its used by Apple's Rendezvous services.  
 We use the [jmDNS](http://jmdns.sf.net/) project to implement the Zeroconf specification to detect services. This means other Zeroconf  
 based tools can be used in conjunction with this discovery agent.
 
-To configure discovery in a Broker you should use the [Xml Configuration](../using-activemq-classic/xml-configuration). Here is an [example](http://svn.apache.org/viewvc/activemq/trunk/activemq-unit-tests/src/test/resources/org/apache/activemq/usecases/receiver-zeroconf.xml?view=co) of using discovery to create [Networks of Brokers](clustering/networks-of-brokers).
+To configure discovery in a Broker you should use the [Xml Configuration](xml-configuration). Here is an [example](http://svn.apache.org/viewvc/activemq/trunk/activemq-unit-tests/src/test/resources/org/apache/activemq/usecases/receiver-zeroconf.xml?view=co) of using discovery to create [Networks of Brokers](networks-of-brokers).
 
 If you have one or more brokers running with Zeroconf discovery enabled you can connect to a broker using the brokerURL
 ```
@@ -34,7 +35,7 @@ This will use Zeroconf to find an available broker and one will be randomly chos
 
 ActiveMQ Classic supports the use of LDAP for discovery of brokers.
 
-Please see [LDAP Broker Discovery Mechanism](../using-activemq-classic-5/ldap-broker-discovery-mechanism) for more details.
+Please see [LDAP Broker Discovery Mechanism](ldap-broker-discovery-mechanism) for more details.
 
 Trying out discovery
 --------------------

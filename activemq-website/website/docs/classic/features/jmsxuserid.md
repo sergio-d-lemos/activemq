@@ -1,5 +1,6 @@
 ---
 title: "JMSXUserID"
+slug: /jmsxuserid
 ---
 
 
@@ -12,13 +13,13 @@ BrokerService broker = new BrokerService();
 broker.setPopulateJMSXUserID(true);
 broker.start();
 ```
-Or via the [Xml Configuration](../using-activemq-classic/xml-configuration)
+Or via the [Xml Configuration](xml-configuration)
 ```
 <broker xmlns="http://activemq.org/config/1.0" populateJMSXUserID="true">
    ...
 </broker>
 ```
-Or via the [Broker Configuration URI](../using-activemq-classic/configuring-transports/activemq-classic-connection-uris/broker-configuration-uri).
+Or via the [Broker Configuration URI](broker-configuration-uri).
 
 Once enabled this feature adds the JMS property **JMSXUserID** to each JMS message so that a consumer can know exactly who the sender was using the broker's authentication policy. i.e. it is not possibile for a producer to spoof this value if this feature is enabled since the broker attaches the property to the message after the senders connection is authenticated.
 

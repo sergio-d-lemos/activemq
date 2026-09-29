@@ -1,5 +1,6 @@
 ---
 title: "ActiveMQ Jakarta Messaging 3.1 & JMS 2.0 Support"
+slug: /jms2
 ---
 
 ### Transition Approach

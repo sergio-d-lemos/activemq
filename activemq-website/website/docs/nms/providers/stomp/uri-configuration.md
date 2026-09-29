@@ -76,7 +76,7 @@ Prior to NMS.Stomp v1.4.0 the failover transport options did not use the `transp
 |connection.useCompression|false|Should message bodies be compressed before being sent.|
 |connection.sendAcksAsync|false|Should message acks be sent asynchronously|
 |connection.messagePrioritySupported|true|Should messages be delivered to the client based on the value of the Message Priority header.|
-|connection.dispatchAsync|false|Should the broker [dispatch messages asynchronously](/components/classic/documentation/features/consumer-features/consumer-dispatch-async) to the connection's consumers.|
+|connection.dispatchAsync|false|Should the broker [dispatch messages asynchronously](/components/classic/documentation/consumer-dispatch-async) to the connection's consumers.|
 
 ##### **Stomp Wire Protocol Options**
 
@@ -99,9 +99,9 @@ d = session.CreateTopic("com.foo?consumer.prefetchSize=2000&consumer.noLocal=tru
 
 |Option Name|Default|Description|
 |---|---|---|
-|consumer.prefetchSize|1000|The number of message the consumer will [prefetch](/components/classic/documentation/features/what-is-the-prefetch-limit-for).|
+|consumer.prefetchSize|1000|The number of message the consumer will [prefetch](/components/classic/documentation/what-is-the-prefetch-limit-for).|
 |consumer.noLocal|false|Same as the noLocal flag on a Topic consumer. Exposed here so that it can be used with a queue.|
-|consumer.dispatchAsync|false|Should the broker [dispatch messages asynchronously](/components/classic/documentation/features/consumer-features/consumer-dispatch-async) to the consumer.|
-|consumer.retroactive|false|Is this a [Retroactive Consumer](/components/classic/documentation/features/consumer-features/retroactive-consumer).|
+|consumer.dispatchAsync|false|Should the broker [dispatch messages asynchronously](/components/classic/documentation/consumer-dispatch-async) to the consumer.|
+|consumer.retroactive|false|Is this a [Retroactive Consumer](/components/classic/documentation/retroactive-consumer).|
 |consumer.selector|null|JMS Selector used with the consumer.|
-|consumer.exclusive|false|Is this an [Exclusive Consumer](/components/classic/documentation/features/consumer-features/exclusive-consumer).|
+|consumer.exclusive|false|Is this an [Exclusive Consumer](/components/classic/documentation/exclusive-consumer).|

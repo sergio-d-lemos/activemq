@@ -1,5 +1,6 @@
 ---
 title: "The ActiveBlaze Message type"
+slug: /the-activeblaze-message-type
 ---
 
 

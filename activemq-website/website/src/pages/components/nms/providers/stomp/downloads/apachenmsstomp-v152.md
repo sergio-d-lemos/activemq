@@ -10,7 +10,7 @@ The release focuses on performance and stability fixes for issues found in the 1
 
 ##### API Documentation
 
-Refer to the API for this release [here](/components/nms/documentation/nms-api)
+Refer to the API for this release [here](/components/nms/nms-api)
 
 ##### Apache.NMS.Stomp Client Downloads
 

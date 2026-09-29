@@ -1,5 +1,6 @@
 ---
 title: "Destination Features"
+slug: /destination-features
 ---
 
 

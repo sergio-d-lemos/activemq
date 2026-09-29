@@ -1,11 +1,12 @@
 ---
 title: "Xml Reference"
+slug: /xml-reference
 ---
 
 ActiveMQ Classic Xml Reference
 -----------------------
 
-This page contains a link to the XML reference guides and XML schema documents for [Xml Configuration](../xml-configuration) with ActiveMQ Classic releases
+This page contains a link to the XML reference guides and XML schema documents for [Xml Configuration](xml-configuration) with ActiveMQ Classic releases
 
 ### Released Schemas
 

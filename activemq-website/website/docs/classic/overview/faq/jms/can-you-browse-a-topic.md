@@ -1,5 +1,6 @@
 ---
 title: "Can you browse a topic"
+slug: /can-you-browse-a-topic
 ---
 
  [FAQ](..) > [JMS](.) > [Can you browse a topic](can-you-browse-a-topic)

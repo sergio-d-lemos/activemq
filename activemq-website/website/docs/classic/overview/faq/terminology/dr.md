@@ -1,5 +1,6 @@
 ---
 title: "DR"
+slug: /dr
 ---
 
  [FAQ](..) > [Terminology](.) > [DR](dr)

@@ -1,5 +1,6 @@
 ---
 title: "Durable Queue Memory Management"
+slug: /durable-queue-memory-management
 ---
 
 

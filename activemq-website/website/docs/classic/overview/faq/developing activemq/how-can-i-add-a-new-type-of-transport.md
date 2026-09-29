@@ -1,5 +1,6 @@
 ---
 title: "How can I add a new type of transport"
+slug: /how-can-i-add-a-new-type-of-transport
 ---
 
  [FAQ](..) > [Developing ActiveMQ Classic](.) > [How can I add a new type of transport](how-can-i-add-a-new-type-of-transport)

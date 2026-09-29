@@ -1,5 +1,6 @@
 ---
 title: "Supporting IO Streams"
+slug: /supporting-io-streams
 ---
 
 

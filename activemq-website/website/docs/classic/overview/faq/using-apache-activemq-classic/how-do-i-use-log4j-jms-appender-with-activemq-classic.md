@@ -1,5 +1,6 @@
 ---
 title: "How do I use log4j JMS appender with ActiveMQ Classic"
+slug: /how-do-i-use-log4j-jms-appender-with-activemq-classic
 ---
 
  [FAQ](..) > [Using Apache ActiveMQ Classic](.) > [How do I use log4j JMS appender with ActiveMQ Classic](how-do-i-use-log4j-jms-appender-with-activemq-classic)

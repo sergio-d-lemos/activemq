@@ -1,5 +1,6 @@
 ---
 title: "What open source integration solution works best with ActiveMQ Classic"
+slug: /what-open-source-integration-solution-works-best-with-activemq-classic
 ---
 
  [FAQ](..) > [General](.) > [What open source integration solution works best with ActiveMQ Classic](what-open-source-integration-solution-works-best-with-activemq-classic)

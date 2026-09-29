@@ -1,5 +1,6 @@
 ---
 title: "BlazeDS"
+slug: /blazeds
 ---
 
 

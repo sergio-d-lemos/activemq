@@ -1,5 +1,6 @@
 ---
 title: "JCA Container"
+slug: /jca-container
 ---
 
 
@@ -37,7 +38,7 @@ Requirements
 
 To be able to use the JCA container, you just need the following jars on your classpath
 
-*   [required ActiveMQ Classic jars](../../using-activemq-classic/initial-configuration) if you are using ActiveMQ Classic as your JMS provider - or your provider's jars if not
+*   [required ActiveMQ Classic jars](initial-configuration) if you are using ActiveMQ Classic as your JMS provider - or your provider's jars if not
 *   activemq-container.jar
 *   spring.jar
 *   J2EE.jar (for the JCA APIs). If you are inside Tomcat, it doesn't like j2ee.jar on the classpath, so use the individual jars from Geronimo - e.g. geronimo-spec-j2ee-connector-*.jar for the JCA APIs

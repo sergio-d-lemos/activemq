@@ -1,5 +1,6 @@
 ---
 title: "JDBC Support"
+slug: /jdbc-support
 ---
 
 

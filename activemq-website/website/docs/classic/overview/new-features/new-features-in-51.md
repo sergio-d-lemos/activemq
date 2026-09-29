@@ -1,5 +1,6 @@
 ---
 title: "New Features in 5.1"
+slug: /new-features-in-51
 ---
 
 

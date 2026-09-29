@@ -1,12 +1,13 @@
 ---
 title: "Mirrored Queues"
+slug: /mirrored-queues
 ---
 
 
 Mirrored Queues
 ---------------
 
-Queues provide an excellent reliable and high performance [load balancing mechanism](../../overview/faq/jms/how-does-a-queue-compare-to-a-topic). Each message placed on a queue can only be successfully processed by a single consumer. This is a good thing! ![(smile)](https://cwiki.apache.org/confluence/s/en_GB/5997/6f42626d00e36f53fe51440403446ca61552e2a2.1/_/images/icons/emoticons/smile.png). However sometimes you want to monitor what messages flow between the producers and consumers on a queue.
+Queues provide an excellent reliable and high performance [load balancing mechanism](how-does-a-queue-compare-to-a-topic). Each message placed on a queue can only be successfully processed by a single consumer. This is a good thing! ![(smile)](https://cwiki.apache.org/confluence/s/en_GB/5997/6f42626d00e36f53fe51440403446ca61552e2a2.1/_/images/icons/emoticons/smile.png). However sometimes you want to monitor what messages flow between the producers and consumers on a queue.
 
 To do this you can use [Virtual Destinations](virtual-destinations) to setup a virtual Queue which forwards the message to multiple physical queues. However enabling this for every single queue in your system can be painful.
 
@@ -32,7 +33,7 @@ When coupled with [Virtual Topics](virtual-destinations) on this topic as descri
 
 By default Mirrored Queues is disabled; as enabling it will cause a virtual topic to be created for each queue you use.
 
-To enable Mirrored Queues, set the **useMirroredQueues** property on [BrokerService](http://activemq.apache.org/maven/activemq-core/apidocs/org/apache/activemq/broker/BrokerService.html) or add the following inside the <broker> element in the [Xml Configuration](../../using-activemq-classic/xml-configuration):
+To enable Mirrored Queues, set the **useMirroredQueues** property on [BrokerService](http://activemq.apache.org/maven/activemq-core/apidocs/org/apache/activemq/broker/BrokerService.html) or add the following inside the <broker> element in the [Xml Configuration](xml-configuration):
 ```
 <destinationInterceptors>
     <mirroredQueue copyMessage = "true" postfix=".qmirror" prefix=""/>

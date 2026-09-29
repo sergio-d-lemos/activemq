@@ -1,22 +1,23 @@
 ---
 title: "Networks of Brokers"
+slug: /networks-of-brokers
 ---
 
 
 To provide massive scalability of a large messaging fabric you typically want to allow many brokers to be connected together into a network so that you can have as many clients as you wish all logically connected together - and running as many message brokers as you need based on your number of clients and network topology.
 
-If you are using [client/server or hub/spoke style topology](../../using-activemq-classic/topologies) then the broker you connect to becomes a single point of failure which is another reason for wanting a network (or cluster) of brokers so that you can survive failure of any particular broker, machine or subnet.
+If you are using [client/server or hub/spoke style topology](topologies) then the broker you connect to becomes a single point of failure which is another reason for wanting a network (or cluster) of brokers so that you can survive failure of any particular broker, machine or subnet.
 
-From 1.1 onwards of ActiveMQ Classic supports _networks of brokers_ which allows us to support [distributed queues and topics](../../overview/faq/using-apache-activemq-classic/how-do-distributed-queues-work) across a network of brokers.
+From 1.1 onwards of ActiveMQ Classic supports _networks of brokers_ which allows us to support [distributed queues and topics](how-do-distributed-queues-work) across a network of brokers.
 
-This allows a client to connect to any broker in the network - and fail over to another broker if there is a failure - providing from the clients perspective a [HA](../../overview/faq/terminology/ha) cluster of brokers.
+This allows a client to connect to any broker in the network - and fail over to another broker if there is a failure - providing from the clients perspective a [HA](ha) cluster of brokers.
 
 **N.B.** By default a network connection is one way only - the broker that establishes the connection _passes messages to_ the broker(s) its connected to. From version 5.x of ActiveMQ Classic, a network connection can be optionally enabled to be duplex, which can be useful for hub and spoke architectures, where the hub is behind a firewall etc.
 
 Configuring a network of brokers
 --------------------------------
 
-The easiest way to configure a network of brokers is via the [Xml Configuration](../../using-activemq-classic/xml-configuration). There are two main ways to create a network of brokers
+The easiest way to configure a network of brokers is via the [Xml Configuration](xml-configuration). There are two main ways to create a network of brokers
 
 *   use a hard coded list of networkConnector elements.
 
@@ -50,7 +51,7 @@ ActiveMQ Classic also supports other transports than tcp to be used for the netw
 
 ### Example using multicast discovery
 
-This example uses [multicast discovery](../discovery#multicast)
+This example uses [multicast discovery](discovery#multicast)
 ```
 <?xml version="1.0" encoding="UTF-8"?>
 
@@ -131,7 +132,7 @@ dynamicallyIncludedDestinations|empty|destinations that match this list **will**
 useVirtualDestSubs|false|if true, the network connection will listen to advisory messages for virtual destination consumers
 staticallyIncludedDestinations|empty|destinations that match will always be passed across the network - even if no consumers have ever registered an interest
 duplex|false|if true, a network connection will be used to both produce **_AND_** Consume messages. This is useful for hub and spoke scenarios when the hub is behind a firewall etc.
-prefetchSize|1000|Sets the [prefetch size](../what-is-the-prefetch-limit-for) on the network connector's consumer. It must be > 0 because network consumers do not poll for messages
+prefetchSize|1000|Sets the [prefetch size](what-is-the-prefetch-limit-for) on the network connector's consumer. It must be > 0 because network consumers do not poll for messages
 suppressDuplicateQueueSubscriptions|false|(from 5.3) if true, duplicate subscriptions in the network that arise from network intermediaries will be suppressed. For example, given brokers A,B and C, networked via multicast discovery. A consumer on A will give rise to a networked consumer on B and C. In addition, C will network to B (based on the network consumer from A) and B will network to C. When true, the network bridges between C and B (being duplicates of their existing network subscriptions to A) will be suppressed. Reducing the routing choices in this way provides determinism when producers or consumers migrate across the network as the potential for dead routes (stuck messages) are eliminated. networkTTL needs to match or exceed the broker count to require this intervention.
 bridgeTempDestinations|true|Whether to broadcast advisory messages for created temp destinations in the network of brokers or not. Temp destinations are typically created for request-reply messages. Broadcasting the information about temp destinations is turned on by default so that consumers of a request-reply message can be connected to another broker in the network and still send back the reply on the temporary destination specified in the JMSReplyTo header. In an application scenario where most/all messages use request-reply pattern, this will generate additional traffic on the broker network as every message typically sets a unique JMSReplyTo address (which causes a new temp destination to be created and broadcasted via an advisory message in the network of brokers). When disabling this feature such network traffic can be reduced but then producer and consumers of a request-reply message need to be connected to the same broker. Remote consumers (i.e. connected via another broker in your network) won't be able to send the reply message but instead raise a "temp destination does not exist" exception.
 alwaysSyncSend|false|(version 5.6) When true, non persistent messages are sent to the remote broker using request/reply in place of a oneway. This setting treats both persistent and non-persistent messages the same.
@@ -147,7 +148,7 @@ sources are networked, in the event of a failure, inflight messages can be lost.
 
 #### Ordering
 
-Total message ordering is not preserved with networks of brokers. Total ordering [works with a single consumer](../../overview/faq/using-apache-activemq-classic/how-do-i-preserve-order-of-messages) but a networkBridge introduces a second consumer. In addition, network bridge consumers forward messages via producer.send(..), so they go from the head of the queue on the forwarding broker to the tail of the queue on the target. If single consumer moves between networked brokers, total order may be preserved if all messages always follow the consumer but this can be difficult to guarantee with large message backlogs.
+Total message ordering is not preserved with networks of brokers. Total ordering [works with a single consumer](how-do-i-preserve-order-of-messages) but a networkBridge introduces a second consumer. In addition, network bridge consumers forward messages via producer.send(..), so they go from the head of the queue on the forwarding broker to the tail of the queue on the target. If single consumer moves between networked brokers, total order may be preserved if all messages always follow the consumer but this can be difficult to guarantee with large message backlogs.
 
 #### When to use and not use Conduit subscriptions
 
@@ -270,7 +271,7 @@ If configured like this, broker will try to listen for new consumers on `ActiveM
 
 ### Dynamic networks and Virtual Destinations (New for 5.13.0)
 
-As described above, a network of brokers can be configured to only send messages to a remote broker when there's a consumer on an included destination.  However, let's consider some cases of how dynamic flow occurs when [Virtual Destinations](../destination-features/virtual-destinations) are in use.
+As described above, a network of brokers can be configured to only send messages to a remote broker when there's a consumer on an included destination.  However, let's consider some cases of how dynamic flow occurs when [Virtual Destinations](virtual-destinations) are in use.
 
 #### Virtual Destination consumers and Composite Destinations
 
@@ -427,7 +428,7 @@ For example, if using distributed queues, you may wish to have equivalent weight
     </networkConnectors>
 ```
 
-**N.B.** You can only use [wildcards](../destination-features/wildcards) in the `excludedDestinations` and `dynamicallyIncludedDestinations` properties.  
+**N.B.** You can only use [wildcards](wildcards) in the `excludedDestinations` and `dynamicallyIncludedDestinations` properties.  
 **N.B.** **Do not** change the name of the bridge or the name of the Broker if you are using durable topic subscribers across the network. Internally ActiveMQ Classic uses the network name and broker name to build a unique but repeatable durable subscriber name for the network.
 
 ### Stuck Messages

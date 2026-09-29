@@ -1,5 +1,6 @@
 ---
 title: "How does Classic compare to Artemis?"
+slug: /how-does-classic-compare-to-artemis
 ---
 
  [FAQ](..) > [General](.) > [How does Classic compare to Artemis?](how-does-classic-compare-to-artemis)

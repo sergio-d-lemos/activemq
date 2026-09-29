@@ -1,5 +1,6 @@
 ---
 title: "How Do Transactions Work"
+slug: /how-do-transactions-work
 ---
 
  [FAQ](..) > [Using Apache ActiveMQ Classic](.) > [How Do Transactions Work](how-do-transactions-work)

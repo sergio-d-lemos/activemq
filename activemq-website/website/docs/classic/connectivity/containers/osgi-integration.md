@@ -1,5 +1,6 @@
 ---
 title: "OSGi Integration"
+slug: /osgi-integration
 ---
 
 

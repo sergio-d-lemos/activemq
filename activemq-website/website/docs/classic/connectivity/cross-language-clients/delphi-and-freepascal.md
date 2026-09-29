@@ -1,5 +1,6 @@
 ---
 title: "Delphi and FreePascal"
+slug: /delphi-and-freepascal
 ---
 
 

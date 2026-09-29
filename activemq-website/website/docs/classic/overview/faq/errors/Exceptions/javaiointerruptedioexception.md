@@ -1,5 +1,6 @@
 ---
 title: "java.io.InterruptedIOException"
+slug: /javaiointerruptedioexception
 ---
 
  [FAQ](../..) > [Errors](..) > [Exceptions](.) > [java.io.InterruptedIOException](javaiointerruptedioexception)

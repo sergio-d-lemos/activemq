@@ -1,5 +1,6 @@
 ---
 title: "JMeter Performance Tests"
+slug: /jmeter-performance-tests
 ---
 
 
@@ -16,7 +17,7 @@ You can download the latest activemq-jmeter-*.zip distribution from the followin
 
 ### Building the JMeter Performance Test from source
 
-1. Check out the latest head version of ActiveMQ Classic from [Source](../legacy-documentation/source). Build from source.
+1. Check out the latest head version of ActiveMQ Classic from [Source](source). Build from source.
 2. Run maven from the JMeter directory. This will build JMeter into the target directory.
 3. Run JMeter.bat from the \\bin directory to start JMeter.
 4. There are sample Test Plans located at \\bin\\testfiles directory that you could open to test ActiveMQ Classic.

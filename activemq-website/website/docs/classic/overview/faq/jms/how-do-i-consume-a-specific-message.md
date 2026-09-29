@@ -1,5 +1,6 @@
 ---
 title: "How do I consume a specific message"
+slug: /how-do-i-consume-a-specific-message
 ---
 
  [FAQ](..) > [JMS](.) > [How do I consume a specific message](how-do-i-consume-a-specific-message)
@@ -16,5 +17,5 @@ JMSMessageID = 'abc'
 ```
 Note that this is not a very efficient way of working with JMS (JMS is designed for consumers to be long lived objects working across many messageS), but it can be useful in certain situations.
 
-Another option is just to use [JMX](../../../features/jmx) directly to browse messages on a queue, process them and then delete them.
+Another option is just to use [JMX](jmx) directly to browse messages on a queue, process them and then delete them.
 

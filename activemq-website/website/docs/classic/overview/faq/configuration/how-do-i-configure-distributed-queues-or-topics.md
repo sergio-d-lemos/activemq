@@ -1,5 +1,6 @@
 ---
 title: "How do I configure distributed queues or topics"
+slug: /how-do-i-configure-distributed-queues-or-topics
 ---
 
  [FAQ](..) > [Configuration](.) > [How do I configure distributed queues or topics](how-do-i-configure-distributed-queues-or-topics)
@@ -12,13 +13,13 @@ You don't need to explicitly [configure distributed queues or topics](how-do-i-c
 
 So you just need to connect brokers together to form either
 
-*   a [Store and Forward Network of Brokers](../../../features/clustering/networks-of-brokers), which means the messages travel from broker to broker until they reach a consumer; with each message being owned by a single broker at any point in time
-*   a [Master/Slave Cluster](../../../features/clustering/masterslave), which means all messages are replicated across each broker in the master/slave cluster
+*   a [Store and Forward Network of Brokers](networks-of-brokers), which means the messages travel from broker to broker until they reach a consumer; with each message being owned by a single broker at any point in time
+*   a [Master/Slave Cluster](masterslave), which means all messages are replicated across each broker in the master/slave cluster
 
 ### Also see
 
 *   [How do I configure the queues I want](how-do-i-configure-the-queues-i-want)
-*   [How do distributed queues work](../using-apache-activemq-classic/how-do-distributed-queues-work)
-*   [Networks of Brokers](../../../features/clustering/networks-of-brokers)
-*   [MasterSlave](../../../features/clustering/masterslave)
+*   [How do distributed queues work](how-do-distributed-queues-work)
+*   [Networks of Brokers](networks-of-brokers)
+*   [MasterSlave](masterslave)
 

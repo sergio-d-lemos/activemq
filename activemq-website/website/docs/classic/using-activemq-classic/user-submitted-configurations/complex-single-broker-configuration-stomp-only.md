@@ -1,5 +1,6 @@
 ---
 title: "Complex Single Broker Configuration (STOMP only)"
+slug: /complex-single-broker-configuration-stomp-only
 ---
 
 

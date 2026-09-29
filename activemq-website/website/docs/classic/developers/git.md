@@ -1,5 +1,6 @@
 ---
 title: "GIT"
+slug: /git
 ---
 
 

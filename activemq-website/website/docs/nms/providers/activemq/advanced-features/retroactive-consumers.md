@@ -7,7 +7,7 @@ Background
 
 A retroactive consumer is just a regular NMS consumer who indicates that at the start of a subscription every attempt should be used to go back in time and send any old messages (or the last message sent on that topic) that the consumer may have missed.
 
-See the [Subscription Recovery Policy](/components/classic/documentation/features/consumer-features/subscription-recovery-policy) for more detail.
+See the [Subscription Recovery Policy](/components/classic/documentation/subscription-recovery-policy) for more detail.
 
 ### Example
 

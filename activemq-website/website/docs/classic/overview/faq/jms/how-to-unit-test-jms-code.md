@@ -1,5 +1,6 @@
 ---
 title: "How To Unit Test JMS Code"
+slug: /how-to-unit-test-jms-code
 ---
 
  [FAQ](..) > [JMS](.) > [How To Unit Test JMS Code](how-to-unit-test-jms-code)
@@ -9,15 +10,15 @@ When unit testing code with JMS you'll typically want to avoid the overhead of r
 
 So when unit testing JMS code we recommend the following
 
-*   Use [an embedded broker](../using-apache-activemq-classic/how-do-i-embed-a-broker-inside-a-connection) to avoid a separate broker process being required.
-*   Disable [broker persistence](../../../using-activemq-classic/configuring-transports/activemq-classic-connection-uris/broker-configuration-uri) so that no queue purging is required before/after tests.
+*   Use [an embedded broker](how-do-i-embed-a-broker-inside-a-connection) to avoid a separate broker process being required.
+*   Disable [broker persistence](broker-configuration-uri) so that no queue purging is required before/after tests.
 *   It's often simpler and faster to just use Java code to create the broker via an XML configuration file using Spring etc.
 
 You can do all of this using the following Java code to create your JMS `ConnectionFactory` which will also automatically create an embedded broker
 ```
 ConnectionFactory connectionFactory = new ActiveMQConnectionFactory("vm://localhost?broker.persistent=false");
 ```
-For more configuration options see the [VM Transport Reference](../../../using-activemq-classic/configuring-transports/activemq-classic-connection-uris/vm-transport-reference) and the [Broker Configuration URI](../../../using-activemq-classic/configuring-transports/activemq-classic-connection-uris/broker-configuration-uri)
+For more configuration options see the [VM Transport Reference](vm-transport-reference) and the [Broker Configuration URI](broker-configuration-uri)
 
 Or if you really would rather be more explicit you can create the broker first using the following Java code
 ```
@@ -25,18 +26,18 @@ BrokerService broker = new BrokerService();
 broker.setPersistent(false);
 broker.start();
 ```
-or you could use [Spring Support.](../../../connectivity/containers/spring-support)
+or you could use [Spring Support.](spring-support)
 
 ### Using JNDI
 
-If your application code is using JNDI to lookup the JMS `ConnectionFactory` and `Destination`'s to use, then you could use the [JNDI Support](../../../connectivity/containers/jndi-support) in ActiveMQ Classic.
+If your application code is using JNDI to lookup the JMS `ConnectionFactory` and `Destination`'s to use, then you could use the [JNDI Support](jndi-support) in ActiveMQ Classic.
 
 Add the following `jndi.properties` to your classpath, e.g., in `src/test/resources`, if you are using maven:
 ```
 java.naming.factory.initial = org.apache.activemq.jndi.ActiveMQInitialContextFactory
 java.naming.provider.url = vm://localhost?broker.persistent=false
 ```
-You should then consider using [Dynamic destinations in JNDI](../../../connectivity/containers/jndi-support) so that your code looks up destinations via
+You should then consider using [Dynamic destinations in JNDI](jndi-support) so that your code looks up destinations via
 ```
 context.lookup("dynamicQueues/FOO.BAR");
 ```

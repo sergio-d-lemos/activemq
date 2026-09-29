@@ -1,5 +1,6 @@
 ---
 title: "Getting Started 3.x"
+slug: /getting-started-3x
 ---
 
 Introduction
@@ -304,4 +305,4 @@ After the installation, ActiveMQ Classic is running with a basic configuration. 
 Additional Resources
 --------------------
 
-If you are new to using ActiveMQ Classic, running the [Examples](../using-activemq-classic/examples) is a good next step to learn more about ActiveMQ Classic.
+If you are new to using ActiveMQ Classic, running the [Examples](examples) is a good next step to learn more about ActiveMQ Classic.

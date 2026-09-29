@@ -1,5 +1,6 @@
 ---
 title: "NoClassDefFoundError - org.springframework.core.io.Resource"
+slug: /noclassdeffounderror-orgspringframeworkcoreioresource
 ---
 
  [FAQ](../..) > [Errors](..) > [Exceptions](.) > [NoClassDefFoundError - org.springframework.core.io.Resource](noclassdeffounderror-orgspringframeworkcoreioresource)
@@ -12,7 +13,7 @@ java.lang.NoClassDefFoundError - org/springframework/core/io/Resource
 
 ### Cause
 
-You were probably trying to use the [XML Configuration](../../../../using-activemq-classic/xml-configuration) mechanism, which uses Spring, but without having the Spring jar on your classpath.
+You were probably trying to use the [XML Configuration](xml-configuration) mechanism, which uses Spring, but without having the Spring jar on your classpath.
 
 ### Solution
 

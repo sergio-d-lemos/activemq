@@ -1,5 +1,6 @@
 ---
 title: "Release Guide"
+slug: /release-guide
 ---
 
 
@@ -191,7 +192,7 @@ Announcing the ActiveMQ Classic Release
     Apache ActiveMQ Classic {{ page.version }} was released on {{ page.release_date }}. It fully supports JDK 9+ at runtime and includes several resolved [issues]({{ page.release_notes }}) and bug fixes.
     ``` 
 3. If necessary, update the current versions by editing the `5x` list in `src/_data/current_releases.yml`. The latest patch release published in `src/_releases/` for the major.minor versions in the list will automatically be included on the [download page](https://activemq.apache.org/components/classic/download/).
-4.  Update the [Xml Reference](../using-activemq-classic/xml-reference) page with a link to the HTML and XSD
+4.  Update the [Xml Reference](xml-reference) page with a link to the HTML and XSD
 7.  Update [QuickLinks](quicklinks) and [JavaDocs](docs) pages
 8.  Mail the [dev](mailto:dev@activemq.apache.org) & [user](mailto:user@activemq.apache.org) lists
 9.  [Post](http://cwiki.apache.org/confluence/pages/viewrecentblogposts.action?key=ACTIVEMQ) a news entry on the WIKI

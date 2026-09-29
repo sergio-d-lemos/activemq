@@ -1,5 +1,6 @@
 ---
 title: "Thanks"
+slug: /thanks
 ---
 
   

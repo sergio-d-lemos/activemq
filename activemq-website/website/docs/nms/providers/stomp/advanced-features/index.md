@@ -2,4 +2,4 @@
 title: "Stomp Advanced Features"
 ---
 
-* [Stomp Delayed and Scheduled Message Feature](/components/nms/documentation/providers/stomp/advanced-features/stomp-delayed-and-scheduled-message-feature)
+* [Stomp Delayed and Scheduled Message Feature](/components/nms/providers/stomp/advanced-features/stomp-delayed-and-scheduled-message-feature)

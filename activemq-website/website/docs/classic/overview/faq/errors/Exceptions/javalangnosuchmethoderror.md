@@ -1,5 +1,6 @@
 ---
 title: "java.lang.NoSuchMethodError"
+slug: /javalangnosuchmethoderror
 ---
 
  [FAQ](../..) > [Errors](..) > [Exceptions](.) > [java.lang.NoSuchMethodError](javalangnosuchmethoderror)

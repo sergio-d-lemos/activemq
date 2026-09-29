@@ -12,7 +12,7 @@ This is the first release of the Apache.NMS.ActiveMQ 1.7.0 line.  This release 
 API Documentation
 -----------------
 
-Refer to the API for this release [here](/components/nms/documentation/nms-api)
+Refer to the API for this release [here](/components/nms/nms-api)
 
 Download Here
 -------------

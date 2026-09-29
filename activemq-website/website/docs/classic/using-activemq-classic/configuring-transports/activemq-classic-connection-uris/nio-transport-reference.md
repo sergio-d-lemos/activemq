@@ -1,5 +1,6 @@
 ---
 title: "NIO Transport Reference"
+slug: /nio-transport-reference
 ---
 
 
@@ -30,7 +31,7 @@ org.apache.activemq.transport.nio.SelectorManager.maximumPoolSize|1024|The maxim
 org.apache.activemq.transport.nio.SelectorManager.workQueueCapacity| 0| The max work queue depth before growing the pool
 org.apache.activemq.transport.nio.SelectorManager.rejectWork|false|Allow work to be rejected with an IOException when capacity is reached such that existing QOS can be preserved
 
-If you want to scale your broker to support thousands of connections to it, you need to first find the limits of number of threads JVM process is allowed to create. Then you can set these properties to some value below that (broker need more threads to operate normally). For more information on thread usage by destinations and how to limit those, please take a look at [Scaling Queues](../../../features/horizontal-scaling/scaling-queues) or [this configuration file](http://svn.apache.org/repos/asf/activemq/trunk/assembly/src/sample-conf/activemq-scalability.xml). For example you can add the following
+If you want to scale your broker to support thousands of connections to it, you need to first find the limits of number of threads JVM process is allowed to create. Then you can set these properties to some value below that (broker need more threads to operate normally). For more information on thread usage by destinations and how to limit those, please take a look at [Scaling Queues](scaling-queues) or [this configuration file](http://svn.apache.org/repos/asf/activemq/trunk/assembly/src/sample-conf/activemq-scalability.xml). For example you can add the following
 ```
 ACTIVEMQ_OPTS="$ACTIVEMQ_OPTS -Dorg.apache.activemq.transport.nio.SelectorManager.corePoolSize=2000 -Dorg.apache.activemq.transport.nio.SelectorManager.maximumPoolSize=2000 -Dorg.apache.activemq.transport.nio.SelectorManager.workQueueCapacity=1024"
 ```

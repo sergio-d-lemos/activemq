@@ -1,5 +1,6 @@
 ---
 title: "Security"
+slug: /security
 ---
 
 ActiveMQ Classic 4.x and greater provides pluggable security through various different providers.
@@ -64,7 +65,7 @@ read|You can browse and consume from the destination
 write|You can send messages to the destination
 admin|You can lazily create the destination if it does not yet exist. This allows you fine grained control over which new destinations can be dynamically created in what part of the queue/topic hierarchy
 
-Queues/Topics can specified using the ActiveMQ Classic [Wildcards](../destination-features/wildcards) syntax.
+Queues/Topics can specified using the ActiveMQ Classic [Wildcards](wildcards) syntax.
 
 #### Authorization Example
 
@@ -480,4 +481,4 @@ to the new Java class. For usage of your own Message level Authorization policy,
 Implementing your own custom Security Plugin
 --------------------------------------------
 
-All of the various security implementations are implemented as [Interceptors](../interceptors) so its very easy to add your own custom implementation. Its probably easier to start with one of the [simple implementations](http://activemq.apache.org/components/classic/documentation/maven/apidocs/org/apache/activemq/security/package-summary.html) though if you are using JAAS you could derive from the [JAAS implementation](http://activemq.apache.org/components/classic/documentation/maven/apidocs/org/apache/activemq/jaas/package-summary.html).
+All of the various security implementations are implemented as [Interceptors](interceptors) so its very easy to add your own custom implementation. Its probably easier to start with one of the [simple implementations](http://activemq.apache.org/components/classic/documentation/maven/apidocs/org/apache/activemq/security/package-summary.html) though if you are using JAAS you could derive from the [JAAS implementation](http://activemq.apache.org/components/classic/documentation/maven/apidocs/org/apache/activemq/jaas/package-summary.html).

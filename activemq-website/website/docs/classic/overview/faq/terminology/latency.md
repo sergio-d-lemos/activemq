@@ -1,5 +1,6 @@
 ---
 title: "Latency"
+slug: /latency
 ---
 
  [FAQ](..) > [Terminology](.) > [Latency](latency)

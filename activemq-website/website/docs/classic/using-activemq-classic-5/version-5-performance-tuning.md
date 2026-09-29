@@ -1,9 +1,10 @@
 ---
 title: "Version 5 Performance Tuning"
+slug: /version-5-performance-tuning
 ---
 
 
-For a more complete overview see [Performance](../features/performance).
+For a more complete overview see [Performance](performance).
 
 There are trade-offs between performance and reliabilty.  
 By default, activemq strikes a balance between the two, so there are some things you can change to increase throughput.
@@ -44,5 +45,5 @@ By default, a Consumer's session will dispatch messages to the consumer in a sep
 File based Persistence
 ----------------------
 
-The default persistence store is the [AMQ Message Store](../features/persistence/amq-message-store)
+The default persistence store is the [AMQ Message Store](amq-message-store)
 

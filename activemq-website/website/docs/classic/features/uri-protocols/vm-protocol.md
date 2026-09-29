@@ -1,5 +1,6 @@
 ---
 title: "VM Protocol"
+slug: /vm-protocol
 ---
 
 

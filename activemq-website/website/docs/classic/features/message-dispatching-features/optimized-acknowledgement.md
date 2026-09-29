@@ -1,5 +1,6 @@
 ---
 title: "Optimized Acknowledgement"
+slug: /optimized-acknowledgement
 ---
 
 

@@ -1,5 +1,6 @@
 ---
 title: "Message Dispatching Features"
+slug: /message-dispatching-features
 ---
 
 

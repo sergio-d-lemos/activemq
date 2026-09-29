@@ -1,12 +1,13 @@
 ---
 title: "LevelDB Store"
+slug: /leveldb-store
 ---
 
 > **Warning**
 > 
 > The LevelDB store has been removed from production.
 > This page only serves as an archival page for previous releases.
-> Use [KahaDB](../kahadb) instead.
+> Use [KahaDB](kahadb) instead.
 
 > **Version Compatibility**
 > 
@@ -51,7 +52,7 @@ property name|default value|Comments
 `indexCompression`|`snappy`|The type of compression to apply to the index blocks. Can be snappy or none.
 `logCompression`|`none`|The type of compression to apply to the log records. Can be snappy or none.
 
-For tuning locking properties please take a look at [Pluggable storage lockers](../features/persistence/pluggable-storage-lockers)
+For tuning locking properties please take a look at [Pluggable storage lockers](pluggable-storage-lockers)
 
 Also See
 --------

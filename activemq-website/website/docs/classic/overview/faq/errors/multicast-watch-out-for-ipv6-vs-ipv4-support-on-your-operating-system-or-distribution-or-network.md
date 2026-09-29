@@ -1,5 +1,6 @@
 ---
 title: "Multicast - Watch out for IPV6 vs IPV4 support on your operating system or distribution or network"
+slug: /multicast-watch-out-for-ipv6-vs-ipv4-support-on-your-operating-system-or-distribution-or-network
 ---
 
  [FAQ](..) > [Errors](.) > [Multicast - Watch out for IPV6 vs IPV4 support on your operating system or distribution or network](multicast-watch-out-for-ipv6-vs-ipv4-support-on-your-operating-system-or-distribution-or-network)

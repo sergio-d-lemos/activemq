@@ -1,5 +1,6 @@
 ---
 title: "KahaDB Replication (Experimental)"
+slug: /kahadb-replication-experimental
 ---
 
 

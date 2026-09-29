@@ -1,5 +1,6 @@
 ---
 title: "OSGi support (in development)"
+slug: /osgi-support-in-development
 ---
 
 

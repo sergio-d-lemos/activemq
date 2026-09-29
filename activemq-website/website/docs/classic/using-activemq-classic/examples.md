@@ -1,5 +1,6 @@
 ---
 title: "Examples"
+slug: /examples
 ---
 
 
@@ -17,7 +18,7 @@ This starts up ActiveMQ Classic.
 Running
 -------
 
-From the [command line](../features/unix/unix-shell-script) you can run
+From the [command line](unix-shell-script) you can run
 ```
 ${ACTIVEMQ_HOME}/bin/activemq producer
 ${ACTIVEMQ_HOME}/bin/activemq consumer
@@ -27,7 +28,7 @@ If you have `activemq-all` jar available you can achieve the same with
 java -jar activemq-all-5.x.x.jar producer
 java -jar activemq-all-5.x.x.jar consumer
 ```
-If you run inside [Karaf](../connectivity/containers/osgi-integration), you can run the commands as
+If you run inside [Karaf](osgi-integration), you can run the commands as
 ```
 activemq:producer
 activemq:consumer
@@ -86,6 +87,6 @@ See Also
 --------
 
 *   [Web Samples](web-samples)
-*   [Web Console](../tools/web-console)
-*   [JMX](../features/jmx)
+*   [Web Console](web-console)
+*   [JMX](jmx)
 

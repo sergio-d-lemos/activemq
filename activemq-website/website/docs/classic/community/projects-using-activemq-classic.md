@@ -1,5 +1,6 @@
 ---
 title: "Projects Using ActiveMQ Classic"
+slug: /projects-using-activemq-classic
 ---
 
 * [Apache Camel](https://camel.apache.org/) is a POJO based routing and mediation framework

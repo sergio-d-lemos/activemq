@@ -1,5 +1,6 @@
 ---
 title: "Version 5 Examples"
+slug: /version-5-examples
 ---
 
 
@@ -8,7 +9,7 @@ Since version **5.12.0**, Apache ActiveMQ Classic comes with the new tool that c
 Prerequisites
 -------------
 
-Before running the examples you should try [running a JMS broker](../using-activemq-classic/run-broker) on your machine. Follow the [Installation](../using-activemq-classic/installation) instructions to use a binary distribution of ActiveMQ Classic. To run the broker in a command shell, type:
+Before running the examples you should try [running a JMS broker](run-broker) on your machine. Follow the [Installation](installation) instructions to use a binary distribution of ActiveMQ Classic. To run the broker in a command shell, type:
 
 bin/activemq console
 
@@ -17,7 +18,7 @@ This starts up ActiveMQ Classic.
 Running
 -------
 
-From the [command line](../features/unix/unix-shell-script) you can run
+From the [command line](unix-shell-script) you can run
 ```
 ${ACTIVEMQ_HOME}/bin/activemq producer
 ${ACTIVEMQ_HOME}/bin/activemq consumer
@@ -27,7 +28,7 @@ If you have `activemq-all` jar available you can achieve the same with
 java -jar activemq-all-5.x.x.jar producer
 java -jar activemq-all-5.x.x.jar consumer
 ```
-If you run inside [Karaf](../connectivity/containers/osgi-integration), you can run the commands as
+If you run inside [Karaf](osgi-integration), you can run the commands as
 ```
 activemq:producer
 activemq:consumer
@@ -85,7 +86,7 @@ In `examples/` directory (depending on the version) you can find more examples o
 See Also
 --------
 
-*   [Web Samples](../using-activemq-classic/web-samples)
-*   [Web Console](../tools/web-console)
-*   [JMX](../features/jmx)
+*   [Web Samples](web-samples)
+*   [Web Console](web-console)
+*   [JMX](jmx)
 

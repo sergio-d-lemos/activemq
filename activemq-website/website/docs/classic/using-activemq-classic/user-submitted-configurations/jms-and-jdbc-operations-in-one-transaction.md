@@ -1,5 +1,6 @@
 ---
 title: "JMS and JDBC operations in one transaction"
+slug: /jms-and-jdbc-operations-in-one-transaction
 ---
 
 

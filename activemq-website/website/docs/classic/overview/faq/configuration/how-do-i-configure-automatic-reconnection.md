@@ -1,5 +1,6 @@
 ---
 title: "How do I configure automatic reconnection"
+slug: /how-do-i-configure-automatic-reconnection
 ---
 
  [FAQ](..) > [Configuration](.) > [How do I configure automatic reconnection](how-do-i-configure-automatic-reconnection)
@@ -13,5 +14,5 @@ e.g. connecting to the URL
 ```
 failover:tcp://host1:port1,tcp://host2:port2
 ```
-For more detail see [Failover Transport Reference](../../../using-activemq-classic/configuring-transports/activemq-classic-connection-uris/failover-transport-reference)
+For more detail see [Failover Transport Reference](failover-transport-reference)
 

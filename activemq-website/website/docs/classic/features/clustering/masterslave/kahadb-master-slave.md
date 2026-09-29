@@ -1,5 +1,6 @@
 ---
 title: "KahaDB Master Slave"
+slug: /kahadb-master-slave
 ---
 
 

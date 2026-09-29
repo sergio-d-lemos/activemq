@@ -1,5 +1,6 @@
 ---
 title: "Resource Adapter"
+slug: /resource-adapter
 ---
 
 
@@ -36,9 +37,9 @@ The RAR is available via [maven central](http://search.maven.org/#search%7Cga%7C
 Deployment Guides
 
 *   [TomEE](tomee)
-*   [Geronimo](../geronimo)
-*   [Integrating Apache ActiveMQ Classic with Glassfish](../integrating-apache-activemq-classic-with-glassfish)
-*   [JBoss Integration](../jboss-integration)
+*   [Geronimo](geronimo)
+*   [Integrating Apache ActiveMQ Classic with Glassfish](integrating-apache-activemq-classic-with-glassfish)
+*   [JBoss Integration](jboss-integration)
 
 The use of an Embedded Broker
 -----------------------------

@@ -1,8 +1,9 @@
 ---
 title: "What is the Prefetch Limit For?"
+slug: /what-is-the-prefetch-limit-for
 ---
 
-One of the design goals of ActiveMQ Classic is to be a highly performant message bus. This means using a [SEDA](../overview/faq/terminology/seda) architecture to perform as much work as possible asynchronously. To make efficient use of network resources the broker utilizes a 'push' model to dispatch messages to consumers. This ensures that a consumer always has a local buffer of messages ready to process. The alternative would be for consumers to explicitly pull messages from the broker. Pulling messages individually is not very efficient and can increase the per message latency significantly.
+One of the design goals of ActiveMQ Classic is to be a highly performant message bus. This means using a [SEDA](seda) architecture to perform as much work as possible asynchronously. To make efficient use of network resources the broker utilizes a 'push' model to dispatch messages to consumers. This ensures that a consumer always has a local buffer of messages ready to process. The alternative would be for consumers to explicitly pull messages from the broker. Pulling messages individually is not very efficient and can increase the per message latency significantly.
 
 However, there is a danger that without limiting the number of messages that are pushed to a consumer its client-side resources could become exhausted. This is the natural consequence of message consumption typically being much slower than message delivery. To avoid this situation ActiveMQ Classic therefore employs a **prefetch limit** to limit the maximum number of messages that can be dispatched to an individual consumer at once. The consumer in turn uses the prefetch limit to size its prefetch message buffer.
 
@@ -39,7 +40,7 @@ To change the prefetch limit for queue consumers only configure the connection U
 ```
 tcp://localhost:61616?jms.prefetchPolicy.queuePrefetch=1
 ```
-It can also be configured on a per consumer basis using [Destination Options](destination-features/destination-options):
+It can also be configured on a per consumer basis using [Destination Options](destination-options):
 ```
 queue = new ActiveMQQueue("TEST.QUEUE?consumer.prefetchSize=10");
 consumer = session.createConsumer(queue);

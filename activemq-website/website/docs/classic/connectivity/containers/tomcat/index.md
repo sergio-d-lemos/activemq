@@ -1,5 +1,6 @@
 ---
 title: "Tomcat"
+slug: /tomcat
 ---
 
 
@@ -94,7 +95,7 @@ This is completely untested but should work ![(smile)](https://cwiki.apache.org/
 
 JMX Tip when working with Tomcat
 
-If you want to use JMX with Tomcat and then connect via JConsole to view the [JMX](../../../features/jmx) MBeans of the server then set the following
+If you want to use JMX with Tomcat and then connect via JConsole to view the [JMX](jmx) MBeans of the server then set the following
 
 CATALINA\_OPTS="$CATALINA\_OPTS -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=1099 \
     -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.authenticate=false"

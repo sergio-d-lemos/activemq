@@ -1,5 +1,6 @@
 ---
 title: "WS Notification"
+slug: /ws-notification
 ---
 
 

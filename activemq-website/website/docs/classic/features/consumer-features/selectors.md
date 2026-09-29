@@ -1,5 +1,6 @@
 ---
 title: "Selectors"
+slug: /selectors
 ---
 
 
@@ -13,7 +14,7 @@ Here is an example
 JMSType = 'car' AND color = 'blue' AND weight > 2500
 ```
 For more documentation on the detail of selectors see the reference on [javax.jmx.Message](http://java.sun.com/j2ee/1.4/docs/api/javax/jms/Message.html).  
-ActiveMQ Classic supports some JMS defined properties, as well as some ActiveMQ Classic ones - see [message properies](../message-features/activemq-classic-message-properties) \- that the selector can use.
+ActiveMQ Classic supports some JMS defined properties, as well as some ActiveMQ Classic ones - see [message properies](activemq-classic-message-properties) \- that the selector can use.
 
 ### Using XPath to filter messages
 

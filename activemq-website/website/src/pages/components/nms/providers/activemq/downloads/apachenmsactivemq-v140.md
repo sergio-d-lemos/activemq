@@ -19,7 +19,7 @@ This release adds some great new features to the NMS ActiveMQ library and fixes 
 API
 ---
 
-Refer to the API for this release [here](/components/nms/documentation/nms-api)
+Refer to the API for this release [here](/components/nms/nms-api)
 
 Apache.NMS Client Downloads
 ---------------------------

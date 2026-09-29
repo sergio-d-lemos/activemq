@@ -1,5 +1,6 @@
 ---
 title: "How do I turn off creating an embedded ActiveMQ Classic broker when using the VM transport"
+slug: /how-do-i-turn-off-creating-an-embedded-activemq-classic-broker-when-using-the-vm-transport
 ---
 
  [FAQ](..) > [Using Apache ActiveMQ Classic](.) > [How do I turn off creating an embedded ActiveMQ Classic broker when using the VM transport](how-do-i-turn-off-creating-an-embedded-activemq-classic-broker-when-using-the-vm-transport)

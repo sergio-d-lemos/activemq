@@ -1,5 +1,6 @@
 ---
 title: "How do I use SSL"
+slug: /how-do-i-use-ssl
 ---
 
 ### Setting up the Key and Trust Stores

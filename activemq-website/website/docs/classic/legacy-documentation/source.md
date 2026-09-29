@@ -1,5 +1,6 @@
 ---
 title: "Source"
+slug: /source
 ---
 
 ActiveMQ Classic source code
@@ -22,7 +23,7 @@ Only project developers can commit to the git repo via this method. SSH must be 
 Building the code
 -----------------
 
-To then build the code, see [Building](../developers/building).
+To then build the code, see [Building](building).
 
 ActiveMQ Artemis
 ================

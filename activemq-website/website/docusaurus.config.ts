@@ -28,6 +28,8 @@ const config: Config = {
 
   url: 'https://activemq.apache.org/',
   baseUrl: '/',
+  // Matches the original Jekyll site: pages are served as /page rather than /page/.
+  trailingSlash: false,
 
   onBrokenLinks: 'warn',
 
@@ -93,7 +95,7 @@ const config: Config = {
       {
         id: 'nms',
         path: 'docs/nms',
-        routeBasePath: 'components/nms/documentation',
+        routeBasePath: 'components/nms',
         sidebarPath: './docs/nms/sidebars.ts',
         editUrl: 'https://github.com/apache/activemq-website/tree/main/',
       },
@@ -103,7 +105,7 @@ const config: Config = {
       {
         id: 'cms',
         path: 'docs/cms',
-        routeBasePath: 'components/cms/documentation',
+        routeBasePath: 'components/cms',
         sidebarPath: './docs/cms/sidebars.ts',
         editUrl: 'https://github.com/apache/activemq-website/tree/main/',
       },

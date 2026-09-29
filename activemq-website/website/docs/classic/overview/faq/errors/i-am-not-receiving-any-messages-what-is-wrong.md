@@ -1,5 +1,6 @@
 ---
 title: "I am not receiving any messages, what is wrong"
+slug: /i-am-not-receiving-any-messages-what-is-wrong
 ---
 
  [FAQ](..) > [Errors](.) > [I am not receiving any messages, what is wrong](i-am-not-receiving-any-messages-what-is-wrong)
@@ -13,9 +14,9 @@ Make sure you call the [start()](http://java.sun.com/j2ee/1.4/docs/api/javax/jms
 
 This is such a common gotcha that as of 4.2 onwards, ActiveMQ Classic will now [log a warning if a message](https://issues.apache.org/activemq/browse/AMQ-1253) is received shortly after the connection was created if the connection was not started (as its so easy to forget to do this part ![(smile)](https://cwiki.apache.org/confluence/s/en_GB/5997/6f42626d00e36f53fe51440403446ca61552e2a2.1/_/images/icons/emoticons/smile.png).
 
-For more details see the discussion of the **warnAboutUnstartedConnectionTimeout** property on the [Connection Configuration URI](../../../using-activemq-classic/configuring-transports/activemq-classic-connection-uris/connection-configuration-uri)
+For more details see the discussion of the **warnAboutUnstartedConnectionTimeout** property on the [Connection Configuration URI](connection-configuration-uri)
 
 ### If you are calling connection.start()
 
-Another common gotcha is [due to another consumer grabbing the messages](i-do-not-receive-messages-in-my-second-consumer). If it's not that then please look at [JMX](../../../features/jmx) or the [Web Console](../../../tools/web-console) to determine what consumers are available and their status. Then report an [issue](issues) to help you resolve your issue.
+Another common gotcha is [due to another consumer grabbing the messages](i-do-not-receive-messages-in-my-second-consumer). If it's not that then please look at [JMX](jmx) or the [Web Console](web-console) to determine what consumers are available and their status. Then report an [issue](issues) to help you resolve your issue.
 

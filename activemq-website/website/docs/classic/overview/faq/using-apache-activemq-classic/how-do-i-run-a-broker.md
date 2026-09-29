@@ -1,5 +1,6 @@
 ---
 title: "How do I run a broker"
+slug: /how-do-i-run-a-broker
 ---
 
  [FAQ](..) > [Using Apache ActiveMQ Classic](.) > [How do I run a broker](how-do-i-run-a-broker)
@@ -7,5 +8,5 @@ title: "How do I run a broker"
 
 ### For ActiveMQ Classic 3.x/4.x
 
-Please see the [running a broker page](../../../using-activemq-classic/run-broker)
+Please see the [running a broker page](run-broker)
 

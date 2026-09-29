@@ -5,7 +5,7 @@ title: "NMS.ActiveMQ Consumer Dispatch Async"
 Overview
 --------
 
-In ActiveMQ 4 onwards, the choice of a broker performing synchronous or asynchronous dispatch to a consumer has become more configurable. It is now configured as a default value on the [connection URI, Connection and ConnectionFactory](/components/nms/documentation/providers/activemq/uri-configuration) together with being customizable on a per consumer basis via the [Destination Options](/components/nms/documentation/providers/activemq/uri-configuration) instead previously just being a transport server setting.
+In ActiveMQ 4 onwards, the choice of a broker performing synchronous or asynchronous dispatch to a consumer has become more configurable. It is now configured as a default value on the [connection URI, Connection and ConnectionFactory](/components/nms/providers/activemq/uri-configuration) together with being customizable on a per consumer basis via the [Destination Options](/components/nms/providers/activemq/uri-configuration) instead previously just being a transport server setting.
 
 This makes more sense since you want to do async message delivery to slower consumers, but do sync message delivery to faster consumers (to avoid the synchronization and context switching costs of adding another seda queue). The downside to using sync message delivery is that the producer is more likely to block if there is a slow consumer that he is dispatching messages to.
 
@@ -27,7 +27,7 @@ connection.DispatchAsync = false;
 
 ### Configuring Dispatch Async at the Consumer Level using the Destination URI
 
-Configuring the dispatchAsync using [Destination Options](/components/nms/documentation/providers/activemq/uri-configuration) overrides the settings at the connection and connection factory level.
+Configuring the dispatchAsync using [Destination Options](/components/nms/providers/activemq/uri-configuration) overrides the settings at the connection and connection factory level.
 
 ```
 var queue = new ActiveMQQueue("TEST.QUEUE?consumer.dispatchAsync=false");

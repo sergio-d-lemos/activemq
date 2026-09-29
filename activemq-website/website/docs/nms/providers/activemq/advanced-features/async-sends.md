@@ -15,7 +15,7 @@ Many high performance applications are designed to tolerate a small amount of me
 
 ### Configuring Async Send using a Connection URI
 
-You can use the [Connection Configuration URI](/components/nms/documentation/providers/activemq/uri-configuration) to configure async sends as follows
+You can use the [Connection Configuration URI](/components/nms/providers/activemq/uri-configuration) to configure async sends as follows
 ```
 var cf = new ConnectionFactory("tcp://locahost:61616?nms.AsyncSend=true");
 ```
@@ -35,6 +35,6 @@ You can enable this feature on the Apache.NMS.ActiveMQ.Connection object using t
 
 ### Also see
 
-*   [Connection Configuration URI](/components/nms/documentation/providers/activemq/uri-configuration)
+*   [Connection Configuration URI](/components/nms/providers/activemq/uri-configuration)
 *   [Should I use transactions](http://activemq.apache.orgCommunity/FAQ/JMSCommunity/FAQ/JMS/Community/FAQ/JMS/should-i-use-transactions.md)
-*   [Consumer Dispatch Async](/components/nms/documentation/providers/activemq/advanced-features/consumer-dispatch-async)
+*   [Consumer Dispatch Async](/components/nms/providers/activemq/advanced-features/consumer-dispatch-async)

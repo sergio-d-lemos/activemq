@@ -1,5 +1,6 @@
 ---
 title: "How do I use Ivy with ActiveMQ Classic"
+slug: /how-do-i-use-ivy-with-activemq-classic
 ---
 
  [FAQ](..) > [Using Apache ActiveMQ Classic](.) > [How do I use Ivy with ActiveMQ Classic](how-do-i-use-ivy-with-activemq-classic)

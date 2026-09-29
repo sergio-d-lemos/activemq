@@ -1,14 +1,15 @@
 ---
 title: "Redelivery Policy"
+slug: /redelivery-policy
 ---
 
 
 Redelivery Policy
 -----------------
 
-Detail on when messages are redelivered to a client can be found in the [Message Redelivery and DLQ Handling](../../developers/developer-guide/design-documents/message-redelivery-and-dlq-handling) section. You can configure the [RedeliveryPolicy](http://svn.apache.org/viewvc/activemq/trunk/activemq-client/src/main/java/org/apache/activemq/RedeliveryPolicy.java?view=markup) on your [ActiveMQConnectionFactory](http://svn.apache.org/viewvc/activemq/trunk/activemq-client/src/main/java/org/apache/activemq/ActiveMQConnectionFactory.java?view=markup) or [ActiveMQConnection](http://svn.apache.org/viewvc/activemq/trunk/activemq-client/src/main/java/org/apache/activemq/ActiveMQConnection.java?view=markup) to customize exactly how you want the redelivery to work.
+Detail on when messages are redelivered to a client can be found in the [Message Redelivery and DLQ Handling](message-redelivery-and-dlq-handling) section. You can configure the [RedeliveryPolicy](http://svn.apache.org/viewvc/activemq/trunk/activemq-client/src/main/java/org/apache/activemq/RedeliveryPolicy.java?view=markup) on your [ActiveMQConnectionFactory](http://svn.apache.org/viewvc/activemq/trunk/activemq-client/src/main/java/org/apache/activemq/ActiveMQConnectionFactory.java?view=markup) or [ActiveMQConnection](http://svn.apache.org/viewvc/activemq/trunk/activemq-client/src/main/java/org/apache/activemq/ActiveMQConnection.java?view=markup) to customize exactly how you want the redelivery to work.
 
-You can use Java code, Spring or the [Connection Configuration URI](../../using-activemq-classic/configuring-transports/activemq-classic-connection-uris/connection-configuration-uri) to customize this.
+You can use Java code, Spring or the [Connection Configuration URI](connection-configuration-uri) to customize this.
 
 ### Available Properties
 

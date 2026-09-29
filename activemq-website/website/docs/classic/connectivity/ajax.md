@@ -1,5 +1,6 @@
 ---
 title: "Ajax"
+slug: /ajax
 ---
 
 
@@ -8,9 +9,9 @@ Introduction
 
 ActiveMQ Classic supports [Ajax](http://en.wikipedia.org/wiki/Ajax_%28programming%29) which is an Asychronous Javascript And Xml mechanism for real time web applications. This means you can create highly real time web applications taking full advantage of the publish/subscribe nature of ActiveMQ Classic
 
-Ajax allows a regular DHTML client (with JavaScript and a modern version 5 or later web browser) to send and receive messages over the web. Ajax support in ActiveMQ Classic builds on the same basis as the [REST](protocols/rest) connector for ActiveMQ Classic which allows any web capable device to send or receive messages over JMS.
+Ajax allows a regular DHTML client (with JavaScript and a modern version 5 or later web browser) to send and receive messages over the web. Ajax support in ActiveMQ Classic builds on the same basis as the [REST](rest) connector for ActiveMQ Classic which allows any web capable device to send or receive messages over JMS.
 
-To see Ajax in action, try [running the examples](../using-activemq-classic/web-samples)
+To see Ajax in action, try [running the examples](web-samples)
 
 The Servlet
 ===========
@@ -76,7 +77,7 @@ amq.addListener(myId,myDestination,myHandler.rcvMessage);
 where `myId` is a string identifier that can be used for a later call to `amq.removeHandler(myId)` and `myDestination` is a URL string address of the destination (e.g. `topic://MY.NAME` or `channel://MY.NAME`). When a message is received, a call back to the `myHandler.rcvMessage` function passes the message to your handling code.  
 The "message" is actually a text of the Text message or a String representation (`toString()`) in case of Object messages.
 
-Be aware that, by default, messages published via [Stomp](protocols/stomp) which include a `content-length` header will be converted by ActiveMQ Classic to binary messages, and will not be visible to your web clients. Beginning with ActiveMQ Classic 5.4.0, you can resolve this problem by always setting the [`amq-msg-type` header](https://issues.apache.org/jira/browse/AMQ-2833) to `text` in messages which will may be consumed by web clients.
+Be aware that, by default, messages published via [Stomp](stomp) which include a `content-length` header will be converted by ActiveMQ Classic to binary messages, and will not be visible to your web clients. Beginning with ActiveMQ Classic 5.4.0, you can resolve this problem by always setting the [`amq-msg-type` header](https://issues.apache.org/jira/browse/AMQ-2833) to `text` in messages which will may be consumed by web clients.
 
 ### Selector support
 

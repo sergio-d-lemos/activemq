@@ -1,5 +1,6 @@
 ---
 title: "Virtual Threads"
+slug: /virtual-threads
 ---
 
 ### Virtual Threads support 

@@ -1,13 +1,14 @@
 ---
 title: "Web Console"
+slug: /web-console
 ---
 
 
-The ActiveMQ Classic Web Console is a web based administration tool for working with ActiveMQ Classic. When used with the [JMX](../features/jmx) support it can be an invaluable tool for working with ActiveMQ Classic
+The ActiveMQ Classic Web Console is a web based administration tool for working with ActiveMQ Classic. When used with the [JMX](jmx) support it can be an invaluable tool for working with ActiveMQ Classic
 
 ### Running the Web Console on ActiveMQ Classic 5.0 or later
 
-We have integrated the Web Console into the binary distribution. So [Download](../overview/download) a binary distribution then follow the instructions for [Version 5 Run Broker](../using-activemq-classic/run-broker). Then you can point your web browser at the URL
+We have integrated the Web Console into the binary distribution. So [Download](../overview/download) a binary distribution then follow the instructions for [Version 5 Run Broker](run-broker). Then you can point your web browser at the URL
 
 *   [http://localhost:8161/admin](http://localhost:8161/admin)
 
@@ -64,7 +65,7 @@ You may also wish to enable **ssl connector** to further secure access to the we
 ```
 Standard connector is left enabled in this example, but you can remove it in your configuration if you wish.
 
-Note that these changes will affect the whole web server, so if you're using [REST](../connectivity/protocols/rest) API or blob fileserver be sure to provide appropriate credentials.
+Note that these changes will affect the whole web server, so if you're using [REST](rest) API or blob fileserver be sure to provide appropriate credentials.
 
 If you're interested in securing 5.3.1 (and 5.3.2) Web consoles, take a look at [this article](http://www.nighttale.net/activemq/securing-activemq-531-console.html). For older versions, please refer to [this article](http://it.toolbox.com/blogs/unix-sysadmin/securing-activemq-web-console-27727)
 
@@ -82,13 +83,13 @@ The Web Console has many features relative to it's tabs as shown in the followin
 
 Tab|Features
 ---|---
-Home|[System Usage](../features/message-dispatching-features/producer-flow-control#ProducerFlowControl-Systemusage)
+Home|[System Usage](producer-flow-control#ProducerFlowControl-Systemusage)
 Queues|
-Topics|[Viewing Advisory Messages](../features/message-features/advisory-message)
+Topics|[Viewing Advisory Messages](advisory-message)
 Subscribers|
-Connections|[Protocols](../connectivity/protocols)
+Connections|[Protocols](protocols)
 Scheduled|
-Send|[Delay and Schedule Message Delivery](../features/delay-and-schedule-message-delivery)
+Send|[Delay and Schedule Message Delivery](delay-and-schedule-message-delivery)
 
 External Web Consoles
 =====================

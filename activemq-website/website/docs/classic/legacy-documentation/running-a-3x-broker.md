@@ -1,5 +1,6 @@
 ---
 title: "Running a 3.x Broker"
+slug: /running-a-3x-broker
 ---
 
 The 3.x [binary distribution](../overview/download) of ActiveMQ Classic comes with a script called 'activemq' which allows you to run a broker. Typing the following will run an ActiveMQ Classic Broker using the out of the box configuration
@@ -8,7 +9,7 @@ The 3.x [binary distribution](../overview/download) of ActiveMQ Classic comes wi
 activemq
 ```
 
-You can use the [Xml Configuration](../using-activemq-classic/xml-configuration) to customize the Message Broker to suit your needs. You can run a broker with a specific XML configuration as
+You can use the [Xml Configuration](xml-configuration) to customize the Message Broker to suit your needs. You can run a broker with a specific XML configuration as
 
 ```
 activemq foo.xml
@@ -30,9 +31,9 @@ Whether its Apache Geronmio, JBoss 4, WebLogic 9 or some other J2EE 1.4 containe
 
 ### Running the 3.x broker from the source code
 
-You can do this by running the main() in the [org.activemq.broker.impl.Main](http://activemq.codehaus.org/maven/apidocs/org/activemq/broker/impl/Main.html) class inside your IDE, assuming you've [set up your classpath](../using-activemq-classic/initial-configuration) properly.
+You can do this by running the main() in the [org.activemq.broker.impl.Main](http://activemq.codehaus.org/maven/apidocs/org/activemq/broker/impl/Main.html) class inside your IDE, assuming you've [set up your classpath](initial-configuration) properly.
 
-Another option, if you have a [source distribution](../developers/building), is to run the broker from inside Maven by typing
+Another option, if you have a [source distribution](building), is to run the broker from inside Maven by typing
 
 ```
 cd modules/assembly maven server
@@ -52,13 +53,13 @@ maven server -Durl=tcp://localhost:61626
 
 ### Using the XML configuration
 
-You can use the [Xml Configuration](../using-activemq-classic/xml-configuration) to customize the Message Broker to suit your needs. You can run a broker from Maven as follows...
+You can use the [Xml Configuration](xml-configuration) to customize the Message Broker to suit your needs. You can run a broker from Maven as follows...
 
 ```
 maven server -Dconfig=src/sample-conf/default.xml
 ```
 
-If your [classpath is setup correctly](../using-activemq-classic/initial-configuration) you can achieve the same thing from the command line
+If your [classpath is setup correctly](initial-configuration) you can achieve the same thing from the command line
 
 ```
 java org.activemq.spring.Main src/sample-conf/default.xml
@@ -71,7 +72,7 @@ Handling JMS brokers going down
 
 A common requirement is that if the JMS broker goes down you want to automatically detect the failure and try to reconnect under the covers so that your application does not have to worry about reconnection.
 
-There is detailed documentation on this in [Configuring Transports](../using-activemq-classic/configuring-transports); briefly...
+There is detailed documentation on this in [Configuring Transports](configuring-transports); briefly...
 
 Just change your connection URI in 3.x to
 

@@ -1,4 +1,8 @@
 {
   "position": 2,
-  "label": "Community"
+  "label": "Community",
+  "link": {
+    "type": "generated-index",
+    "slug": "/community"
+  }
 }

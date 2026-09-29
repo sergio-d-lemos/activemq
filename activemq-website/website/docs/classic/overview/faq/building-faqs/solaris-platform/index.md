@@ -1,5 +1,6 @@
 ---
 title: "Solaris Platform"
+slug: /solaris-platform
 ---
 
 Information specific to builds on Solaris

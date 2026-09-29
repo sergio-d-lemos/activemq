@@ -1,11 +1,12 @@
 ---
 title: "OpenWire Version 2 Specification"
+slug: /openwire-version-2-specification
 ---
 
 
 > **OpenWire Version 2 is not the latest version.**
 > 
-> This article references OpenWire V2 which is no longer the latest version. The formatting and encoding rules in this article are still valid for later OpenWire versions, but later versions define additional fields in the OpenWire commands. The default settings shown in this article may not reflect the current defaults, see [this page](../../../using-activemq-classic/configuring-transports/activemq-classic-connection-uris/configuring-wire-formats) for the latest default OpenWire settings.
+> This article references OpenWire V2 which is no longer the latest version. The formatting and encoding rules in this article are still valid for later OpenWire versions, but later versions define additional fields in the OpenWire commands. The default settings shown in this article may not reflect the current defaults, see [this page](configuring-wire-formats) for the latest default OpenWire settings.
 
 Overview
 --------

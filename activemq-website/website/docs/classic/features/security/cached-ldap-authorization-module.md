@@ -1,5 +1,6 @@
 ---
 title: "Cached LDAP Authorization Module"
+slug: /cached-ldap-authorization-module
 ---
 
 

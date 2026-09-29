@@ -1,5 +1,6 @@
 ---
 title: "Logging Interceptor"
+slug: /logging-interceptor
 ---
 
 Logging Interceptor
@@ -7,7 +8,7 @@ Logging Interceptor
 
 The Logging Interceptor is a pretty trivial [Interceptor](index) which just logs to [Jakarta Commons Logging](http://jakarta.apache.org/commons/logging/) or [log4j](http://logging.apache.org/log4j/docs/) as messages are sent or acknowledged on a broker.
 
-The default logging level used is **INFO**. If you want to increase/reduce the logging you can use [change it via commons logging or log4j](../../overview/faq/using-apache-activemq-classic/how-do-i-change-the-logging).
+The default logging level used is **INFO**. If you want to increase/reduce the logging you can use [change it via commons logging or log4j](how-do-i-change-the-logging).
 
 As of version 5.3 the logging Interceptor is more configurable. The idea is to log all events but be able to turn off logging for certain event groups by configuration.
 

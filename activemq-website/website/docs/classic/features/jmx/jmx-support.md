@@ -1,5 +1,6 @@
 ---
 title: "JMX Support"
+slug: /jmx-support
 ---
 
 

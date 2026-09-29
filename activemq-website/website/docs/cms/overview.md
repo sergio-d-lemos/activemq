@@ -23,7 +23,7 @@ std::auto_ptr<cms::ConnectionFactory> connectionFactory(
     cms::ConnectionFactory::createCMSConnectionFactory( "tcp://127.0.0.1:61616" ) );
 ```
 
-As you can see the **createCMSConnectionFactory** takes a single string parameter which is in the form of a URI that defines where the Connection that is created is to connect to as well as the protocol that should be used, TCP/IP in the case of the above example. Additionally configuration information can be encoded in the URI. Refer to the [Configuration](/components/cms/documentation/configuring) page for more information on the configuration parameters that can be passed to ActiveMQ-CPP via the URI.
+As you can see the **createCMSConnectionFactory** takes a single string parameter which is in the form of a URI that defines where the Connection that is created is to connect to as well as the protocol that should be used, TCP/IP in the case of the above example. Additionally configuration information can be encoded in the URI. Refer to the [Configuration](/components/cms/configuring) page for more information on the configuration parameters that can be passed to ActiveMQ-CPP via the URI.
 
 Once you've created a ConnectionFactory the next thing to do is to create a CMS Connection using the ConnectionFactory. A Connection is the Object that manages the client's connection to the Provider. The next section covers the use of a CMS Connection, the code to create a Connection is shown below:
 

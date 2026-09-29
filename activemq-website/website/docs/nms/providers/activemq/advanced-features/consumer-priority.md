@@ -10,7 +10,7 @@ This allows us to weight consumers to optimise network hops. For example, you ty
 
 ### Example
 
-The priority for a consumer is set using [Destination Options](/components/nms/documentation/providers/activemq/uri-configuration) as follows:
+The priority for a consumer is set using [Destination Options](/components/nms/providers/activemq/uri-configuration) as follows:
 ```
 var queue = session.GetQueue("TEST.QUEUE?consumer.priority=10");
 var consumer = session.CreateConsumer(queue);

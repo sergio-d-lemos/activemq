@@ -1,5 +1,6 @@
 ---
 title: "ActiveMQ Classic Command Line Tools Reference"
+slug: /activemq-classic-command-line-tools-reference
 ---
 
  [FAQ](..) > [Using Apache ActiveMQ Classic](.) > [ActiveMQ Classic Command Line Tools Reference](activemq-classic-command-line-tools-reference)
@@ -10,7 +11,7 @@ Command Line Tools
 
 The current script contains the entire functionality to manage activemq.
 
-*   [activemq](activemq-classic-command-line-tools-reference) - runs an activemq broker  (see [Unix Shell Script](../../../features/unix/unix-shell-script))
+*   [activemq](activemq-classic-command-line-tools-reference) - runs an activemq broker  (see [Unix Shell Script](unix-shell-script))
 
 In versions prior 5.4.1 some management functionalities beyond controlling the service itself where part of the "activemq-admin" script.  
 This script is currently still part of the distribution to provide access to this for Windows users-
@@ -29,7 +30,7 @@ In versions prior to 5.0 the functionality of activemq-admin script was scattere
 activemq script
 ---------------------
 
-> **Description of this script is valid for Windows platform.** For Unix platform it is valid for broker versions prior to 5.4.0. With version 5.4.0 and later, ActiveMQ Classic comes with enhanced [Unix Shell Script](../../../features/unix/unix-shell-script)
+> **Description of this script is valid for Windows platform.** For Unix platform it is valid for broker versions prior to 5.4.0. With version 5.4.0 and later, ActiveMQ Classic comes with enhanced [Unix Shell Script](unix-shell-script)
 
 Script Name|activemq.bat, activemq
 Task Usage|_activemq [options] [config]_ or _java -jar run.jar start [options] [config]_
@@ -54,7 +55,7 @@ activemq xbean:file:C:/ActiveMQ/conf/broker2.xml|Runs a broker using the file br
 activemq broker:(tcp://localhost:61616, tcp://localhost:5000)?useJmx=true|Runs a broker with two transport connectors and JMX enabled.Â¹
 activemq broker:(tcp://localhost:61616, network:tcp://localhost:5000)?persistent=false|Runs a broker with 1 transport connector and 1 network connector with persistence disabled.Â¹
 
-For details on how to configure using broker URI refer to: [Broker Configuration URI](../../../using-activemq-classic/configuring-transports/activemq-classic-connection-uris/broker-configuration-uri)
+For details on how to configure using broker URI refer to: [Broker Configuration URI](broker-configuration-uri)
 
 activemq-admin
 --------------

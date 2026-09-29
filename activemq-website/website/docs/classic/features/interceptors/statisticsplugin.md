@@ -1,5 +1,6 @@
 ---
 title: "StatisticsPlugin"
+slug: /statisticsplugin
 ---
 
 Beginning in ActiveMQ Classic 5.3, a statistics plugin is included that can be used to retrieve statistics from the broker or its destinations. Note that the message must contain a `replyTo` header (the `jmsReplyTo` header if you're using JMS) else the message will be ignored. The `replyTo` header must contain the name of the destination from which you want to retrieve the stats message(s). The statistics message is a `MapMessage` populated with statistics for the target (i.e., a broker or a destination).

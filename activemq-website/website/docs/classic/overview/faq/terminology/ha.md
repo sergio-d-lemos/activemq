@@ -1,5 +1,6 @@
 ---
 title: "HA"
+slug: /ha
 ---
 
  [FAQ](..) > [Terminology](.) > [HA](ha)

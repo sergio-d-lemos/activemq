@@ -1,5 +1,6 @@
 ---
 title: "JMX"
+slug: /jmx
 ---
 
 
@@ -12,7 +13,7 @@ Apache ActiveMQ Classic has extensive support for JMX to allow you to monitor an
 
 You can enable/disable JMX support as follows...
 
-1. [Run a broker](../../using-activemq-classic/run-broker) setting the broker property useJmx to true (enabled by default) i.e.
+1. [Run a broker](run-broker) setting the broker property useJmx to true (enabled by default) i.e.
 
     For xbean configuration
     ```
@@ -49,9 +50,9 @@ Connection|**type=Broker**, **brokerName=&lt;name-of-broker>**, **connectionView
 PersistenceAdapter|**type=Broker**, **brokerName=&lt;name-of-broker>**, **Service=PersistenceAdapter**, **InstanceName==&lt;adapter-identifier>**|Name, Size, Data, Transactions|
 Health|**type=Broker**, **brokerName=&lt;name-of-broker>**, **Service=Health**|CurrentStatus|health
 
-Command line utilities are also available to let you monitor ActiveMQ Classic. Refer to [ActiveMQ Classic Command Line Tools Reference](../../overview/faq/using-apache-activemq-classic/activemq-classic-command-line-tools-reference) for usage information.
+Command line utilities are also available to let you monitor ActiveMQ Classic. Refer to [ActiveMQ Classic Command Line Tools Reference](activemq-classic-command-line-tools-reference) for usage information.
 
-JMX API is also exposed via [REST management API](../../connectivity/protocols/rest)
+JMX API is also exposed via [REST management API](rest)
 
 ### Password Protecting the JMX Connector
 

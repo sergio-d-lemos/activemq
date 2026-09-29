@@ -1,5 +1,6 @@
 ---
 title: "zOS"
+slug: /zos
 ---
 
 
@@ -170,5 +171,5 @@ export IBM\_JAVA\_ZOS_TDUMP=NO
 
 Once the broker has been started on z/OS, modify one of the example application to have the hostname of the z/OS system and run it to confirm that the broker is functioning correctly.
 
-You can also gather information about the broker as usual using [jmx](../../features/jmx).
+You can also gather information about the broker as usual using [jmx](jmx).
 

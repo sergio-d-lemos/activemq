@@ -1,5 +1,6 @@
 ---
 title: "How do I avoid Maven downloading latest jars"
+slug: /how-do-i-avoid-maven-downloading-latest-jars
 ---
 
  [FAQ](..) > [General](.) > [How do I avoid Maven downloading latest jars](how-do-i-avoid-maven-downloading-latest-jars)

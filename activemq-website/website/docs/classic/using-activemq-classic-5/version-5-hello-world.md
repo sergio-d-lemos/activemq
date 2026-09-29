@@ -1,13 +1,14 @@
 ---
 title: "Version 5 Hello World"
+slug: /version-5-hello-world
 ---
 
 
-The following is a very simple JMS application with multiple, concurrent, consumers and producers. See the [Initial Configuration](../using-activemq-classic/initial-configuration) guide for details on how to setup your classpath correctly.
+The following is a very simple JMS application with multiple, concurrent, consumers and producers. See the [Initial Configuration](initial-configuration) guide for details on how to setup your classpath correctly.
 
 Things you might do after running this example:
 
-*   [Setup a broker](../using-activemq-classic/run-broker) instead of using the org.activemq.broker.impl.Main class directly
+*   [Setup a broker](run-broker) instead of using the org.activemq.broker.impl.Main class directly
 *   Use JNDI to lookup a javax.jms.ConnectionFactory rather than creating ActiveMQConnectionFactory directly.
 *   Implement the javax.jms.MessageListener interface rather than calling consumer.receive()
 *   Use transactional sessions

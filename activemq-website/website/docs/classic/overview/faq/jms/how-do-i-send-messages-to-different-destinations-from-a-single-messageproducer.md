@@ -1,5 +1,6 @@
 ---
 title: "How do I send messages to different Destinations from a single MessageProducer"
+slug: /how-do-i-send-messages-to-different-destinations-from-a-single-messageproducer
 ---
 
  [FAQ](..) > [JMS](.) > [How do I send messages to different Destinations from a single MessageProducer](how-do-i-send-messages-to-different-destinations-from-a-single-messageproducer)

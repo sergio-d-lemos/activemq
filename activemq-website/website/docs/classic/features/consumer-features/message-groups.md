@@ -1,5 +1,6 @@
 ---
 title: "Message Groups"
+slug: /message-groups
 ---
 
 
@@ -98,7 +99,7 @@ To flush caches to ensure consistent state when faced with network errors.
 
 ### Adding New Consumers
 
-If you have existing messages in the broker and add consumers at a later stage, it is a good idea to delay message dispatch start until all consumers are present (or at least to give enough time for them to subscribe). If you don't do that the first consumer will probably acquire all message groups and all messages will be dispatched to it. You can achieve this by using `consumersBeforeDispatchStarts` and `timeBeforeDispatchStarts` [destination policies](../destination-features/per-destination-policies).
+If you have existing messages in the broker and add consumers at a later stage, it is a good idea to delay message dispatch start until all consumers are present (or at least to give enough time for them to subscribe). If you don't do that the first consumer will probably acquire all message groups and all messages will be dispatched to it. You can achieve this by using `consumersBeforeDispatchStarts` and `timeBeforeDispatchStarts` [destination policies](per-destination-policies).
 
 When both **consumersBeforeDispatchStarts** and **timeBeforeDispatchStarts** are set to a value greater than zero, the dispatching will start as soon as the required number of consumers are present or the timeBeforeDispatchStarts timeout expires. If only consumersBeforeDispatchStarts is set then the timeout for consumers to connect is 1 second. If all consumers disconnect then message dispatch delay will be applied again at the next consumer connection.
 
@@ -171,4 +172,4 @@ The following code snippet shows how to enable it :
 
 ### See
 
-*   [How do Message Groups compare to Selectors](../../overview/faq/using-apache-activemq-classic/how-do-message-groups-compare-to-selectors)
+*   [How do Message Groups compare to Selectors](how-do-message-groups-compare-to-selectors)

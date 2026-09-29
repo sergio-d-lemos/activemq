@@ -10,7 +10,7 @@ This is the first official release of the NMS Stomp client library. This library
 
 ##### API
 
-Refer to the API for this release [here](/components/nms/documentation/nms-api)
+Refer to the API for this release [here](/components/nms/nms-api)
 
 ##### Apache.NMS.Stomp Downloads
 

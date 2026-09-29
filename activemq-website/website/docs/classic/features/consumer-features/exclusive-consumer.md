@@ -1,5 +1,6 @@
 ---
 title: "Exclusive Consumer"
+slug: /exclusive-consumer
 ---
 
 
@@ -21,7 +22,7 @@ For those who've struggled with pinning JMS consumers in J2EE clusters you'll im
 
 ### Example
 
-An Exclusive Consumer is created using [Destination Options](../destination-features/destination-options) as follows:
+An Exclusive Consumer is created using [Destination Options](destination-options) as follows:
 ```
 queue = new ActiveMQQueue("TEST.QUEUE?consumer.exclusive=true");
 consumer = session.createConsumer(queue);

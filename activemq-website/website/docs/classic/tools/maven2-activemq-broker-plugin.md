@@ -1,5 +1,6 @@
 ---
 title: "Maven2 ActiveMQ Classic Broker Plugin"
+slug: /maven2-activemq-broker-plugin
 ---
 
 

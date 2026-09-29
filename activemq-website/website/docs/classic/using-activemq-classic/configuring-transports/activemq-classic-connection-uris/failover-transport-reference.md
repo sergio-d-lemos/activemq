@@ -1,5 +1,6 @@
 ---
 title: "Failover Transport Reference"
+slug: /failover-transport-reference
 ---
 
 ### The Failover Transport

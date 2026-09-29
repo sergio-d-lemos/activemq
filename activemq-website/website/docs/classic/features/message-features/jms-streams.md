@@ -1,5 +1,6 @@
 ---
 title: "JMS Streams"
+slug: /jms-streams
 ---
 
 

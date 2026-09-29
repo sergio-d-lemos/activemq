@@ -1,5 +1,6 @@
 ---
 title: "VM Transport Reference"
+slug: /vm-transport-reference
 ---
 
 ### The VM Transport
@@ -33,7 +34,7 @@ vm://broker1?marshal=false&broker.persistent=false
 ```
 Be careful with embedded brokers
 
-If you are using the VM transport and wish to explicitly configure an [Embedded Broker](../../../overview/faq/using-apache-activemq-classic/how-do-i-embed-a-broker-inside-a-connection) there is a chance that you could create the JMS connections first before the broker starts up. Currently ActiveMQ Classic will auto-create a broker if you use the VM transport and there is not one already configured. (In 5.2 it is possible to use the waitForStart and create=false options for the connection uri)
+If you are using the VM transport and wish to explicitly configure an [Embedded Broker](how-do-i-embed-a-broker-inside-a-connection) there is a chance that you could create the JMS connections first before the broker starts up. Currently ActiveMQ Classic will auto-create a broker if you use the VM transport and there is not one already configured. (In 5.2 it is possible to use the waitForStart and create=false options for the connection uri)
 
 So to work around this if you are using Spring you may wish to use the **depends-on** attribute so that your JMS ConnectionFactory depends on the embedded broker to avoid this happening. e.g.
 ```
@@ -66,7 +67,7 @@ marshal|false|If true, forces each command sent over the transport to be marshal
 wireFormat|default|The name of the WireFormat to use
 wireFormat.*||All the properties with this prefix are used to configure the wireFormat
 
-There are [more options](../../../overview/faq/using-apache-activemq-classic/how-should-i-use-the-vm-transport) on optimising the use of the VM transport.
+There are [more options](how-should-i-use-the-vm-transport) on optimising the use of the VM transport.
 
 ##### Example URI
 ```

@@ -1,5 +1,6 @@
 ---
 title: "TCP Transport Reference"
+slug: /tcp-transport-reference
 ---
 
 

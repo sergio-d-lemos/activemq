@@ -1,5 +1,6 @@
 ---
 title: "How do I use durable subscribers in a network of brokers"
+slug: /how-do-i-use-durable-subscribers-in-a-network-of-brokers
 ---
 
  [FAQ](..) > [Using Apache ActiveMQ Classic](.) > [How do I use durable subscribers in a network of brokers](how-do-i-use-durable-subscribers-in-a-network-of-brokers)
@@ -9,9 +10,9 @@ Durable subscribers behave a little differently across a cluster of ActiveMQ Cla
 
 For example, if you have two brokers A and B networked together in both directions to form a cluster, and a durable subscriber connects to broker B, a producer P on broker A will have its messages properly forwarded to broker B and the durable subscriber. However, if the subscriber disconnects and reconnects to broker A, any messages sent by P while the subscriber was away will be stuck on B until the subscriber reconnects to B.
 
-The solution is to use [Virtual Destinations](../../../features/destination-features/virtual-destinations)
+The solution is to use [Virtual Destinations](virtual-destinations)
 
-Virtual topics use queues under the covers and this allows ActiveMQ Classic to treat each subscriber as a plain old Queue subscriber. This allows ActiveMQ Classic to replay messages that have been orphaned on another broker in the cluster using this configuration as explained in the [Networks of Brokers](../../../features/clustering/networks-of-brokers) documentation:
+Virtual topics use queues under the covers and this allows ActiveMQ Classic to treat each subscriber as a plain old Queue subscriber. This allows ActiveMQ Classic to replay messages that have been orphaned on another broker in the cluster using this configuration as explained in the [Networks of Brokers](networks-of-brokers) documentation:
 ```
 <destinationPolicy>
   <policyMap>

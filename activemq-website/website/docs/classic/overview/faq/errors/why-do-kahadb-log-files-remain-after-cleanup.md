@@ -1,5 +1,6 @@
 ---
 title: "Why do KahaDB log files remain after cleanup"
+slug: /why-do-kahadb-log-files-remain-after-cleanup
 ---
 
  [FAQ](..) > [Errors](.) > [Why do KahaDB log files remain after cleanup](why-do-kahadb-log-files-remain-after-cleanup)

@@ -1,5 +1,6 @@
 ---
 title: "I get errors building the code whats wrong"
+slug: /i-get-errors-building-the-code-whats-wrong
 ---
 
  [FAQ](..) > [Errors](.) > [I get errors building the code whats wrong](i-get-errors-building-the-code-whats-wrong)
@@ -11,5 +12,5 @@ mvn clean
 rm -rf ~/.m2/repository
 mvn
 ```
-You may also want to [disable the unit tests](../general/how-do-i-build-but-disable-the-unit-tests)
+You may also want to [disable the unit tests](how-do-i-build-but-disable-the-unit-tests)
 

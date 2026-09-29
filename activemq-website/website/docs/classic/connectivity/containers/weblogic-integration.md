@@ -1,5 +1,6 @@
 ---
 title: "WebLogic Integration"
+slug: /weblogic-integration
 ---
 
 

@@ -1,5 +1,6 @@
 ---
 title: "JMS to JMS Bridge"
+slug: /jms-to-jms-bridge
 ---
 
 
@@ -109,7 +110,7 @@ outboundQueueName|null|the foreign queue name to send to
 
 ### Example XBean Configuration
 
-The following [example config file](http://svn.apache.org/repos/asf/activemq/trunk/activemq-unit-tests/src/test/resources/org/apache/activemq/network/jms/queue-xbean.xml) shows how to use the regular [Xml Configuration](../using-activemq-classic/xml-configuration) to configure a JMS to JMS bridge.
+The following [example config file](http://svn.apache.org/repos/asf/activemq/trunk/activemq-unit-tests/src/test/resources/org/apache/activemq/network/jms/queue-xbean.xml) shows how to use the regular [Xml Configuration](xml-configuration) to configure a JMS to JMS bridge.
 ```xml
 <broker xmlns="http://activemq.apache.org/schema/core" id="localbroker"
   brokerName="localBroker" persistent="false">

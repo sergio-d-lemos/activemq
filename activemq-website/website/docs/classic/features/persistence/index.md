@@ -1,35 +1,36 @@
 ---
 title: "Persistence"
+slug: /persistence
 ---
 
 ActiveMQ Classic V5.14.2 / V5.17.0
 -------------
 
 ActiveMQ Classic 5.14.2 was the first release after the deprecation announcement of LevelDB. The implementation was removed in 5.17.0.
-We once again recommend you use [KahaDB](../../kahadb).
+We once again recommend you use [KahaDB](kahadb).
 
 ActiveMQ Classic V5.9
 -------------
 
-In ActiveMQ Classic 5.9, the [Replicated LevelDB Store](../../legacy-documentation/replicated-leveldb-store) was introduced. It handles using [Apache ZooKeeper](http://zookeeper.apache.org/) to pick a master from a set of broker nodes configured to replicate single LevelDB Store. Then synchronizes all slave LevelDB Stores with the master keeps them up to date by replicating all updates to the master. It may have become the preferred [Master Slave](../clustering/masterslave) configuration going forward.
+In ActiveMQ Classic 5.9, the [Replicated LevelDB Store](replicated-leveldb-store) was introduced. It handles using [Apache ZooKeeper](http://zookeeper.apache.org/) to pick a master from a set of broker nodes configured to replicate single LevelDB Store. Then synchronizes all slave LevelDB Stores with the master keeps them up to date by replicating all updates to the master. It may have become the preferred [Master Slave](masterslave) configuration going forward.
 
 ActiveMQ Classic V5.8
 -------------
 
-In ActiveMQ Classic 5.8, the [LevelDB Store](../../legacy-documentation/leveldb-store) was introduced. The LevelDB Store is a file based persistence database. It has been optimized to provide even faster persistence than KahaDB. Although not yet the default message store, we expect this store implementation become the default in future releases.
+In ActiveMQ Classic 5.8, the [LevelDB Store](leveldb-store) was introduced. The LevelDB Store is a file based persistence database. It has been optimized to provide even faster persistence than KahaDB. Although not yet the default message store, we expect this store implementation become the default in future releases.
 
 ActiveMQ Classic V5.3
 -------------
 
-From 5.3 onwards - we recommend you use [KahaDB](../../kahadb) - which offers improved scalability and recoverability over the [AMQ Message Store](amq-message-store).  
-The [AMQ Message Store](amq-message-store) which although faster than [KahaDB](../../kahadb) - does not scales as well as [KahaDB](../../kahadb) and recovery times take longer.
+From 5.3 onwards - we recommend you use [KahaDB](kahadb) - which offers improved scalability and recoverability over the [AMQ Message Store](amq-message-store).  
+The [AMQ Message Store](amq-message-store) which although faster than [KahaDB](kahadb) - does not scales as well as [KahaDB](kahadb) and recovery times take longer.
 
 ActiveMQ Classic V4
 -----------
 
 For long term persistence we recommend using JDBC coupled with our high performance journal. You can use just JDBC if you wish but its quite slow.
 
-Our out of the box default configuration uses [Apache Derby](http://incubator.apache.org/derby/) as the default database, which is easy to embed - but we support all the [major SQL databases](jdbc-support) \- just reconfigure your JDBC configuration in the [Xml Configuration](../../using-activemq-classic/xml-configuration).
+Our out of the box default configuration uses [Apache Derby](http://incubator.apache.org/derby/) as the default database, which is easy to embed - but we support all the [major SQL databases](jdbc-support) \- just reconfigure your JDBC configuration in the [Xml Configuration](xml-configuration).
 
 High performance journal - ActiveMQ Classic 4.x
 ---------------------------------------
@@ -43,7 +44,7 @@ Our journal is based on lots of the great work in the [Howl](http://howl.objectw
 Configuring persistence
 -----------------------
 
-For full explict control over configuration check out the [Xml Configuration](../../using-activemq-classic/xml-configuration). However a quick way to set which persistence adapter to use is to set the following system property to be the class name of the PersistenceAdapter implementation.
+For full explict control over configuration check out the [Xml Configuration](xml-configuration). However a quick way to set which persistence adapter to use is to set the following system property to be the class name of the PersistenceAdapter implementation.
 
 activemq.persistenceAdapter
 
@@ -100,7 +101,7 @@ AMQ 5.x
 </beans>
 ```
 
-For more details see the [Initial Configuration](../../using-activemq-classic/initial-configuration) guide.
+For more details see the [Initial Configuration](initial-configuration) guide.
 
 JDBC Persistence without Journaling
 -----------------------------------
@@ -139,15 +140,15 @@ Make sure to send durable messages so that it will be persisted in the database 
 Disaster Recovery options
 -------------------------
 
-For people with high [DR](../../overview/faq/terminology/dr) requirements we have various options for providing a [Replicated Message Store](../clustering/replicated-message-store) to allow full failover in times of major data centre failure.
+For people with high [DR](dr) requirements we have various options for providing a [Replicated Message Store](replicated-message-store) to allow full failover in times of major data centre failure.
 
 Disabling Persistence
 ---------------------
 
-If you don't want persistence at all you can disable it easily via the [Xml Configuration](../../using-activemq-classic/xml-configuration). e.g.
+If you don't want persistence at all you can disable it easily via the [Xml Configuration](xml-configuration). e.g.
 ```xml
 <broker persistent="false"> </broker>
 ```
 This will make the broker use the [<memoryPersistenceAdapter>](http://activemq.apache.org/components/classic/documentation/maven/apidocs/org/apache/activemq/store/memory/MemoryPersistenceAdapter.html)  
-For an example of using a configuration URI see [How To Unit Test JMS Code](../../overview/faq/jms/how-to-unit-test-jms-code)
+For an example of using a configuration URI see [How To Unit Test JMS Code](how-to-unit-test-jms-code)
 

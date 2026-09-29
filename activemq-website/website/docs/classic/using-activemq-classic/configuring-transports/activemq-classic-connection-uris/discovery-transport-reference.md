@@ -1,5 +1,6 @@
 ---
 title: "Discovery Transport Reference"
+slug: /discovery-transport-reference
 ---
 
 
@@ -17,9 +18,9 @@ or
 discovery:discoveryAgentURI
 ```
 
-Note that to be able to use [Discovery](../../../features/discovery) to find brokers, the brokers need to have the multicast discovery agent enabled on the broker.
+Note that to be able to use [Discovery](discovery) to find brokers, the brokers need to have the multicast discovery agent enabled on the broker.
 
-To configure discovery in a Broker you should use the [Xml Configuration](../../xml-configuration). Here is an [example](http://svn.apache.org/viewvc/activemq/trunk/activemq-core/src/test/resources/org/apache/activemq/usecases/receiver-discovery.xml?view=co) of using discovery. Its basically something like the following (see the **discoveryUri**)
+To configure discovery in a Broker you should use the [Xml Configuration](xml-configuration). Here is an [example](http://svn.apache.org/viewvc/activemq/trunk/activemq-core/src/test/resources/org/apache/activemq/usecases/receiver-discovery.xml?view=co) of using discovery. Its basically something like the following (see the **discoveryUri**)
 ```
 <broker name="foo">
   <transportConnectors>

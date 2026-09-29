@@ -1,5 +1,6 @@
 ---
 title: "AMQ Message Store"
+slug: /amq-message-store
 ---
 
 

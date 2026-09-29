@@ -1,5 +1,6 @@
 ---
 title: "sample report"
+slug: /sample-report
 ---
 
 

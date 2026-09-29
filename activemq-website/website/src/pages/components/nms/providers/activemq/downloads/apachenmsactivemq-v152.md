@@ -16,7 +16,7 @@ This release focuses on performance and stability fixes to the ActiveMQ provider
 API Documentation
 -----------------
 
-Refer to the API for this release [here](/components/nms/documentation/nms-api)
+Refer to the API for this release [here](/components/nms/nms-api)
 
 Download Here
 -------------

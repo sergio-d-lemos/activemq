@@ -1,12 +1,13 @@
 ---
 title: "Broker URI"
+slug: /broker-uri
 ---
 
 
 Broker URI
 ----------
 
-The Broker URI allows you to [run a configured broker](../../../run-broker) using a single URI for all the configuration.
+The Broker URI allows you to [run a configured broker](run-broker) using a single URI for all the configuration.
 
 #### Syntax
 
@@ -22,7 +23,7 @@ Option Name|Default Value|Description
 ---|---|---
 useJmx|rue|Should the broker be exposed to JMX?
 persistent|true|Should the broker use persistent storage
-populateJMSXUserID|false|Should the broker populate the [JMSXUserID](../../../../features/jmsxuserid) property of messages to indicate the authenticated sender username who sent the message
+populateJMSXUserID|false|Should the broker populate the [JMSXUserID](jmsxuserid) property of messages to indicate the authenticated sender username who sent the message
 useShutdownHook|true|should the broker install a shutdown hook so that it can properly shut itself down on a JVM kill
 brokerName|localhost|The name of the broker
 deleteAllMessagesOnStartup|false|Should all the messages in the persistent store be deleted on broker startup
@@ -36,7 +37,7 @@ broker:(tcp://localhost:61616,network:static:tcp://remotehost:61616)?persistent=
 ```
 You can use the Broker URI on other transports
 
-If you are using another transport - such as the [VM Transport Reference](../vm-transport-reference) then you can refer to the above broker URI properties inside that URL. e.g. using the URL
+If you are using another transport - such as the [VM Transport Reference](vm-transport-reference) then you can refer to the above broker URI properties inside that URL. e.g. using the URL
 ```
 vm://localhost?broker.persistent=false
 ```

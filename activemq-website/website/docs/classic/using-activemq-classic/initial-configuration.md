@@ -1,5 +1,6 @@
 ---
 title: "Initial Configuration"
+slug: /initial-configuration
 ---
 
 
@@ -34,7 +35,7 @@ Optional JARS
 Persistence Support
 -------------------
 
-We support persistence via [Specialized KahaDB file system message store or JDBC](../features/persistence). For full explict control over configuration check out the [Xml Configuration](xml-configuration). If you wish to use KahaDB, include kahadb.jar in your classpath. In case of JDBC you'll need to include appropriate database driver.
+We support persistence via [Specialized KahaDB file system message store or JDBC](persistence). For full explict control over configuration check out the [Xml Configuration](xml-configuration). If you wish to use KahaDB, include kahadb.jar in your classpath. In case of JDBC you'll need to include appropriate database driver.
 
 If you're just doing some testing or in-VM SEDA based messaging you may wish to disable persistence. You can use the [Xml Configuration](xml-configuration) for this.
 
@@ -57,8 +58,8 @@ Additional Resources
 *   Sun's [JMS Tutorial](http://java.sun.com/products/jms/tutorial/) is a handy place to start looking at how to use the JMS API directly
 *   The ActiveMQ Classic [Website](http://activemq.apache.org/components/classic) for specifics on how to use ActiveMQ Classic
 *   [ActiveMQ Classic Topologies](topologies)
-*   [ActiveMQ Classic Clustering](../features/clustering)
-*   [ActiveMQ Classic Network of Brokers](../features/clustering/networks-of-brokers)
+*   [ActiveMQ Classic Clustering](clustering)
+*   [ActiveMQ Classic Network of Brokers](networks-of-brokers)
 *   [Staged Event Driven Architecture (SEDA)](http://www.eecs.harvard.edu/~mdw/proj/seda/)
 
 ### Specifications

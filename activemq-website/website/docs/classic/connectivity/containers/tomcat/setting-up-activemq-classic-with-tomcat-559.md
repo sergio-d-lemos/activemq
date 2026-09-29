@@ -1,5 +1,6 @@
 ---
 title: "Setting up ActiveMQ Classic with Tomcat 5.5.9"
+slug: /setting-up-activemq-classic-with-tomcat-559
 ---
 
 

@@ -1,5 +1,6 @@
 ---
 title: "LDAP Broker Discovery Mechanism"
+slug: /ldap-broker-discovery-mechanism
 ---
 
 

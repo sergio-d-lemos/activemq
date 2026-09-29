@@ -17,5 +17,5 @@ Click on the provider name to visit the URI configuration documentation for your
 
 |Option Name|Description|
 |---|---|
-|[amqp](/components/nms/documentation/providers/amqp/uri-configuration)|Use the Apache.NMS.AMQP Provider to talk to ActiveMQ 5.x, ActiveMQ Artemis or any other AMQP 1.0 compliant Broker.|
-|[activemq (openwire)](/components/nms/documentation/providers/activemq/uri-configuration)|Use the NMS.ActiveMQ Provider to talk to an ActiveMQ Broker that supports openwire.|
+|[amqp](/components/nms/providers/amqp/uri-configuration)|Use the Apache.NMS.AMQP Provider to talk to ActiveMQ 5.x, ActiveMQ Artemis or any other AMQP 1.0 compliant Broker.|
+|[activemq (openwire)](/components/nms/providers/activemq/uri-configuration)|Use the NMS.ActiveMQ Provider to talk to an ActiveMQ Broker that supports openwire.|

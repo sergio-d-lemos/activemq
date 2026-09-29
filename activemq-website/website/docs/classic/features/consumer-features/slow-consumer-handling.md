@@ -1,9 +1,10 @@
 ---
 title: "Slow Consumer Handling"
+slug: /slow-consumer-handling
 ---
 
 
-[Slow Consumers](../../developers/developer-guide/design-documents/slow-consumers) can cause problems on non-durable topics since they can force the broker to keep old messages in RAM which once it fills up, forces the broker to slow down producers, causing the fast consumers to be slowed down. One option we could implement in the future is spooling to disk - but then spooling to disk could slow down the fast consumers too.
+[Slow Consumers](slow-consumers) can cause problems on non-durable topics since they can force the broker to keep old messages in RAM which once it fills up, forces the broker to slow down producers, causing the fast consumers to be slowed down. One option we could implement in the future is spooling to disk - but then spooling to disk could slow down the fast consumers too.
 
 Currently we have a strategy that lets you configure the maximum number of matched messages the broker will keep around for a consumer in addition to its prefetch buffer. Once this maximum is reached, as new messages come in, older messages are discarded. This allows you to keep the RAM for current messages and keep sending messages to a slow consumer but to discard old messages.
 
@@ -39,7 +40,7 @@ This strategy calculates the maximum number of pending messages using a multipli
 
 ### Using the Prefetch Policy to Configure the Limit
 
-The JMS Client has a [prefetch policy](../what-is-the-prefetch-limit-for) you can use to configure the various prefetch limits for persistent and non persistent queues and topics. The prefetch policy also allows you to specify the `maximumPendingMessageLimit` on a per connection/consumer basis. One minor difference with configuring this value; to simplify operation with non-JMS clients such as with [OpenWire](../../connectivity/protocols/openwire) the value of zero is ignored; so the lowest value you can configure is `1`.
+The JMS Client has a [prefetch policy](what-is-the-prefetch-limit-for) you can use to configure the various prefetch limits for persistent and non persistent queues and topics. The prefetch policy also allows you to specify the `maximumPendingMessageLimit` on a per connection/consumer basis. One minor difference with configuring this value; to simplify operation with non-JMS clients such as with [OpenWire](openwire) the value of zero is ignored; so the lowest value you can configure is `1`.
 
 ### Configuring the Eviction Policy
 
@@ -129,7 +130,7 @@ For example, if you know a particular server is quite slow and you have very hig
 
 ### Monitoring the Status of Slow Consumers
 
-You can also use a [JMX](../jmx) Console to view the statistics of the active subscriptions. This allows you to view the following statistics on a `TopicSubscriptionViewMBean`:
+You can also use a [JMX](jmx) Console to view the statistics of the active subscriptions. This allows you to view the following statistics on a `TopicSubscriptionViewMBean`:
 
 Statistic|Definition
 ---|---

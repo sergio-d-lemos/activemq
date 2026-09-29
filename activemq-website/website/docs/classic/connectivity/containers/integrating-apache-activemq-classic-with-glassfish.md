@@ -1,5 +1,6 @@
 ---
 title: "Integrating Apache ActiveMQ Classic with Glassfish"
+slug: /integrating-apache-activemq-classic-with-glassfish
 ---
 
 

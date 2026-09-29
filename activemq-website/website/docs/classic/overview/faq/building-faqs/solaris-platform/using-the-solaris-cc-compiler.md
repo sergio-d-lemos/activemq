@@ -1,5 +1,6 @@
 ---
 title: "Using the Solaris CC compiler"
+slug: /using-the-solaris-cc-compiler
 ---
 
 Use the Correct Compiler

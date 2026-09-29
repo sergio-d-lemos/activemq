@@ -16,9 +16,9 @@ A JMS durable subscriber MessageConsumer is created with a unique JMS clientID a
 *   load balancing of messages.
 *   fast failover of the subscriber if that one process running that one consumer thread dies.
 
-Now _queue_ semantics in JMS offer the ability to load balance work across a number of consumers in a reliable way - allowing many threads, processes and machines to be used to process messages. Then we have sophisticated sticky load balancing techniques like [Message Groups](/components/classic/documentation/features/consumer-features/message-groups) to load balance and parallelise work while maintaining ordering.
+Now _queue_ semantics in JMS offer the ability to load balance work across a number of consumers in a reliable way - allowing many threads, processes and machines to be used to process messages. Then we have sophisticated sticky load balancing techniques like [Message Groups](/components/classic/documentation/message-groups) to load balance and parallelise work while maintaining ordering.
 
-Another added benefit of having physical queues for each logical topic subscriber is we can them monitor the queue depths via [JMX](/components/classic/documentation/features/jmx) to monitor system performance together with being able to browse these physical queues.
+Another added benefit of having physical queues for each logical topic subscriber is we can them monitor the queue depths via [JMX](/components/classic/documentation/jmx) to monitor system performance together with being able to browse these physical queues.
 
 ### Virtual Topics to the rescue
 
@@ -58,7 +58,7 @@ Note that making a topic virtual does add a small CPU overhead when sending mess
 Composite Destinations
 ----------------------
 
-Composite Destinations allow for one-to-many relationships on individual destinations; the main use case is for _composite queues_. For example when a message is sent to queue A you may want to forward it also to queues B and C and topic D. Composite destinations are then a mapping from a virtual destination to a collection of other physical destinations. In this case the mapping is broker side and the client is unaware of the mapping between the destinations. This is different from client side [Composite Destinations](/components/classic/documentation/features/destination-features/composite-destinations) where the client uses a URL notation to specify the actual physical destinations that a message must be sent to.
+Composite Destinations allow for one-to-many relationships on individual destinations; the main use case is for _composite queues_. For example when a message is sent to queue A you may want to forward it also to queues B and C and topic D. Composite destinations are then a mapping from a virtual destination to a collection of other physical destinations. In this case the mapping is broker side and the client is unaware of the mapping between the destinations. This is different from client side [Composite Destinations](/components/classic/documentation/composite-destinations) where the client uses a URL notation to specify the actual physical destinations that a message must be sent to.
 
 The following [example](http://svn.apache.org/repos/asf/incubator/activemq/trunk/activemq-unit-tests/src/test/resources/org/apache/activemq/broker/virtual/composite-queue.xml) shows how to set up a `<compositeQueue/>` element in the XML configuration so that when a message is sent to `MY.QUEUE` then it is really forwarded to the physical queue `FOO` and the topic `BAR`.
 

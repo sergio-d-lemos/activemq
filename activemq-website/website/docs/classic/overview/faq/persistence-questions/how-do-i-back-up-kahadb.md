@@ -1,5 +1,6 @@
 ---
 title: "How do I back-up KahaDB"
+slug: /how-do-i-back-up-kahadb
 ---
 
  [FAQ](..) > [Persistence Questions](.) > [How do I back-up KahaDB](how-do-i-back-up-kahadb)

@@ -1,5 +1,6 @@
 ---
 title: "SQLServer"
+slug: /sqlserver
 ---
 
 

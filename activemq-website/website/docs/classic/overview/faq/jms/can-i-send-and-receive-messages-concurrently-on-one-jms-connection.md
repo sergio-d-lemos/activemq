@@ -1,5 +1,6 @@
 ---
 title: "Can I send and receive messages concurrently on one JMS Connection"
+slug: /can-i-send-and-receive-messages-concurrently-on-one-jms-connection
 ---
 
  [FAQ](..) > [JMS](.) > [Can I send and receive messages concurrently on one JMS Connection](can-i-send-and-receive-messages-concurrently-on-one-jms-connection)

@@ -1,5 +1,6 @@
 ---
 title: "Sample Camel Routes"
+slug: /sample-camel-routes
 ---
 
 

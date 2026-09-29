@@ -1,5 +1,6 @@
 ---
 title: "J2EE"
+slug: /j2ee
 ---
 
 
@@ -37,7 +38,7 @@ The RAR is available via [maven central](http://search.maven.org/#search%7Cga%7C
 
 Deployment Guides
 
-*   [TomEE](resource-adapter/tomee)
+*   [TomEE](tomee)
 *   [Geronimo](geronimo)
 *   [Integrating Apache ActiveMQ Classic with Glassfish](integrating-apache-activemq-classic-with-glassfish)
 *   [JBoss Integration](jboss-integration)
@@ -45,12 +46,12 @@ Deployment Guides
 The use of an Embedded Broker
 -----------------------------
 
-The ActiveMQ Classic Resource Adapter can connect to a remote broker using any of the available transports, or it can start up an embedded broker. As described in the [Resource Adapter Properties](resource-adapter/resource-adapter-properties), you can enable an embedded broker using the **BrokerXmlConfig** property.
+The ActiveMQ Classic Resource Adapter can connect to a remote broker using any of the available transports, or it can start up an embedded broker. As described in the [Resource Adapter Properties](resource-adapter-properties), you can enable an embedded broker using the **BrokerXmlConfig** property.
 
 Configuration Reference
 -----------------------
 
-*   [Resource Adapter Properties](resource-adapter/resource-adapter-properties)
-*   [Connection Factory Properties](resource-adapter/connection-factory-properties)
-*   [Activation Spec Properties](resource-adapter/activation-spec-properties)
+*   [Resource Adapter Properties](resource-adapter-properties)
+*   [Connection Factory Properties](connection-factory-properties)
+*   [Activation Spec Properties](activation-spec-properties)
 

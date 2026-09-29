@@ -1,5 +1,6 @@
 ---
 title: "Configuring ActiveMQ CPP"
+slug: /configuring-activemq-cpp
 ---
 
 
@@ -60,14 +61,14 @@ d = session->createTopic("com.foo?consumer.prefetchSize=2000&consumer.noLocal=tr
 ### **General Options**
 Option Name|Default|Description
 ---|---|---
-consumer.prefetchSize|1000|The number of message the consumer will [prefetch](../../../features/what-is-the-prefetch-limit-for).
-consumer.maximumPendingMessageLimit|0|Use to control if messages are dropped if a [slow consumer](../../../features/consumer-features/slow-consumer-handling) situation exists.
+consumer.prefetchSize|1000|The number of message the consumer will [prefetch](what-is-the-prefetch-limit-for).
+consumer.maximumPendingMessageLimit|0|Use to control if messages are dropped if a [slow consumer](slow-consumer-handling) situation exists.
 consumer.noLocal|false|Same as the noLocal flag on a Topic consumer. Exposed here so that it can be used with a queue.
-consumer.dispatchAsync|false|Should the broker [dispatch messages asynchronously](../../../features/consumer-features/consumer-dispatch-async) to the consumer.
-consumer.retroactive|false|Is this a [Retroactive Consumer](../../../features/consumer-features/retroactive-consumer).
+consumer.dispatchAsync|false|Should the broker [dispatch messages asynchronously](consumer-dispatch-async) to the consumer.
+consumer.retroactive|false|Is this a [Retroactive Consumer](retroactive-consumer).
 consumer.selector|null|JMS Selector used with the consumer.
-consumer.exclusive|false|Is this an [Exclusive Consumer](../../../features/consumer-features/exclusive-consumer).
-consumer.priority|0|Allows you to configure a [Consumer Priority](../../../features/consumer-features/consumer-priority).
+consumer.exclusive|false|Is this an [Exclusive Consumer](exclusive-consumer).
+consumer.priority|0|Allows you to configure a [Consumer Priority](consumer-priority).
 
 ### **OpenWire-only Options**
 

@@ -1,5 +1,6 @@
 ---
 title: "What jars do I need"
+slug: /what-jars-do-i-need
 ---
 
  [FAQ](..) > [General](.) > [What jars do I need](what-jars-do-i-need)

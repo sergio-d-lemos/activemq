@@ -1,5 +1,6 @@
 ---
 title: "Integration Tests"
+slug: /integration-tests
 ---
 
 

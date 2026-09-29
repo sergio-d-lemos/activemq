@@ -1,5 +1,6 @@
 ---
 title: "Inbound Communication"
+slug: /inbound-communication
 ---
 
 

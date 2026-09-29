@@ -1,5 +1,6 @@
 ---
 title: "TomEE"
+slug: /tomee
 ---
 
 

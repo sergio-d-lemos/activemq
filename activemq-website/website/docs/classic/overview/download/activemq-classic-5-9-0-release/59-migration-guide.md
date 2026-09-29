@@ -1,5 +1,6 @@
 ---
 title: "5.9 Migration Guide"
+slug: /59-migration-guide
 ---
 
 There are some changes in 5.9 that may require user intervention

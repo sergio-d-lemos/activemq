@@ -12,7 +12,7 @@ For those who've struggled with pinning NMS consumers in clusters you'll immedia
 
 ### Example
 
-An Exclusive Consumer is created using [ActiveMQ URI Configuration](/components/nms/documentation/providers/activemq/uri-configuration) as follows:
+An Exclusive Consumer is created using [ActiveMQ URI Configuration](/components/nms/providers/activemq/uri-configuration) as follows:
 
 ```
 var queue = session.GetQueue("TEST.QUEUE?consumer.exclusive=true");

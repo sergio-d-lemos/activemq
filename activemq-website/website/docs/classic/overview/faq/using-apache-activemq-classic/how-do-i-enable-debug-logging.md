@@ -1,5 +1,6 @@
 ---
 title: "How do I enable debug logging"
+slug: /how-do-i-enable-debug-logging
 ---
 
  [FAQ](..) > [Using Apache ActiveMQ Classic](.) > [How do I enable debug logging](how-do-i-enable-debug-logging)

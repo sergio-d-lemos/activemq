@@ -1,5 +1,6 @@
 ---
 title: "JUnit Reports"
+slug: /junit-reports
 ---
 
 

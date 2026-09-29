@@ -1,5 +1,6 @@
 ---
 title: "5.8 Migration Guide"
+slug: /58-migration-guide
 ---
 
 There are some changes in 5.8 that may require some code change

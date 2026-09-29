@@ -1,5 +1,6 @@
 ---
 title: "JMS Bridge With Oracle AQ"
+slug: /jms-bridge-with-oracle-aq
 ---
 
 

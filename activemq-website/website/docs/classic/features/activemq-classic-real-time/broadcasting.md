@@ -1,5 +1,6 @@
 ---
 title: "Broadcasting"
+slug: /broadcasting
 ---
 
 

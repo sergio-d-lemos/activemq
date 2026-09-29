@@ -1,8 +1,9 @@
 ---
 title: "IOException - could not find class for resource"
+slug: /ioexception-could-not-find-class-for-resource
 ---
 
- [FAQ](../..) > [Errors](..) > [Exceptions](.) > [IOException - could not find class for resource](../../../../legacy-documentation/source)
+ [FAQ](../..) > [Errors](..) > [Exceptions](.) > [IOException - could not find class for resource](source)
 
 
 If you get an exception looking like this

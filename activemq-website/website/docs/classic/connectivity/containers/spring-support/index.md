@@ -1,5 +1,6 @@
 ---
 title: "Spring Support"
+slug: /spring-support
 ---
 
 
@@ -27,7 +28,7 @@ The following shows how to use Zeroconf to discover the available brokers to con
   </property>
 </bean>
 ```
-From 1.1 of ActiveMQ Classic onwards you can also use JNDI to configure ActiveMQ Classic within Spring. [This example](http://svn.apache.org/repos/asf/activemq/trunk/activemq-unit-tests/src/test/resources/spring-jndi.xml) shows how to configure Spring using ActiveMQ Classic's [JNDI Support](../jndi-support).
+From 1.1 of ActiveMQ Classic onwards you can also use JNDI to configure ActiveMQ Classic within Spring. [This example](http://svn.apache.org/repos/asf/activemq/trunk/activemq-unit-tests/src/test/resources/spring-jndi.xml) shows how to configure Spring using ActiveMQ Classic's [JNDI Support](jndi-support).
 
 ### Using Spring
 

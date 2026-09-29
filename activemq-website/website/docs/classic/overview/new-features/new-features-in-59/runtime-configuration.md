@@ -1,5 +1,6 @@
 ---
 title: "Runtime Configuration"
+slug: /runtime-configuration
 ---
 
 

@@ -1,5 +1,6 @@
 ---
 title: "C integration scenarios"
+slug: /c-integration-scenarios
 ---
 
 

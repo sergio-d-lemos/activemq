@@ -1,5 +1,6 @@
 ---
 title: "WSIF"
+slug: /wsif
 ---
 
 

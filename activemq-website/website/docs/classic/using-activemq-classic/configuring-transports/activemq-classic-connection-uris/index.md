@@ -1,5 +1,6 @@
 ---
 title: "ActiveMQ Classic Connection URIs"
+slug: /activemq-classic-connection-uris
 ---
 
 
@@ -14,7 +15,7 @@ One of the first kinds of URI you are likely to use is a transport URI to connec
 
 ### The AUTO Transport
 
-Starting with 5.13.0 ActiveMQ Classic has support for automatic wire protocol detection over TCP, SSL, NIO, and NIO SSL.  OpenWire, STOMP, AMQP, and MQTT are supported.  For details see the [AUTO](../../../connectivity/protocols/auto) Transport Reference.
+Starting with 5.13.0 ActiveMQ Classic has support for automatic wire protocol detection over TCP, SSL, NIO, and NIO SSL.  OpenWire, STOMP, AMQP, and MQTT are supported.  For details see the [AUTO](auto) Transport Reference.
 
 ### The VM Transport
 
@@ -26,11 +27,11 @@ For more information see the [VM Transport Reference](vm-transport-reference)
 
 ### The AMQP Transport
 
-As of 5.8.0 ActiveMQ Classic has support for AMQP. For details see the [AMQP](../../../amqp) Transport Reference.
+As of 5.8.0 ActiveMQ Classic has support for AMQP. For details see the [AMQP](amqp) Transport Reference.
 
 ### The MQTT Transport
 
-Starting with 5.6.0 ActiveMQ Classic also supports [MQTT](http://mqtt.org/). Its a light weight publish/subscribe messaging transport. See the [MQTT](../../../connectivity/protocols/mqtt) Transport Reference for details.
+Starting with 5.6.0 ActiveMQ Classic also supports [MQTT](http://mqtt.org/). Its a light weight publish/subscribe messaging transport. See the [MQTT](mqtt) Transport Reference for details.
 
 ### The TCP Transport
 
@@ -96,17 +97,17 @@ For more information see the [Multicast Transport Reference](multicast-transport
 
 ### The HTTP and HTTPS Transport
 
-This allows the ActiveMQ Classic client and broker to tunnel over HTTP. If the client is not JMS you might want to look at [REST](../../../connectivity/protocols/rest) or [Ajax](../../../connectivity/ajax) support instead.
+This allows the ActiveMQ Classic client and broker to tunnel over HTTP. If the client is not JMS you might want to look at [REST](rest) or [Ajax](ajax) support instead.
 
-For more information see the [HTTP and HTTPs Transports Reference](../http-and-https-transports-reference)
+For more information see the [HTTP and HTTPs Transports Reference](http-and-https-transports-reference)
 
 ### The WebSockets Transport
 
-This transport uses the new HTML5 WebSockets to exchange messages with the broker. For more information see the [WebSockets](../../../connectivity/websockets) Transport Reference
+This transport uses the new HTML5 WebSockets to exchange messages with the broker. For more information see the [WebSockets](websockets) Transport Reference
 
 ### The Stomp Transport
 
-A plain text transport that can be used with many languages. See [Stomp](../../../connectivity/protocols/stomp) for more details.
+A plain text transport that can be used with many languages. See [Stomp](stomp) for more details.
 
 General Purpose URIs
 --------------------
@@ -121,15 +122,15 @@ For more information see [Connection Configuration URI](connection-configuration
 
 ### Destination Options
 
-You can configure various consumer related options using [Destination Options](../../../features/destination-features/destination-options) which allow you to configure destinations using URI syntax.
+You can configure various consumer related options using [Destination Options](destination-options) which allow you to configure destinations using URI syntax.
 
 ### Broker Configuration URI
 
-You can use a [Broker Configuration URI](broker-configuration-uri) to configure an embedded broker, either using the BrokerFactory helper class from Java or using the activemq shell script. For more details see [How to Run a Broker](../../run-broker)
+You can use a [Broker Configuration URI](broker-configuration-uri) to configure an embedded broker, either using the BrokerFactory helper class from Java or using the activemq shell script. For more details see [How to Run a Broker](run-broker)
 
 ### Configuring Wire Formats
 
-Any transport which involves marshalling messages onto some kind of network transport like TCP or UDP will typically use the [OpenWire](../../../connectivity/protocols/openwire) format. This is configurable to customize how things appear on the wire.
+Any transport which involves marshalling messages onto some kind of network transport like TCP or UDP will typically use the [OpenWire](openwire) format. This is configurable to customize how things appear on the wire.
 
 For more information see [Configuring Wire Formats](configuring-wire-formats)
 
@@ -153,7 +154,7 @@ For more information see the [Fanout Transport Reference](fanout-transport-refer
 Using Discovery
 ---------------
 
-Often when using transports like TCP you want to use [Discovery](../../../features/discovery) to locate the available brokers. This is different from using, say, [Multicast](multicast-transport-reference) \- as the actual main communication is over TCP but multicast is purely used to discover the location of brokers.
+Often when using transports like TCP you want to use [Discovery](discovery) to locate the available brokers. This is different from using, say, [Multicast](multicast-transport-reference) \- as the actual main communication is over TCP but multicast is purely used to discover the location of brokers.
 
 ### The Discovery Transport
 
@@ -163,9 +164,9 @@ For more information see the [Discovery Transport Reference](discovery-transport
 
 ### The ZeroConf Transport
 
-The ZeroConf transport provides [Discovery](../../../features/discovery) and it works like the [Discovery Transport](discovery-transport-reference) but rather than using our own multicast based discovery mechanism (which allows you to configure the exact multicast address and port, etc.), the [ZeroConf](../zeroconf-transport-reference/zeroconf) transport is used instead.
+The ZeroConf transport provides [Discovery](discovery) and it works like the [Discovery Transport](discovery-transport-reference) but rather than using our own multicast based discovery mechanism (which allows you to configure the exact multicast address and port, etc.), the [ZeroConf](zeroconf) transport is used instead.
 
-For more information see the [ZeroConf Transport Reference](../zeroconf-transport-reference)
+For more information see the [ZeroConf Transport Reference](zeroconf-transport-reference)
 
 ### Server side options
 

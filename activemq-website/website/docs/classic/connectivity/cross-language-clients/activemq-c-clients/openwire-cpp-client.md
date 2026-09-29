@@ -1,5 +1,6 @@
 ---
 title: "OpenWire CPP Client"
+slug: /openwire-cpp-client
 ---
 
 

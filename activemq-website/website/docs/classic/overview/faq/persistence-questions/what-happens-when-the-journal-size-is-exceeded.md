@@ -1,5 +1,6 @@
 ---
 title: "What happens when the journal size is exceeded"
+slug: /what-happens-when-the-journal-size-is-exceeded
 ---
 
  [FAQ](..) > [Persistence Questions](.) > [What happens when the journal size is exceeded](what-happens-when-the-journal-size-is-exceeded)

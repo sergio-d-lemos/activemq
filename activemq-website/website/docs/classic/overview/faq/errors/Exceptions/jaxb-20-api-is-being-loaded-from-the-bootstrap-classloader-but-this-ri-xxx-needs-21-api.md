@@ -1,5 +1,6 @@
 ---
 title: "JAXB 2.0 API is being loaded from the bootstrap classloader, but this RI (xxx) needs 2.1 API"
+slug: /jaxb-20-api-is-being-loaded-from-the-bootstrap-classloader-but-this-ri-xxx-needs-21-api
 ---
 
  [FAQ](../..) > [Errors](..) > [Exceptions](.) > [JAXB 2.0 API is being loaded from the bootstrap classloader, but this RI (xxx) needs 2.1 API](jaxb-20-api-is-being-loaded-from-the-bootstrap-classloader-but-this-ri-xxx-needs-21-api)

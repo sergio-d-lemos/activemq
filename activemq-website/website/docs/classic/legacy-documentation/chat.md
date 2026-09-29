@@ -1,5 +1,6 @@
 ---
 title: "Title"
+slug: /chat
 ---
 
  Chat Example - ActiveMQ Classic Classic Web Demos

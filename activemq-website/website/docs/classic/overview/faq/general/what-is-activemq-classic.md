@@ -1,5 +1,6 @@
 ---
 title: "What is ActiveMQ Classic"
+slug: /what-is-activemq-classic
 ---
 
  [FAQ](..) > [General](.) > [What is ActiveMQ Classic](what-is-activemq-classic)

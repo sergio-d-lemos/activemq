@@ -1,10 +1,11 @@
 ---
 title: "REST"
+slug: /rest
 ---
 
 ActiveMQ Classic implements a RESTful API to messaging which allows any web capable device to publish or consume messages using a regular HTTP POST or GET.
 
-If you are interested in messaging directly from web browsers you might wanna check out our [Ajax](../ajax) or [WebSockets](../websockets) support or try [running the REST examples](../../using-activemq-classic/web-samples)
+If you are interested in messaging directly from web browsers you might wanna check out our [Ajax](ajax) or [WebSockets](websockets) support or try [running the REST examples](web-samples)
 
 Mapping of REST to JMS
 ----------------------
@@ -36,7 +37,7 @@ For a more cleaner mapping of a simple transfer protocol to different languages,
 Default configuration
 ---------------------
 
-Until version 5.8, REST API was part of the [Web Samples](../../using-activemq-classic/web-samples) and was mapped to [http://localhost:8161/demo/message](http://localhost:8161/demo/message) url. From 5.8 onwards, the API is available by default at [http://localhost:8161/api/message](http://localhost:8161/api/message) url. Also, starting with 5.8, web server is secured by default (see [Web Console](../../tools/web-console) for more information), so have that in mind when trying to use it. Examples below will assume new api location and secured web server.
+Until version 5.8, REST API was part of the [Web Samples](web-samples) and was mapped to [http://localhost:8161/demo/message](http://localhost:8161/demo/message) url. From 5.8 onwards, the API is available by default at [http://localhost:8161/api/message](http://localhost:8161/api/message) url. Also, starting with 5.8, web server is secured by default (see [Web Console](web-console) for more information), so have that in mind when trying to use it. Examples below will assume new api location and secured web server.
 
 ### Producing
 
@@ -246,7 +247,7 @@ By default, ActiveMQ Classic uses the [following](https://github.com/apache/acti
 ```
 A custom Jolokia security policy can be configured by editing 'webapps/api/WEB-INF/web.xml' and specifying the 'policyLocation' parameter under the 'jolokia-agent' servlet.
 
-For more information on Jolokia security, please refer to the [security section](https://jolokia.org/reference/html/security.html) of its reference manual. An API like this makes it easy to script monitoring and management operations against the broker, see also [How can I monitor ActiveMQ Classic](../../overview/faq/using-apache-activemq-classic/how-can-i-monitor-activemq-classic)?
+For more information on Jolokia security, please refer to the [security section](https://jolokia.org/reference/html/security.html) of its reference manual. An API like this makes it easy to script monitoring and management operations against the broker, see also [How can I monitor ActiveMQ Classic](how-can-i-monitor-activemq-classic)?
 
 Gotcha's and other trivia
 -------------------------

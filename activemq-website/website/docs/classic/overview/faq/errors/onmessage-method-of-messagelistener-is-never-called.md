@@ -1,5 +1,6 @@
 ---
 title: "onMessage method of MessageListener is never called"
+slug: /onmessage-method-of-messagelistener-is-never-called
 ---
 
  [FAQ](..) > [Errors](.) > [onMessage method of MessageListener is never called](onmessage-method-of-messagelistener-is-never-called)

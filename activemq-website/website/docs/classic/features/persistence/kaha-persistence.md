@@ -1,5 +1,6 @@
 ---
 title: "Kaha Persistence"
+slug: /kaha-persistence
 ---
 
 

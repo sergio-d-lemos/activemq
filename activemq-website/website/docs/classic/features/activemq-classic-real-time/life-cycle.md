@@ -1,5 +1,6 @@
 ---
 title: "Life Cycle"
+slug: /life-cycle
 ---
 
 

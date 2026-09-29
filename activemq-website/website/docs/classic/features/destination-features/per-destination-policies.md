@@ -1,5 +1,6 @@
 ---
 title: "Per Destination Policies"
+slug: /per-destination-policies
 ---
 
 Multiple different policies can be applied per destination (queue or topic), or using wildcard notation to apply to a hierarchy of queues or topics, making it possible, therefore, to configure how different regions of the JMS destination space are handled.
@@ -20,7 +21,7 @@ Common Property|Default|Description
 `maxBrowsePageSize`|`400`|The maximum number of messages to page in from the store at one time for a browser.
 `maxDestinations`|`-1`|(v5.12) If `>= 0`, sets the maximum number of destinations that can be created. This parameter is intended to limit the number of hierarchical destinations that can be created under a wildcard destination.
 `maxPageSize`|`200`|The maximum number of messages to page in from the store at one time. Increase this value to improve performance for queue destination's that contain grouped messages that are consumed by multiple concurrent consumers.
-`memoryLimit`|`n/a`|The memory limit (in bytes) of the destination's cursor. This memory limit is subordinate to the system level memory limit, as specified by the [`<systemUsage>/<memoryUsage>`](../message-dispatching-features/producer-flow-control) attribute. There is no default for this value; it simply acts as a child to the overall broker memory until the broker memory is exhausted. **Note**: when this limit is specified the destination's `cursorMemoryHighWaterMark` will be applied against it and not the `<systemUsage>/><memoryUsage>` memory limit.
+`memoryLimit`|`n/a`|The memory limit (in bytes) of the destination's cursor. This memory limit is subordinate to the system level memory limit, as specified by the [`<systemUsage>/<memoryUsage>`](producer-flow-control) attribute. There is no default for this value; it simply acts as a child to the overall broker memory until the broker memory is exhausted. **Note**: when this limit is specified the destination's `cursorMemoryHighWaterMark` will be applied against it and not the `<systemUsage>/><memoryUsage>` memory limit.
 `minimumMessageSize`|`1024`|For non-serialized messages (embedded broker) - the assumed size of the message used for memory usage calculation. Serialized messages use the serialized size as the basis for the memory calculation.
 `prioritizedMessages`|`false`|Persist message priority information.
 `producerFlowControl`|`true`|If `true` the broker will throttle (flow-control) the producer. Throttling is achieved either by withholding the producer's ACK or by raising a `javax.jms.ResourceAllocationException` (that's propagated back to the client) when local resources, e.g., memory and/or storage, have been exhausted. If `false` excess messages will be written to the message store to prevent memory exhaustion. However, when the message store reaches capacity the producer will be throttled until resources are freed.
@@ -36,7 +37,7 @@ The following properties can be applied _only_ to a queue:
 
 Queue Only Property|Default|Description
 ---|---|---
-`allConsumersExclusiveByDefault`|`false`|When `true` all consumers will be exclusive. See [Exclusive Consumers](../consumer-features/exclusive-consumer)
+`allConsumersExclusiveByDefault`|`false`|When `true` all consumers will be exclusive. See [Exclusive Consumers](exclusive-consumer)
 `cursorMemoryHighWaterMark`|`70`|The percentage (%) threshold applied either to the `<systemUsage>/<memoryUsage>` or the destination's `memoryLimit` (when defined) which when exceeded will cause the destination's cursor to either block or write to disk.
 `consumersBeforeDispatchStarts`|`0`|When the first consumer connects, wait for specified number of consumers before message dispatching starts.
 `expireMessagesPeriod`|`30000`|The period (in ms) of checks for message expiry on queued messages. A value of `0` will disable expiration checking.
@@ -62,7 +63,7 @@ Topic Only Property|Default|Description
 
 The following are examples of different policies that can be customized on a per destination basis:
 
-*   [Dispatch Policies](../message-dispatching-features/dispatch-policies)
+*   [Dispatch Policies](dispatch-policies)
 
 An example from the demos [https://git-wip-us.apache.org/repos/asf?p=activemq.git;a=blob;f=assembly/src/release/examples/conf/activemq-demo.xml;hb=HEAD](https://git-wip-us.apache.org/repos/asf?p=activemq.git;a=blob;f=assembly/src/release/examples/conf/activemq-demo.xml;hb=HEAD): 
 

@@ -1,5 +1,6 @@
 ---
 title: "OpenSSL Support"
+slug: /openssl-support
 ---
 
 This section covers building the ActiveMQ-CPP Library with support for SSL using the OpenSSL library

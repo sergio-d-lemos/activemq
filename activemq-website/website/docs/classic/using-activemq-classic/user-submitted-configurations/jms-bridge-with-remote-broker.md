@@ -1,5 +1,6 @@
 ---
 title: "JMS Bridge With Remote Broker"
+slug: /jms-bridge-with-remote-broker
 ---
 
 

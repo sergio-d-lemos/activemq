@@ -25,4 +25,4 @@ We use the master for the next main release; then we use a branch for any bug fi
 
 ## Building the code
 
-To then build the code see [Building](/components/cms/documentation/developers/building).
+To then build the code see [Building](/components/cms/developers/building).

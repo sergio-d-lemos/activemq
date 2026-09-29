@@ -1,5 +1,6 @@
 ---
 title: "How should I use the VM transport"
+slug: /how-should-i-use-the-vm-transport
 ---
 
  [FAQ](..) > [Using Apache ActiveMQ Classic](.) > [How should I use the VM transport](how-should-i-use-the-vm-transport)

@@ -1,5 +1,6 @@
 ---
 title: "How do I access ActiveMQ Classic from Ruby, Perl, Python, PHP"
+slug: /how-do-i-access-activemq-classic-from-ruby-perl-python-php
 ---
 
  [FAQ](..) > [Using Apache ActiveMQ Classic](.) > [How do I access ActiveMQ Classic from Ruby, Perl, Python, PHP](how-do-i-access-activemq-classic-from-ruby-perl-python-php)

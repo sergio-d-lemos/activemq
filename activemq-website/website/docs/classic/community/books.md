@@ -1,5 +1,6 @@
 ---
 title: "Books"
+slug: /books
 ---
 
   

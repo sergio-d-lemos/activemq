@@ -1,5 +1,6 @@
 ---
 title: "Encrypted passwords"
+slug: /encrypted-passwords
 ---
 
 

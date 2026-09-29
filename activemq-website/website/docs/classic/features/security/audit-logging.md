@@ -1,5 +1,6 @@
 ---
 title: "Audit Logging"
+slug: /audit-logging
 ---
 
 

@@ -1,5 +1,6 @@
 ---
 title: "How do I embed a Broker inside a Connection"
+slug: /how-do-i-embed-a-broker-inside-a-connection
 ---
 
  [FAQ](..) > [Using Apache ActiveMQ Classic](.) > [How do I embed a Broker inside a Connection](how-do-i-embed-a-broker-inside-a-connection)
@@ -29,7 +30,7 @@ connector.setUri(new URI("tcp://localhost:61616"));
 broker.addConnector(connector);
 broker.start();
 ```
-In the same JVM clients can then use the [vm:// transport](../../../using-activemq-classic/configuring-transports/activemq-classic-connection-uris/vm-transport-reference) to connect to the embedded broker - whilst external clients can use the [tcp:// protocol](../../../using-activemq-classic/configuring-transports/activemq-classic-connection-uris/tcp-transport-reference)
+In the same JVM clients can then use the [vm:// transport](vm-transport-reference) to connect to the embedded broker - whilst external clients can use the [tcp:// protocol](tcp-transport-reference)
 
 If you have more than one embedded broker, ensure that you give them a unique name and - e.g.
 ```
@@ -68,8 +69,8 @@ The available values of the URI are:
 
 URI scheme|Example|Description
 ---|---|---
-xbean:|bean:activemq.xml|Searches the classpath (and file system) for an XML document with the given URI (activemq.xml in this case) which will then be used as the [Xml Configuration](../../../using-activemq-classic/xml-configuration)
-broker:|broker:tcp://localhost:61616|Uses the [Broker Configuration URI](../../../using-activemq-classic/configuring-transports/activemq-classic-connection-uris/broker-configuration-uri) to confgure the broker
+xbean:|bean:activemq.xml|Searches the classpath (and file system) for an XML document with the given URI (activemq.xml in this case) which will then be used as the [Xml Configuration](xml-configuration)
+broker:|broker:tcp://localhost:61616|Uses the [Broker Configuration URI](broker-configuration-uri) to confgure the broker
 
 ### Using Spring
 

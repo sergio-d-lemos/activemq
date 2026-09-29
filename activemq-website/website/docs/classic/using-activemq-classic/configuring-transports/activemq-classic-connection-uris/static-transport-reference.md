@@ -1,5 +1,6 @@
 ---
 title: "Static Transport Reference"
+slug: /static-transport-reference
 ---
 
 

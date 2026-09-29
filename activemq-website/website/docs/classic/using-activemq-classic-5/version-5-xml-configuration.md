@@ -1,5 +1,6 @@
 ---
 title: "Version 5 XML Configuration"
+slug: /version-5-xml-configuration
 ---
 
 
@@ -11,7 +12,7 @@ title: "Version 5 XML Configuration"
 
 We use [XBean](https://geronimo.apache.org/xbean/) to perform the XML configuration.
 
-For details of the XML see the [Xml Reference](../using-activemq-classic/xml-reference)
+For details of the XML see the [Xml Reference](xml-reference)
 
 Be careful with broker names and URIs
 
@@ -176,7 +177,7 @@ From a binary distribution there is an _activemq_ script allowing you to run a M
 Configuring embedded brokers
 ----------------------------
 
-You can also use the XML Configuration to configure [embedded brokers](../overview/faq/using-apache-activemq-classic/how-do-i-embed-a-broker-inside-a-connection). For example using the JNDI configuration mechanism you can do the following [BrokerXmlConfigFromJNDITest](http://svn.apache.org/repos/asf/activemq/trunk/assembly/src/test/java/org/apache/activemq/config/BrokerXmlConfigFromJNDITest.java)  
+You can also use the XML Configuration to configure [embedded brokers](how-do-i-embed-a-broker-inside-a-connection). For example using the JNDI configuration mechanism you can do the following [BrokerXmlConfigFromJNDITest](http://svn.apache.org/repos/asf/activemq/trunk/assembly/src/test/java/org/apache/activemq/config/BrokerXmlConfigFromJNDITest.java)  
 
 Or of you want to explicitly configure the embedded broker via Java code you can do the following [BrokerXmlConfigTest](http://svn.apache.org/repos/asf/activemq/trunk/assembly/src/test/java/org/apache/activemq/config/BrokerXmlConfigTest.java)
 
@@ -185,7 +186,7 @@ User Submitted Configurations
 
 We have a page which allows users to submit details of their configurations.
 
-*   [User Submitted Configurations](../using-activemq-classic/user-submitted-configurations)
+*   [User Submitted Configurations](user-submitted-configurations)
 
 Background
 ----------
@@ -194,5 +195,5 @@ Since ActiveMQ Classic has so many strategy pattern plugins for transports, wire
 
 So we use the [Spring XML](http://static.springframework.org/spring/docs/2.5.x/reference/beans.html#beans-basics) configuration file format, which allows any beans / POJOs to be wired together and configured. However often Spring's XML can be kinda verbose at times, so we have implemented an ActiveMQ Classic extension to the Spring XML which knows about the common, standard ActiveMQ Classic things you're likely to do (e.g. tags like connector, wireFormat, serverTransport, persistence) - but at any time you can fall back to the normal Spring way of doing things (with tags like bean, property etc).
 
-To see documentation of the XML file we use or to get access to the XSD/DTD see the [Xml Reference](../using-activemq-classic/xml-reference)
+To see documentation of the XML file we use or to get access to the XSD/DTD see the [Xml Reference](xml-reference)
 

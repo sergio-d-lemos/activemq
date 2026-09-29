@@ -1,5 +1,6 @@
 ---
 title: "How do I make messages durable"
+slug: /how-do-i-make-messages-durable
 ---
 
  [FAQ](..) > [JMS](.) > [How do I make messages durable](how-do-i-make-messages-durable)

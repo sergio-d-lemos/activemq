@@ -1,5 +1,6 @@
 ---
 title: "Release Plans"
+slug: /release-plans
 ---
 
 

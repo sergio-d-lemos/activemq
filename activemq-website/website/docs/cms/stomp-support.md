@@ -6,7 +6,7 @@ sidebar_position: 6
 
 [Stomp](https://stomp.github.io/) is a simple text-based protocol supported by the ActiveMQ Broker that allows communication from a variety of clients (e.g. C++, Java, .NET, Ruby, Python, etc). If you'd like to learn more about the stomp protocol, checkout [https://stomp.github.io/](https://stomp.github.io/).
 
-The ActiveMQ-CPP implementation of the CMS API with stomp has some quirks, as it's a simple protocol and doesn't have the full capabilities of, say, [OpenWire](/components/cms/documentation/openwire-support). The purpose of this page is to document these quirks so that users understand any strange behaviors that they may see occasionally.
+The ActiveMQ-CPP implementation of the CMS API with stomp has some quirks, as it's a simple protocol and doesn't have the full capabilities of, say, [OpenWire](/components/cms/openwire-support). The purpose of this page is to document these quirks so that users understand any strange behaviors that they may see occasionally.
 
 ### Message Properties in Stomp CMS
 

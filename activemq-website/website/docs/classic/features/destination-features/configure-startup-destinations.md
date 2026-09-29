@@ -1,9 +1,10 @@
 ---
 title: "Configure Startup Destinations"
+slug: /configure-startup-destinations
 ---
 
 
-Typically in Apache ActiveMQ Classic we [create destinations on demand](../../overview/faq/using-apache-activemq-classic/how-do-i-create-new-destinations) as clients start to use them. However sometimes users want to be able to configure which destinations are available on startup explicitly in the [Xml Configuration](../../using-activemq-classic/xml-configuration).
+Typically in Apache ActiveMQ Classic we [create destinations on demand](how-do-i-create-new-destinations) as clients start to use them. However sometimes users want to be able to configure which destinations are available on startup explicitly in the [Xml Configuration](xml-configuration).
 
 > **4.1 Feature**
 > 

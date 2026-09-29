@@ -1,5 +1,6 @@
 ---
 title: "REST protocols"
+slug: /rest-protocols
 ---
 
 

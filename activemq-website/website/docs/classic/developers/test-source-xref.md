@@ -1,5 +1,6 @@
 ---
 title: "Test Source XRef"
+slug: /test-source-xref
 ---
 
 

@@ -51,7 +51,7 @@ const componentCards: ComponentCard[] = [
                 compatible broker.
             </>
         ),
-        moreUrl: '/components/nms/documentation/providers/amqp',
+        moreUrl: '/components/nms/providers/amqp',
     },
     {
         title: 'Apache.NMS.ActiveMQ',
@@ -62,7 +62,7 @@ const componentCards: ComponentCard[] = [
                 protocol, with .NET Framework support.
             </>
         ),
-        moreUrl: '/components/nms/documentation/providers/activemq',
+        moreUrl: '/components/nms/providers/activemq',
     },
 ];
 

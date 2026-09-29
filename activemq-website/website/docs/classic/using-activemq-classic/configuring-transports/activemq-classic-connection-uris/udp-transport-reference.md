@@ -1,5 +1,6 @@
 ---
 title: "UDP Transport Reference"
+slug: /udp-transport-reference
 ---
 
 

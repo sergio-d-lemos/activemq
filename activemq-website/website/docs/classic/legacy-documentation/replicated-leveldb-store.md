@@ -1,10 +1,11 @@
 ---
 title: "Replicated LevelDB Store"
+slug: /replicated-leveldb-store
 ---
 
 > **Warning**
 > 
-> The LevelDB store has been deprecated and is no longer supported or recommended for use. The recommended store is [KahaDB](../kahadb)
+> The LevelDB store has been deprecated and is no longer supported or recommended for use. The recommended store is [KahaDB](kahadb)
 
 Synopsis
 --------
@@ -30,7 +31,7 @@ When a new master is elected, you also need at least a quorum of nodes online to
 
 ### Deployment Tips
 
-Clients should be using the [Failover Transport](../using-activemq-classic/configuring-transports/activemq-classic-connection-uris/failover-transport-reference) to connect to the broker nodes in the replication cluster. e.g. using a URL something like the following:
+Clients should be using the [Failover Transport](failover-transport-reference) to connect to the broker nodes in the replication cluster. e.g. using a URL something like the following:
 ```
 failover:(tcp://broker1:61616,tcp://broker2:61616,tcp://broker3:61616)
 ```
@@ -106,5 +107,5 @@ property name|default value|Comments
 
 > **Caveats**
 > 
-> The LevelDB store does not yet support storing data associated with [Delay and Schedule Message Delivery](../features/delay-and-schedule-message-delivery). Those are are stored in a separate non-replicated KahaDB data files. Unexpected results will occur if you use [Delay and Schedule Message Delivery](../features/delay-and-schedule-message-delivery) with the replicated leveldb store since that data will be not be there when the master fails over to a slave.
+> The LevelDB store does not yet support storing data associated with [Delay and Schedule Message Delivery](delay-and-schedule-message-delivery). Those are are stored in a separate non-replicated KahaDB data files. Unexpected results will occur if you use [Delay and Schedule Message Delivery](delay-and-schedule-message-delivery) with the replicated leveldb store since that data will be not be there when the master fails over to a slave.
 

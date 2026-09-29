@@ -1,5 +1,6 @@
 ---
 title: "MDC Logging"
+slug: /mdc-logging
 ---
 
 

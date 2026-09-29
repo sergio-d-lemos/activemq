@@ -16,7 +16,7 @@ This release adds some great new features to the NMS.ActiveMQ API.
 API Documentation
 -----------------
 
-Refer to the API for this release [here](/components/nms/documentation/nms-api)
+Refer to the API for this release [here](/components/nms/nms-api)
 
 Download Here
 -------------

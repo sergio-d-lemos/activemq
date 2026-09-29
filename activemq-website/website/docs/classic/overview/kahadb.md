@@ -1,8 +1,9 @@
 ---
 title: "KahaDB"
+slug: /kahadb
 ---
 
-KahaDB is a file based persistence database that is local to the message broker that is using it. It has been optimized for fast persistence. It is the the default storage mechanism since **ActiveMQ Classic 5.4**. KahaDB uses less file descriptors and provides faster recovery than its predecessor, the [AMQ Message Store](features/persistence/amq-message-store).
+KahaDB is a file based persistence database that is local to the message broker that is using it. It has been optimized for fast persistence. It is the the default storage mechanism since **ActiveMQ Classic 5.4**. KahaDB uses less file descriptors and provides faster recovery than its predecessor, the [AMQ Message Store](amq-message-store).
 
 Configuration
 -------------
@@ -47,7 +48,7 @@ Property|Default|Comments
 `preallocationStrategy`|`sparse_file`|From **ActiveMQ Classic 5.12.0**: This setting configures how the broker will try to preallocate the journal files when a new journal file is needed. `sparse_file` - sets the file length, but does not populate it with any data. `os_kernel_copy` - delegates the preallocation to the Operating System. `zeros`  - each preallocated journal file contains nothing but `0x00` throughout.
 `storeOpenWireVersion`|`11`|Determines the version of OpenWire commands that are marshaled to the KahaDB journal. Before **ActiveMQ Classic 5.12.0**: the default value is `6`. Some features of the broker depend on information stored in the OpenWire commands from newer protocol revisions and these may not work correctly if the store version is set to a lower value.  KahaDB stores from broker versions greater than 5.9.0 will in many cases still be readable by the broker but will cause the broker to continue using the older store version meaning newer features may not work as intended.  For KahaDB stores that were created in versions prior to **ActiveMQ Classic 5.9.0** it will be necessary to manually set `storeOpenWireVersion="6"` in order to start a broker without error. 
 
-> For tuning locking properties see the options listed at [Pluggable storage lockers.](features/persistence/pluggable-storage-lockers)
+> For tuning locking properties see the options listed at [Pluggable storage lockers.](pluggable-storage-lockers)
 
 ### Slow File System Access Diagnostic Logging
 
@@ -71,7 +72,7 @@ Transactions can span multiple journals if the destinations are distributed. Thi
 
 ### Configuration
 
-Each instance of `kahaDB` can be configured independently. If no destination is supplied to a `filteredKahaDB`, the implicit default value will match any destination, queue or topic. This is a handy catch all. If no matching persistence adapter can be found, destination creation will fail with an exception. The `filteredKahaDB` shares its wildcard matching rules with [Per Destination Policies](features/destination-features/per-destination-policies).
+Each instance of `kahaDB` can be configured independently. If no destination is supplied to a `filteredKahaDB`, the implicit default value will match any destination, queue or topic. This is a handy catch all. If no matching persistence adapter can be found, destination creation will fail with an exception. The `filteredKahaDB` shares its wildcard matching rules with [Per Destination Policies](per-destination-policies).
 
 From ActiveMQ Classic 5.15, `filteredKahaDB` support a StoreUsage attribute named `usage`. This allows individual disk limits to be imposed on matching queues.
 ```

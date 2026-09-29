@@ -1,9 +1,10 @@
 ---
 title: "Version 5 Topologies"
+slug: /version-5-topologies
 ---
 
 
-ActiveMQ Classic supports a wide range of different deployment topologies as well as [protocols](../features/uri-protocols) & wire formats. The following diagram shows a federated network of brokers with a few different kinds of topology.
+ActiveMQ Classic supports a wide range of different deployment topologies as well as [protocols](uri-protocols) & wire formats. The following diagram shows a federated network of brokers with a few different kinds of topology.
 
 [![](/img/BrokerTopology-1.png)](http://activemq.org/BrokerTopology.pdf)
 
@@ -27,7 +28,7 @@ Client-Server
 
 This is probably the most efficient and fastest solution for large numbers of clients requiring a diverse range of communication options from publish / subscribe to queue based communication. Typically the clients will connect with a Message Broker using a protocol, typically TCP or SSL but this could be NIO or other protocols.
 
-We can load balance clients across brokers and provide broker failover so that we have a logical cluster of brokers with [HA](../overview/faq/terminology/ha).
+We can load balance clients across brokers and provide broker failover so that we have a logical cluster of brokers with [HA](ha).
 
 e.g.
 ```
@@ -37,7 +38,7 @@ Or for SSL
 ```
 ssl://somehost:port
 ```
-You can use [Discovery](../features/discovery) to find the brokers available that you can connect to which makes it easier to seamlessly connect to a cluster of brokers.
+You can use [Discovery](discovery) to find the brokers available that you can connect to which makes it easier to seamlessly connect to a cluster of brokers.
 
 Embedded Broker
 ---------------
@@ -50,7 +51,7 @@ Embedded Brokers can also simplify deployment options as well, its one less proc
 
 Another use case for embedded brokers is to provide store and forward isolation from each service - so that the remote brokers can fail quite happily without affecting the service with the embedded broker. e.g. the entire network could fail, but a service could continue publishing messages to its embedded broker.
 
-You can find out how to [configure an embedded broker here](../overview/faq/using-apache-activemq-classic/how-do-i-embed-a-broker-inside-a-connection)
+You can find out how to [configure an embedded broker here](how-do-i-embed-a-broker-inside-a-connection)
 
 Peer to Peer
 ------------
@@ -68,7 +69,7 @@ Multicast is great in development though often you might want to disable this fe
 
 Often we can use the peer to peer topology as a bootstrap to create a cluster of clients & brokers and then autodeploy servers into the cluster for a true grid style network.
 
-So you can get the effect of a peer based network using [Discovery](../features/discovery) together with either stand alone Brokers or using embedded brokers.
+So you can get the effect of a peer based network using [Discovery](discovery) together with either stand alone Brokers or using embedded brokers.
 
 ### JXTA
 

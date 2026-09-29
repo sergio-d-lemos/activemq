@@ -1,5 +1,6 @@
 ---
 title: "MOM"
+slug: /mom
 ---
 
  [FAQ](..) > [Terminology](.) > [MOM](mom)

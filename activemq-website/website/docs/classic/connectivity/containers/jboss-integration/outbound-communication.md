@@ -1,5 +1,6 @@
 ---
 title: "Outbound Communication"
+slug: /outbound-communication
 ---
 
 

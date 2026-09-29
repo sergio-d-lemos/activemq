@@ -1,5 +1,6 @@
 ---
 title: "Resource Adapter Properties"
+slug: /resource-adapter-properties
 ---
 
 
@@ -17,7 +18,7 @@ UserName|no|defaultUser|User name
 Password|no|defaultPassword|Password
 Clientid|no|null|The JMS client ID to use
 UseInboundSession|no|false|
-BrokerXmlConfig|no||The ActiveMQ Classic XML config file to use to deploy an embedded broker. E.g. to configure via an XML configuration file then use **xbean:activemq.xml** or to configure via a [Broker Configuration URI](../../../using-activemq-classic/configuring-transports/activemq-classic-connection-uris/broker-configuration-uri) (to avoid using Spring, XBean and XML) then use **broker:(tcp://localhost:61616)**
+BrokerXmlConfig|no||The ActiveMQ Classic XML config file to use to deploy an embedded broker. E.g. to configure via an XML configuration file then use **xbean:activemq.xml** or to configure via a [Broker Configuration URI](broker-configuration-uri) (to avoid using Spring, XBean and XML) then use **broker:(tcp://localhost:61616)**
 
 #### Performance related settings
 
@@ -40,7 +41,7 @@ RedeliveryUseExponentialBackOff|no|false|To enable exponential backoff. Also con
 
 #### ServerUrl
 
-The URL to the ActiveMQ Classic server that you want this connection to connect to. If using an embedded broker, this value should be 'vm://localhost' if using the auto-created embedded broker, otherwise if you explicitly create a broker (e.g. using one of the [embedded broker](../../../overview/faq/using-apache-activemq-classic/how-do-i-embed-a-broker-inside-a-connection) techniques), then this value should be 'vm://brokerName', where brokerName is replaced by the broker's name.
+The URL to the ActiveMQ Classic server that you want this connection to connect to. If using an embedded broker, this value should be 'vm://localhost' if using the auto-created embedded broker, otherwise if you explicitly create a broker (e.g. using one of the [embedded broker](how-do-i-embed-a-broker-inside-a-connection) techniques), then this value should be 'vm://brokerName', where brokerName is replaced by the broker's name.
 
 #### UserName
 
@@ -60,7 +61,7 @@ Boolean to configure if outbound connections should reuse the inbound connection
 
 #### BrokerXmlConfig
 
-Sets the XML configuration file used to configure the embedded ActiveMQ Classic broker via Spring if using embedded mode. If this property is omitted then no embedded broker is used and you must [run the broker](../../../using-activemq-classic/run-broker) in a separate process or deployment unit.
+Sets the XML configuration file used to configure the embedded ActiveMQ Classic broker via Spring if using embedded mode. If this property is omitted then no embedded broker is used and you must [run the broker](run-broker) in a separate process or deployment unit.
 
 BrokerXmlConfig is the filename which is assumed to be on the classpath unless a URL is specified. So a value of foo/bar.xml would be assumed to be on the classpath whereas file:dir/file.xml would use the file system. Any valid URL string is supported.
 

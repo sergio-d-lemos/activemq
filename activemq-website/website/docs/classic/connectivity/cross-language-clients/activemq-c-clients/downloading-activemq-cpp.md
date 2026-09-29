@@ -1,5 +1,6 @@
 ---
 title: "Downloading ActiveMQ CPP"
+slug: /downloading-activemq-cpp
 ---
 
 

@@ -1,5 +1,6 @@
 ---
 title: "Configuring Wire Formats"
+slug: /configuring-wire-formats
 ---
 
 ### The OpenWire Wire Format
@@ -10,8 +11,8 @@ Option|Default|Description
 ---|---|---
 `cacheEnabled`|`true`|Should commonly repeated values be cached so that less marshaling occurs?
 `cacheSize`|`1024`|When `cacheEnabled=true` then this parameter is used to specify the number of values to be cached.
-`maxInactivityDuration`|`30000`|The maximum [inactivity](../activemq-classic-inactivitymonitor) duration (before which the socket is considered dead) in milliseconds. On some platforms it can take a long time for a socket to die. Therefore allow the broker to kill connections when they have been inactive for the configured period of time. Used by some transports to enable a keep alive heart beat feature. Inactivity monitoring is disabled when set to a value `<= 0`.
-`maxInactivityDurationInitalDelay`|`10000`|The initial delay before starting [inactivity](../activemq-classic-inactivitymonitor) checks. Yes, the word `'Inital'` is supposed to be misspelled like that.
+`maxInactivityDuration`|`30000`|The maximum [inactivity](activemq-classic-inactivitymonitor) duration (before which the socket is considered dead) in milliseconds. On some platforms it can take a long time for a socket to die. Therefore allow the broker to kill connections when they have been inactive for the configured period of time. Used by some transports to enable a keep alive heart beat feature. Inactivity monitoring is disabled when set to a value `<= 0`.
+`maxInactivityDurationInitalDelay`|`10000`|The initial delay before starting [inactivity](activemq-classic-inactivitymonitor) checks. Yes, the word `'Inital'` is supposed to be misspelled like that.
 `maxFrameSize`|`MAX_LONG`|Maximum allowed frame size. Can help help prevent OOM DOS attacks.
 `maxFrameSizeEnabled`|`true`|Should the maxFrameSize check be verified? (since: v5.16.4)
 `sizePrefixDisabled`|`false`|Should the size of the packet be prefixed before each packet is marshaled?

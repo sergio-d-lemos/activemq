@@ -1,13 +1,14 @@
 ---
 title: "How do I change dispatch policy"
+slug: /how-do-i-change-dispatch-policy
 ---
 
  [FAQ](..) > [Using Apache ActiveMQ Classic](.) > [How do I change dispatch policy](how-do-i-change-dispatch-policy)
 
 
-This is much simpler and more powerful in ActiveMQ Classic 4.0 - you can configure different [Dispatch Policies](../../../features/message-dispatching-features/dispatch-policies) directly.
+This is much simpler and more powerful in ActiveMQ Classic 4.0 - you can configure different [Dispatch Policies](dispatch-policies) directly.
 
-For now in ActiveMQ Classic 3.x we have a [PrefetchPolicy configuration](../../../features/what-is-the-prefetch-limit-for). This allows a certain number of messages to be dispatched to a consumer before they are acknowledged. This feature is to achieve high performance; the higher the value the less likely it is that a client has to wait for messages to arrive before processing the message and so the higher the throughput.
+For now in ActiveMQ Classic 3.x we have a [PrefetchPolicy configuration](what-is-the-prefetch-limit-for). This allows a certain number of messages to be dispatched to a consumer before they are acknowledged. This feature is to achieve high performance; the higher the value the less likely it is that a client has to wait for messages to arrive before processing the message and so the higher the throughput.
 
 e.g. under heavy load of a busy system you probably want to dispatch 1000 or so messages to a consumer, so as soon as its ready to receive a message, there are a bunch of them in memory waiting to be used - rather than having a slow request-response RPC each time.
 

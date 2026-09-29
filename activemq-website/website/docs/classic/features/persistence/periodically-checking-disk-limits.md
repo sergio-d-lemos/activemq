@@ -1,5 +1,6 @@
 ---
 title: "Periodically checking disk limits"
+slug: /periodically-checking-disk-limits
 ---
 
 

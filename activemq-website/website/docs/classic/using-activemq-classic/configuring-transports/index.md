@@ -1,5 +1,6 @@
 ---
 title: "Configuring Transports"
+slug: /configuring-transports
 ---
 
 Transport configuration options
@@ -13,7 +14,7 @@ One of the first kinds of URI you are likely to use is a transport URI to connec
 
 ### The AUTO Transport
 
-Starting with 5.13.0 ActiveMQ Classic has support for automatic wire protocol detection over TCP, SSL, NIO, and NIO SSL.  OpenWire, STOMP, AMQP, and MQTT are supported.  For details see the [AUTO](../../connectivity/protocols/auto) Transport Reference.
+Starting with 5.13.0 ActiveMQ Classic has support for automatic wire protocol detection over TCP, SSL, NIO, and NIO SSL.  OpenWire, STOMP, AMQP, and MQTT are supported.  For details see the [AUTO](auto) Transport Reference.
 
 ### The VM Transport
 
@@ -21,21 +22,21 @@ The VM transport allows clients to connect to each other inside the VM without t
 
 The first client to use the VM connection will boot an embedded broker. Subsequent connections will attach that the same broker. Once all VM connections to the broker have been closed, the embedded broker will automatically shutdown.
 
-For more information see the [VM Transport Reference](activemq-classic-connection-uris/vm-transport-reference)
+For more information see the [VM Transport Reference](vm-transport-reference)
 
 ### The AMQP Transport
 
-As of 5.8.0 ActiveMQ Classic has support for AMQP. For details see the [AMQP](../../amqp) Transport Reference.
+As of 5.8.0 ActiveMQ Classic has support for AMQP. For details see the [AMQP](amqp) Transport Reference.
 
 ### The MQTT Transport
 
-Starting with 5.6.0 ActiveMQ Classic also supports [MQTT](http://mqtt.org/). Its a light weight publish/subscribe messaging transport. See the [MQTT](../../connectivity/protocols/mqtt) Transport Reference for details.
+Starting with 5.6.0 ActiveMQ Classic also supports [MQTT](http://mqtt.org/). Its a light weight publish/subscribe messaging transport. See the [MQTT](mqtt) Transport Reference for details.
 
 ### The TCP Transport
 
 The TCP transport allows clients to connect a remote ActiveMQ Classic using a a TCP socket.
 
-For more information see the [TCP Transport Reference](activemq-classic-connection-uris/tcp-transport-reference)
+For more information see the [TCP Transport Reference](tcp-transport-reference)
 
 ### The NIO Transport
 
@@ -51,11 +52,11 @@ To switch from TCP to NIO, simply change the scheme portion of the URI. Here's a
   ...
 </broker>
 ```
-Trying to use nio transport url on the client side will instantiate the regular TCP transport. For more information see the [NIO Transport Reference](activemq-classic-connection-uris/nio-transport-reference)
+Trying to use nio transport url on the client side will instantiate the regular TCP transport. For more information see the [NIO Transport Reference](nio-transport-reference)
 
 ### The SSL Transport
 
-This allows you to talk over TCP using SSL. For more information see the [SSL Transport Reference](activemq-classic-connection-uris/ssl-transport-reference)
+This allows you to talk over TCP using SSL. For more information see the [SSL Transport Reference](ssl-transport-reference)
 
 ### The NIO SSL Transport
 
@@ -79,33 +80,33 @@ Trying to use `nio+ssl` transport url on the client side will instantiate the re
 
 The Peer transport provides a peer-to-peer network with ActiveMQ Classic. What actually happens is the peer transport uses the VM transport to create and connect to a local embedded broker but which configures the embedded broker to establish network connections to other peer embedded brokers.
 
-For more information see the [Peer Transport Reference](activemq-classic-connection-uris/peer-transport-reference)
+For more information see the [Peer Transport Reference](peer-transport-reference)
 
 ### The UDP Transport
 
 This allows you to talk over UDP.
 
-For more information see the [UDP Transport Reference](activemq-classic-connection-uris/udp-transport-reference)
+For more information see the [UDP Transport Reference](udp-transport-reference)
 
 ### The Multicast Transport
 
 This allows you to talk over Multicast.
 
-For more information see the [Multicast Transport Reference](activemq-classic-connection-uris/multicast-transport-reference)
+For more information see the [Multicast Transport Reference](multicast-transport-reference)
 
 ### The HTTP and HTTPS Transport
 
-This allows the ActiveMQ Classic client and broker to tunnel over HTTP. If the client is not JMS you might want to look at [REST](../../connectivity/protocols/rest) or [Ajax](../../connectivity/ajax) support instead.
+This allows the ActiveMQ Classic client and broker to tunnel over HTTP. If the client is not JMS you might want to look at [REST](rest) or [Ajax](ajax) support instead.
 
 For more information see the [HTTP and HTTPs Transports Reference](http-and-https-transports-reference)
 
 ### The WebSockets Transport
 
-This transport uses the new HTML5 WebSockets to exchange messages with the broker. For more information see the [WebSockets](../../connectivity/websockets) Transport Reference
+This transport uses the new HTML5 WebSockets to exchange messages with the broker. For more information see the [WebSockets](websockets) Transport Reference
 
 ### The Stomp Transport
 
-A plain text transport that can be used with many languages. See [Stomp](../../connectivity/protocols/stomp) for more details.
+A plain text transport that can be used with many languages. See [Stomp](stomp) for more details.
 
 General Purpose URIs
 --------------------
@@ -116,21 +117,21 @@ You can configure other features via the URI syntax as follows...
 
 Any Apache ActiveMQ Classic JMS connection can be configured using the URL or explicitly setting properties on the [ActiveMQConnection](http://incubator.apache.org/activemq/maven/activemq-core/apidocs/org/apache/activemq/ActiveMQConnection.html) or [ActiveMQConnectionFactory](http://incubator.apache.org/activemq/maven/activemq-core/apidocs/org/apache/activemq/ActiveMQConnectionFactory.html) objects themselves.
 
-For more information see [Connection Configuration URI](activemq-classic-connection-uris/connection-configuration-uri)
+For more information see [Connection Configuration URI](connection-configuration-uri)
 
 ### Destination Options
 
-You can configure various consumer related options using [Destination Options](../../features/destination-features/destination-options) which allow you to configure destinations using URI syntax.
+You can configure various consumer related options using [Destination Options](destination-options) which allow you to configure destinations using URI syntax.
 
 ### Broker Configuration URI
 
-You can use a [Broker Configuration URI](activemq-classic-connection-uris/broker-configuration-uri) to configure an embedded broker, either using the BrokerFactory helper class from Java or using the activemq shell script. For more details see [How to Run a Broker](../run-broker)
+You can use a [Broker Configuration URI](broker-configuration-uri) to configure an embedded broker, either using the BrokerFactory helper class from Java or using the activemq shell script. For more details see [How to Run a Broker](run-broker)
 
 ### Configuring Wire Formats
 
-Any transport which involves marshalling messages onto some kind of network transport like TCP or UDP will typically use the [OpenWire](../../connectivity/protocols/openwire) format. This is configurable to customize how things appear on the wire.
+Any transport which involves marshalling messages onto some kind of network transport like TCP or UDP will typically use the [OpenWire](openwire) format. This is configurable to customize how things appear on the wire.
 
-For more information see [Configuring Wire Formats](activemq-classic-connection-uris/configuring-wire-formats)
+For more information see [Configuring Wire Formats](configuring-wire-formats)
 
 High Level Protocol URIs
 ------------------------
@@ -141,28 +142,28 @@ The following higher level protocols can be configured via URI
 
 The Failover transport layers reconnect logic on top of any of the other transports. This is what used to be the Reliable transport in ActiveMQ Classic 3. Its configuration syntax allows you to specify any number of composite URIs. The Failover transport randomly chooses one of the composite URIs and attempts to establish a connection to it. If it does not succeed or if it subsequently fails, a new connection is established to one of the other URIs in the list.
 
-For more information see the [Failover Transport Reference](activemq-classic-connection-uris/failover-transport-reference)
+For more information see the [Failover Transport Reference](failover-transport-reference)
 
 ### The Fanout Transport
 
 The Fanout transport layers reconnect and replicate logic on top of any of the other transports. It is used replicate commands to multiple brokers.
 
-For more information see the [Fanout Transport Reference](activemq-classic-connection-uris/fanout-transport-reference)
+For more information see the [Fanout Transport Reference](fanout-transport-reference)
 
 Using Discovery
 ---------------
 
-Often when using transports like TCP you want to use [Discovery](../../features/discovery) to locate the available brokers. This is different from using, say, [Multicast](activemq-classic-connection-uris/multicast-transport-reference) - as the actual main communication is over TCP but multicast is purely used to discover the location of brokers.
+Often when using transports like TCP you want to use [Discovery](discovery) to locate the available brokers. This is different from using, say, [Multicast](multicast-transport-reference) - as the actual main communication is over TCP but multicast is purely used to discover the location of brokers.
 
 ### The Discovery Transport
 
 The Discovery transport works just like the reliable transport, except that it uses a discovery agent to locate the list of URIs to connect to.
 
-For more information see the [Discovery Transport Reference](activemq-classic-connection-uris/discovery-transport-reference)
+For more information see the [Discovery Transport Reference](discovery-transport-reference)
 
 ### The ZeroConf Transport
 
-The ZeroConf transport provides [Discovery](../../features/discovery) and it works like the [Discovery Transport](activemq-classic-connection-uris/discovery-transport-reference) but rather than using our own multicast based discovery mechanism (which allows you to configure the exact multicast address and port, etc.), the [ZeroConf](zeroconf-transport-reference/zeroconf) transport is used instead.
+The ZeroConf transport provides [Discovery](discovery) and it works like the [Discovery Transport](discovery-transport-reference) but rather than using our own multicast based discovery mechanism (which allows you to configure the exact multicast address and port, etc.), the [ZeroConf](zeroconf) transport is used instead.
 
 For more information see the [ZeroConf Transport Reference](zeroconf-transport-reference)
 

@@ -1,11 +1,12 @@
 ---
 title: "Consumer Dispatch Async"
+slug: /consumer-dispatch-async
 ---
 
 Overview
 --------
 
-From ActiveMQ Classic v4: the choice of a broker performing synchronous or asynchronous dispatch to a consumer has become more configurable. It is now configured as a default value on the [connection URI, Connection and ConnectionFactory](../../using-activemq-classic/configuring-transports/activemq-classic-connection-uris/connection-configuration-uri) as well as with being customizable on a per consumer basis via the [Destination Options](../destination-features/destination-options) instead previously just being a transport server setting.
+From ActiveMQ Classic v4: the choice of a broker performing synchronous or asynchronous dispatch to a consumer has become more configurable. It is now configured as a default value on the [connection URI, Connection and ConnectionFactory](connection-configuration-uri) as well as with being customizable on a per consumer basis via the [Destination Options](destination-options) instead previously just being a transport server setting.
 
 This makes more sense since you want to do asynchronous message delivery to slower consumers, but synchronous message delivery for faster consumers (to avoid the synchronization and context switching costs of adding another SEDA queue). The downside to using synchronous message delivery is that the producer is more likely to block if there is a slow consumer that he is dispatching messages to.
 
@@ -22,7 +23,7 @@ Configuring the `dispatchAsync` setting at this level overrides the settings at
 
 ### Configuring Dispatch Async at the Consumer Level using the Destination URI
 
-Configuring the `dispatchAsync` using [Destination Options](../destination-features/destination-options) overrides the settings at the connection and connection factory level.
+Configuring the `dispatchAsync` using [Destination Options](destination-options) overrides the settings at the connection and connection factory level.
 ```
 queue = new ActiveMQQueue("TEST.QUEUE?consumer.dispatchAsync=false");
 consumer = session.createConsumer(queue);

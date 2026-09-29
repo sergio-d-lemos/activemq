@@ -1,5 +1,6 @@
 ---
 title: "How do I configure ActiveMQ Classic to use AIO server transport"
+slug: /how-do-i-configure-activemq-classic-to-use-aio-server-transport
 ---
 
  [FAQ](..) > [Configuration](.) > [How do I configure ActiveMQ Classic to use AIO server transport](how-do-i-configure-activemq-classic-to-use-aio-server-transport)

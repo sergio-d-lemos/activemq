@@ -1,5 +1,6 @@
 ---
 title: "Enterprise Integration Patterns"
+slug: /enterprise-integration-patterns
 ---
 
 

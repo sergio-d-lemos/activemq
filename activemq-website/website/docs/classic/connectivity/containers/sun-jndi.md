@@ -1,5 +1,6 @@
 ---
 title: "Sun JNDI"
+slug: /sun-jndi
 ---
 
 

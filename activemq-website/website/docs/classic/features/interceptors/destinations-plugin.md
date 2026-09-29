@@ -1,5 +1,6 @@
 ---
 title: "Destinations Plugin"
+slug: /destinations-plugin
 ---
 
 

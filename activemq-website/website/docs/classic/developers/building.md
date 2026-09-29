@@ -1,5 +1,6 @@
 ---
 title: "Building"
+slug: /building
 ---
 
 
@@ -13,7 +14,7 @@ ActiveMQ Classic uses [Maven](http://maven.apache.org/) as its build and managem
 **Required:**
 
 *   Download and [install Maven](http://maven.apache.org/download).
-*   Get the latest [Source](../legacy-documentation/source)
+*   Get the latest [Source](source)
 *   JDK (11 for version 5.17.0+, 1.8 for version <= 5.17.0, 1.6 for version <= 5.10, 1.7 for version > 5.10)
 
 Using Maven 3
@@ -44,7 +45,7 @@ mvn idea:idea
 
 ### Other Maven 2 Goals
 
-For more details try the [Examples](../using-activemq-classic/examples) or [Benchmark Tests](benchmark-tests)  
+For more details try the [Examples](examples) or [Benchmark Tests](benchmark-tests)  
 Please refer to the [plugin reference](http://maven.apache.org/plugins/index.html) for more details on using them.
 
 Using Maven 1 (ActiveMQ Classic 4.0.x and Down)
@@ -70,6 +71,6 @@ etc.
 
 ### Other Maven 1 Goals
 
-For more details try the [Examples](../using-activemq-classic/examples) or [Benchmark Tests](benchmark-tests)  
+For more details try the [Examples](examples) or [Benchmark Tests](benchmark-tests)  
 Please refer to the [plugin reference](http://maven.apache.org/maven-1.x/plugins/bundled/) for more details on using them.
 

@@ -1,5 +1,6 @@
 ---
 title: "Activation Spec Properties"
+slug: /activation-spec-properties
 ---
 
 
@@ -30,7 +31,7 @@ enableBatch|no|false|Used to enable transaction batching for increased performan
 maxMessagesPerBatch|no|10|The number of messages per transaction batch
 maxMessagesPerSessions|no|10|This is actually the prefetch size for the subscription. (Yes, badly named).
 maxSessions|no|10|The maximum number of concurrent sessions to use
-messageSelector|no|null|The JMS [Message Selector](../../../features/consumer-features/selectors) to use on the subscription to perform content based routing filtering the messages
+messageSelector|no|null|The JMS [Message Selector](selectors) to use on the subscription to perform content based routing filtering the messages
 noLocal|no|false|Only required for topic subscriptions; indicates if locally published messages should be included in the subscription or not
 password|no|set in resource adapter|The password for the JMS connection
 subscriptionDurability|no|NonDurable|Whether or not a durable (topic) subscription is required. Valid values are: Durable or NonDurable
@@ -47,7 +48,7 @@ useJndi|no|false|when true, use destination as a jndi name
 
 If you want to maximise throughput of MDBs you should really set the **maxSessions** to something fairly large to increase the concurrency. Then set **maxMessagesPerSessions** to something big (say) 1000.
 
-This assumes you have large numbers of messages available (say more than **maxSessions** \* **maxMessagesPerSession**). Otherwise the [prefetch](../../../features/what-is-the-prefetch-limit-for) will end up [starving other consumers](../../../overview/faq/errors/i-do-not-receive-messages-in-my-second-consumer).
+This assumes you have large numbers of messages available (say more than **maxSessions** \* **maxMessagesPerSession**). Otherwise the [prefetch](what-is-the-prefetch-limit-for) will end up [starving other consumers](i-do-not-receive-messages-in-my-second-consumer).
 
 So if you don't have that many messages available, but maybe they take a while to process then you might want to set a lower value of **maxMessagesPerSessions**
 

@@ -1,11 +1,12 @@
 ---
 title: "Unix Shell Script"
+slug: /unix-shell-script
 ---
 
 Functional overview
 ===================
 
-From version 5.4.0 onwards, ActiveMQ Classic comes with a enhanced shell script for starting, stopping and managing the broker in Unix environment. For basic [activemq](../../overview/faq/using-apache-activemq-classic/activemq-classic-command-line-tools-reference) and [activemq-admin](../../overview/faq/using-apache-activemq-classic/activemq-classic-command-line-tools-reference) scripts functionality take a look at [ActiveMQ Classic Command Line Tools Reference](../../overview/faq/using-apache-activemq-classic/activemq-classic-command-line-tools-reference).
+From version 5.4.0 onwards, ActiveMQ Classic comes with a enhanced shell script for starting, stopping and managing the broker in Unix environment. For basic [activemq](activemq-classic-command-line-tools-reference) and [activemq-admin](activemq-classic-command-line-tools-reference) scripts functionality take a look at [ActiveMQ Classic Command Line Tools Reference](activemq-classic-command-line-tools-reference).
 
 This `activemq` script incorporate these two scripts into one and adds some new functionalities. On top of regular `activemq` and `activemq-admin` scripts, it adds the following features:
 
@@ -17,7 +18,7 @@ This `activemq` script incorporate these two scripts into one and adds some new 
     (you can interrupt the )
     
 
-*   **stop** - stops the broker that is running in the background. It tries first to stop the broker using [shutdown](../../overview/faq/using-apache-activemq-classic/activemq-classic-command-line-tools-reference) task. If that task doesn't return in 30 seconds (configurable), it will kill the process.
+*   **stop** - stops the broker that is running in the background. It tries first to stop the broker using [shutdown](activemq-classic-command-line-tools-reference) task. If that task doesn't return in 30 seconds (configurable), it will kill the process.
 
 *   **restart** - stops the running instance (if there's one) and starts the new one
 
@@ -167,7 +168,7 @@ Testing and reporting interoperability problems for unix platforms
 The activemq repo provides a testsuite to validate the proper operation of the unix shell script on different platforms.
 
 *   Download the testsuite  
-    Alternatively clone the sourcecode repo ([Source](../../legacy-documentation/source)) and pick the file `assembly/src/test/scripts/init-script-testsuite`
+    Alternatively clone the sourcecode repo ([Source](source)) and pick the file `assembly/src/test/scripts/init-script-testsuite`
     ```
     cd /tmp
     wget -c "https://git-wip-us.apache.org/repos/asf?p=activemq.git;a=blob_plain;f=assembly/src/test/scripts/init-script-testsuite;hb=HEAD"

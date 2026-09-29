@@ -1,5 +1,6 @@
 ---
 title: "Verify Downloads"
+slug: /verify-downloads
 ---
 
 

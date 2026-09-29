@@ -1,5 +1,6 @@
 ---
 title: "Consumer Priority"
+slug: /consumer-priority
 ---
 
 
@@ -9,7 +10,7 @@ As well as having a pluggable dispatch policy e.g. round robin, ActiveMQ Classic
 
 ### Example
 
-The priority for a consumer is set using [Destination Options](../destination-features/destination-options) as follows:
+The priority for a consumer is set using [Destination Options](destination-options) as follows:
 ```
 queue = new ActiveMQQueue("TEST.QUEUE?consumer.priority=10");
 consumer = session.createConsumer(queue);

@@ -1,5 +1,6 @@
 ---
 title: "How do I unack the message with Stomp"
+slug: /how-do-i-unack-the-message-with-stomp
 ---
 
  [FAQ](..) > [Using Apache ActiveMQ Classic](.) > [How do I unack the message with Stomp](how-do-i-unack-the-message-with-stomp)
@@ -54,5 +55,5 @@ Since the transaction `tx1` has been aborted, we needed to acknowledge that mess
 Also take a look at these pages for more info:
 
 *   [http://activemq.apache.org/stomp/stomp10/additional.html#transaction_handling](http://activemq.apache.org/stomp/stomp10/additional.html#transaction_handling)
-*   [what-is-the-prefetch-limit-for](../../../features/what-is-the-prefetch-limit-for)
+*   [what-is-the-prefetch-limit-for](what-is-the-prefetch-limit-for)
 

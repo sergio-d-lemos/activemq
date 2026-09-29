@@ -1,5 +1,6 @@
 ---
 title: "QoS"
+slug: /qos
 ---
 
  [FAQ](..) > [Terminology](.) > [QoS](qos)

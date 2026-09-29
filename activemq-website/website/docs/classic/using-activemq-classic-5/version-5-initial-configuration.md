@@ -1,5 +1,6 @@
 ---
 title: "Version 5 Initial Configuration"
+slug: /version-5-initial-configuration
 ---
 
 Firstly you need to add the jars to your classpath.
@@ -34,16 +35,16 @@ Optional JARS
 Persistence support
 -------------------
 
-The default persistence is the [AMQ Message Store](../features/persistence/amq-message-store). We do still support persistence via [JDBC and a high performance journal](../features/persistence). For full explict control over configuration check out the [Xml Configuration](../using-activemq-classic/xml-configuration).
+The default persistence is the [AMQ Message Store](amq-message-store). We do still support persistence via [JDBC and a high performance journal](persistence). For full explict control over configuration check out the [Xml Configuration](xml-configuration).
 
-If you're just doing some testing or in-VM SEDA based messaging you may wish to disable persistence. You can use the [Xml Configuration](../using-activemq-classic/xml-configuration) for this.
+If you're just doing some testing or in-VM SEDA based messaging you may wish to disable persistence. You can use the [Xml Configuration](xml-configuration) for this.
 
-You can do this by setting the usePersistence property to false either in the [Xml Configuration](../using-activemq-classic/xml-configuration) or on the [broker URL](../using-activemq-classic/configuring-transports).
+You can do this by setting the usePersistence property to false either in the [Xml Configuration](xml-configuration) or on the [broker URL](configuring-transports).
 
 Next steps
 ----------
 
-One of the first things you might want to do is [start a broker](../using-activemq-classic/run-broker). Once you have a broker running you could try using the [JNDI Support](../connectivity/containers/jndi-support) which shows how to run an example JMS program. Or there are some other [example programs](../using-activemq-classic/examples)
+One of the first things you might want to do is [start a broker](run-broker). Once you have a broker running you could try using the [JNDI Support](jndi-support) which shows how to run an example JMS program. Or there are some other [example programs](examples)
 
 If you don't want to use JNDI you can just instantiate an [ActiveMQConnectionFactory](http://activemq.codehaus.org/maven/apidocs/org/apache/activemq/ActiveMQConnectionFactory.html), configure its properties directly and then you're ready to use the standard JMS API to create Connections, Sessions, MessageProducer and MessageConsumer instances.
 
@@ -54,9 +55,9 @@ Additional resources
 
 *   Sun's [JMS Tutorial](http://java.sun.com/products/jms/tutorial/) is a handy place to start looking at how to use the JMS API directly
 *   The ActiveMQ Classic [Website](http://activemq.apache.org) for specifics on how to use ActiveMQ Classic
-*   [ActiveMQ Classic Topologies](../using-activemq-classic/topologies)
-*   [ActiveMQ Classic Clustering](../features/clustering)
-*   [ActiveMQ Classic Network of Brokers](../features/clustering/networks-of-brokers)
+*   [ActiveMQ Classic Topologies](topologies)
+*   [ActiveMQ Classic Clustering](clustering)
+*   [ActiveMQ Classic Network of Brokers](networks-of-brokers)
 *   [Staged Event Driven Architecture (SEDA)](http://www.eecs.harvard.edu/~mdw/proj/seda/)
 
 ### Specifications

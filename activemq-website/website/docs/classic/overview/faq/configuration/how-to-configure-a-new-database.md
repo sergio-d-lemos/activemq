@@ -1,5 +1,6 @@
 ---
 title: "How to configure a new database"
+slug: /how-to-configure-a-new-database
 ---
 
  [FAQ](..) > [Configuration](.) > [How to configure a new database](how-to-configure-a-new-database)

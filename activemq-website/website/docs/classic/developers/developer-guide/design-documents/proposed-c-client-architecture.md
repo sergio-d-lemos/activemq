@@ -1,5 +1,6 @@
 ---
 title: "Proposed C Client Architecture"
+slug: /proposed-c-client-architecture
 ---
 
 

@@ -1,5 +1,6 @@
 ---
 title: "Active Groups"
+slug: /active-groups
 ---
 
 

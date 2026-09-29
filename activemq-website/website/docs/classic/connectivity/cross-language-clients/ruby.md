@@ -1,5 +1,6 @@
 ---
 title: "Ruby"
+slug: /ruby
 ---
 
 

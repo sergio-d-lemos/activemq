@@ -1,5 +1,6 @@
 ---
 title: "java.lang.NoSuchMethodException org.activemq.ra.ActiveMQResourceAdapter.setUseEmbeddedBroker"
+slug: /javalangnosuchmethodexception-orgactivemqraactivemqresourceadaptersetuseembeddedbroker
 ---
 
  [FAQ](../..) > [Errors](..) > [Exceptions](.) > [java.lang.NoSuchMethodException org.activemq.ra.ActiveMQResourceAdapter.setUseEmbeddedBroker](javalangnosuchmethodexception-orgactivemqraactivemqresourceadaptersetuseembeddedbroker)

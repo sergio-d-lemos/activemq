@@ -1,12 +1,13 @@
 ---
 title: "Broker Properties URI"
+slug: /broker-properties-uri
 ---
 
 
 Broker Properties URI
 ---------------------
 
-From version 4.2 of ActiveMQ Classic onwards the Broker Properties URI allows you to [run a configured broker](../../../run-broker) by referencing a properties file which could be on the classpath, a local file or a remote URL.
+From version 4.2 of ActiveMQ Classic onwards the Broker Properties URI allows you to [run a configured broker](run-broker) by referencing a properties file which could be on the classpath, a local file or a remote URL.
 
 #### Syntax
 ```

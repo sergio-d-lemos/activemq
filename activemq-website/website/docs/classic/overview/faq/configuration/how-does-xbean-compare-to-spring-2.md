@@ -1,5 +1,6 @@
 ---
 title: "How does XBean compare to Spring 2"
+slug: /how-does-xbean-compare-to-spring-2
 ---
 
  [FAQ](..) > [Configuration](.) > [How does XBean compare to Spring 2](how-does-xbean-compare-to-spring-2)

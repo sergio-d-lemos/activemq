@@ -1,5 +1,6 @@
 ---
 title: "Delete Inactive Destinations"
+slug: /delete-inactive-destinations
 ---
 
 

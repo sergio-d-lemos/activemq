@@ -1,5 +1,6 @@
 ---
 title: "Using ActiveMQ Classic 5"
+slug: /using-activemq-classic-5
 ---
 
 To help you get started using Apache ActiveMQ Classic 5 you may wish to start off with the [Version 5 Getting Started](version-5-getting-started) guide or the [Configuring version 5 Transports](configuring-version-5-transports). Otherwise here is a complete list of the guides.

@@ -1,11 +1,12 @@
 ---
 title: "I see NC_ client-ids, what does that mean"
+slug: /i-see-nc-client-ids-what-does-that-mean
 ---
 
  [FAQ](..) > [Using Apache ActiveMQ Classic](.) > [I see NC_ client-ids, what does that mean](i-see-nc-client-ids-what-does-that-mean)
 
 
-Durable subscription ClientIds and SubscriptionNames using the **NC** prefix are the result of durable subscriptions in a [Networks of Brokers](../../../features/clustering/networks-of-brokers).  
+Durable subscription ClientIds and SubscriptionNames using the **NC** prefix are the result of durable subscriptions in a [Networks of Brokers](networks-of-brokers).  
 When a durable subscription is being forwarded by a network connector (or demand forwarding bridge), the network durable subscription needs to outlive the subscription that created it. This is achieved by using a well known name for the clientId and subscriptionName that can be easily be mapped to the original subscription. The prefix NC_, and NC-DS_ are used, where NC denotes Network Connector and DS denotes Durable Subscription. The prefix is combined with the local broker name and the target destination.
 
 The expectation is that the connectionId associated with these subscriptions can change on a reconnect, but the durable subsctiption remains. In this way, the durable subscription can continue to receive messages even if there is a network partition between the originating broker and the forwarding broker.

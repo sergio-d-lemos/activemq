@@ -1,5 +1,6 @@
 ---
 title: "Using ActiveMQ Classic with Docker"
+slug: /docker-image
 ---
 
 You can also get started with ActiveMQ Classic Docker image in no time. The image is hosted [here](https://hub.docker.com/r/apache/activemq/tags)

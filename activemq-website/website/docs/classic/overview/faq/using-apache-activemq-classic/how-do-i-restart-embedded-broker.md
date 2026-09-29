@@ -1,5 +1,6 @@
 ---
 title: "How do I restart embedded broker"
+slug: /how-do-i-restart-embedded-broker
 ---
 
  [FAQ](..) > [Using Apache ActiveMQ Classic](.) > [How do I restart embedded broker](how-do-i-restart-embedded-broker)

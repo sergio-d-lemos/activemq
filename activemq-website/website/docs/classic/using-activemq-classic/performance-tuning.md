@@ -1,9 +1,10 @@
 ---
 title: "Performance Tuning"
+slug: /performance-tuning
 ---
 
 
-For a more complete overview see [Performance](../features/performance).
+For a more complete overview see [Performance](performance).
 
 There are trade-offs between performance and reliability. By default, ActiveMQ Classic strikes a balance between the two, so there are some things you can change to increase throughput.
 
@@ -43,11 +44,11 @@ By default, a Consumer's session will dispatch messages to the consumer in a sep
 File based Persistence
 ----------------------
 
-We have a [file based persistence store](../features/persistence) that can be used to increase throughput for the persistent messages
+We have a [file based persistence store](persistence) that can be used to increase throughput for the persistent messages
 
 Performance guides
 ------------------
 
-If you're not convinced by performance reports then please do try running performance tests yourself. You might wanna check out our overview of [Performance](../features/performance) or try using out the [ActiveMQ Classic Performance Module Users Manual](../features/performance/activemq-classic-performance-module-users-manual)
+If you're not convinced by performance reports then please do try running performance tests yourself. You might wanna check out our overview of [Performance](performance) or try using out the [ActiveMQ Classic Performance Module Users Manual](activemq-classic-performance-module-users-manual)
 
 [Commercial providers](support#commercial-support) may also be able to help diagnose performance issues, suggest changes, etc...

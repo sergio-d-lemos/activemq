@@ -1,5 +1,6 @@
 ---
 title: "Configuring Brokers"
+slug: /configuring-brokers
 ---
 
 

@@ -1,5 +1,6 @@
 ---
 title: "Getting Started with ActiveMQ"
+slug: /getting-started
 ---
 
 Introduction
@@ -241,7 +242,7 @@ This procedure explains how to download and install the latest developer's snaps
 Starting ActiveMQ Classic
 -------------------------
 
-There now follows instructions on how to [run the ActiveMQ Classic Message Broker](../using-activemq-classic/run-broker).
+There now follows instructions on how to [run the ActiveMQ Classic Message Broker](run-broker).
 
 #### On Windows:
 
@@ -273,7 +274,7 @@ cd [activemq_install_dir]/bin
 ```
 ### More help
 
-For other ways of running the broker see [Here](../using-activemq-classic/run-broker). For example you can run an [embedded broker](faq/using-apache-activemq-classic/how-do-i-embed-a-broker-inside-a-connection) inside your JMS Connection to avoid starting a separate process.
+For other ways of running the broker see [Here](run-broker). For example you can run an [embedded broker](how-do-i-embed-a-broker-inside-a-connection) inside your JMS Connection to avoid starting a separate process.
 
 Testing the Installation
 ------------------------
@@ -312,12 +313,12 @@ netstat -nl|grep 61616
 Monitoring ActiveMQ Classic
 ---------------------------
 
-You can monitor ActiveMQ Classic using the [Web Console](../tools/web-console) by pointing your browser at `http://localhost:8161/admin`.
+You can monitor ActiveMQ Classic using the [Web Console](web-console) by pointing your browser at `http://localhost:8161/admin`.
 
 From ActiveMQ Classic 5.8 onwards the web apps is secured out of the box.  
 The default username and password is admin/admin. You can configure this in the conf/jetty-real.properties file.
 
-Or you can use the [JMX](../features/jmx) support to view the running state of ActiveMQ Classic.
+Or you can use the [JMX](jmx) support to view the running state of ActiveMQ Classic.
 
 For more information see the file `docs/WebConsole-README.txt` in the distribution.
 
@@ -335,20 +336,20 @@ cd [activemq_install_dir]/bin
 Configuring ActiveMQ Classic
 ----------------------------
 
-The ActiveMQ Classic broker should now run. You can configure the broker by specifying an [Xml Configuration](../using-activemq-classic/xml-configuration) file as a parameter to the _activemq_ command. An alternative is to use the [Broker Configuration URI](../using-activemq-classic/configuring-transports/activemq-classic-connection-uris/broker-configuration-uri) to configure things on the command line in a concise format (though the configuration options are not as extensive as if you use Java or XML code). You can also
+The ActiveMQ Classic broker should now run. You can configure the broker by specifying an [Xml Configuration](xml-configuration) file as a parameter to the _activemq_ command. An alternative is to use the [Broker Configuration URI](broker-configuration-uri) to configure things on the command line in a concise format (though the configuration options are not as extensive as if you use Java or XML code). You can also
 
-Also see [Configuring Transports](../using-activemq-classic/configuring-transports) to see how you can configure the various connection, transport and broker options using the connection URL in the ActiveMQConnectionFactory.
+Also see [Configuring Transports](configuring-transports) to see how you can configure the various connection, transport and broker options using the connection URL in the ActiveMQConnectionFactory.
 
 See the [Initial Configuration](faq/configuration) for details of which jars you need to add to your classpath to start using ActiveMQ Classic in your Java code
 
-If you want to use JNDI to connect to your JMS provider then please view the [JNDI Support](../connectivity/containers/jndi-support). If you are a Spring user you should read about [Spring Support](../connectivity/containers/spring-support)
+If you want to use JNDI to connect to your JMS provider then please view the [JNDI Support](jndi-support). If you are a Spring user you should read about [Spring Support](spring-support)
 
 After the installation, ActiveMQ Classic is running with a basic configuration. For details on configuring options, please see refer to the [Configuration](faq/configuration) section.
 
 Additional Resources
 --------------------
 
-If you are new to using ActiveMQ Classic, running the [Web Samples](../using-activemq-classic/web-samples) or the [Examples](../using-activemq-classic/examples) is a good next step to learn more about ActiveMQ Classic.
+If you are new to using ActiveMQ Classic, running the [Web Samples](web-samples) or the [Examples](examples) is a good next step to learn more about ActiveMQ Classic.
 
 The commercial providers listed on the [issues](issues) page may also have additional documentation, examples, tutorials, etc... that can help you get started.
 

@@ -10,12 +10,12 @@ title: ActiveMQ Classic 5.8.0 Release
 
 Apache ActiveMQ Classic 5.8.0 resolves [160 issues](https://issues.apache.org/jira/secure/IssueNavigator.jspa?reset=true&jqlQuery=project+%3D+AMQ+AND+fixVersion+%3D+%225.8.0%22+AND+status+%3D+Resolved+ORDER+BY+priority+DESC&mode=hide), mostly bug fixes and improvements. It has the following new features:
 
-*   [AMQP](amqp)
+*   [AMQP](/components/classic/documentation/amqp)
 *   new feature modules and activemq-client module allowing smaller foorprint
-*   management via [REST](ProtocolsConnectivity/Protocols/Connectivity/Protocols/rest) with [jolokia](http://www.jolokia.org/) jmx to http bridge
+*   management via [REST](/components/classic/documentation/rest) with [jolokia](http://www.jolokia.org/) jmx to http bridge
 *   Includes [Apache Camel 2.10.3](http://camel.apache.org/camel-2103-release.html)
 *   Java 7 support (compiled with jdk6 and validated with jdk7)
-*   [Pure Master Slave](pure-master-slave) no longer supported
+*   [Pure Master Slave](/components/classic/documentation/pure-master-slave) no longer supported
 
 There are some changes in 5.8 that may require some code change
 
@@ -30,7 +30,7 @@ There are some changes in 5.8 that may require some code change
     NetworkConnector|Type=NetworkConnector|type=Broker,connector=networkConnectors
     Connection|Type=Connection|type=Broker,connector=*,connectionViewType=remoteAddress\|clientId
 
-3.  OSGi integration has changed. The full details are at [OSGi Integration](osgi-integration). In summary:
+3.  OSGi integration has changed. The full details are at [OSGi Integration](/components/classic/documentation/osgi-integration). In summary:
     1.  There is a single uber OSGI bundle
     2.  The broker and webconsole are now configured via config admin pid files through an OSGi managed service factory.
 4.  The ActiveMQ Classic binary file `bin/run.jar` has been renamed to `bin/activemq.jar`.

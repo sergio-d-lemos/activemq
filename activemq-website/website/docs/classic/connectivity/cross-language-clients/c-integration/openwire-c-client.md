@@ -1,9 +1,10 @@
 ---
 title: "OpenWire C Client"
+slug: /openwire-c-client
 ---
 
 
-This is the C library which is based on the [OpenWire](../../protocols/openwire) protocol.
+This is the C library which is based on the [OpenWire](openwire) protocol.
 
 You can browse the code here
 

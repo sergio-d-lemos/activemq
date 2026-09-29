@@ -1,11 +1,12 @@
 ---
 title: "Apollo Version Migration Guide"
+slug: /migration-guide
 ---
 
        
 
 *   [Apollo 1.7.1](index.html)
-*   [Developers](../../developers)
+*   [Developers](developers)
 *   [Community](Community/index.html)
 *   [Download](../../overview/download)
 

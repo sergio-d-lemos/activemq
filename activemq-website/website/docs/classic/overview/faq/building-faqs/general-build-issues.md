@@ -1,5 +1,6 @@
 ---
 title: "General Build Issues"
+slug: /general-build-issues
 ---
 
 ###### Error during configure: "error: libpthread not found!"

@@ -1,5 +1,6 @@
 ---
 title: "Consumer Features"
+slug: /consumer-features
 ---
 
 
