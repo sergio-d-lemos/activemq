@@ -3,7 +3,6 @@ title: Apache.NMS.AMQP Past Releases
 ---
 
 import NmsReleaseList from '@site/src/components/NmsReleaseList';
-import {nmsAmqpCurrentPrefixes, nmsAmqpReleases, pastReleases} from '@site/src/data/nmsReleases';
 
 # Apache.NMS.AMQP Past Releases
 
@@ -18,10 +17,4 @@ For any releases not shown here, check the [archive](https://archive.apache.org/
 
 It is important to [verify the integrity](/components/nms/providers/amqp/downloads#verify-the-integrity-of-downloads) of the files you download.
 
-<NmsReleaseList
-  product="amqp"
-  releases={pastReleases(nmsAmqpReleases, nmsAmqpCurrentPrefixes)}
-  label="NMS AMQP"
-  isCurrentRelease={false}
-  releasePageBase="/components/nms/providers/amqp/downloads"
-/>
+<NmsReleaseList product="amqp" list="past" />

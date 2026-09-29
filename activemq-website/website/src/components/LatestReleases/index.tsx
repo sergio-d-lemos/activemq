@@ -19,7 +19,7 @@
 
 import Link from '@docusaurus/Link';
 import releases from '@site/src/data/generated/releases.json';
-import {formatNewsDate} from '../News';
+import {formatDate} from '@site/src/utils/formatDate';
 import styles from './styles.module.css';
 
 type ReleaseItem = {
@@ -34,7 +34,7 @@ type ReleaseItem = {
 const releaseList: ReleaseItem[] = releases.slice(0, 3).map((release) => ({
   title: release.title,
   shortDescription: release.summary ?? '',
-  releaseDate: formatNewsDate(release.releaseDate),
+  releaseDate: formatDate(release.releaseDate),
   url: release.url,
 }));
 
@@ -48,7 +48,7 @@ function ReleaseCard({title, shortDescription, releaseDate, url}: ReleaseItem) {
   );
 }
 
-export default function LatestReleases(): JSX.Element {
+export default function LatestReleases() {
   return (
     <section className={styles.latestReleases}>
       <div className="container">

@@ -19,36 +19,59 @@
 
 import Link from '@docusaurus/Link';
 import NmsDownloadTable, {type NmsProduct} from '../NmsDownloadTable';
-import {formatReleaseDate, type NmsRelease} from '../../data/nmsReleases';
+import {
+  nmsAmqpCurrentPrefixes,
+  nmsAmqpReleases,
+  nmsApiCurrentPrefixes,
+  nmsApiReleases,
+  type NmsRelease,
+} from '../../data/nmsReleases';
+import {formatDate} from '@site/src/utils/formatDate';
+import {currentReleases, pastReleases} from '@site/src/utils/releases';
 
-interface NmsReleaseListProps {
-  product: NmsProduct;
-  releases: NmsRelease[];
-  /** Heading prefix, e.g. "NMS API" or "NMS AMQP". */
+interface Product {
+  /** Heading prefix of each release. */
   label: string;
-  isCurrentRelease: boolean;
+  releases: NmsRelease[];
+  prefixes: string[];
   /**
-   * When the product publishes a page per release, the base path those pages live
-   * under. Releases are then linked to their own page instead of being described
-   * inline.
+   * When the product publishes a page per release, the base path those pages
+   * live under. Releases then link to their own page instead of being
+   * described inline.
    */
   releasePageBase?: string;
 }
 
+const PRODUCTS: Record<NmsProduct, Product> = {
+  api: {label: 'NMS API', releases: nmsApiReleases, prefixes: nmsApiCurrentPrefixes},
+  amqp: {
+    label: 'NMS AMQP',
+    releases: nmsAmqpReleases,
+    prefixes: nmsAmqpCurrentPrefixes,
+    releasePageBase: '/components/nms/providers/amqp/downloads',
+  },
+};
+
+interface NmsReleaseListProps {
+  product: NmsProduct;
+  /** The newest release of each current stream, or all the other ones. */
+  list: 'current' | 'past';
+}
+
 /** Renders a list of NMS releases together with their download links. */
-export default function NmsReleaseList({
-  product,
-  releases,
-  label,
-  isCurrentRelease,
-  releasePageBase,
-}: NmsReleaseListProps): JSX.Element {
+export default function NmsReleaseList({product, list}: NmsReleaseListProps) {
+  const {label, releases: allReleases, prefixes, releasePageBase} = PRODUCTS[product];
+  const isCurrentRelease = list === 'current';
+  const releases = isCurrentRelease
+    ? currentReleases(allReleases, prefixes)
+    : pastReleases(allReleases, prefixes);
+
   return (
     <>
       {releases.map((release) => (
         <div key={release.version}>
           <h4>
-            {label} {release.version} ({formatReleaseDate(release.releaseDate)})
+            {label} {release.version} ({formatDate(release.releaseDate, 'long')})
           </h4>
           {releasePageBase && release.slug ? (
             <p>

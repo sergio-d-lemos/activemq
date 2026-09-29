@@ -26,7 +26,7 @@ import styles from './index.module.css';
 
 const CURRENT_RELEASE = '3.9.5';
 
-export default function CmsHome(): JSX.Element {
+export default function CmsHome() {
     return (
         <Layout title="CMS Client" description="C++ Messaging API">
             <header className={clsx('hero', styles.heroBanner)}>

@@ -3,7 +3,6 @@ title: NMS API Past Releases
 ---
 
 import NmsReleaseList from '@site/src/components/NmsReleaseList';
-import {nmsApiCurrentPrefixes, nmsApiReleases, pastReleases} from '@site/src/data/nmsReleases';
 
 # NMS API Past Releases
 
@@ -18,12 +17,7 @@ For any releases not shown here, check the [archive](https://archive.apache.org/
 
 It is important to [verify the integrity](/components/nms/nms-api-downloads#verify-the-integrity-of-downloads) of the files you download.
 
-<NmsReleaseList
-  product="api"
-  releases={pastReleases(nmsApiReleases, nmsApiCurrentPrefixes)}
-  label="NMS API"
-  isCurrentRelease={false}
-/>
+<NmsReleaseList product="api" list="past" />
 
 #### NMS API 1.7.1 (09/04/2015)
 

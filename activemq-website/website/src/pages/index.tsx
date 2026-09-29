@@ -26,7 +26,7 @@ import styles from './index.module.css';
 import HomepageFeatures from '../components/HomepageFeatures';
 import LatestReleases from '../components/LatestReleases';
 
-export default function Home(): JSX.Element {
+export default function Home() {
     return (
         <Layout title='Welcome'>
             <header className={clsx('hero', styles.heroBanner)}>

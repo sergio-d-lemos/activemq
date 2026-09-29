@@ -20,16 +20,16 @@
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
 import releases from '@site/src/data/generated/releases.json';
-import {formatNewsDate} from '@site/src/components/News';
+import {formatDate} from '@site/src/utils/formatDate';
+import {currentReleases} from '@site/src/utils/releases';
+import VerifyDownloads from '@site/src/components/VerifyDownloads';
 import {currentReleasePrefixes} from '@site/src/data/currentReleases';
 
 // Generated from the release pages by scripts/generate-release-news.ts, newest first.
 const classicReleases = releases.filter((release) => release.component === 'classic');
 
 /** The newest release of each current series, in the order they are declared. */
-const currentReleases = currentReleasePrefixes
-  .map((prefix) => classicReleases.find((release) => release.version.startsWith(prefix)))
-  .filter((release) => release !== undefined);
+const currentClassicReleases = currentReleases(classicReleases, currentReleasePrefixes);
 
 type SeriesStatus = {
   series: string;
@@ -59,7 +59,7 @@ for (const release of classicReleases) {
     seriesStatus.push({
       series,
       latest: release.version,
-      date: formatNewsDate(release.releaseDate),
+      date: formatDate(release.releaseDate),
       current: currentReleasePrefixes.includes(`${seriesOf(release.version)}.`),
     });
   }
@@ -73,7 +73,7 @@ function compareSeries(a: string, b: string): number {
   return aMajor - bMajor || aMinor - bMinor;
 }
 
-export default function DownloadPage(): JSX.Element {
+export default function DownloadPage() {
   return (
     <Layout title="Download ActiveMQ">
       <div className="container margin-vert--lg">
@@ -112,9 +112,9 @@ export default function DownloadPage(): JSX.Element {
         <p><strong>Stable - Supported</strong>: Actively supported and recommended for production use. This version receives regular updates, including new features, security patches, and bug fixes.</p>
         <p><strong>Deprecated</strong>: Reached end-of-life and is no longer maintained. Deprecated versions do not receive updates. Not recommended for new deployments; users are encouraged to upgrade to a stable version for ongoing support.</p>
 
-        {currentReleases.map((release) => (
+        {currentClassicReleases.map((release) => (
           <div key={release.version}>
-            <h4>ActiveMQ Classic {release.version} ({formatNewsDate(release.releaseDate)})</h4>
+            <h4>ActiveMQ Classic {release.version} ({formatDate(release.releaseDate)})</h4>
             <p>
               <a href={release.releaseNotes}>Release Notes</a> |{' '}
               <Link to={release.url}>Release Page</Link> |{' '}
@@ -156,19 +156,7 @@ export default function DownloadPage(): JSX.Element {
 
         <hr />
         <h4 id="verify-the-integrity-of-downloads">Verify the Integrity of Downloads</h4>
-        <p>
-          It is essential that you verify the integrity of the downloaded files using the ASC signature or SHA checksum.
-        </p>
-        <p>The ASC signatures can be verified using PGP or GPG. Begin by following these steps:</p>
-        <ol>
-          <li>Download the <a href="https://downloads.apache.org/activemq/KEYS">KEYS</a> file.</li>
-          <li>Download the <code>.asc</code> signature for the relevant distribution file.</li>
-          <li>Verify the signature:
-            <pre><code>{`$ gpg --import KEYS\n$ gpg --verify <file-name>.asc <file-name>`}</code></pre>
-          </li>
-        </ol>
-        <p>Alternatively you can verify the SHA-512 checksum of the file:</p>
-        <pre><code>$ sha512sum -c &lt;file-name&gt;.sha512</code></pre>
+        <VerifyDownloads pgp={false} />
       </div>
     </Layout>
   );

@@ -18,7 +18,9 @@
  */
 
 import Link from '@docusaurus/Link';
-import {currentReleasePrefixes} from '../../data/currentReleases';
+import {currentReleasePrefixes} from '@site/src/data/currentReleases';
+import {isCurrentRelease} from '@site/src/utils/releases';
+import VerifyDownloads from '../VerifyDownloads';
 
 /** The front matter of a Classic release page, as written by `pnpm new-release`. */
 export interface ClassicReleaseFrontMatter {
@@ -37,10 +39,6 @@ interface ClassicReleaseProps {
   children?: React.ReactNode;
 }
 
-function isCurrentRelease(version: string): boolean {
-  return currentReleasePrefixes.some(prefix => version.startsWith(prefix));
-}
-
 /**
  * Wraps the body of an ActiveMQ Classic release page with the download links,
  * verification instructions and change log, replacing the classic_release
@@ -52,13 +50,13 @@ function isCurrentRelease(version: string): boolean {
 export default function ClassicRelease({
   frontMatter,
   children,
-}: ClassicReleaseProps): JSX.Element {
+}: ClassicReleaseProps) {
   const {
     version,
     java_version: javaVersion,
     release_notes: releaseNotes,
   } = frontMatter;
-  const isCurrent = isCurrentRelease(version);
+  const isCurrent = isCurrentRelease(version, currentReleasePrefixes);
   const baseUrl = isCurrent
     ? 'https://www.apache.org/dyn/closer.cgi?filename=/activemq/'
     : 'https://archive.apache.org/dist/activemq/';
@@ -128,19 +126,7 @@ export default function ClassicRelease({
       )}
 
       <h3>Verify the Integrity of Downloads</h3>
-      <p>
-        It is essential that you verify the integrity of the downloaded files using the ASC signature or SHA checksum.
-      </p>
-      <p>The ASC signatures can be verified using PGP or GPG. Begin by following these steps:</p>
-      <ol>
-        <li>Download the <a href="https://downloads.apache.org/activemq/KEYS">KEYS</a> file.</li>
-        <li>Download the <code>.asc</code> signature for the relevant distribution file.</li>
-        <li>Verify the signature:
-          <pre><code>{`$ gpg --import KEYS\n$ gpg --verify <file-name>.asc <file-name>`}</code></pre>
-        </li>
-      </ol>
-      <p>Alternatively you can verify the SHA-512 checksum of the file:</p>
-      <pre><code>$ sha512sum -c &lt;file-name&gt;.sha512</code></pre>
+      <VerifyDownloads pgp={false} />
 
       <h3>Getting the Binaries using Maven 3</h3>
       <p>

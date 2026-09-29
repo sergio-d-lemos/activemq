@@ -20,11 +20,8 @@
 import Link from '@docusaurus/Link';
 import NmsDownloadTable from '../NmsDownloadTable';
 import VerifyDownloads from '../VerifyDownloads';
-import {
-  currentReleases,
-  nmsAmqpCurrentPrefixes,
-  nmsAmqpReleases,
-} from '../../data/nmsReleases';
+import {nmsAmqpCurrentPrefixes, nmsAmqpReleases} from '../../data/nmsReleases';
+import {currentReleases} from '@site/src/utils/releases';
 
 interface NmsAmqpReleaseProps {
   version: string;
@@ -42,7 +39,7 @@ interface NmsAmqpReleaseProps {
 export default function NmsAmqpRelease({
   version,
   children,
-}: NmsAmqpReleaseProps): JSX.Element {
+}: NmsAmqpReleaseProps) {
   const release = nmsAmqpReleases.find((candidate) => candidate.version === version);
   const isCurrent = currentReleases(nmsAmqpReleases, nmsAmqpCurrentPrefixes).some(
     (candidate) => candidate.version === version,

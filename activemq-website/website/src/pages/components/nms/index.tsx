@@ -17,6 +17,7 @@
  * under the License.
  */
 
+import type {ReactNode} from 'react';
 import clsx from 'clsx';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
@@ -24,18 +25,18 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faDownload, faInfoCircle, faBook} from '@fortawesome/free-solid-svg-icons';
 import styles from './index.module.css';
 import {
-    currentReleases,
-    formatReleaseDate,
     nmsAmqpCurrentPrefixes,
     nmsAmqpReleases,
     nmsApiCurrentPrefixes,
     nmsApiReleases,
 } from '@site/src/data/nmsReleases';
+import {formatDate} from '@site/src/utils/formatDate';
+import {currentReleases} from '@site/src/utils/releases';
 
 type ComponentCard = {
     title: string;
     subtitle: string;
-    description: JSX.Element;
+    description: ReactNode;
     moreUrl: string;
 };
 
@@ -79,13 +80,13 @@ const latestReleases: LatestRelease[] = [
     {
         title: `Apache.NMS ${apiRelease.version} Release`,
         shortDescription: apiRelease.shortDescription,
-        releaseDate: formatReleaseDate(apiRelease.releaseDate),
+        releaseDate: formatDate(apiRelease.releaseDate, 'long'),
         url: '/components/nms/nms-api-downloads',
     },
     {
         title: `Apache.NMS.AMQP ${amqpRelease.version} Release`,
         shortDescription: amqpRelease.shortDescription,
-        releaseDate: formatReleaseDate(amqpRelease.releaseDate),
+        releaseDate: formatDate(amqpRelease.releaseDate, 'long'),
         url: `/components/nms/providers/amqp/downloads/${amqpRelease.slug}`,
     },
 ];
@@ -119,7 +120,7 @@ function ReleaseCard({title, shortDescription, releaseDate, url}: LatestRelease)
     );
 }
 
-export default function NmsHome(): JSX.Element {
+export default function NmsHome() {
     return (
         <Layout title="NMS Clients" description=".NET Messaging API">
             <header className={clsx('hero', styles.heroBanner)}>

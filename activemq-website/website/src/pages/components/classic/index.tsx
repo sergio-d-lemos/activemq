@@ -27,7 +27,7 @@ import styles from './index.module.css';
 // pages plugin from turning it into a route of its own.
 import Content from './_content.md';
 
-export default function ClassicHome(): JSX.Element {
+export default function ClassicHome() {
     return (
         <Layout title="ActiveMQ Classic" description="The Tried and Trusted Open Source Message Broker">
             <header className={clsx('hero', styles.heroBanner)}>

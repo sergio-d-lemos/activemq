@@ -61,7 +61,7 @@ export default function NmsDownloadTable({
   product,
   version,
   isCurrentRelease,
-}: NmsDownloadTableProps): JSX.Element {
+}: NmsDownloadTableProps) {
   const dist = DIST_NAME[product];
   const mirrorBase = `https://www.apache.org/dyn/closer.lua?filename=/activemq/${dist}/${version}/`;
   const downloadsBase = `https://downloads.apache.org/activemq/${dist}/${version}/`;

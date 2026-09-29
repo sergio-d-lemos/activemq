@@ -4,7 +4,6 @@ title: NMS API Downloads
 
 import NmsReleaseList from '@site/src/components/NmsReleaseList';
 import VerifyDownloads from '@site/src/components/VerifyDownloads';
-import {currentReleases, nmsApiCurrentPrefixes, nmsApiReleases} from '@site/src/data/nmsReleases';
 
 # NMS API Downloads
 
@@ -12,12 +11,7 @@ This is the current NMS.API release. For prior releases, please see the [past re
 
 It is important to [verify the integrity](#verify-the-integrity-of-downloads) of the files you download.
 
-<NmsReleaseList
-  product="api"
-  releases={currentReleases(nmsApiReleases, nmsApiCurrentPrefixes)}
-  label="NMS API"
-  isCurrentRelease
-/>
+<NmsReleaseList product="api" list="current" />
 
 ---
 

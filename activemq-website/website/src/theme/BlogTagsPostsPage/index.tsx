@@ -30,7 +30,7 @@ import Unlisted from '@theme/ContentVisibility/Unlisted';
 import type {Props} from '@theme/BlogTagsPostsPage';
 import {NewsList, NewsPage} from '@site/src/components/News';
 
-export default function BlogTagsPostsPage(props: Props): JSX.Element {
+export default function BlogTagsPostsPage(props: Props) {
   const {tag, items} = props;
   const title = `${items.length} post${items.length === 1 ? '' : 's'} tagged with "${tag.label}"`;
 

@@ -23,32 +23,8 @@ import Link from '@docusaurus/Link';
 import TagsListInline from '@theme/TagsListInline';
 import type {Content} from '@theme/BlogPostPage';
 import type {Props as TagsListInlineProps} from '@theme/TagsListInline';
+import {formatDate} from '@site/src/utils/formatDate';
 import styles from './styles.module.css';
-
-const MONTHS = [
-  'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
-  'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec',
-];
-
-function ordinal(day: number): string {
-  if (day % 100 >= 11 && day % 100 <= 13) {
-    return `${day}th`;
-  }
-  switch (day % 10) {
-    case 1: return `${day}st`;
-    case 2: return `${day}nd`;
-    case 3: return `${day}rd`;
-    default: return `${day}th`;
-  }
-}
-
-/** Formats a date the way the Jekyll `date_to_string: "ordinal", "US"` filter did. */
-export function formatNewsDate(date: Date | string): string {
-  // The blog plugin serializes `metadata.date` to an ISO string for the client.
-  const iso = typeof date === 'string' ? date : date.toISOString();
-  const [year, month, day] = iso.slice(0, 10).split('-').map(Number);
-  return `${MONTHS[month - 1]} ${ordinal(day)}, ${year}`;
-}
 
 export type Crumb = {
   label: string;
@@ -63,7 +39,7 @@ type NewsPageProps = {
 };
 
 /** The title band, breadcrumbs and container shared by every /news page. */
-export function NewsPage({title, crumbs, children}: NewsPageProps): JSX.Element {
+export function NewsPage({title, crumbs, children}: NewsPageProps) {
   return (
     <Layout>
       <header className={styles.newsBanner}>
@@ -105,7 +81,7 @@ type NewsItemProps = {
   tags: TagsListInlineProps['tags'];
 };
 
-function NewsItem({title, date, description, permalink, tags}: NewsItemProps): JSX.Element {
+function NewsItem({title, date, description, permalink, tags}: NewsItemProps) {
   return (
     <article className={styles.newsItem}>
       <h3 className={styles.newsTitle}>{title}</h3>
@@ -130,7 +106,7 @@ type NewsListProps = {
 };
 
 /** A flat, reverse-chronological list of news entries. */
-export function NewsList({items}: NewsListProps): JSX.Element {
+export function NewsList({items}: NewsListProps) {
   return (
     <div className={styles.newsList}>
       {items.map(({content}) => {
@@ -142,7 +118,7 @@ export function NewsList({items}: NewsListProps): JSX.Element {
           <NewsItem
             key={permalink}
             title={title}
-            date={formatNewsDate(date)}
+            date={formatDate(date)}
             description={description}
             permalink={releasePage ?? permalink}
             tags={tags}

@@ -4,7 +4,6 @@ title: Apache.NMS.AMQP Downloads
 
 import NmsReleaseList from '@site/src/components/NmsReleaseList';
 import VerifyDownloads from '@site/src/components/VerifyDownloads';
-import {currentReleases, nmsAmqpCurrentPrefixes, nmsAmqpReleases} from '@site/src/data/nmsReleases';
 
 # Apache.NMS.AMQP Downloads
 
@@ -12,13 +11,7 @@ This is the current NMS.AMQP release. For prior releases, please see the [past r
 
 It is important to [verify the integrity](#verify-the-integrity-of-downloads) of the files you download.
 
-<NmsReleaseList
-  product="amqp"
-  releases={currentReleases(nmsAmqpReleases, nmsAmqpCurrentPrefixes)}
-  label="NMS AMQP"
-  isCurrentRelease
-  releasePageBase="/components/nms/providers/amqp/downloads"
-/>
+<NmsReleaseList product="amqp" list="current" />
 
 ---
 

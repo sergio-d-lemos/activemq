@@ -17,11 +17,17 @@
  * under the License.
  */
 
+interface VerifyDownloadsProps {
+  /** Also explain how to verify the signatures with PGP, not only GPG. */
+  pgp?: boolean;
+}
+
 /**
  * The shared "Verify the Integrity of Downloads" instructions, replacing the
- * verify_download.md include of the original Jekyll site.
+ * verify_download.md include of the original Jekyll site. The ActiveMQ Classic
+ * pages only document GPG.
  */
-export default function VerifyDownloads(): JSX.Element {
+export default function VerifyDownloads({pgp = true}: VerifyDownloadsProps) {
   return (
     <>
       <p>
@@ -36,28 +42,41 @@ export default function VerifyDownloads(): JSX.Element {
         <li>
           Download the <code>.asc</code> signature for the relevant distribution file.
         </li>
-        <li>
-          Verify the signature.
-          <ul>
-            <li>
-              If using GPG:
-              <pre>
-                <code>{'$ gpg --import KEYS\n$ gpg --verify <file-name>.asc <file-name>'}</code>
-              </pre>
-            </li>
-            <li>
-              If using PGP:
-              <pre>
-                <code>{'$ pgp -ka KEYS\n$ pgp <file-name>.asc'}</code>
-              </pre>
-            </li>
-          </ul>
-        </li>
+        {pgp ? (
+          <li>
+            Verify the signature.
+            <ul>
+              <li>
+                If using GPG:
+                <pre>
+                  <code>{'$ gpg --import KEYS\n$ gpg --verify <file-name>.asc <file-name>'}</code>
+                </pre>
+              </li>
+              <li>
+                If using PGP:
+                <pre>
+                  <code>{'$ pgp -ka KEYS\n$ pgp <file-name>.asc'}</code>
+                </pre>
+              </li>
+            </ul>
+          </li>
+        ) : (
+          <li>
+            Verify the signature:
+            <pre>
+              <code>{'$ gpg --import KEYS\n$ gpg --verify <file-name>.asc <file-name>'}</code>
+            </pre>
+          </li>
+        )}
       </ol>
-      <p>
-        Alternatively you can [also] verify the SHA-512 checksum of the file. For example,
-        using the <code>sha512sum</code> command:
-      </p>
+      {pgp ? (
+        <p>
+          Alternatively you can [also] verify the SHA-512 checksum of the file. For example,
+          using the <code>sha512sum</code> command:
+        </p>
+      ) : (
+        <p>Alternatively you can verify the SHA-512 checksum of the file:</p>
+      )}
       <pre>
         <code>{'$ sha512sum -c <file-name>.sha512'}</code>
       </pre>

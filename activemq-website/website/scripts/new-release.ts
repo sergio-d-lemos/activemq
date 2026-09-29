@@ -37,9 +37,9 @@ import {
   classicReleaseDir,
   collectReleases,
   compareVersions,
-  formatDate,
   siteDir,
 } from './lib/releases.ts';
+import {formatDate} from '../src/utils/formatDate.ts';
 import {currentReleasePrefixes} from '../src/data/currentReleases.ts';
 
 const USAGE =

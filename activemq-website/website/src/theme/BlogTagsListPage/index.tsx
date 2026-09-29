@@ -30,7 +30,7 @@ import TagsListByLetter from '@theme/TagsListByLetter';
 import type {Props} from '@theme/BlogTagsListPage';
 import {NewsPage} from '@site/src/components/News';
 
-export default function BlogTagsListPage({tags}: Props): JSX.Element {
+export default function BlogTagsListPage({tags}: Props) {
   const title = translateTagsPageTitle();
 
   return (

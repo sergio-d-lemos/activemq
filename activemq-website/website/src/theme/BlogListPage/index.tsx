@@ -30,7 +30,7 @@ import BlogListPageStructuredData from '@theme/BlogListPage/StructuredData';
 import type {Props} from '@theme/BlogListPage';
 import {NewsList, NewsPage} from '@site/src/components/News';
 
-function BlogListPageMetadata({metadata}: Props): JSX.Element {
+function BlogListPageMetadata({metadata}: Props) {
   const {blogDescription, blogTitle} = metadata;
   return (
     <>
@@ -40,7 +40,7 @@ function BlogListPageMetadata({metadata}: Props): JSX.Element {
   );
 }
 
-export default function BlogListPage(props: Props): JSX.Element {
+export default function BlogListPage(props: Props) {
   const {metadata, items} = props;
   const {siteConfig} = useDocusaurusContext();
   const title = metadata.blogTitle || siteConfig.title;

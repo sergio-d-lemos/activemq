@@ -37,12 +37,12 @@ import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import matter from 'gray-matter';
 import {
-  currentReleases,
   nmsAmqpCurrentPrefixes,
   nmsAmqpReleases,
   nmsApiCurrentPrefixes,
   nmsApiReleases,
 } from '../../src/data/nmsReleases.ts';
+import {currentReleases} from '../../src/utils/releases.ts';
 
 export const siteDir = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..');
 export const classicReleaseDir = path.join(siteDir, 'src/data/releases/classic');
@@ -193,30 +193,7 @@ export function collectReleases(): Release[] {
   ].sort(compareReleases);
 }
 
-const MONTHS = [
-  'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
-  'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec',
-];
-
-function ordinal(day: number): string {
-  if (day % 100 >= 11 && day % 100 <= 13) {
-    return `${day}th`;
-  }
-  switch (day % 10) {
-    case 1: return `${day}st`;
-    case 2: return `${day}nd`;
-    case 3: return `${day}rd`;
-    default: return `${day}th`;
-  }
-}
-
 /** Strips the markdown emphasis a summary may use, for plain text contexts. */
 export function plainText(markdown: string): string {
   return markdown.replace(/(\*\*|__)(.*?)\1/g, '$2');
-}
-
-/** Formats an ISO date the way the Jekyll `date_to_string: "ordinal", "US"` filter did. */
-export function formatDate(iso: string): string {
-  const [year, month, day] = iso.split('-').map(Number);
-  return `${MONTHS[month - 1]} ${ordinal(day)}, ${year}`;
 }
