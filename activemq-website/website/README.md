@@ -45,6 +45,11 @@ RSS/Atom feeds) and the release list used by the home page and the download
 page (`src/data/generated/releases.json`). Both are ignored by git and must
 never be edited.
 
+ActiveMQ Classic release pages live in `src/data/releases/classic/`, and are
+served below `/components/classic/download/` by a dedicated instance of the
+pages plugin (see `docusaurus.config.ts`). The file name is the URL, e.g.
+`classic-06-02-11.mdx` is served as `/components/classic/download/classic-06-02-11`.
+
 To publish an ActiveMQ Classic release, create its page with:
 
 ```bash

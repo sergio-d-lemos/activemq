@@ -71,6 +71,16 @@ const config: Config = {
 
   plugins: [
     [
+      // Release pages live with the release data rather than in src/pages,
+      // but keep being served next to the download page.
+      '@docusaurus/plugin-content-pages',
+      {
+        id: 'classic-releases',
+        path: 'src/data/releases/classic',
+        routeBasePath: 'components/classic/download',
+      },
+    ],
+    [
       '@docusaurus/plugin-content-docs',
       {
         id: 'nms',

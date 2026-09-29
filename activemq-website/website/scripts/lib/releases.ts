@@ -23,7 +23,7 @@
  * derived from the same data:
  *
  * - ActiveMQ Classic: the front matter of the release pages in
- *   src/pages/components/classic/download/.
+ *   src/data/releases/classic/, served below /components/classic/download.
  * - Apache.NMS.ActiveMQ: the front matter of the release pages in
  *   src/pages/components/nms/providers/activemq/downloads/.
  * - Apache.NMS.API and Apache.NMS.AMQP: src/data/nmsReleases.ts.
@@ -45,7 +45,7 @@ import {
 } from '../../src/data/nmsReleases.ts';
 
 export const siteDir = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..');
-export const classicReleaseDir = path.join(siteDir, 'src/pages/components/classic/download');
+export const classicReleaseDir = path.join(siteDir, 'src/data/releases/classic');
 const nmsActiveMqReleaseDir = path.join(siteDir, 'src/pages/components/nms/providers/activemq/downloads');
 
 export type Component = 'classic' | 'nms';

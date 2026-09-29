@@ -5,6 +5,9 @@ website/node/*
 website/node_modules
 website/node_modules/*
 website/build
+# The root .gitignore excludes every data/ directory, for the broker data.
+!website/src/data/
+
 # Generated from the release pages by scripts/generate-release-news.ts
 website/blog/releases
 website/src/data/generated
