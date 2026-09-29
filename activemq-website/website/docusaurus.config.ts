@@ -30,11 +30,13 @@ const config: Config = {
   baseUrl: '/',
 
   onBrokenLinks: 'warn',
-  onBrokenMarkdownLinks: 'warn',
 
   markdown: {
     // .md files are plain CommonMark, .mdx files may use JSX and imports.
     format: 'detect',
+    hooks: {
+      onBrokenMarkdownLinks: 'warn',
+    },
   },
 
   i18n: {
