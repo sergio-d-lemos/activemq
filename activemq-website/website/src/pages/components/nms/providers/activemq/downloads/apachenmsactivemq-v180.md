@@ -1,5 +1,7 @@
 ---
 title: Apache.NMS.ActiveMQ v1.8.0
+version: 1.8.0
+release_date: 2021-03-01
 ---
 
 # Apache.NMS.ActiveMQ v1.8.0

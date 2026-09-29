@@ -1,5 +1,9 @@
 ---
 title: Apache.NMS.ActiveMQ 2.1.1 Release
+version: 2.1.1
+release_date: 2025-02-16
+release_notes: https://issues.apache.org/jira/secure/ReleaseNote.jspa?version=12355665&projectId=12311201
+shortDescription: Various enhancements and fixes, including SSL buffer size support and nested parameters for failover transport.
 ---
 
 # Apache.NMS.ActiveMQ 2.1.1 Release

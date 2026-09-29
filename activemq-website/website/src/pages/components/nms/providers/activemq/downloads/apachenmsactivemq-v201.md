@@ -1,5 +1,9 @@
 ---
 title: Apache.NMS.ActiveMQ 2.0.1 Release
+version: 2.0.1
+release_date: 2023-02-14
+release_notes: https://issues.apache.org/jira/secure/ReleaseNote.jspa?projectId=12311201&version=12352889
+shortDescription: Deadlock fix in WinForms environment.
 ---
 
 # Apache.NMS.ActiveMQ 2.0.1 Release

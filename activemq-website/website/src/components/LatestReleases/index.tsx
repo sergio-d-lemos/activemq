@@ -18,6 +18,8 @@
  */
 
 import Link from '@docusaurus/Link';
+import releases from '@site/src/data/generated/releases.json';
+import {formatNewsDate} from '../News';
 import styles from './styles.module.css';
 
 type ReleaseItem = {
@@ -27,26 +29,14 @@ type ReleaseItem = {
   url: string;
 };
 
-const releaseList: ReleaseItem[] = [
-  {
-    title: 'ActiveMQ 6.2.6 Release',
-    shortDescription: 'Important maintenance release on the 6.2.x series.',
-    releaseDate: 'May 31st, 2026',
-    url: '/components/classic/download/classic-06-02-06',
-  },
-  {
-    title: 'ActiveMQ 5.19.7 Release',
-    shortDescription: 'Maintenance release on the 5.19.x series.',
-    releaseDate: 'May 31st, 2026',
-    url: '/components/classic/download/classic-05-19-07',
-  },
-  {
-    title: 'ActiveMQ 6.2.5 Release',
-    shortDescription: 'Maintenance release on the 6.2.x series.',
-    releaseDate: 'Apr 23rd, 2026',
-    url: '/components/classic/download/classic-06-02-05',
-  },
-];
+// The newest releases of every component, generated from the release pages by
+// scripts/generate-release-news.ts.
+const releaseList: ReleaseItem[] = releases.slice(0, 3).map((release) => ({
+  title: release.title,
+  shortDescription: release.summary ?? '',
+  releaseDate: formatNewsDate(release.releaseDate),
+  url: release.url,
+}));
 
 function ReleaseCard({title, shortDescription, releaseDate, url}: ReleaseItem) {
   return (

@@ -19,46 +19,59 @@
 
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
+import releases from '@site/src/data/generated/releases.json';
+import {formatNewsDate} from '@site/src/components/News';
+import {currentReleasePrefixes} from '@site/src/data/currentReleases';
 
-interface CurrentRelease {
-  version: string;
-  releaseDate: string;
-  javaVersion: string;
-  releaseNotes: string;
-  slug: string;
+// Generated from the release pages by scripts/generate-release-news.ts, newest first.
+const classicReleases = releases.filter((release) => release.component === 'classic');
+
+/** The newest release of each current series, in the order they are declared. */
+const currentReleases = currentReleasePrefixes
+  .map((prefix) => classicReleases.find((release) => release.version.startsWith(prefix)))
+  .filter((release) => release !== undefined);
+
+type SeriesStatus = {
+  series: string;
+  latest: string;
+  date: string;
+  current: boolean;
+};
+
+// Series whose releases predate the release_date front matter, so cannot be
+// derived from the release pages.
+const legacySeries: SeriesStatus[] = [
+  { series: '5.14.x', latest: '5.14.5', date: 'Apr 25th, 2017', current: false },
+  { series: '5.13.x', latest: '5.13.5', date: 'Dec 16th, 2016', current: false },
+  { series: '5.12.x', latest: '5.12.3', date: 'Feb 3rd, 2016', current: false },
+  { series: '5.11.x', latest: '5.11.4', date: 'Feb 3rd, 2016', current: false },
+];
+
+function seriesOf(version: string): string {
+  return version.split('.').slice(0, 2).join('.');
 }
 
-const currentReleases: CurrentRelease[] = [
-  {
-    version: '6.2.6',
-    releaseDate: 'May 31st, 2026',
-    javaVersion: '17+',
-    releaseNotes: 'https://github.com/apache/activemq/releases/tag/activemq-6.2.6',
-    slug: 'classic-06-02-06',
-  },
-  {
-    version: '5.19.7',
-    releaseDate: 'May 31st, 2026',
-    javaVersion: '11+',
-    releaseNotes: 'https://github.com/apache/activemq/releases/tag/activemq-5.19.7',
-    slug: 'classic-05-19-07',
-  },
-];
+/** The newest release of every series, newest series first. */
+const seriesStatus: SeriesStatus[] = [];
+for (const release of classicReleases) {
+  const series = `${seriesOf(release.version)}.x`;
+  if (!seriesStatus.some((status) => status.series === series)) {
+    seriesStatus.push({
+      series,
+      latest: release.version,
+      date: formatNewsDate(release.releaseDate),
+      current: currentReleasePrefixes.includes(`${seriesOf(release.version)}.`),
+    });
+  }
+}
+seriesStatus.sort((a, b) => compareSeries(b.series, a.series));
+seriesStatus.push(...legacySeries);
 
-const seriesStatus = [
-  { series: '6.2.x', status: 'Stable - Supported', latest: '6.2.6', date: 'May 31st, 2026', current: true },
-  { series: '6.1.x', status: 'Deprecated', latest: '6.1.8', date: 'Oct 22nd, 2025', current: false },
-  { series: '6.0.x', status: 'Deprecated', latest: '6.0.1', date: 'Dec 3rd, 2023', current: false },
-  { series: '5.19.x', status: 'Stable - Supported', latest: '5.19.7', date: 'May 31st, 2026', current: true },
-  { series: '5.18.x', status: 'Deprecated', latest: '5.18.7', date: 'Mar 19th, 2025', current: false },
-  { series: '5.17.x', status: 'Deprecated', latest: '5.17.7', date: 'Mar 20th, 2025', current: false },
-  { series: '5.16.x', status: 'Deprecated', latest: '5.16.8', date: 'Mar 22nd, 2025', current: false },
-  { series: '5.15.x', status: 'Deprecated', latest: '5.15.16', date: 'Oct 26th, 2023', current: false },
-  { series: '5.14.x', status: 'Deprecated', latest: '5.14.5', date: 'Apr 25th, 2017', current: false },
-  { series: '5.13.x', status: 'Deprecated', latest: '5.13.5', date: 'Dec 16th, 2016', current: false },
-  { series: '5.12.x', status: 'Deprecated', latest: '5.12.3', date: 'Feb 3rd, 2016', current: false },
-  { series: '5.11.x', status: 'Deprecated', latest: '5.11.4', date: 'Feb 3rd, 2016', current: false },
-];
+function compareSeries(a: string, b: string): number {
+  const [aMajor, aMinor] = a.split('.').map(Number);
+  const [bMajor, bMinor] = b.split('.').map(Number);
+  return aMajor - bMajor || aMinor - bMinor;
+}
 
 export default function DownloadPage(): JSX.Element {
   return (
@@ -87,7 +100,7 @@ export default function DownloadPage(): JSX.Element {
             {seriesStatus.map((s) => (
               <tr key={s.series} style={{backgroundColor: s.current ? '#dff0d8' : '#f0f0f0'}}>
                 <td>{s.series}</td>
-                <td>{s.current ? <strong>{s.status}</strong> : <em>{s.status}</em>}</td>
+                <td>{s.current ? <strong>Stable - Supported</strong> : <em>Deprecated</em>}</td>
                 <td>{s.latest}</td>
                 <td>{s.date}</td>
               </tr>
@@ -101,10 +114,10 @@ export default function DownloadPage(): JSX.Element {
 
         {currentReleases.map((release) => (
           <div key={release.version}>
-            <h4>ActiveMQ Classic {release.version} ({release.releaseDate})</h4>
+            <h4>ActiveMQ Classic {release.version} ({formatNewsDate(release.releaseDate)})</h4>
             <p>
               <a href={release.releaseNotes}>Release Notes</a> |{' '}
-              <Link to={`/components/classic/download/${release.slug}`}>Release Page</Link> |{' '}
+              <Link to={release.url}>Release Page</Link> |{' '}
               <Link to="/components/classic/documentation">Documentation</Link> |{' '}
               Java compatibility: <strong>{release.javaVersion}</strong>
             </p>

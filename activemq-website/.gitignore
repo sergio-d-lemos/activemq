@@ -5,3 +5,6 @@ website/node/*
 website/node_modules
 website/node_modules/*
 website/build
+# Generated from the release pages by scripts/generate-release-news.ts
+website/blog/releases
+website/src/data/generated

@@ -1,5 +1,9 @@
 ---
 title: Apache.NMS.ActiveMQ 2.1.0 Release
+version: 2.1.0
+release_date: 2023-03-12
+release_notes: https://issues.apache.org/jira/secure/ReleaseNote.jspa?projectId=12311201&version=12352935
+shortDescription: Security enhancement for binary serialization by adding allow/deny list of types.
 ---
 
 # Apache.NMS.ActiveMQ 2.1.0 Release

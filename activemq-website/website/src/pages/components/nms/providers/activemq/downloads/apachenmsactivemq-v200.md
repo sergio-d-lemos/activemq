@@ -1,5 +1,9 @@
 ---
 title: Apache.NMS.ActiveMQ 2.0.0 Release
+version: 2.0.0
+release_date: 2022-07-07
+release_notes: https://issues.apache.org/jira/secure/ReleaseNote.jspa?projectId=12311201&version=12352047
+shortDescription: NMS 2.0 implementation and bug fixes.
 ---
 
 # Apache.NMS.ActiveMQ 2.0.0 Release
