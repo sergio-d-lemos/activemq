@@ -46,12 +46,8 @@ const config: Config = {
     [
       'classic',
       {
-        docs: {
-          path: 'docs',
-          routeBasePath: 'components/classic/documentation',
-          sidebarPath: './docs/sidebars.ts',
-          editUrl: 'https://github.com/apache/activemq-website/tree/main/',
-        },
+        // Each component's docs are a docs plugin instance, declared in plugins.
+        docs: false,
         blog: {
           routeBasePath: 'news',
           blogTitle: 'News',
@@ -83,10 +79,20 @@ const config: Config = {
     [
       '@docusaurus/plugin-content-docs',
       {
+        id: 'classic',
+        path: 'docs/classic',
+        routeBasePath: 'components/classic/documentation',
+        sidebarPath: './docs/classic/sidebars.ts',
+        editUrl: 'https://github.com/apache/activemq-website/tree/main/',
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
         id: 'nms',
-        path: 'nms-docs',
+        path: 'docs/nms',
         routeBasePath: 'components/nms/documentation',
-        sidebarPath: './nms-docs/sidebars.ts',
+        sidebarPath: './docs/nms/sidebars.ts',
         editUrl: 'https://github.com/apache/activemq-website/tree/main/',
       },
     ],
@@ -94,9 +100,9 @@ const config: Config = {
       '@docusaurus/plugin-content-docs',
       {
         id: 'cms',
-        path: 'cms-docs',
+        path: 'docs/cms',
         routeBasePath: 'components/cms/documentation',
-        sidebarPath: './cms-docs/sidebars.ts',
+        sidebarPath: './docs/cms/sidebars.ts',
         editUrl: 'https://github.com/apache/activemq-website/tree/main/',
       },
     ],

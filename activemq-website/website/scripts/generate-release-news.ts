@@ -43,9 +43,11 @@ const dataFile = path.join(siteDir, 'src/data/generated/releases.json');
 function timestamps(releases: Release[]): Map<Release, string> {
   const result = new Map<Release, string>();
   const byDate = new Map<string, Release[]>();
+
   for (const release of releases) {
     byDate.set(release.releaseDate, [...(byDate.get(release.releaseDate) ?? []), release]);
   }
+
   for (const [date, sameDay] of byDate) {
     // `releases` is sorted newest version first within a day.
     sameDay.forEach((release, index) => {
@@ -54,15 +56,18 @@ function timestamps(releases: Release[]): Map<Release, string> {
       result.set(release, `${date}T00:00:${seconds}`);
     });
   }
+
   return result;
 }
 
 function newsPost(release: Release, date: string): string {
   const summary = release.summary ?? `${release.title}.`;
+
   const links = [`See the [release page](${release.url}) for the downloads`];
   if (release.releaseNotes) {
     links.push(`the [release notes](${release.releaseNotes}) for the full list of changes`);
   }
+
   // JSON strings are valid YAML scalars and need no further escaping.
   const frontMatter = {
     slug: release.newsSlug,
@@ -73,9 +78,11 @@ function newsPost(release: Release, date: string): string {
     description: plainText(summary),
     release_page: release.url,
   };
+
   const yaml = Object.entries(frontMatter)
     .map(([key, value]) => `${key}: ${JSON.stringify(value)}`)
     .join('\n');
+
   return `---\n${yaml}\n---\n\n${summary}\n\n<!-- truncate -->\n\n${links.join(' and ')}.\n`;
 }
 
@@ -84,16 +91,19 @@ const dates = timestamps(releases);
 
 fs.rmSync(newsDir, {recursive: true, force: true});
 fs.mkdirSync(newsDir, {recursive: true});
+
 for (const release of releases) {
   const file = `${release.releaseDate}-${path.basename(release.newsSlug)}.md`;
   fs.writeFileSync(path.join(newsDir, file), newsPost(release, dates.get(release)!));
 }
 
 fs.mkdirSync(path.dirname(dataFile), {recursive: true});
+
 const data = releases.map((release) => ({
   ...release,
   summary: release.summary && plainText(release.summary),
 }));
+
 fs.writeFileSync(dataFile, `${JSON.stringify(data, null, 2)}\n`);
 
 console.log(`Generated news posts for ${releases.length} releases in ${path.relative(siteDir, newsDir)}`);

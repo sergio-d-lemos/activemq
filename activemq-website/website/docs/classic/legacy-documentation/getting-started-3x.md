@@ -293,13 +293,13 @@ ps -ef|grep activemq kill [PID] where [PID] is the process id of the ActiveMQ Cl
 Configuring ActiveMQ Classic
 ----------------------------
 
-The ActiveMQ Classic broker should now run. You can configure the broker by specifying an [Xml Configuration](xml-Community/FAQ/configuration.md "Xml Configuration") file as a parameter to the _activemq_ command.
+The ActiveMQ Classic broker should now run. You can configure the broker by specifying an [Xml Configuration](../using-activemq-classic/xml-configuration.md "Xml Configuration") file as a parameter to the _activemq_ command.
 
-See the [Initial Configuration](Using ActiveMQ/initial-Community/FAQ/configuration.md "Initial Configuration") for details of which jars you need to add to your classpath to start using ActiveMQ Classic in your Java code
+See the [Initial Configuration](../using-activemq-classic/initial-configuration.md "Initial Configuration") for details of which jars you need to add to your classpath to start using ActiveMQ Classic in your Java code
 
-If you want to use JNDI to connect to your JMS provider then please view the [JNDI Support](Connectivity/Containers/jndi-Community/support.md "JNDI Support"). If you are a Spring user you should read about [Spring Support](Connectivity/Containers/spring-Community/support.md "Spring Support")
+If you want to use JNDI to connect to your JMS provider then please view the [JNDI Support](../connectivity/containers/jndi-support.md "JNDI Support"). If you are a Spring user you should read about [Spring Support](../connectivity/containers/spring-support/index.md "Spring Support")
 
-After the installation, ActiveMQ Classic is running with a basic configuration. For details on configuring options, please see refer to the [Configuration](Community/FAQ/configuration.md "Configuration") section.
+After the installation, ActiveMQ Classic is running with a basic configuration. For details on configuring options, please see refer to the [Configuration](../overview/faq/configuration "Configuration") section.
 
 Additional Resources
 --------------------

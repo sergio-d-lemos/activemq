@@ -15,7 +15,6 @@ features/destination-features/virtual-destinations.md:135  tcp://localhost:61617
 features/performance/index.md:37  support#commercial-support
 features/performance/performance-report.md:11  support#commercial-support
 features/persistence/jdbc-support/index.md:26  contact
-features/persistence/kaha-persistence/test.md:39  irc://irc.codehaus.org/activemq
 index.md:12  maven/apidocs/
 legacy-documentation/activemq-artemis-roadmap.md:28  components/artemis/documentation/latest/using-jms
 legacy-documentation/activemq-artemis-roadmap.md:30  components/artemis/documentation/latest/clusters

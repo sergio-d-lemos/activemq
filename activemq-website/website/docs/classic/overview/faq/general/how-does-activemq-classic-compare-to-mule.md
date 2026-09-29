@@ -27,5 +27,5 @@ Additional ESB requirements, such as support for a distributed architecture and 
 
 #### Commercial Support, Copyright and License
 
-Both Mule and ActiveMQ Classic have commercial support available from companies dedicated to the technologies. Commercial support options for ActiveMQ Classic are listed [here](../../../support.md).
+Both Mule and ActiveMQ Classic have commercial support available from companies dedicated to the technologies. Commercial support options for ActiveMQ Classic are listed [here](/support).
 
