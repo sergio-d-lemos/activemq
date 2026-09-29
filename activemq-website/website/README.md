@@ -50,15 +50,40 @@ served below `/components/classic/download/` by a dedicated instance of the
 pages plugin (see `docusaurus.config.ts`). The file name is the URL, e.g.
 `classic-06-02-11.mdx` is served as `/components/classic/download/classic-06-02-11`.
 
-To publish an ActiveMQ Classic release, create its page with:
+To publish an ActiveMQ Classic release, add its page to
+`src/data/releases/classic/`, named after the zero-padded version (e.g.
+`classic-06-02-11.mdx` for 6.2.11). Copying the page of the previous release of
+the series is the easiest way to start:
 
-```bash
-pnpm new-release classic 6.2.11 [--date yyyy-mm-dd] [--java 17+] [--summary "..."] [--dry-run]
+```mdx
+---
+title: ActiveMQ 6.2.11 Release
+version: 6.2.11
+release_date: 2026-10-01
+java_version: 17+
+release_notes: https://github.com/apache/activemq/releases/tag/activemq-6.2.11
+shortDescription: ActiveMQ 6.2.11 is a maintenance release on the 6.2.x series.
+---
+
+import ClassicRelease from '@site/src/components/ClassicRelease';
+
+<ClassicRelease frontMatter={frontMatter}>
+
+Apache ActiveMQ 6.2.11 was released on October 1st, 2026.
+
+This is a maintenance release on the 6.2.x series.
+It especially includes:
+- ...
+
+You can find details on the [release notes](https://github.com/apache/activemq/releases/tag/activemq-6.2.11).
+
+</ClassicRelease>
 ```
 
-then list the highlights of the release on the page, picking them from the
-GitHub changes the command adds to it as a comment. When starting a new series,
-also update `src/data/currentReleases.ts`.
+The `release_date` is the day the release is announced, and the highlights can
+be picked from the "What's Changed" section of the GitHub release. When starting
+a new series, also update `src/data/currentReleases.ts`: add the new series
+(e.g. `'6.3.'`) and remove the one it replaces.
 
 NMS releases are published the same way, by adding a page with the same front
 matter under `src/pages/components/nms/providers/activemq/downloads/`, or an

@@ -22,7 +22,7 @@ import {currentReleasePrefixes} from '@site/src/data/currentReleases';
 import {isCurrentRelease} from '@site/src/utils/releases';
 import VerifyDownloads from '../VerifyDownloads';
 
-/** The front matter of a Classic release page, as written by `pnpm new-release`. */
+/** The front matter of a Classic release page. */
 export interface ClassicReleaseFrontMatter {
   title: string;
   version: string;
