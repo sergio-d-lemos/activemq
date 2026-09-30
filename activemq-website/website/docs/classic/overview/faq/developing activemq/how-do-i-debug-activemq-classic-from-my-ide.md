@@ -1,9 +1,9 @@
 ---
-title: "How do I debug ActiveMQ Classic from my IDE"
+title: "How do I debug ActiveMQ from my IDE"
 slug: /how-do-i-debug-activemq-classic-from-my-ide
 ---
 
- [FAQ](..) > [Developing ActiveMQ Classic](.) > [How do I debug ActiveMQ Classic from my IDE](how-do-i-debug-activemq-classic-from-my-ide)
+ [FAQ](..) > [Developing ActiveMQ](.) > [How do I debug ActiveMQ from my IDE](how-do-i-debug-activemq-classic-from-my-ide)
 
 
 One option is to run your broker in the same JVM as your application; see [How To Unit Test JMS Code](how-to-unit-test-jms-code).

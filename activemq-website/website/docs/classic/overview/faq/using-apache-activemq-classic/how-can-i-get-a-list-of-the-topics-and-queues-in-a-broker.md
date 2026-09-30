@@ -3,7 +3,7 @@ title: "How can I get a list of the topics and queues in a broker"
 slug: /how-can-i-get-a-list-of-the-topics-and-queues-in-a-broker
 ---
 
- [FAQ](..) > [Using Apache ActiveMQ Classic](.) > [How can I get a list of the topics and queues in a broker](how-can-i-get-a-list-of-the-topics-and-queues-in-a-broker)
+ [FAQ](..) > [Using Apache ActiveMQ](.) > [How can I get a list of the topics and queues in a broker](how-can-i-get-a-list-of-the-topics-and-queues-in-a-broker)
 
 
 How can I get a list of the topics and queues in a broker?

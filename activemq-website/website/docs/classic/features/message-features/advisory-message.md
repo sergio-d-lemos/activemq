@@ -4,7 +4,7 @@ slug: /advisory-message
 ---
 
 
-ActiveMQ Classic supports advisory messages which allows you to watch the system using regular JMS messages. Currently we have advisory messages that support:
+ActiveMQ supports advisory messages which allows you to watch the system using regular JMS messages. Currently we have advisory messages that support:
 
 *   consumers, producers and connections starting and stopping
 *   temporary destinations being created and destroyed
@@ -108,7 +108,7 @@ Advisory Topics|Description|Properties|Data Structure|Default|PolicyEntry Proper
 
 ### Network bridge advisories
 
-Starting with ActiveMQ Classic version 5.5 you can watch advisory topics for events related to the status of network bridges. You can get advisory messages when the network bridge is started or stopped.
+Starting with ActiveMQ version 5.5 you can watch advisory topics for events related to the status of network bridges. You can get advisory messages when the network bridge is started or stopped.
 
 Advisory Topics|Description|Properties|Data Structure|Default
 ---|---|---|---
@@ -116,7 +116,7 @@ Advisory Topics|Description|Properties|Data Structure|Default
 
 ### Enabling Advisories Disabled by Default
 
-The advisories that are not turned on by default (see the last column) can be enabled on a `PolicyEntry` in the ActiveMQ Classic Broker Configuration, e.g., to enable a message consumed advisory you can configure the following:
+The advisories that are not turned on by default (see the last column) can be enabled on a `PolicyEntry` in the ActiveMQ Broker Configuration, e.g., to enable a message consumed advisory you can configure the following:
 ```
 <destinationPolicy>
     <policyMap>

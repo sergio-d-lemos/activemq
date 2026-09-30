@@ -8,7 +8,7 @@ Configuring network topologies can be quite tedious when the number of brokers i
 
 > **Note**
 > 
-> The basic feature was added to satisfy [AMQ-358](https://issues.apache.org/activemq/browse/AMQ-358). There are known problems and limitations with this implementation. These deficiencies have been addressed in [AMQ-1587](https://issues.apache.org/activemq/browse/AMQ-1587). The features discussed on this page require the patch attached to JIRA issue [AMQ-1587](https://issues.apache.org/activemq/browse/AMQ-1587). This patch should apply cleanly to the ActiveMQ Classic 5.0.0 release or the current development trunk.
+> The basic feature was added to satisfy [AMQ-358](https://issues.apache.org/activemq/browse/AMQ-358). There are known problems and limitations with this implementation. These deficiencies have been addressed in [AMQ-1587](https://issues.apache.org/activemq/browse/AMQ-1587). The features discussed on this page require the patch attached to JIRA issue [AMQ-1587](https://issues.apache.org/activemq/browse/AMQ-1587). This patch should apply cleanly to the ActiveMQ 5.0.0 release or the current development trunk.
 
 LDAP v3 Directory Server Compliance
 -----------------------------------
@@ -53,7 +53,7 @@ Topology|LDAP v3 Directory Structure|Entry
 ---|---|---
 ![](/img/Example1-Topology.jpg)|![](/img/Example1-DirectoryStructure.jpg)|![](/img/Example1-Entry.jpg)
 
-### ActiveMQ Classic Configuration (activemq.xml)
+### ActiveMQ Configuration (activemq.xml)
 
 **srv-a.mydomain.com**
 ```
@@ -95,7 +95,7 @@ Topology|LDAP v3 Directory Structure
 ---|---
 ![](/img/Example2-Topology.jpg)|![](/img/Example2-DirectoryStructure.jpg)
 
-### ActiveMQ Classic Configuration (activemq.xml)
+### ActiveMQ Configuration (activemq.xml)
 
 **srv-a.mydomain.com**
 ```

@@ -6,7 +6,7 @@ slug: /features
 Apache ActiveMQ is packed with features; to get an idea you might want to look at the [Features Overview](features-overview) otherwise here is the list of all of the main features...
 
 *   [Active Groups](active-groups)
-*   [ActiveMQ Classic Real Time](activemq-classic-real-time)
+*   [ActiveMQ Real Time](activemq-classic-real-time)
     *   [Broadcasting](broadcasting)
     *   [Group Membership](group-membership)
     *   [Life Cycle](life-cycle)
@@ -64,7 +64,7 @@ Apache ActiveMQ is packed with features; to get an idea you might want to look a
     *   [Producer Flow Control](producer-flow-control)
     *   [Total Ordering](total-ordering)
 *   [Message Features](message-features)
-    *   [ActiveMQ Classic Message Properties](activemq-classic-message-properties)
+    *   [ActiveMQ Message Properties](activemq-classic-message-properties)
     *   [Advisory Message](advisory-message)
     *   [Blob Messages](blob-messages)
     *   [Delay and Schedule Message Delivery](delay-and-schedule-message-delivery)
@@ -91,7 +91,7 @@ Apache ActiveMQ is packed with features; to get an idea you might want to look a
     *   [New Features in 5.17](new-features-in-517)
     *   [New Features in 6.0](new-features-in-60)
 *   [Performance](performance)
-    *   [ActiveMQ Classic Performance Module Users Manual](activemq-classic-performance-module-users-manual)
+    *   [ActiveMQ Performance Module Users Manual](activemq-classic-performance-module-users-manual)
         *   [sample report](sample-report)
     *   [Load Testing with Camel](load-testing-with-camel)
     *   [Performance report](performance-report)

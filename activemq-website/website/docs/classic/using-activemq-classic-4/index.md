@@ -1,13 +1,13 @@
 ---
-title: "Using ActiveMQ Classic 4"
+title: "Using ActiveMQ 4"
 slug: /using-activemq-classic-4
 ---
 
-To help you get started using Apache ActiveMQ Classic you may wish to start off with the [Getting Started](getting-started) guide or the [Configuring Transports](configuring-transports). Otherwise here is a complete list of the guides.
+To help you get started using Apache ActiveMQ you may wish to start off with the [Getting Started](getting-started) guide or the [Configuring Transports](configuring-transports). Otherwise here is a complete list of the guides.
 
 *   [Configuring Brokers](configuring-brokers)
 *   [Configuring Transports](configuring-transports)
-    *   [ActiveMQ Classic 4 Connection URIs](activemq-4-connection-uris)
+    *   [ActiveMQ 4 Connection URIs](activemq-4-connection-uris)
         *   [Broker Configuration URI](broker-configuration-uri)
             *   [Broker Properties URI](broker-properties-uri)
             *   [Broker URI](broker-uri)
@@ -26,12 +26,12 @@ To help you get started using Apache ActiveMQ Classic you may wish to start off 
         *   [TCP Transport Reference](tcp-transport-reference)
         *   [UDP Transport Reference](udp-transport-reference)
         *   [VM Transport Reference](vm-transport-reference)
-    *   [ActiveMQ Classic InactivityMonitor](activemq-classic-inactivitymonitor)
+    *   [ActiveMQ InactivityMonitor](activemq-classic-inactivitymonitor)
     *   [ZeroConf Transport Reference](zeroconf-transport-reference)
         *   [ZeroConf](zeroconf)
 *   [Examples](examples)
 *   [Getting Started](getting-started)
-    *   [Monitoring ActiveMQ Classic](monitoring-activemq-classic)
+    *   [Monitoring ActiveMQ](monitoring-activemq-classic)
 *   [Hello World](hello-world)
 *   [Initial Configuration](../overview/faq/configuration)
 *   [Installation](installation)

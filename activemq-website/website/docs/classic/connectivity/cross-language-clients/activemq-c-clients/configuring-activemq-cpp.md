@@ -4,7 +4,7 @@ slug: /configuring-activemq-cpp
 ---
 
 
-The configuration of ActiveMQ Classic is so slick, we decided to take a similar approach with ActiveMQ-CPP. All configuration is achieved via URI-encoded parameters, either on the connection or destinations. Through the URIs, you can configure virtually every facet of your ActiveMQ-CPP client. The tables below show the comprehensive set of parameters.
+The configuration of ActiveMQ is so slick, we decided to take a similar approach with ActiveMQ-CPP. All configuration is achieved via URI-encoded parameters, either on the connection or destinations. Through the URIs, you can configure virtually every facet of your ActiveMQ-CPP client. The tables below show the comprehensive set of parameters.
 
 Connection URI Parameters
 -----------------------------

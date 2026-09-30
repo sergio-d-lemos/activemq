@@ -7,7 +7,7 @@ slug: /optimized-acknowledgement
 Overview
 --------
 
-ActiveMQ Classic supports acknowledging a range of messages in a single batch operations. This option is disabled by default but can be used to improve throughput in some circumstances as it decreases load on the broker. Consider enabling it for your performance test scenario to see if it is applicable.
+ActiveMQ supports acknowledging a range of messages in a single batch operations. This option is disabled by default but can be used to improve throughput in some circumstances as it decreases load on the broker. Consider enabling it for your performance test scenario to see if it is applicable.
 
 ### Enabling Optimized Acknowledgements using a Connection URI
 ```

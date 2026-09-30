@@ -3,7 +3,7 @@ title: "How do I disable logging"
 slug: /how-do-i-disable-logging
 ---
 
- [FAQ](..) > [Using Apache ActiveMQ Classic](.) > [How do I disable logging](how-do-i-disable-logging)
+ [FAQ](..) > [Using Apache ActiveMQ](.) > [How do I disable logging](how-do-i-disable-logging)
 
 
 How do I disable logging?

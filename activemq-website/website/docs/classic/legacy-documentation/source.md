@@ -3,7 +3,7 @@ title: "Source"
 slug: /source
 ---
 
-ActiveMQ Classic source code
+ActiveMQ source code
 ============================
 
 Web Browsing of the git Repo

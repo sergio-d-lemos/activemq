@@ -17,7 +17,21 @@
  * under the License.
  */
 
+/**
+ * Release streams whose newest release is listed on the download page, and
+ * downloaded from the mirrors rather than from the archive.
+ */
 export const currentReleasePrefixes: string[] = [
+  '6.3.',
   '6.2.',
+  '5.19.',
+];
+
+/**
+ * Current release streams which are still actively maintained, shown as
+ * "Active" on the download page. The other ones are shown as "Inactive".
+ */
+export const activeReleasePrefixes: string[] = [
+  '6.3.',
   '5.19.',
 ];

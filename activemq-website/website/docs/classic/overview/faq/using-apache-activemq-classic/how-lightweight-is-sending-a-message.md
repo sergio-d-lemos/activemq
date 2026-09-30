@@ -3,10 +3,10 @@ title: "How lightweight is sending a message"
 slug: /how-lightweight-is-sending-a-message
 ---
 
- [FAQ](..) > [Using Apache ActiveMQ Classic](.) > [How lightweight is sending a message](how-lightweight-is-sending-a-message)
+ [FAQ](..) > [Using Apache ActiveMQ](.) > [How lightweight is sending a message](how-lightweight-is-sending-a-message)
 
 
-### For ActiveMQ Classic 3.x/4.x
+### For ActiveMQ 3.x/4.x
 
 It depends.
 

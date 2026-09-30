@@ -1,9 +1,9 @@
 ---
-title: "How do I use Ivy with ActiveMQ Classic"
+title: "How do I use Ivy with ActiveMQ"
 slug: /how-do-i-use-ivy-with-activemq-classic
 ---
 
- [FAQ](..) > [Using Apache ActiveMQ Classic](.) > [How do I use Ivy with ActiveMQ Classic](how-do-i-use-ivy-with-activemq-classic)
+ [FAQ](..) > [Using Apache ActiveMQ](.) > [How do I use Ivy with ActiveMQ](how-do-i-use-ivy-with-activemq-classic)
 
 ```
 <ivyconf>

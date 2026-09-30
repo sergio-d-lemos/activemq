@@ -5,19 +5,45 @@ slug: /virtual-threads
 
 ### Virtual Threads support 
 
-ActiveMQ Classic support for Virtual Threads is in Technology Preview stage.
+ActiveMQ support for Virtual Threads is in Technology Preview stage. Virtual Thread support is implemented using multi-release jar, so no special changes to the distribution are required.
 
 ### Virtual Threads benefits
 
- * Performance on-par with reactive coding approaches
+ * Performance on-par (or better) than reactive coding approaches
  * JDK-based option for peak concurrency performance
  * Automatically scales based on need and detected CPU cores
  * Less configuration tuning required for administrators
  * Easier to code extensions
+ * Scales connection count
+ * Scales destination count
 
-### Virtual Threads warning
+### Configuration
 
-JDK 21 support for Virtual Threads can lead to thread pinning in _synchronized_ code blocks, which negates the performance benefit from using virtual threads and may lead to other issues. 
+To enable Virtual Threads in ActiveMQ 6.3.x (and higher)
+
+1. Run Apache ActiveMQ 6.3.0 (or higher)
+2. Run with Java JDK 25 (or newer)
+3. Edit conf/activemq.xml
+
+    <broker ... virtualThreadTaskRunner="true" .. >
+
+4. Run ActiveMQ and confirm with the following log message:
+
+    INFO | VirtualThreadExecutor initialized name:ActiveMQ BrokerService[localhost] Task
+
+NOTE: The log message may be removed in the future
+
+### ActiveMQ Virtual Thread Implementation Progress 
+
+Virtual Thread support was released with ActiveMQ v6.3.0. User feedback is welcome! Please open a GitHub issue with questions and comments.
+
+JIRA|Status|Target Version|Completed Version|Feature|Notes
+---|---|---
+[AMQ-9394](https://issues.apache.org/jira/browse/AMQ-9394) | PR [#1172](https://github.com/apache/activemq/pull/1172) | 6.2.0 | 6.3.0 | Task Runner Factory | Tech Preview support to allow Virtual Thread Executor Service
+
+### Reference: Running with Virtual Threads
+
+JDK 25 (or newer) should always be used when running Virtual Threads to avoid thread pinning.
 
 Technical factors:
 
@@ -30,31 +56,3 @@ Technical factors:
 
 JDK thread pinning improvement:
 ref:  https://mail.openjdk.org/pipermail/loom-dev/2024-May/006632.html
-
-### Configuration
-
-To enable Virtual Threads in ActiveMQ Classic 6.x (and higher)
-
-1. Checkout activemq source code from git
-2. Build using JDK 21 (Virtual Thread support will be added automatically)
-3. Replace the lib/activemq-client_version_.jar with the lib/jdk21/activemq-client-jdk21-_version.jar
-3. Edit conf/activemq.xml
-
-    <broker ... virtualThreadTaskRunner="true" .. >
-
-4. Run ActiveMQ Classic and confirm with the following log message:
-
-    INFO | VirtualThreadExecutor initialized name:ActiveMQ BrokerService[localhost] Task
-
-NOTE: The log message may be removed in the future
-
-### ActiveMQ Classic Virtual Thread Implementation Progress 
-
-The implementation approach is subject to change. Be sure to verify features in Release notes. 
-
-User feedback is welcome! Please comment on the JIRAs with questions and comments.
-
-JIRA|Status|Target Version|Completed Version|Feature|Notes
----|---|---
-[AMQ-9394](https://issues.apache.org/jira/browse/AMQ-9394) | PR [#1172](https://github.com/apache/activemq/pull/1172) | 6.2.0 | | Task Runner Factory | Tech Preview support to allow Virtual Thread Executor Service
-

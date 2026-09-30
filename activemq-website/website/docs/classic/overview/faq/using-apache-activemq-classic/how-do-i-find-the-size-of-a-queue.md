@@ -3,12 +3,12 @@ title: "How do I find the Size of a Queue"
 slug: /how-do-i-find-the-size-of-a-queue
 ---
 
- [FAQ](..) > [Using Apache ActiveMQ Classic](.) > [How do I find the Size of a Queue](how-do-i-find-the-size-of-a-queue)
+ [FAQ](..) > [Using Apache ActiveMQ](.) > [How do I find the Size of a Queue](how-do-i-find-the-size-of-a-queue)
 
 
 How do I check on the size of the queue? I know it's not JMS standard, but most JMS implementations have a way to do this.
 
-You can view the queue depth using the MBeans in ActiveMQ Classic 5.x. Use any JMX management console to see the statistics. See [How can I monitor ActiveMQ Classic](how-can-i-monitor-activemq-classic).
+You can view the queue depth using the MBeans in ActiveMQ 5.x. Use any JMX management console to see the statistics. See [How can I monitor ActiveMQ](how-can-i-monitor-activemq-classic).
 
 You can also browse the contents of a queue using the JMS [QueueBrowser](http://java.sun.com/j2ee/1.4/docs/api/javax/jms/QueueBrowser.html).
 

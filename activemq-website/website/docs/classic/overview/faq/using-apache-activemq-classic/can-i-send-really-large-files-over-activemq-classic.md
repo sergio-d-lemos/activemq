@@ -1,14 +1,14 @@
 ---
-title: "Can I send really large files over ActiveMQ Classic?"
+title: "Can I send really large files over ActiveMQ?"
 slug: /can-i-send-really-large-files-over-activemq-classic
 ---
 
- [FAQ](..) > [Using Apache ActiveMQ Classic](.) > [Can I send really large files over ActiveMQ Classic?](can-i-send-really-large-files-over-activemq-classic)
+ [FAQ](..) > [Using Apache ActiveMQ](.) > [Can I send really large files over ActiveMQ?](can-i-send-really-large-files-over-activemq-classic)
 
 
-Can I send really large files over ActiveMQ Classic?
+Can I send really large files over ActiveMQ?
 ----------------------------------------------------
-If you are using ActiveMQ Classic 4.2 or later we highly recommend you use [Blob Messages](blob-messages) which implements an out-of-band transport of the messages. It allows the files to be hosted on external http/ftp sites if required and can support either direct publisher <-> subscriber communication or publisher -> broker/file server -> consumer messaging.
+If you are using ActiveMQ 4.2 or later we highly recommend you use [Blob Messages](blob-messages) which implements an out-of-band transport of the messages. It allows the files to be hosted on external http/ftp sites if required and can support either direct publisher <-> subscriber communication or publisher -> broker/file server -> consumer messaging.
 
 For 4.1 or ealier large file transfer is achieved using [JMS Streams](jms-streams).
 

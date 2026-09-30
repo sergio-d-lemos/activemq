@@ -3,7 +3,7 @@ title: "I see NC_ client-ids, what does that mean"
 slug: /i-see-nc-client-ids-what-does-that-mean
 ---
 
- [FAQ](..) > [Using Apache ActiveMQ Classic](.) > [I see NC_ client-ids, what does that mean](i-see-nc-client-ids-what-does-that-mean)
+ [FAQ](..) > [Using Apache ActiveMQ](.) > [I see NC_ client-ids, what does that mean](i-see-nc-client-ids-what-does-that-mean)
 
 
 Durable subscription ClientIds and SubscriptionNames using the **NC** prefix are the result of durable subscriptions in a [Networks of Brokers](networks-of-brokers).  

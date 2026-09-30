@@ -19,11 +19,13 @@
 
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faDownload} from '@fortawesome/free-solid-svg-icons';
 import releases from '@site/src/data/generated/releases.json';
 import {formatDate} from '@site/src/utils/formatDate';
-import {currentReleases} from '@site/src/utils/releases';
+import {currentReleases, isCurrentRelease} from '@site/src/utils/releases';
 import VerifyDownloads from '@site/src/components/VerifyDownloads';
-import {currentReleasePrefixes} from '@site/src/data/currentReleases';
+import {activeReleasePrefixes, currentReleasePrefixes} from '@site/src/data/currentReleases';
 
 // Generated from the release pages by scripts/generate-release-news.ts, newest first.
 const classicReleases = releases.filter((release) => release.component === 'classic');
@@ -31,46 +33,66 @@ const classicReleases = releases.filter((release) => release.component === 'clas
 /** The newest release of each current series, in the order they are declared. */
 const currentClassicReleases = currentReleases(classicReleases, currentReleasePrefixes);
 
-type SeriesStatus = {
-  series: string;
-  latest: string;
-  date: string;
-  current: boolean;
-};
+/** Past series still listed in the summary table, after the current ones. */
+const summaryPastReleasePrefixes = ['5.18.'];
 
-// Series whose releases predate the release_date front matter, so cannot be
-// derived from the release pages.
-const legacySeries: SeriesStatus[] = [
-  { series: '5.14.x', latest: '5.14.5', date: 'Apr 25th, 2017', current: false },
-  { series: '5.13.x', latest: '5.13.5', date: 'Dec 16th, 2016', current: false },
-  { series: '5.12.x', latest: '5.12.3', date: 'Feb 3rd, 2016', current: false },
-  { series: '5.11.x', latest: '5.11.4', date: 'Feb 3rd, 2016', current: false },
-];
+/** The newest release of each series of the summary table. */
+const summaryReleases = currentReleases(classicReleases, [...currentReleasePrefixes, ...summaryPastReleasePrefixes]);
 
 function seriesOf(version: string): string {
   return version.split('.').slice(0, 2).join('.');
 }
 
-/** The newest release of every series, newest series first. */
-const seriesStatus: SeriesStatus[] = [];
-for (const release of classicReleases) {
-  const series = `${seriesOf(release.version)}.x`;
-  if (!seriesStatus.some((status) => status.series === series)) {
-    seriesStatus.push({
-      series,
-      latest: release.version,
-      date: formatDate(release.releaseDate),
-      current: currentReleasePrefixes.includes(`${seriesOf(release.version)}.`),
-    });
-  }
+function isActive(version: string): boolean {
+  return isCurrentRelease(version, activeReleasePrefixes);
 }
-seriesStatus.sort((a, b) => compareSeries(b.series, a.series));
-seriesStatus.push(...legacySeries);
 
-function compareSeries(a: string, b: string): number {
-  const [aMajor, aMinor] = a.split('.').map(Number);
-  const [bMajor, bMinor] = b.split('.').map(Number);
-  return aMajor - bMajor || aMinor - bMinor;
+function Status({version}: {version: string}) {
+  return isActive(version) ? <strong>Active</strong> : <em>Inactive</em>;
+}
+
+/** Current releases are downloaded from the mirrors, older ones from the archive. */
+function binaryUrl(version: string, extension: 'zip' | 'tar.gz'): string {
+  const file = `apache-activemq-${version}-bin.${extension}`;
+  return isCurrentRelease(version, currentReleasePrefixes)
+    ? `https://www.apache.org/dyn/closer.cgi?filename=/activemq/${version}/${file}&action=download`
+    : `https://archive.apache.org/dist/activemq/${version}/${file}`;
+}
+
+type SeriesSchedule = {
+  series: string;
+  brokerJms: string;
+  clientJms: string;
+  java: string;
+  spring: string;
+  logging: string;
+  web: string;
+  /** Latest release of the series, when it has no release page. */
+  last?: string;
+  next?: string;
+  eta?: string;
+};
+
+const schedule: SeriesSchedule[] = [
+  { series: '6.3', brokerJms: 'Jakarta JMS 2/3.1 (partial)', clientJms: 'Jakarta JMS 2/3.1', java: '[17,26)', spring: '7.0.8', logging: 'Log4j 2.26.1/Slf4j 2.0.18', web: 'Jetty 12.1.12', next: '6.3.3' },
+  { series: '6.2', brokerJms: 'Jakarta JMS 2/3.1 (partial)', clientJms: 'Jakarta JMS 2/3.1', java: '[17,23)', spring: '6.2.19', logging: 'Log4j 2.25.4/Slf4j 2.0.17', web: 'Jetty 11.0.26' },
+  { series: '6.1', brokerJms: 'Jakarta JMS 2/3.1 (partial)', clientJms: 'Jakarta JMS 2/3.1', java: '[17,23)', spring: '6.1.21', logging: 'Log4j 2.25.2/Slf4j 2.0.17', web: 'Jetty 11.0.26' },
+  { series: '6.0', brokerJms: 'Jakarta JMS 2/3.1 (partial)', clientJms: 'Jakarta JMS 2/3.1', java: '[17,23)', spring: '6.0.17', logging: 'Log4j 2.22.0/Slf4j 2.0.9', web: 'Jetty 11.0.18' },
+  { series: '5.19', brokerJms: 'Javax JMS 1.1', clientJms: 'Javax JMS 1.1/Jakarta JMS 2', java: '[11,23)', spring: '5.3.39', logging: 'Log4j 2.25.3/Slf4j 2.0.17', web: 'Jetty 9.4.58.v20250814', next: '5.19.12' },
+  { series: '5.18', brokerJms: 'Javax JMS 1.1', clientJms: 'Javax JMS 1.1/Jakarta JMS 2', java: '[11,23)', spring: '5.3.39', logging: 'Log4j 2.24.1/Slf4j 2.0.13', web: 'Jetty 9.4.57.v20241219' },
+  { series: '5.17', brokerJms: 'Javax JMS 1.1', clientJms: 'Javax JMS 1.1', java: '[11,23)', spring: '5.3.33', logging: 'Log4j 2.23.1/Slf4j 1.7.36', web: 'Jetty 9.4.54.v20240208' },
+  { series: '5.16', brokerJms: 'Javax JMS 1.1', clientJms: 'Javax JMS 1.1', java: '1.8', spring: '4.3.30.RELEASE', logging: 'Reload4j 1.2.24/Slf4j 1.7.36', web: 'Jetty 9.4.53.v20231009' },
+  { series: '5.15', brokerJms: 'Javax JMS 1.1', clientJms: 'Javax JMS 1.1', java: '1.8', spring: '4.3.30.RELEASE', logging: 'Log4j 1.2.17/Slf4j 1.7.32', web: 'Jetty 9.4.39.v20210325' },
+  { series: '5.14', brokerJms: 'Javax JMS 1.1', clientJms: 'Javax JMS 1.1', java: '1.7', spring: '4.1.9.RELEASE', logging: 'Log4j 1.2.17/Slf4j 1.7.13', web: 'Jetty 9.2.13.v20150730', last: '5.14.5' },
+  { series: '5.13', brokerJms: 'Javax JMS 1.1', clientJms: 'Javax JMS 1.1', java: '1.7', spring: '4.1.9.RELEASE', logging: 'Log4j 1.2.17/Slf4j 1.7.13', web: 'Jetty 9.2.13.v20150730', last: '5.13.5' },
+  { series: '5.12', brokerJms: 'Javax JMS 1.1', clientJms: 'Javax JMS 1.1', java: '1.7', spring: '3.2.16.RELEASE', logging: 'Log4j 1.2.17/Slf4j 1.7.10', web: 'Jetty 9.2.6.v20141205', last: '5.12.3' },
+  { series: '5.11', brokerJms: 'Javax JMS 1.1', clientJms: 'Javax JMS 1.1', java: '1.7', spring: '3.2.16.RELEASE', logging: 'Log4j 1.2.17/Slf4j 1.7.10', web: 'Jetty 9.2.6.v20141205', last: '5.11.4' },
+  { series: '5.10', brokerJms: 'Javax JMS 1.1', clientJms: 'Javax JMS 1.1', java: '1.6', spring: '3.2.8.RELEASE', logging: 'Log4j 1.2.17/Slf4j 1.7.5', web: 'Jetty 7.6.9.v20130131' },
+];
+
+/** The latest release of a series, from its release pages. */
+function lastRelease({series, last}: SeriesSchedule): string {
+  return classicReleases.find((release) => seriesOf(release.version) === series)?.version ?? last ?? '';
 }
 
 export default function DownloadPage() {
@@ -78,13 +100,6 @@ export default function DownloadPage() {
     <Layout title="Download ActiveMQ">
       <div className="container margin-vert--lg">
         <h1>Download ActiveMQ</h1>
-        <p>
-          These are the current ActiveMQ releases. For prior releases, please see the{' '}
-          <Link to="/components/classic/documentation/download-archives">past releases</Link> page.
-        </p>
-        <p>
-          It is important to <a href="#verify-the-integrity-of-downloads">verify the integrity</a> of the files you download.
-        </p>
 
         <h4>Summary Table of ActiveMQ Series Status</h4>
         <table>
@@ -94,27 +109,75 @@ export default function DownloadPage() {
               <th>Status</th>
               <th>Latest Patch Version</th>
               <th>Date of Release</th>
+              <th>Unix</th>
+              <th>Win64</th>
             </tr>
           </thead>
           <tbody>
-            {seriesStatus.map((s) => (
-              <tr key={s.series} style={{backgroundColor: s.current ? '#dff0d8' : '#f0f0f0'}}>
-                <td>{s.series}</td>
-                <td>{s.current ? <strong>Stable - Supported</strong> : <em>Deprecated</em>}</td>
-                <td>{s.latest}</td>
-                <td>{s.date}</td>
+            {summaryReleases.map((release) => (
+              <tr key={release.version} style={{backgroundColor: isActive(release.version) ? '#dff0d8' : '#f0f0f0'}}>
+                <td>{seriesOf(release.version)}.x</td>
+                <td><Status version={release.version} /></td>
+                <td>{release.version}</td>
+                <td>{formatDate(release.releaseDate)}</td>
+                <td><a href={binaryUrl(release.version, 'tar.gz')} title="Download UNIX"><FontAwesomeIcon icon={faDownload} /></a></td>
+                <td><a href={binaryUrl(release.version, 'zip')} title="Download Win64"><FontAwesomeIcon icon={faDownload} /></a></td>
               </tr>
             ))}
           </tbody>
         </table>
 
+        <p>
+          These are the current ActiveMQ releases. For prior releases, please see the{' '}
+          <Link to="/components/classic/documentation/download-archives">past releases</Link> page.
+        </p>
+        <p>
+          It is important to <a href="#verify-the-integrity-of-downloads">verify the integrity</a> of the files you download.
+        </p>
+
         <h5>Status Descriptions</h5>
-        <p><strong>Stable - Supported</strong>: Actively supported and recommended for production use. This version receives regular updates, including new features, security patches, and bug fixes.</p>
-        <p><strong>Deprecated</strong>: Reached end-of-life and is no longer maintained. Deprecated versions do not receive updates. Not recommended for new deployments; users are encouraged to upgrade to a stable version for ongoing support.</p>
+        <p><strong>Active</strong>: Actively supported and recommended for production use. This version receives regular community updates, including new features, security patches, and bug fixes.</p>
+        <p><strong>Inactive</strong>: Reached end-of-life and is no longer actively maintained. Inactive versions do not receive updates. Not recommended for new deployments; users are encouraged to upgrade to an active version for ongoing community releases.</p>
+
+        <h4>Schedule &amp; Status</h4>
+        <table>
+          <thead>
+            <tr>
+              <th>Series</th>
+              <th>Broker JMS API Support</th>
+              <th>Client JMS API Client</th>
+              <th>Java Version</th>
+              <th>Spring Version</th>
+              <th>Logging Support</th>
+              <th>Web Support</th>
+              <th>Status</th>
+              <th>Last</th>
+              <th>Next</th>
+              <th>ETA</th>
+            </tr>
+          </thead>
+          <tbody>
+            {schedule.map((s) => (
+              <tr key={s.series}>
+                <td>{s.series}.x</td>
+                <td>{s.brokerJms}</td>
+                <td>{s.clientJms}</td>
+                <td>{s.java}</td>
+                <td>{s.spring}</td>
+                <td>{s.logging}</td>
+                <td>{s.web}</td>
+                <td><Status version={`${s.series}.`} /></td>
+                <td>{lastRelease(s)}</td>
+                <td>{s.next}</td>
+                <td>{s.eta}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
 
         {currentClassicReleases.map((release) => (
           <div key={release.version}>
-            <h4>ActiveMQ Classic {release.version} ({formatDate(release.releaseDate)})</h4>
+            <h4>ActiveMQ {release.version} ({formatDate(release.releaseDate)})</h4>
             <p>
               <a href={release.releaseNotes}>Release Notes</a> |{' '}
               <Link to={release.url}>Release Page</Link> |{' '}

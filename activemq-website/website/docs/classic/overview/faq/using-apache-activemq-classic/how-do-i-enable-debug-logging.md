@@ -3,7 +3,7 @@ title: "How do I enable debug logging"
 slug: /how-do-i-enable-debug-logging
 ---
 
- [FAQ](..) > [Using Apache ActiveMQ Classic](.) > [How do I enable debug logging](how-do-i-enable-debug-logging)
+ [FAQ](..) > [Using Apache ActiveMQ](.) > [How do I enable debug logging](how-do-i-enable-debug-logging)
 
 
 How do I enable debug logging?
@@ -11,7 +11,7 @@ How do I enable debug logging?
 
 For background see [How do I change the logging](how-do-i-change-the-logging).
 
-You can enable debug logging in ActiveMQ Classic by adding the following line to the `conf/log4j.properties` file
+You can enable debug logging in ActiveMQ by adding the following line to the `conf/log4j.properties` file
 ```
 log4j.logger.org.apache.activemq=DEBUG
 ```

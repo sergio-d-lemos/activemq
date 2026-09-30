@@ -1,9 +1,9 @@
 ---
-title: "I cannot connect to ActiveMQ Classic from JConsole"
+title: "I cannot connect to ActiveMQ from JConsole"
 slug: /i-cannot-connect-to-activemq-classic-from-jconsole
 ---
 
- [FAQ](..) > [Errors](.) > [I cannot connect to ActiveMQ Classic from JConsole](i-cannot-connect-to-activemq-classic-from-jconsole)
+ [FAQ](..) > [Errors](.) > [I cannot connect to ActiveMQ from JConsole](i-cannot-connect-to-activemq-classic-from-jconsole)
 
 
 Make sure that the machine you are talking to has a valid **java.rmi.server.hostname-property** value

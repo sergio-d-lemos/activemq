@@ -4,7 +4,7 @@ slug: /git
 ---
 
 
-ActiveMQ Classic 5
+ActiveMQ 5
 ==========
 
 Web Browsing of the git Repo

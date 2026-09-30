@@ -1,10 +1,10 @@
 ---
-title: "ActiveMQ Classic Message Properties"
+title: "ActiveMQ Message Properties"
 slug: /activemq-classic-message-properties
 ---
 
 
-**ActiveMQ Classic Messages support the following default message properties:**
+**ActiveMQ Messages support the following default message properties:**
 
 Message Attributes Accessed as Properties:
 ------------------------------------------
@@ -32,7 +32,7 @@ Property Name|Type|Default Value|Description
 `JMSXGroupSeq`|`int`|`0`|Sequence number of the message.
 `JMSXProducerTXID`|`String`|`null`|Transaction identifier.
 
-ActiveMQ Classic Defined:
+ActiveMQ Defined:
 -------------------------
 
 Property Name|Type|Default Value|Description

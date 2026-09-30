@@ -34,7 +34,7 @@ A network connector which uses a discovery agent to detect the remote brokers av
 
 _\<broker>_
 
-An ActiveMQ Classic Message Broker. It consists of a number of transport connectors, network connectors and a bunch of properties which can be used to configure the broker as its lazily created.
+An ActiveMQ Message Broker. It consists of a number of transport connectors, network connectors and a bunch of properties which can be used to configure the broker as its lazily created.
 
 #### The _org.apache.activemq.usage.TempUsage_ Type Implementations
 
@@ -94,7 +94,7 @@ Provides a simple authentication plugin
 
 _\<timeStampingBrokerPlugin>_
 
-A Broker interceptor which updates a JMS Client's timestamp on the message with a broker timestamp. Useful when the clocks on client machines are known to not be correct and you can only trust the time set on the broker machines. Enabling this plugin will break JMS compliance since the timestamp that the producer sees on the messages after as send() will be different from the timestamp the consumer will observe when he receives the message. This plugin is not enabled in the default ActiveMQ Classic configuration.
+A Broker interceptor which updates a JMS Client's timestamp on the message with a broker timestamp. Useful when the clocks on client machines are known to not be correct and you can only trust the time set on the broker machines. Enabling this plugin will break JMS compliance since the timestamp that the producer sees on the messages after as send() will be different from the timestamp the consumer will observe when he receives the message. This plugin is not enabled in the default ActiveMQ configuration.
 
 _\<udpTraceBrokerPlugin>_
 
@@ -104,7 +104,7 @@ A Broker interceptor which allows you to trace all operations to a UDP socket.
 
 _\<axionJDBCAdapter>_
 
-Axion specific Adapter. Axion does not seem to support ALTER statements or sub-selects. This means: - We cannot auto upgrade the schema was we roll out new versions of ActiveMQ Classic - We cannot delete durable sub messages that have be acknowledged by all consumers.
+Axion specific Adapter. Axion does not seem to support ALTER statements or sub-selects. This means: - We cannot auto upgrade the schema was we roll out new versions of ActiveMQ - We cannot delete durable sub messages that have be acknowledged by all consumers.
 
 _\<blobJDBCAdapter>_
 
@@ -227,11 +227,11 @@ Holder for Usage instances for memory, store and temp files Main use case is man
 
 _\<queue>_
 
-An ActiveMQ Classic Queue
+An ActiveMQ Queue
 
 _\<topic>_
 
-An ActiveMQ Classic Topic
+An ActiveMQ Topic
 
 #### The _org.apache.activemq.broker.region.policy.SubscriptionRecoveryPolicy_ Type Implementations
 
@@ -343,7 +343,7 @@ A default implementation of {@link DeadLetterStrategy} which uses a constant des
 
 _\<topic>_
 
-An ActiveMQ Classic Topic
+An ActiveMQ Topic
 
 #### The _org.apache.activemq.ActiveMQPrefetchPolicy_ Type Implementations
 
@@ -363,7 +363,7 @@ A Broker interceptor which allows you to trace all operations to a Multicast soc
 
 _\<timeStampingBrokerPlugin>_
 
-A Broker interceptor which updates a JMS Client's timestamp on the message with a broker timestamp. Useful when the clocks on client machines are known to not be correct and you can only trust the time set on the broker machines. Enabling this plugin will break JMS compliance since the timestamp that the producer sees on the messages after as send() will be different from the timestamp the consumer will observe when he receives the message. This plugin is not enabled in the default ActiveMQ Classic configuration.
+A Broker interceptor which updates a JMS Client's timestamp on the message with a broker timestamp. Useful when the clocks on client machines are known to not be correct and you can only trust the time set on the broker machines. Enabling this plugin will break JMS compliance since the timestamp that the producer sees on the messages after as send() will be different from the timestamp the consumer will observe when he receives the message. This plugin is not enabled in the default ActiveMQ configuration.
 
 _\<udpTraceBrokerPlugin>_
 
@@ -419,11 +419,11 @@ A {@link PersistenceAdapter} implementation using JDBC for persistence storage. 
 
 _\<queue>_
 
-An ActiveMQ Classic Queue
+An ActiveMQ Queue
 
 _\<topic>_
 
-An ActiveMQ Classic Topic
+An ActiveMQ Topic
 
 #### The _org.apache.activemq.network.jms.InboundTopicBridge_ Type Implementations
 
@@ -495,7 +495,7 @@ A [Spring](http://www.springframework.org/) enhanced XA connection factory which
 
 _\<queue>_
 
-An ActiveMQ Classic Queue
+An ActiveMQ Queue
 
 #### The _org.apache.activemq.broker.region.policy.MessageEvictionStrategy_ Type Implementations
 
@@ -511,7 +511,7 @@ An eviction strategy which evicts the oldest message with the lowest priority fi
 
 _\<broker>_
 
-An ActiveMQ Classic Message Broker. It consists of a number of transport connectors, network connectors and a bunch of properties which can be used to configure the broker as its lazily created.
+An ActiveMQ Message Broker. It consists of a number of transport connectors, network connectors and a bunch of properties which can be used to configure the broker as its lazily created.
 
 _\<commandAgent>_
 
@@ -905,7 +905,7 @@ _org.apache.activemq.security.AuthorizationMap_
 
 ### The _\<axionJDBCAdapter>_ Element
 
-Axion specific Adapter. Axion does not seem to support ALTER statements or sub-selects. This means: - We cannot auto upgrade the schema was we roll out new versions of ActiveMQ Classic - We cannot delete durable sub messages that have be acknowledged by all consumers.
+Axion specific Adapter. Axion does not seem to support ALTER statements or sub-selects. This means: - We cannot auto upgrade the schema was we roll out new versions of ActiveMQ - We cannot delete durable sub messages that have be acknowledged by all consumers.
 
 #### Properties
 
@@ -953,7 +953,7 @@ _boolean_
 
 ### The _\<broker>_ Element
 
-An ActiveMQ Classic Message Broker. It consists of a number of transport connectors, network connectors and a bunch of properties which can be used to configure the broker as its lazily created.
+An ActiveMQ Message Broker. It consists of a number of transport connectors, network connectors and a bunch of properties which can be used to configure the broker as its lazily created.
 
 #### Properties
 
@@ -1203,6 +1203,12 @@ vmConnectorURI
 
 _java.net.URI_
 
+maxInflatedDataSize
+
+_integer_
+
+The maximum allowed size of an uncompressed message body. The default is 100 MB.
+
 ### The _\<bytesJDBCAdapter>_ Element
 
 This JDBCAdapter inserts and extracts BLOB data using the setBytes()/getBytes() operations. The databases/JDBC drivers that use this adapter are:
@@ -1431,7 +1437,7 @@ brokerURL
 
 _java.lang.String_
 
-Sets the [connection URL](configuring-transports) used to connect to the ActiveMQ Classic broker.
+Sets the [connection URL](configuring-transports) used to connect to the ActiveMQ broker.
 
 clientID
 
@@ -3804,7 +3810,7 @@ Sets the query strategy to load initial messages
 
 ### The _\<queue>_ Element
 
-An ActiveMQ Classic Queue
+An ActiveMQ Queue
 
 #### Properties
 
@@ -4398,7 +4404,7 @@ _float_
 
 ### The _\<timeStampingBrokerPlugin>_ Element
 
-A Broker interceptor which updates a JMS Client's timestamp on the message with a broker timestamp. Useful when the clocks on client machines are known to not be correct and you can only trust the time set on the broker machines. Enabling this plugin will break JMS compliance since the timestamp that the producer sees on the messages after as send() will be different from the timestamp the consumer will observe when he receives the message. This plugin is not enabled in the default ActiveMQ Classic configuration.
+A Broker interceptor which updates a JMS Client's timestamp on the message with a broker timestamp. Useful when the clocks on client machines are known to not be correct and you can only trust the time set on the broker machines. Enabling this plugin will break JMS compliance since the timestamp that the producer sees on the messages after as send() will be different from the timestamp the consumer will observe when he receives the message. This plugin is not enabled in the default ActiveMQ configuration.
 
 #### Properties
 
@@ -4434,7 +4440,7 @@ _long_
 
 ### The _\<topic>_ Element
 
-An ActiveMQ Classic Topic
+An ActiveMQ Topic
 
 #### Properties
 
@@ -4682,7 +4688,7 @@ brokerURL
 
 _java.lang.String_
 
-Sets the [connection URL](configuring-transports) used to connect to the ActiveMQ Classic broker.
+Sets the [connection URL](configuring-transports) used to connect to the ActiveMQ broker.
 
 clientID
 
@@ -4862,7 +4868,7 @@ An authorization plugin where each operation on a destination is checked against
 
 _\<axionJDBCAdapter>_
 
-Axion specific Adapter. Axion does not seem to support ALTER statements or sub-selects. This means: - We cannot auto upgrade the schema was we roll out new versions of ActiveMQ Classic - We cannot delete durable sub messages that have be acknowledged by all consumers.
+Axion specific Adapter. Axion does not seem to support ALTER statements or sub-selects. This means: - We cannot auto upgrade the schema was we roll out new versions of ActiveMQ - We cannot delete durable sub messages that have be acknowledged by all consumers.
 
 _\<blobJDBCAdapter>_
 
@@ -4870,7 +4876,7 @@ This JDBCAdapter inserts and extracts BLOB data using the getBlob()/setBlob() op
 
 _\<broker>_
 
-An ActiveMQ Classic Message Broker. It consists of a number of transport connectors, network connectors and a bunch of properties which can be used to configure the broker as its lazily created.
+An ActiveMQ Message Broker. It consists of a number of transport connectors, network connectors and a bunch of properties which can be used to configure the broker as its lazily created.
 
 _\<bytesJDBCAdapter>_
 
@@ -5117,7 +5123,7 @@ This implementation of {@link SubscriptionRecoveryPolicy} will perform a user sp
 
 _\<queue>_
 
-An ActiveMQ Classic Queue
+An ActiveMQ Queue
 
 _\<redeliveryPolicy>_
 
@@ -5189,7 +5195,7 @@ Used to keep track of how much of something is being used so that a productive w
 
 _\<timeStampingBrokerPlugin>_
 
-A Broker interceptor which updates a JMS Client's timestamp on the message with a broker timestamp. Useful when the clocks on client machines are known to not be correct and you can only trust the time set on the broker machines. Enabling this plugin will break JMS compliance since the timestamp that the producer sees on the messages after as send() will be different from the timestamp the consumer will observe when he receives the message. This plugin is not enabled in the default ActiveMQ Classic configuration.
+A Broker interceptor which updates a JMS Client's timestamp on the message with a broker timestamp. Useful when the clocks on client machines are known to not be correct and you can only trust the time set on the broker machines. Enabling this plugin will break JMS compliance since the timestamp that the producer sees on the messages after as send() will be different from the timestamp the consumer will observe when he receives the message. This plugin is not enabled in the default ActiveMQ configuration.
 
 _\<timedSubscriptionRecoveryPolicy>_
 
@@ -5197,7 +5203,7 @@ This implementation of {@link SubscriptionRecoveryPolicy} will keep a timed buff
 
 _\<topic>_
 
-An ActiveMQ Classic Topic
+An ActiveMQ Topic
 
 _\<transportConnector>_
 

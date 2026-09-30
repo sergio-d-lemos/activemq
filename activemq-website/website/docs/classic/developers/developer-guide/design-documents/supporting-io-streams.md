@@ -4,7 +4,7 @@ slug: /supporting-io-streams
 ---
 
 
-It'd be great to offer kick ass support for streaming files over ActiveMQ Classic of any arbitrary size. The basic idea is to fragment the stream into multiple messages and send/receive those over JMS.
+It'd be great to offer kick ass support for streaming files over ActiveMQ of any arbitrary size. The basic idea is to fragment the stream into multiple messages and send/receive those over JMS.
 
 There are a few issues to consider...
 

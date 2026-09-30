@@ -83,7 +83,9 @@ You can find details on the [release notes](https://github.com/apache/activemq/r
 The `release_date` is the day the release is announced, and the highlights can
 be picked from the "What's Changed" section of the GitHub release. When starting
 a new series, also update `src/data/currentReleases.ts`: add the new series
-(e.g. `'6.3.'`) and remove the one it replaces.
+(e.g. `'6.3.'`) to `currentReleasePrefixes` (series listed on the download page)
+and `activeReleasePrefixes` (series shown as "Active"), and remove the ones it
+replaces.
 
 NMS releases are published the same way, by adding a page with the same front
 matter under `src/pages/components/nms/providers/activemq/downloads/`, or an

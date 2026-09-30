@@ -22,4 +22,4 @@ Connection|Type=Connection|type=Broker,connector=*,connectionViewType=remoteAddr
 3.  OSGi integration has changed. The full details are at [OSGi Integration](osgi-integration.html). In summary:
     1.  There is a single uber OSGI bundle
     2.  The broker and webconsole are now configured via config admin pid files through an OSGi managed service factory.
-4.  The ActiveMQ Classic binary file `bin/run.jar` has been renamed to `bin/activemq.jar`.
+4.  The ActiveMQ binary file `bin/run.jar` has been renamed to `bin/activemq.jar`.

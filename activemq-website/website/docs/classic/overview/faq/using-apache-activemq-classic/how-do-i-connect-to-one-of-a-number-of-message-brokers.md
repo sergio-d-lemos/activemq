@@ -3,7 +3,7 @@ title: "How do I connect to one of a number of message brokers"
 slug: /how-do-i-connect-to-one-of-a-number-of-message-brokers
 ---
 
- [FAQ](..) > [Using Apache ActiveMQ Classic](.) > [How do I connect to one of a number of message brokers](how-do-i-connect-to-one-of-a-number-of-message-brokers)
+ [FAQ](..) > [Using Apache ActiveMQ](.) > [How do I connect to one of a number of message brokers](how-do-i-connect-to-one-of-a-number-of-message-brokers)
 
 
 You can specify a list of URLs to connect to (for example if you have message brokers running on a number of machines). To specify a list of URLs, use a comma separated list of URLs with a prefix of list:. e.g.

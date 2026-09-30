@@ -4,7 +4,7 @@ slug: /example-testing-scenario
 ---
 
 
-ActiveMQ Classic Performance Module
+ActiveMQ Performance Module
 ---------------------------
 
 *   [Users Manual](activemq-classic-performance-module-users-manual)

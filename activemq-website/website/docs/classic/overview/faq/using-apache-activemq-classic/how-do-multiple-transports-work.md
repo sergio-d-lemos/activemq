@@ -3,10 +3,10 @@ title: "How do multiple transports work"
 slug: /how-do-multiple-transports-work
 ---
 
- [FAQ](..) > [Using Apache ActiveMQ Classic](.) > [How do multiple transports work](how-do-multiple-transports-work)
+ [FAQ](..) > [Using Apache ActiveMQ](.) > [How do multiple transports work](how-do-multiple-transports-work)
 
 
-### For ActiveMQ Classic 3.x/4.x
+### For ActiveMQ 3.x/4.x
 
 The transport a client uses to connect to the broker is just the transport your client uses. So messages the broker sends to your client will be sent over that transport. However the broker can support many transports.
 

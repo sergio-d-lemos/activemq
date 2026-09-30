@@ -1,10 +1,10 @@
 ---
-title: "What is ActiveMQ Classic"
+title: "What is ActiveMQ"
 slug: /what-is-activemq-classic
 ---
 
- [FAQ](..) > [General](.) > [What is ActiveMQ Classic](what-is-activemq-classic)
+ [FAQ](..) > [General](.) > [What is ActiveMQ](what-is-activemq-classic)
 
 
-ActiveMQ Classic is an open sourced implementation of JMS 1.1 as part of the J2EE 1.4 specification.
+ActiveMQ is an open sourced implementation of JMS 1.1 as part of the J2EE 1.4 specification.
 

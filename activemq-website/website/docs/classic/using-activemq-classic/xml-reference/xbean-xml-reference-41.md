@@ -16,7 +16,7 @@ Create an Inbound Queue Bridge
 
 _\<broker>_
 
-An ActiveMQ Classic Message Broker which consists of a number of transport connectors, network connectors and a persistence adaptor
+An ActiveMQ Message Broker which consists of a number of transport connectors, network connectors and a persistence adaptor
 
 #### The _org.apache.activemq.broker.BrokerPlugin_ Type Implementations
 
@@ -181,7 +181,7 @@ A default implementation of {@link DeadLetterStrategy} which uses a constant des
 
 _\<topic>_
 
-An ActiveMQ Classic Topic Destination
+An ActiveMQ Topic Destination
 
 #### The _org.apache.activemq.store.PersistenceAdapter_ Type Implementations
 
@@ -243,11 +243,11 @@ A {@link PersistenceAdapter} implementation using JDBC for persistence storage. 
 
 _\<queue>_
 
-An ActiveMQ Classic Queue Destination
+An ActiveMQ Queue Destination
 
 _\<topic>_
 
-An ActiveMQ Classic Topic Destination
+An ActiveMQ Topic Destination
 
 #### The _org.apache.activemq.network.jms.InboundTopicBridge_ Type Implementations
 
@@ -293,7 +293,7 @@ Dispatch policy that causes every subscription to see messages in the same order
 
 _\<queue>_
 
-An ActiveMQ Classic Queue Destination
+An ActiveMQ Queue Destination
 
 #### The _org.apache.activemq.broker.region.policy.MessageEvictionStrategy_ Type Implementations
 
@@ -431,7 +431,7 @@ _org.apache.activemq.security.AuthorizationMap_
 
 ### The _\<axionJDBCAdapter>_ Element
 
-Axion specific Adapter. Axion does not seem to support ALTER statements or sub-selects. This means: - We cannot auto upgrade the schema was we roll out new versions of ActiveMQ Classic - We cannot delete durable sub messages that have be acknowledged by all consumers.
+Axion specific Adapter. Axion does not seem to support ALTER statements or sub-selects. This means: - We cannot auto upgrade the schema was we roll out new versions of ActiveMQ - We cannot delete durable sub messages that have be acknowledged by all consumers.
 
 #### Properties
 
@@ -479,7 +479,7 @@ _boolean_
 
 ### The _\<broker>_ Element
 
-An ActiveMQ Classic Message Broker which consists of a number of transport connectors, network connectors and a persistence adaptor
+An ActiveMQ Message Broker which consists of a number of transport connectors, network connectors and a persistence adaptor
 
 #### Properties
 
@@ -2346,7 +2346,7 @@ Sets the query strategy to load initial messages
 
 ### The _\<queue>_ Element
 
-An ActiveMQ Classic Queue Destination
+An ActiveMQ Queue Destination
 
 #### Properties
 
@@ -2732,7 +2732,7 @@ _long_
 
 ### The _\<topic>_ Element
 
-An ActiveMQ Classic Topic Destination
+An ActiveMQ Topic Destination
 
 #### Properties
 
@@ -2926,7 +2926,7 @@ An authorization plugin where each operation on a destination is checked against
 
 _\<axionJDBCAdapter>_
 
-Axion specific Adapter. Axion does not seem to support ALTER statements or sub-selects. This means: - We cannot auto upgrade the schema was we roll out new versions of ActiveMQ Classic - We cannot delete durable sub messages that have be acknowledged by all consumers.
+Axion specific Adapter. Axion does not seem to support ALTER statements or sub-selects. This means: - We cannot auto upgrade the schema was we roll out new versions of ActiveMQ - We cannot delete durable sub messages that have be acknowledged by all consumers.
 
 _\<blobJDBCAdapter>_
 
@@ -2934,7 +2934,7 @@ This JDBCAdapter inserts and extracts BLOB data using the getBlob()/setBlob() op
 
 _\<broker>_
 
-An ActiveMQ Classic Message Broker which consists of a number of transport connectors, network connectors and a persistence adaptor
+An ActiveMQ Message Broker which consists of a number of transport connectors, network connectors and a persistence adaptor
 
 _\<bytesJDBCAdapter>_
 
@@ -3117,7 +3117,7 @@ This implementation of {@link SubscriptionRecoveryPolicy} will perform a user sp
 
 _\<queue>_
 
-An ActiveMQ Classic Queue Destination
+An ActiveMQ Queue Destination
 
 _\<quickJournalPersistenceAdapter>_
 
@@ -3169,7 +3169,7 @@ This implementation of {@link SubscriptionRecoveryPolicy} will keep a timed buff
 
 _\<topic>_
 
-An ActiveMQ Classic Topic Destination
+An ActiveMQ Topic Destination
 
 _\<transportConnector>_
 

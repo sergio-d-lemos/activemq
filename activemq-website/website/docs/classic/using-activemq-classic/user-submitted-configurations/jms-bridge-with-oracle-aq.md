@@ -23,7 +23,7 @@ slug: /jms-bridge-with-oracle-aq
             <to   uri="activemq:queue:queue.inboundOracleAQqueue" >
         </route>
         <route>
-            <!-- NOTE: I have had success with a topic using ActiveMQ Classic 5.3, but not 5.1 -->
+            <!-- NOTE: I have had success with a topic using ActiveMQ 5.3, but not 5.1 -->
             <from uri="oracleTopic:topic:ORACLE_TOPIC">
             <to   uri="activemq:queue:queue.inboundOracleAQtopic" >
         </route>

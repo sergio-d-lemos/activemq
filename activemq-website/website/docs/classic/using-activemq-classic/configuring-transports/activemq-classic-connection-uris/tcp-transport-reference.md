@@ -6,7 +6,7 @@ slug: /tcp-transport-reference
 
 ### The TCP Transport
 
-The TCP transport allows clients to connect to a remote ActiveMQ Classic broker using a TCP socket. These configuration options can be used to tune the underlying TCP transport on either the client-side using the JMS client's connection URI string or on a broker's transport connector URI.
+The TCP transport allows clients to connect to a remote ActiveMQ broker using a TCP socket. These configuration options can be used to tune the underlying TCP transport on either the client-side using the JMS client's connection URI string or on a broker's transport connector URI.
 
 Note: Use Correct Prefix!
 

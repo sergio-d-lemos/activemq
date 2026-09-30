@@ -1,9 +1,9 @@
 ---
-title: "How do I configure ActiveMQ Classic to use AIO server transport"
+title: "How do I configure ActiveMQ to use AIO server transport"
 slug: /how-do-i-configure-activemq-classic-to-use-aio-server-transport
 ---
 
- [FAQ](..) > [Configuration](.) > [How do I configure ActiveMQ Classic to use AIO server transport](how-do-i-configure-activemq-classic-to-use-aio-server-transport)
+ [FAQ](..) > [Configuration](.) > [How do I configure ActiveMQ to use AIO server transport](how-do-i-configure-activemq-classic-to-use-aio-server-transport)
 
 
 For Windows XP:
@@ -19,10 +19,10 @@ For Windows XP:
 
 4. Include ibmaio-1.0.jar in the classpath.
 
-5. Edit ActiveMQ Classic's configuration file (**activemq.xml**, found in the conf folder). Look the following snippet:  
+5. Edit ActiveMQ's configuration file (**activemq.xml**, found in the conf folder). Look the following snippet:  
     ```
     <!-- ==================================================================== -->
-    <!-- ActiveMQ Classic Broker Configuration -->
+    <!-- ActiveMQ Broker Configuration -->
     <!-- ==================================================================== -->
     <broker>
      <connector>

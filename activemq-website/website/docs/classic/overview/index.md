@@ -14,7 +14,7 @@ slug: /
 *   Community
 *   [Features](../features/index.md)
 *   [Connectivity](../connectivity/index.md)
-*   [Using ActiveMQ Classic](../using-activemq-classic-5/index.md)
+*   [Using ActiveMQ](../using-activemq-classic-5/index.md)
 *   [Tools](../tools/index.md)
 *   [Support](/support)
 *   [Developers](../developers/index.md)

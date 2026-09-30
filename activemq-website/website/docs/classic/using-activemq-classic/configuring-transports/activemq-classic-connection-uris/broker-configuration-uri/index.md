@@ -6,7 +6,7 @@ slug: /broker-configuration-uri
 
 ### Overview
 
-An ActiveMQ Classic broker can be extensivly configured using a single configuration URI. The following URI schemes are supported
+An ActiveMQ broker can be extensivly configured using a single configuration URI. The following URI schemes are supported
 
 Scheme|Link|Description
 ---|---|---

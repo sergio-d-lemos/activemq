@@ -1,12 +1,12 @@
 ---
-title: "How do I run ActiveMQ Classic under the Kaffe JVM"
+title: "How do I run ActiveMQ under the Kaffe JVM"
 slug: /how-do-i-run-activemq-classic-under-the-kaffe-jvm
 ---
 
- [FAQ](..) > [Configuration](.) > [How do I run ActiveMQ Classic under the Kaffe JVM](how-do-i-run-activemq-classic-under-the-kaffe-jvm)
+ [FAQ](..) > [Configuration](.) > [How do I run ActiveMQ under the Kaffe JVM](how-do-i-run-activemq-classic-under-the-kaffe-jvm)
 
 
-ActiveMQ Classic will run under Kaffe with a few adjustments to the default configuration.
+ActiveMQ will run under Kaffe with a few adjustments to the default configuration.
 
 We have found the Kaffe does not properly implement:
 
@@ -14,7 +14,7 @@ We have found the Kaffe does not properly implement:
 *   Multicast Sockets
 *   JMX connector JNDI handling
 
-Therefore, the default ActiveMQ Classic configuration must be adjusted to disable the Journal (uses NIO), disable Multicast discovery, and JMX.
+Therefore, the default ActiveMQ configuration must be adjusted to disable the Journal (uses NIO), disable Multicast discovery, and JMX.
 
 The Kaffe and OS Version that was tested against was:
 

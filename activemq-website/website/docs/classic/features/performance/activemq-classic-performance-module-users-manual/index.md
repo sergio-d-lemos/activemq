@@ -1,5 +1,5 @@
 ---
-title: "ActiveMQ Classic Performance Module Users Manual"
+title: "ActiveMQ Performance Module Users Manual"
 slug: /activemq-classic-performance-module-users-manual
 ---
 
@@ -11,7 +11,7 @@ This [Maven 2](http://maven.apache.org) plugin allows you to run performance tes
 
 ### Prerequisites
 
-Starting with ActiveMQ Classic 5.5 and above the plugin can be obtained from maven or if you download the src from GIT you can build it yourself. Start with a complete build of Apache ActiveMQ Classic and then do
+Starting with ActiveMQ 5.5 and above the plugin can be obtained from maven or if you download the src from GIT you can build it yourself. Start with a complete build of Apache ActiveMQ and then do
 ```
 cd activemq-tooling
 mvn clean install
@@ -28,7 +28,7 @@ To get started, switch to the [activemq-perftest directory from the sandbox repo
   <version>${activemq-version}</version>
 </plugin>
 ```
-In ActiveMQ Classic versions prior to 5.8, the artifactId was `maven-activemq-perf-plugin`.
+In ActiveMQ versions prior to 5.8, the artifactId was `maven-activemq-perf-plugin`.
 
 Type the following commands into separate shells (the broker line here is optional if you have a preconfigured one running):
 ```
@@ -160,7 +160,7 @@ ActiveMQClassLoaderSPI loads from the classpath `org.apache.activemq.ActiveMQCon
 
 It should be noted that the loaded class should implement the appropriate getter and setter methods. Nested objects should also be properly instantiated. For more information on configuring this SPI, refer to the specific provider API manual.
 
-As of ActiveMQ Classic 4.0.1, these are the available fields and default values:
+As of ActiveMQ 4.0.1, these are the available fields and default values:
 
 Configuration Key|Default Value
 ---|---
@@ -205,7 +205,7 @@ mvn activemq-perf:producer -DtpSampler.duration=10000 -DcpuSampler.duration=1500
 ```
 By default, both samplers are used within a test run. This however, can be overridden through the use of the `sysTest.samplers` property.
 
-#### Before ActiveMQ Classic 5.11
+#### Before ActiveMQ 5.11
 
 Sampler configurations are not tied in to the test run, so it is possible for the sampler to run for longer than the actual test itself. For short run durations, the sampler may not even have ramped up before the test completes.
 
@@ -216,7 +216,7 @@ Configuration Key|Default Value|Description
 `<samplerName>.rampDownTime`|30000|The ramp down time of the sampler, sampling will stop when the sampler has executed for (duration - rampUpTime - rampDownTime) ms.
 `<samplerName>.interval`|1000|The interval (in ms), the sampler will sample for data.
 
-#### From ActiveMQ Classic 5.11
+#### From ActiveMQ 5.11
 
 Sampler run duration is tied directly to the behavior of the client (producer/consumer). Due to the non-deterministic nature of count-based tests (where consumer.recvType or producer.sendType are set to `count`), duration, ramp up and ramp down times are ignored; the samplers are shut down when the client completes.
 

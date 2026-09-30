@@ -2,9 +2,9 @@
 title: "Clients"
 ---
 
-## ActiveMQ Classic Broker Protocol Support Matrix
+## ActiveMQ Broker Protocol Support Matrix
 
-Protocol                | ActiveMQ Classic
+Protocol                | ActiveMQ
 :---------------------- | :----------------
 [OpenWire](/clients/openwire)    | [x]
 [Core](/clients/core)            | [x]

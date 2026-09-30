@@ -3,7 +3,7 @@ title: "Security Advisories - ActiveMQ Apollo"
 slug: /security-advisories-apollo
 ---
 
-**NOTE: ActiveMQ Apollo is deprecated and no longer maintained. We strongly recommend you use [ActiveMQ "Classic"](components/classic) or [ActiveMQ Artemis](components/artemis) instead.**
+**NOTE: ActiveMQ Apollo is deprecated and no longer maintained. We strongly recommend you use [ActiveMQ](components/classic) or [Artemis](components/artemis) instead.**
 
 Details of security problems fixed in released versions of Apache ActiveMQ Apollo are detailed below.
 

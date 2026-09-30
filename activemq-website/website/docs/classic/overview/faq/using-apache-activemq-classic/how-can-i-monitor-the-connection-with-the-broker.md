@@ -3,7 +3,7 @@ title: "How can I monitor the connection with the broker"
 slug: /how-can-i-monitor-the-connection-with-the-broker
 ---
 
- [FAQ](..) > [Using Apache ActiveMQ Classic](.) > [How can I monitor the connection with the broker](how-can-i-monitor-the-connection-with-the-broker)
+ [FAQ](..) > [Using Apache ActiveMQ](.) > [How can I monitor the connection with the broker](how-can-i-monitor-the-connection-with-the-broker)
 
 
 How can I monitor the connection with the broker
@@ -15,5 +15,5 @@ This method takes a [TransportListener](http://activemq.apache.org/components/cl
 
 ### See Also
 
-*   [How can I monitor ActiveMQ Classic](how-can-i-monitor-activemq-classic)
+*   [How can I monitor ActiveMQ](how-can-i-monitor-activemq-classic)
 

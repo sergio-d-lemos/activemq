@@ -3,7 +3,7 @@ title: "How can I see what destinations are used?"
 slug: /how-can-i-see-what-destinations-are-used
 ---
 
- [FAQ](..) > [Using ActiveMQ Classic](.) > [How can I see what destinations are used?](how-can-i-see-what-destinations-are-used)
+ [FAQ](..) > [Using ActiveMQ](.) > [How can I see what destinations are used?](how-can-i-see-what-destinations-are-used)
 
 
 The easiest way is to use [JMX](jmx) by pointing your JMX console or JConsole at the broker JVM.

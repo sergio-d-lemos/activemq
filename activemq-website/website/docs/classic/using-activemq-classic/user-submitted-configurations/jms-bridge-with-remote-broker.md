@@ -4,7 +4,7 @@ slug: /jms-bridge-with-remote-broker
 ---
 
 
-### Example of a configuration that shows how to use a BridgeConnector to make a connection to a remote ActiveMQ Classic broker.
+### Example of a configuration that shows how to use a BridgeConnector to make a connection to a remote ActiveMQ broker.
 ```
 <beans>
     <!-- Allows us to use system properties as variables in this configuration file -->

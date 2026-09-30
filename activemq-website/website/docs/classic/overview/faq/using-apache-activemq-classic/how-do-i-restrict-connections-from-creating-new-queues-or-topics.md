@@ -3,7 +3,7 @@ title: "How do I restrict connections from creating new queues or topics"
 slug: /how-do-i-restrict-connections-from-creating-new-queues-or-topics
 ---
 
- [FAQ](..) > [Using Apache ActiveMQ Classic](.) > [How do I restrict connections from creating new queues or topics](how-do-i-restrict-connections-from-creating-new-queues-or-topics)
+ [FAQ](..) > [Using Apache ActiveMQ](.) > [How do I restrict connections from creating new queues or topics](how-do-i-restrict-connections-from-creating-new-queues-or-topics)
 
 
 How do I restrict connections from creating new queues or topics?

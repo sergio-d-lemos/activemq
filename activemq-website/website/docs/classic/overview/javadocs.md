@@ -4,10 +4,10 @@ slug: /javadocs
 ---
 
 
-JavaDocs for Apache ActiveMQ Classic
+JavaDocs for Apache ActiveMQ
 ----------------------------
 
-Versioned JavaDocs for Apache ActiveMQ Classic could be found at [http://activemq.apache.org/components/classic/documentation/maven/](http://activemq.apache.org/components/classic/documentation/maven/apidocs/index.html).
+Versioned JavaDocs for Apache ActiveMQ could be found at [http://activemq.apache.org/components/classic/documentation/maven/](http://activemq.apache.org/components/classic/documentation/maven/apidocs/index.html).
 
 Other JavaDocs
 --------------

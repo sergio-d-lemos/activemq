@@ -1,5 +1,5 @@
 ---
-title: "Integrating Apache ActiveMQ Classic with Glassfish"
+title: "Integrating Apache ActiveMQ with Glassfish"
 slug: /integrating-apache-activemq-classic-with-glassfish
 ---
 
@@ -7,7 +7,7 @@ slug: /integrating-apache-activemq-classic-with-glassfish
 General
 =======
 
-See this article for a description of how to connect Glassfish 3 to an ActiveMQ Classic 5 broker, and consume messages using a Message Driven Bean: [http://geertschuring.wordpress.com/2012/04/20/how-to-connect-glassfish-3-to-activemq-5/](http://geertschuring.wordpress.com/2012/04/20/how-to-connect-glassfish-3-to-activemq-5/)
+See this article for a description of how to connect Glassfish 3 to an ActiveMQ 5 broker, and consume messages using a Message Driven Bean: [http://geertschuring.wordpress.com/2012/04/20/how-to-connect-glassfish-3-to-activemq-5/](http://geertschuring.wordpress.com/2012/04/20/how-to-connect-glassfish-3-to-activemq-5/)
 
 Glassfish 4.1
 =============

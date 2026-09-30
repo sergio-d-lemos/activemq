@@ -3,7 +3,7 @@ title: "How do I restart embedded broker"
 slug: /how-do-i-restart-embedded-broker
 ---
 
- [FAQ](..) > [Using Apache ActiveMQ Classic](.) > [How do I restart embedded broker](how-do-i-restart-embedded-broker)
+ [FAQ](..) > [Using Apache ActiveMQ](.) > [How do I restart embedded broker](how-do-i-restart-embedded-broker)
 
 
 Pure restart of the embedded broker is not advisable, since it's state could be corrupted. Therefore, you're advised to instantiate the broker again before restarting it.

@@ -3,7 +3,7 @@ title: "How do Message Groups compare to Selectors"
 slug: /how-do-message-groups-compare-to-selectors
 ---
 
- [FAQ](..) > [Using Apache ActiveMQ Classic](.) > [How do Message Groups compare to Selectors](how-do-message-groups-compare-to-selectors)
+ [FAQ](..) > [Using Apache ActiveMQ](.) > [How do Message Groups compare to Selectors](how-do-message-groups-compare-to-selectors)
 
 
 Selectors are just filters. Message Groups are a way of grouping messages together to the same consumer to partition your application or insure ordering is maintained.

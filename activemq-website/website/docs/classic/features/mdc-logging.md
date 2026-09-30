@@ -4,9 +4,9 @@ slug: /mdc-logging
 ---
 
 
-ActiveMQ Classic uses [slf4j](http://www.slf4j.org/) as its logging framework. This allows ActiveMQ Classic to support [MDC logging](http://www.slf4j.org/api/org/slf4j/MDC.html). For more information about about MDC logging see the [logback manual](http://logback.qos.ch/manual/mdc.html).
+ActiveMQ uses [slf4j](http://www.slf4j.org/) as its logging framework. This allows ActiveMQ to support [MDC logging](http://www.slf4j.org/api/org/slf4j/MDC.html). For more information about about MDC logging see the [logback manual](http://logback.qos.ch/manual/mdc.html).
 
-Currently ActiveMQ Classic adds three keys to the diagnostic context:
+Currently ActiveMQ adds three keys to the diagnostic context:
 
 Key|Description
 ---|---
