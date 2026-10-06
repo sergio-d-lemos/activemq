@@ -1,5 +1,5 @@
 ---
-title: "Version 5 XML Configuration"
+title: "XML Configuration"
 slug: /version-5-xml-configuration
 ---
 

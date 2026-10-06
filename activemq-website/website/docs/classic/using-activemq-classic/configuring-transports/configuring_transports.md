@@ -1,9 +1,8 @@
 ---
 title: "Configuring Transports"
-slug: /configuring-version-5-transports
+slug: /configuring-transports
+displayed_sidebar: docs
 ---
-
- Using ActiveMQ > [Configuring Transports](configuring-version-5-transports)
 
 Transport configuration options
 -------------------------------
@@ -185,17 +184,17 @@ discoveryURI`|`null`|If set, the multicast discovery address for client connecti
 `updateClusterFilter`|`null`|Comma separated list of regular expressions. Brokers with a name matching the pattern will be included for client updates.
 `uri`|`null`|The bind address for the transport.
 
-`Note**: properties in red are version 5.10 (and higher) options only.
+**Note**: properties in red are version 5.10 (and higher) options only.
 
 Example configuration:
 ```
 <broker>
-   <!\-\- ... -->
+   <!-- ... -->
 
    <transportConnectors>
      <transportConnector name="openwire" uri="tcp://0.0.0.0:61616" enableStatusMonitor="true"/> 
    </<transportConnectors>
 
-   <!\-\- ... -->
+   <!-- ... -->
 </broker>
 ```

@@ -23,7 +23,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const LEGACY_DOCUMENTATION = new Set<string>([
   'using-activemq-classic/configuring-brokers',
-  'using-activemq-classic/configuring-transports/index',
+  'using-activemq-classic/configuring-transports/configuring-transports',
   'using-activemq-classic/examples',
   'using-activemq-classic/hello-world',
   'using-activemq-classic/initial-configuration',
@@ -124,7 +124,6 @@ const config: Config = {
         routeBasePath: 'components/classic/documentation',
         sidebarPath: './docs/classic/sidebars.ts',
         editUrl: 'https://github.com/apache/activemq-website/tree/main/',
-        // Legacy ActiveMQ 4 pages stay published (same URLs as the old site) but are hidden from the sidebar
         async sidebarItemsGenerator({defaultSidebarItemsGenerator, ...args}) {
           const items = await defaultSidebarItemsGenerator(args);
           return removeLegacyDocumentation(items);

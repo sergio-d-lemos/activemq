@@ -3,10 +3,10 @@ title: "Using ActiveMQ"
 slug: /using-activemq-classic
 ---
 
-To help you get started using Apache ActiveMQ you may wish to start off with the [Getting Started](getting-started) guide or the [Configuring Transports](configuring-transports). Otherwise here is a complete list of the guides.
+To help you get started using Apache ActiveMQ you may wish to start off with the [Getting Started](version-5-getting-started) guide or the [Configuring Transports](configuring-version-5-transports). Otherwise here is a complete list of the guides.
 
-*   [Configuring Brokers](configuring-brokers)
-*   [Configuring Transports](configuring-transports)
+*   [Configuring Brokers](configure-version-5-brokers)
+*   [Configuring Transports](configuring-version-5-transports)
     *   [ActiveMQ Connection URIs](activemq-classic-connection-uris)
         *   [Broker Configuration URI](broker-configuration-uri)
             *   [Broker Properties URI](broker-properties-uri)
@@ -29,16 +29,17 @@ To help you get started using Apache ActiveMQ you may wish to start off with the
     *   [ActiveMQ InactivityMonitor](activemq-classic-inactivitymonitor)
     *   [ZeroConf Transport Reference](zeroconf-transport-reference)
         *   [ZeroConf](zeroconf)
-*   [Examples](examples)
-*   [Getting Started](getting-started)
+* [LDAP Broker Discovery Mechanism](ldap-broker-discovery-mechanism)  
+* [Examples](version-5-examples)
+*   [Getting Started](version-5-getting-started)
     *   [Monitoring ActiveMQ](monitoring-activemq-classic)
-*   [Hello World](hello-world)
-*   [Initial Configuration](initial-configuration)
-*   [Installation](installation)
+*   [Hello World](version-5-hello-world)
+*   [Initial Configuration](version-5-initial-configuration)
+*   [Installation](version-5-installation)
 *   [Known Bad OS and JVM Combinations](known-bad-os-and-jvm-combinations)
-*   [Performance Tuning](performance-tuning)
-*   [Run Broker](run-broker)
-*   [Topologies](topologies)
+*   [Performance Tuning](version-5-performance-tuning)
+*   [Run Broker](version-5-run-broker)
+*   [Topologies](version-5-topologies)
 *   [Use Cases](use-cases)
 *   [User Submitted Configurations](user-submitted-configurations)
     *   [Complex Single Broker Configuration (STOMP only)](complex-single-broker-configuration-stomp-only)
@@ -48,9 +49,12 @@ To help you get started using Apache ActiveMQ you may wish to start off with the
     *   [JMS Bridge With Remote Broker](jms-bridge-with-remote-broker)
     *   [JMS Bridge With Remote TIBCO Broker](jms-bridge-with-remote-tibco-broker)
     *   [Sample Camel Routes](sample-camel-routes)
-*   [Web Samples](web-samples)
-*   [Xml Configuration](xml-configuration)
+*   [Web Samples](version-5-web-samples)
+*   [Xml Configuration](version-5-xml-configuration)
 *   [Xml Reference](xml-reference)
     *   [XBean XML Reference 4.1](xbean-xml-reference-41)
     *   [XBean XML Reference 5.0](xbean-xml-reference-50)
 
+### Commercial Documentation
+
+The commercial providers listed on the [support](../../../support) page may also have additional documentation, examples, tutorials, etc... that can help you get started using ActiveMQ.

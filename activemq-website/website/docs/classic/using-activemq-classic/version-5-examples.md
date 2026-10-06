@@ -1,5 +1,5 @@
 ---
-title: "Version 5 Examples"
+title: "Examples"
 slug: /version-5-examples
 ---
 

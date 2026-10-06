@@ -1,5 +1,5 @@
 ---
-title: "Version 5 Performance Tuning"
+title: "Performance Tuning"
 slug: /version-5-performance-tuning
 ---
 

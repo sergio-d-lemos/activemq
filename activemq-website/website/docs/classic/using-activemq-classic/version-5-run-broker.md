@@ -1,5 +1,5 @@
 ---
-title: "Version 5 Run Broker"
+title: "Run Broker"
 slug: /version-5-run-broker
 ---
 

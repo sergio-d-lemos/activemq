@@ -1,5 +1,5 @@
 ---
-title: "Version 5 Topologies"
+title: "Topologies"
 slug: /version-5-topologies
 ---
 

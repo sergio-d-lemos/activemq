@@ -1,5 +1,5 @@
 ---
-title: "Version 5 Hello World"
+title: "Hello World"
 slug: /version-5-hello-world
 ---
 

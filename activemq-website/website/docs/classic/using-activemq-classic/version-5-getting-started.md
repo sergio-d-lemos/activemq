@@ -1,5 +1,5 @@
 ---
-title: "Version 5 Getting Started"
+title: "Getting Started"
 slug: /version-5-getting-started
 ---
 

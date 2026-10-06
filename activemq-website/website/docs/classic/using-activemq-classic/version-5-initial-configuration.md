@@ -1,5 +1,5 @@
 ---
-title: "Version 5 Initial Configuration"
+title: "Initial Configuration"
 slug: /version-5-initial-configuration
 ---
 

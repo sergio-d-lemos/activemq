@@ -1,5 +1,5 @@
 ---
-title: "Version 5 Web Samples"
+title: "Web Samples"
 slug: /version-5-web-samples
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: "Configure version 5 Brokers"
+title: "Configure Brokers"
 slug: /configure-version-5-brokers
 ---
 

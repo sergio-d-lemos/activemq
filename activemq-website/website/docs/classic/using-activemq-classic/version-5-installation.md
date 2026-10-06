@@ -1,5 +1,5 @@
 ---
-title: "Version 5 Installation"
+title: "Installation"
 slug: /version-5-installation
 ---
 
