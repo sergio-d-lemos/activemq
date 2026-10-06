@@ -1,6 +1,7 @@
 ---
 title: "Hello World"
 slug: /hello-world
+displayed_sidebar: docs
 ---
 
 

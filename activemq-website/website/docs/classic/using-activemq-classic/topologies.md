@@ -1,6 +1,7 @@
 ---
 title: "Topologies"
 slug: /topologies
+displayed_sidebar: docs
 ---
 
 

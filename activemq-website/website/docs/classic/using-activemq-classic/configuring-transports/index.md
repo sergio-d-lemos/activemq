@@ -1,6 +1,7 @@
 ---
 title: "Configuring Transports"
 slug: /configuring-transports
+displayed_sidebar: docs
 ---
 
 Transport configuration options

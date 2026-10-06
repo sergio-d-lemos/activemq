@@ -1,6 +1,7 @@
 ---
 title: "Initial Configuration"
 slug: /initial-configuration
+displayed_sidebar: docs
 ---
 
 

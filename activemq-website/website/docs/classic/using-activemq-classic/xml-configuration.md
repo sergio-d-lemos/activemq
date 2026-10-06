@@ -1,6 +1,7 @@
 ---
 title: "Xml Configuration"
 slug: /xml-configuration
+displayed_sidebar: docs
 ---
 
 We support an XML deployment descriptor for configuring the ActiveMQ Message Broker. There are many things which can be configured such as

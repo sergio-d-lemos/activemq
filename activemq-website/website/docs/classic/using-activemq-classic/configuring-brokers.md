@@ -1,6 +1,7 @@
 ---
 title: "Configuring Brokers"
 slug: /configuring-brokers
+displayed_sidebar: docs
 ---
 
 

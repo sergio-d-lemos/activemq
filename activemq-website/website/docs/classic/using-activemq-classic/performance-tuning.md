@@ -1,6 +1,7 @@
 ---
 title: "Performance Tuning"
 slug: /performance-tuning
+displayed_sidebar: docs
 ---
 
 

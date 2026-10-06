@@ -1,6 +1,7 @@
 ---
 title: "Examples"
 slug: /examples
+displayed_sidebar: docs
 ---
 
 

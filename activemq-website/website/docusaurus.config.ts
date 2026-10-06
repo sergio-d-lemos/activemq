@@ -21,6 +21,42 @@ import {themes as prismThemes} from 'prism-react-renderer';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
+const LEGACY_DOCUMENTATION = new Set<string>([
+  'using-activemq-classic/configuring-brokers',
+  'using-activemq-classic/configuring-transports/index',
+  'using-activemq-classic/examples',
+  'using-activemq-classic/hello-world',
+  'using-activemq-classic/initial-configuration',
+  'using-activemq-classic/installation',
+  'using-activemq-classic/performance-tuning',
+  'using-activemq-classic/run-broker',
+  'using-activemq-classic/topologies',
+  'using-activemq-classic/web-samples',
+  'using-activemq-classic/xml-configuration'
+]);
+
+function isLegacyDocumentation(sidebarItem): boolean {
+  if (sidebarItem.type === 'category') {
+    return sidebarItem.link?.type === 'doc'
+      && sidebarItem.link.id === 'using-activemq-classic-4/index';
+  }
+  return sidebarItem.type === 'doc' && LEGACY_DOCUMENTATION.has(sidebarItem.id);
+}
+
+function removeLegacyDocumentation(sidebarItems) {
+  return sidebarItems
+    .filter((item) => !isLegacyDocumentation(item))
+    .map((item) =>
+      item.type === 'category'
+        ? {
+            ...item,
+            link: item.link?.type === 'doc' && LEGACY_DOCUMENTATION.has(item.link.id) ? undefined : item.link,
+            items: removeLegacyDocumentation(item.items),
+          }
+        : item,
+    );
+}
+
 const config: Config = {
   title: 'Apache ActiveMQ',
   tagline: 'Flexible & Powerful Open Source Multi-Protocol Messaging',
@@ -91,9 +127,7 @@ const config: Config = {
         // Legacy ActiveMQ 4 pages stay published (same URLs as the old site) but are hidden from the sidebar
         async sidebarItemsGenerator({defaultSidebarItemsGenerator, ...args}) {
           const items = await defaultSidebarItemsGenerator(args);
-          return items.filter(
-            (item) => !(item.type === 'category' && item.link?.type === 'doc' && item.link.id === 'using-activemq-classic-4/index'),
-          );
+          return removeLegacyDocumentation(items);
         },
       },
     ],

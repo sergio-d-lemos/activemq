@@ -1,6 +1,7 @@
 ---
 title: "Web Samples"
 slug: /web-samples
+displayed_sidebar: docs
 ---
 
 There are a few example programs demonstrating the [REST](rest), [Ajax](ajax) and [WebSockets](websockets) messaging that comes with the ActiveMQ distribution.

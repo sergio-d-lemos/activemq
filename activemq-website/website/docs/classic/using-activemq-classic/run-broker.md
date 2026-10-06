@@ -1,6 +1,7 @@
 ---
 title: "Run Broker"
 slug: /run-broker
+displayed_sidebar: docs
 ---
 
 

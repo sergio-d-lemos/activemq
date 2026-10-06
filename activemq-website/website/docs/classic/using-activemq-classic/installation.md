@@ -1,6 +1,7 @@
 ---
 title: "Installation"
 slug: /installation
+displayed_sidebar: docs
 ---
 
 
