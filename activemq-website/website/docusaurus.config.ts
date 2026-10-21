@@ -17,6 +17,7 @@
  * under the License.
  */
 
+import {existsSync} from 'node:fs';
 import {themes as prismThemes} from 'prism-react-renderer';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
@@ -68,6 +69,13 @@ const config: Config = {
   trailingSlash: false,
 
   onBrokenLinks: 'warn',
+
+  // The Pagefind index only exists after a production build. `pnpm run start:search`
+  // copies it to .pagefind so the dev server can serve it at /pagefind.
+  staticDirectories:
+    process.env.NODE_ENV === 'development' && existsSync('.pagefind')
+      ? ['static', '.pagefind']
+      : ['static'],
 
   markdown: {
     // .md files are plain CommonMark, .mdx files may use JSX and imports.
@@ -148,6 +156,15 @@ const config: Config = {
         routeBasePath: 'components/cms',
         sidebarPath: './docs/cms/sidebars.ts',
         editUrl: 'https://github.com/apache/activemq-website/tree/main/',
+      },
+    ],
+    [
+      // Client-side full-text search. The index is generated from the built
+      // HTML by Pagefind after `docusaurus build`; see staticDirectories for
+      // using it with the dev server.
+      'docusaurus-plugin-pagefind',
+      {
+        forceLanguage: 'en',
       },
     ],
   ],

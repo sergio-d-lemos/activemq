@@ -79,6 +79,16 @@
               <arguments>start</arguments>
             </configuration>
           </execution>
+          <execution>
+            <id>start-search</id>
+            <goals>
+              <goal>pnpm</goal>
+            </goals>
+            <phase>none</phase>
+            <configuration>
+              <arguments>run start:search</arguments>
+            </configuration>
+          </execution>
         </executions>
       </plugin>
       <plugin>

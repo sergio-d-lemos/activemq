@@ -5,6 +5,7 @@ website/node/*
 website/node_modules
 website/node_modules/*
 website/build
+website/.pagefind
 # The root .gitignore excludes every data/ directory, for the broker data.
 !website/src/data/
 
