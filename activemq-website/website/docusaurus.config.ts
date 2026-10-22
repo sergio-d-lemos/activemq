@@ -177,6 +177,8 @@ const config: Config = {
         src: 'img/activemq_logo_black_small.png',
       },
       items: [
+        // Shown on docs pages only (see src/theme/SearchBar), centered by custom.css.
+        {type: 'search', position: 'left', className: 'navbar-search--center'},
         {to: '/news', label: 'News', position: 'right'},
         {
           type: 'dropdown',

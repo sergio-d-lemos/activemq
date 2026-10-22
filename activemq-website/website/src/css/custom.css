@@ -53,6 +53,23 @@
   width: auto;
 }
 
+/* Center the search bar in the space between the logo and the right items,
+   and in the whole navbar once it is wide enough not to overlap them. */
+@media (min-width: 997px) {
+  .navbar-search--center {
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1280px) {
+  .navbar-search--center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+  }
+}
+
 .header-github-link:hover {
   opacity: 0.6;
 }
