@@ -82,7 +82,7 @@ The indexes used to reference the message data logs in the journal for fast retr
 
 ##### state
 
-The state of the store - i.e. names of durable subscribers - the reason for this is described in [Recovery](#recovery)
+The state of the store - i.e. names of durable subscribers - the reason for this is described in [Recovery](#recovery-)
 
 ### tmp-storage
 

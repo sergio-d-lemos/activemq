@@ -13,7 +13,7 @@ We have integrated the Web Samples into the binary distribution.
 
 The steps to running the Web Samples are
 
-*   [Download](../overview/download) a binary distribution
+*   [Download](/components/classic/download) a binary distribution
 *   [Run the Message Broker](run-broker) e.g. by running bin/activemq
 *   point your browser to [http://localhost:8161/demo](http://localhost:8161/demo)
 

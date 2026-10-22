@@ -73,7 +73,7 @@ Check with the provider for the current status of your preferred language implem
 
 *  [M2MQTT (works with .Net Micro Framework)](https://github.com/ppatierno/m2mqtt)
 
-(see also [devices](things) page for more on hardware with built-in support)
+(see also devices page for more on hardware with built-in support)
 
 #### Actionscript
 

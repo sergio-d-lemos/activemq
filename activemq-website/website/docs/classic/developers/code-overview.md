@@ -66,7 +66,7 @@ Message Broker
 
 The APIs for the message broker (server side of the JMS client) are defined in the [org.apache.activemq.broker](https://activemq.apache.org/components/classic/documentation/maven/apidocs/org/apache/activemq/broker/package-summary.html). There are various other packages which define different parts, from the message stores to the message routing and so forth.
 
-To see an overview of these packages try the [JavaDocs](docs)
+To see an overview of these packages try the [JavaDocs](pathname:///components/classic/documentation/maven/apidocs/index.html)
 
 * * *
 

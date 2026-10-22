@@ -19,7 +19,7 @@ The links on our download pages reference an apache CGI script to handle the mir
 
 The cgi script "closer.cgi" takes a file resource relative to www/www.apache.org/dist and generates a download page for it with the list of mirrors.
 
-To see this in action, go to the amq-cpp 1.1 download page here: [activemq-cpp-11-release.md](../../download/11-release)
+To see this in action, go to the amq-cpp 1.1 download page here: [activemq-cpp-11-release.md](/components/cms/download/11-release)
 
 ... and click on one of the archives. You'll be taken to a generic-looking download page.
 

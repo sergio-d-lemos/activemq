@@ -6,10 +6,10 @@ title: "Clients"
 
 Protocol                | ActiveMQ
 :---------------------- | :----------------
-[OpenWire](/clients/openwire)    | [x]
-[Core](/clients/core)            | [x]
-[AMQP](/clients/amqp)            | [x]
-[MQTT](/clients/mqtt)            | [ ]
-[STOMP](/clients/stomp)          | [x]
-[XMPP](/clients/xmpp)            | [x]
-[REST](/clients/rest)            | [x]
+[OpenWire](../connectivity/protocols/openwire/index.md)    | [x]
+Core            | [x]
+[AMQP](./amqp/index.md)            | [x]
+[MQTT](./mqtt/index.md)            | [ ]
+[STOMP](../connectivity/protocols/stomp.md)          | [x]
+[XMPP](../connectivity/protocols/xmpp.md)            | [x]
+[REST](../connectivity/protocols/rest.md)            | [x]

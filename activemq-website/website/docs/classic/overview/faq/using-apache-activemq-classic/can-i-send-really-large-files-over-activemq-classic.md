@@ -14,5 +14,5 @@ For 4.1 or ealier large file transfer is achieved using [JMS Streams](jms-stream
 
 Normally the JMS API expects the entire JMS messsage to reside in the client side memory; however using [Blob Messages](blob-messages) or [JMS Streams](jms-streams) allows you to send and receive arbitrarily large files with very low RAM overhead.
 
-If you want the broker itself to be able to handle large messages (i.e. without needing to use an out-of-band transport mechanism like HTTP or FTP) then use [ActiveMQ Artemis](../../artemis/documentation/latest/large-messages.html).
+If you want the broker itself to be able to handle large messages (i.e. without needing to use an out-of-band transport mechanism like HTTP or FTP) then use [ActiveMQ Artemis](https://artemis.apache.org/components/artemis/documentation/latest/large-messages.html).
 

@@ -15,7 +15,7 @@ This is a minor release of the C++ Messaging Service (CMS). This release is was 
 API
 ---
 
-Check out the API for this release [here](/components/cms/api_docs/cms-1.1/index.html)
+Check out the API for this release [here](pathname:///components/cms/api_docs/cms-1.1/index.html)
 
 Download Here
 -------------

@@ -14,7 +14,6 @@ This is a minor release incorporating several bug fixes that have been found sin
 API
 ---
 
-Check out the API for this release [here](/components/cms/api_docs/activemqcpp-2.2.1/)
 
 Download Here
 -------------

@@ -2,8 +2,7 @@
 title: "javax.jms.JMSException - Wire format negociation timeout - peer did not send his wire format."
 slug: /javaxjmsjmsexception-wire-format-negociation-timeout-peer-did-not-send-his-wire-format
 ---
-
- [FAQ](../..) > [Errors](..) > [Exceptions](.) > [javax.jms.JMSException - Wire format negociation timeout - peer did not send his wire format.](javaxjmsjmsexception-wire-format-negociation-timeout-peer-did-not-send-his-wire-format)
+[FAQ](../../index.md) > [Errors](/components/classic/documentation/overview/faq/errors) > [Exceptions](/components/classic/documentation/overview/faq/errors/exceptions) > javax.jms.JMSException - Wire format negociation timeout - peer did not send his wire format.
 
 
 If you get exception like this:

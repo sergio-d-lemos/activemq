@@ -10,7 +10,7 @@ slug: /features-overview
     *   [AMQP](amqp) v1.0 support
     *   [MQTT](mqtt) v3.1 support allowing for connections in an IoT environment.
 *   full support for the [Enterprise Integration Patterns](enterprise-integration-patterns) both in the JMS client and the Message Broker
-*   Supports many [advanced features](index) such as [Message Groups](message-groups), [Virtual Destinations](virtual-destinations), [Wildcards](wildcards) and [Composite Destinations](composite-destinations)
+*   Supports many [advanced features](./index.md) such as [Message Groups](message-groups), [Virtual Destinations](virtual-destinations), [Wildcards](wildcards) and [Composite Destinations](composite-destinations)
 *   Fully supports JMS 1.1 and J2EE 1.4 with support for transient, persistent, transactional and XA messaging
 *   [Spring Support](spring-support) so that ActiveMQ can be easily embedded into Spring applications and configured using Spring's XML configuration mechanism
 *   Tested inside popular J2EE servers such as [TomEE](http://tomee.apache.org/), [Geronimo](http://geronimo.apache.org/), JBoss, GlassFish and WebLogic

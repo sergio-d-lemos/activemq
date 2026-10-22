@@ -1,3 +1,7 @@
 {
-  "label": "Using Apache ActiveMQ Classic"
+  "label": "Using Apache ActiveMQ Classic",
+  "link": {
+    "type": "generated-index",
+    "slug": "/overview/faq/using-apache-activemq-classic"
+  }
 }

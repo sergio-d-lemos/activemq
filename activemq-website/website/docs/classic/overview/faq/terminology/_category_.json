@@ -1,3 +1,7 @@
 {
-  "label": "Terminology"
+  "label": "Terminology",
+  "link": {
+    "type": "generated-index",
+    "slug": "/overview/faq/terminology"
+  }
 }

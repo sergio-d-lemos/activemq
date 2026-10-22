@@ -5,34 +5,29 @@ slug: /stomp-manual
 
        
 
-*   [Apollo 1.7.1](index.html)
-*   [Developers](developers)
-*   [Community](Community/index.html)
-*   [Download](../../overview/download)
-
 Apollo 1.7.1 STOMP Protocol Manual
 ==================================
 
-*   [Using the STOMP Protocol](#Using_the_STOMP_Protocol)
-*   *   [Stomp Protocol Options](#Stomp_Protocol_Options)
-    *   [Client Libraries](#Client_Libraries)
-    *   [Connecting](#Connecting)
-    *   [Destination Types](#Destination_Types)
-    *   [Topic Retained Messages](#Topic_Retained_Messages)
-    *   [Reliable Messaging](#Reliable_Messaging)
-    *   [Message Expiration](#Message_Expiration)
-    *   [Subscription Flow Control](#Subscription_Flow_Control)
-    *   [Topic Durable Subscriptions](#Topic_Durable_Subscriptions)
-    *   [Browsing Subscriptions](#Browsing_Subscriptions)
-    *   [Queue Message Sequences](#Queue_Message_Sequences)
-    *   [Using Queue Browsers to Implement Durable Topic Subscriptions](#Using_Queue_Browsers_to_Implement_Durable_Topic_Subscriptions)
-    *   [Exclusive Subscriptions](#Exclusive_Subscriptions)
-    *   [Message Groups](#Message_Groups)
-    *   [Temporary Destinations](#Temporary_Destinations)
-    *   [Destination Wildcards](#Destination_Wildcards)
-    *   [Composite Destinations](#Composite_Destinations)
-    *   [Message Selectors](#Message_Selectors)
-    *   [Destination Name Restrictions](#Destination_Name_Restrictions)
+*   [Using the STOMP Protocol](#using-the-stomp-protocol)
+*   *   [Stomp Protocol Options](#stomp-protocol-options)
+    *   [Client Libraries](#client-libraries)
+    *   [Connecting](#connecting)
+    *   [Destination Types](#destination-types)
+    *   [Topic Retained Messages](#topic-retained-messages)
+    *   [Reliable Messaging](#reliable-messaging)
+    *   [Message Expiration](#message-expiration)
+    *   [Subscription Flow Control](#subscription-flow-control)
+    *   [Topic Durable Subscriptions](#topic-durable-subscriptions)
+    *   [Browsing Subscriptions](#browsing-subscriptions)
+    *   [Queue Message Sequences](#queue-message-sequences)
+    *   [Using Queue Browsers to Implement Durable Topic Subscriptions](#using-queue-browsers-to-implement-durable-topic-subscriptions)
+    *   [Exclusive Subscriptions](#exclusive-subscriptions)
+    *   [Message Groups](#message-groups)
+    *   [Temporary Destinations](#temporary-destinations)
+    *   [Destination Wildcards](#destination-wildcards)
+    *   [Composite Destinations](#composite-destinations)
+    *   [Message Selectors](#message-selectors)
+    *   [Destination Name Restrictions](#destination-name-restrictions)
 
 Using the STOMP Protocol
 ------------------------

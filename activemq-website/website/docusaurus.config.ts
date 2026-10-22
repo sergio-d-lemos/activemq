@@ -68,7 +68,8 @@ const config: Config = {
   // Matches the original Jekyll site: pages are served as /page rather than /page/.
   trailingSlash: false,
 
-  onBrokenLinks: 'warn',
+  onBrokenLinks: 'throw',
+  onBrokenAnchors: 'throw',
 
   // The Pagefind index only exists after a production build. `pnpm run start:search`
   // copies it to .pagefind so the dev server can serve it at /pagefind.

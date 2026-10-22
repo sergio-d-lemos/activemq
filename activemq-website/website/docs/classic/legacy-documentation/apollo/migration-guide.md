@@ -5,11 +5,6 @@ slug: /migration-guide
 
        
 
-*   [Apollo 1.7.1](index.html)
-*   [Developers](developers)
-*   [Community](Community/index.html)
-*   [Download](../../overview/download)
-
 Version Migration Guide
 =======================
 

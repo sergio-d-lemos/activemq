@@ -2,8 +2,7 @@
 title: "Journal is already opened by this application"
 slug: /journal-is-already-opened-by-this-application
 ---
-
- [FAQ](../..) > [Errors](..) > [Exceptions](.) > [Journal is already opened by this application](journal-is-already-opened-by-this-application)
+[FAQ](../../index.md) > [Errors](/components/classic/documentation/overview/faq/errors) > [Exceptions](/components/classic/documentation/overview/faq/errors/exceptions) > Journal is already opened by this application
 
 
 ### Error

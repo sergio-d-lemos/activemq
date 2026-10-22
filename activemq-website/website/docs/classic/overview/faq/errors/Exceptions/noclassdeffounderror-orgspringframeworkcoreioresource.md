@@ -2,8 +2,7 @@
 title: "NoClassDefFoundError - org.springframework.core.io.Resource"
 slug: /noclassdeffounderror-orgspringframeworkcoreioresource
 ---
-
- [FAQ](../..) > [Errors](..) > [Exceptions](.) > [NoClassDefFoundError - org.springframework.core.io.Resource](noclassdeffounderror-orgspringframeworkcoreioresource)
+[FAQ](../../index.md) > [Errors](/components/classic/documentation/overview/faq/errors) > [Exceptions](/components/classic/documentation/overview/faq/errors/exceptions) > NoClassDefFoundError - org.springframework.core.io.Resource
 
 
 If you get an exception like this

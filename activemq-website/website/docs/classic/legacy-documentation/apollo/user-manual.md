@@ -5,49 +5,44 @@ slug: /user-manual
 
        
 
-*   [Apollo 1.7.1](index.html)
-*   [Developers](developers)
-*   [Community](Community/index.html)
-*   [Download](../../overview/download)
-
 Apollo 1.7.1 User Manual
 ========================
 
-*   [Creating a Broker](#Creating_a_Broker)
-*   [Broker Configuration](#Broker_Configuration)
-*   *   [Automatic Configuration Reloading](#Automatic_Configuration_Reloading)
-    *   [Adjusting JVM Settings](#Adjusting_JVM_Settings)
-    *   [Understanding the `apollo.xml` File](#Understanding_the__code_apollo_xml__code__File)
-    *   *   [Connectors](#Connectors)
-        *   *   [TCP Transports](#TCP_Transports)
-            *   [WebSocket Transports](#WebSocket_Transports)
-            *   [UDP Transports](#UDP_Transports)
-        *   [Virtual Hosts](#Virtual_Hosts)
-        *   *   [Queues](#Queues)
-            *   [Topics](#Topics)
-            *   [Durable Subscriptions](#Durable_Subscriptions)
-            *   [Mirrored Queues](#Mirrored_Queues)
-            *   [Message Stores](#Message_Stores)
-    *   [Support Platforms](#Support_Platforms)
-    *   [Security](#Security)
-    *   [Working Around Java 7 SSL Bugs](#Working_Around_Java_7_SSL_Bugs)
-    *   *   [The SSL/TLS Transport](#The_SSL_TLS_Transport)
-        *   [Authentication](#Authentication)
-        *   *   [Using Custom Login Modules](#Using_Custom_Login_Modules)
-        *   [Authorization](#Authorization)
-        *   *   [Ordering](#Ordering)
-        *   [Resource Actions](#Resource_Actions)
-        *   [Resource Kinds](#Resource_Kinds)
-        *   [Encrypting Passwords in the Configuration](#Encrypting_Passwords_in_the_Configuration)
-    *   [Web Based Administration](#Web_Based_Administration)
-*   [Managing Brokers](#Managing_Brokers)
-*   *   [Running a Broker Instance in the Foreground](#Running_a_Broker_Instance_in_the_Foreground)
-    *   [Managing a Background Broker Instance](#Managing_a_Background_Broker_Instance)
-    *   *   [On Linux/Unix](#On_Linux_Unix)
-        *   [On Windows](#On_Windows)
-    *   [Viewing Broker State](#Viewing_Broker_State)
-    *   [Exporting/Importing Stores](#Exporting_Importing_Stores)
-*   [Messaging Protocols Manuals](#Messaging_Protocols_Manuals)
+*   [Creating a Broker](#creating-a-broker)
+*   [Broker Configuration](#broker-configuration)
+*   *   [Automatic Configuration Reloading](#automatic-configuration-reloading)
+    *   [Adjusting JVM Settings](#adjusting-jvm-settings)
+    *   [Understanding the `apollo.xml` File](#understanding-the-apolloxml-file)
+    *   *   [Connectors](#connectors)
+        *   *   [TCP Transports](#tcp-transports)
+            *   [WebSocket Transports](#websocket-transports)
+            *   [UDP Transports](#udp-transports)
+        *   [Virtual Hosts](#virtual-hosts)
+        *   *   [Queues](#queues)
+            *   [Topics](#topics)
+            *   [Durable Subscriptions](#durable-subscriptions)
+            *   [Mirrored Queues](#mirrored-queues)
+            *   [Message Stores](#message-stores)
+    *   [Support Platforms](#support-platforms)
+    *   [Security](#security)
+    *   [Working Around Java 7 SSL Bugs](#working-around-java-7-ssl-bugs)
+    *   *   [The SSL/TLS Transport](#the-ssltls-transport)
+        *   [Authentication](#authentication)
+        *   *   [Using Custom Login Modules](#using-custom-login-modules)
+        *   [Authorization](#authorization)
+        *   *   [Ordering](#ordering)
+        *   [Resource Actions](#resource-actions)
+        *   [Resource Kinds](#resource-kinds)
+        *   [Encrypting Passwords in the Configuration](#encrypting-passwords-in-the-configuration)
+    *   [Web Based Administration](#web-based-administration)
+*   [Managing Brokers](#managing-brokers)
+*   *   [Running a Broker Instance in the Foreground](#running-a-broker-instance-in-the-foreground)
+    *   [Managing a Background Broker Instance](#managing-a-background-broker-instance)
+    *   *   [On Linux/Unix](#on-linuxunix)
+        *   [On Windows](#on-windows)
+    *   [Viewing Broker State](#viewing-broker-state)
+    *   [Exporting/Importing Stores](#exportingimporting-stores)
+*   [Messaging Protocols Manuals](#messaging-protocols-manuals)
 
 Creating a Broker
 -----------------
@@ -102,7 +97,7 @@ Make sure you define the variables before the `apollo-broker` script executes `a
 
 ### Understanding the `apollo.xml` File
 
-There are many XSD aware XML editors which make editing XML configuration files less error prone. If you're using one of these editors, you can configure it to use this [apollo.xsd](schema/apollo.xsd) file.
+There are many XSD aware XML editors which make editing XML configuration files less error prone. If you're using one of these editors, you can configure it to use this apollo.xsd file.
 
 The simplest valid `apollo.xml` defines a single virtual host and a single connector.
 
@@ -123,7 +118,7 @@ The broker, virtual host, and connector are assigned an id which which is used t
 
 Brokers can be configured with multiple virtual hosts and connectors.
 
-When a broker is first started up, it will validate the configuration file against the the [XSD Schema](schema/apollo.xsd) and report any errors/warnings it finds but it will continue to start the broker even it finds problems. You would want to the broker to abort starting up if any issues are found with the schema validation you should set the `broker` element's `validation` attribute to `strict`. Example:
+When a broker is first started up, it will validate the configuration file against the the XSD Schema and report any errors/warnings it finds but it will continue to start the broker even it finds problems. You would want to the broker to abort starting up if any issues are found with the schema validation you should set the `broker` element's `validation` attribute to `strict`. Example:
 
     
     <broker validation="strict" 
@@ -286,7 +281,7 @@ The supported protocols that can be used with the udp transport are:
     
     *   `topic` : The name of the topic to send messages. Defaults to `udp`.
     *   `buffer_size` : The amount of memory to use to buffer between the socket and topic endpoint. Defaults to `640k`.
-*   `stomp-udp` : Expects the received UDP datagram to contain a STOMP frame. The STOMP frame is processed and routed just like any STOMP frame that would be received on a TCP transport. This protocol can be configured by nesting a `stomp` element within the `connector` element. See the [Stomp Protocol Options section](#Stomp_Protocol_Options) for more details.
+*   `stomp-udp` : Expects the received UDP datagram to contain a STOMP frame. The STOMP frame is processed and routed just like any STOMP frame that would be received on a TCP transport. This protocol can be configured by nesting a `stomp` element within the `connector` element. See the [Stomp Protocol Options section](stomp-manual.md#stomp-protocol-options) for more details.
     
 
 #### Virtual Hosts
@@ -318,7 +313,7 @@ If the queue definition is not using a wild card in the id, then the queue will 
 
 A `queue` element may be configured with the following attributes:
 
-*   `mirrored` : If set to true, If set to true, then once the queue is created all messages sent to the queue will be mirrored to a topic of the same name and all messages sent to the topic will be mirror to the queue. See the [Mirrored Queues](Mirrored_Queues) documentation for more details. Defaults to false.
+*   `mirrored` : If set to true, If set to true, then once the queue is created all messages sent to the queue will be mirrored to a topic of the same name and all messages sent to the topic will be mirror to the queue. See the [Mirrored Queues](#mirrored-queues) documentation for more details. Defaults to false.
     
 *   `tail_buffer` : The amount of memory buffer space allocated for holding freshly enqueued message. Defaults to `640k`.
     
@@ -432,8 +427,8 @@ A message store is used to implement reliable messaging and message swapping whi
 
 Apollo supports multiple message store implementations. The implementations currently supported are:
 
-*   [LevelDB Store](#LevelDB_Store) : is a file based message store implemented using the [Google's LevelDB](http://en.wikipedia.org/wiki/LevelDB) library to maintain indexes into log files holding the messages. This the default implementation used.
-*   [BDB Store](#BDB_Store) : is a file based message store implemented using the [Sleepycat BDB](http://en.wikipedia.org/wiki/Berkeley_DB) library. This implemenation should work equally well on all platforms since it's a pure java implementation.
+*   [LevelDB Store](#leveldb-store) : is a file based message store implemented using the [Google's LevelDB](http://en.wikipedia.org/wiki/LevelDB) library to maintain indexes into log files holding the messages. This the default implementation used.
+*   [BDB Store](#bdb-store) : is a file based message store implemented using the [Sleepycat BDB](http://en.wikipedia.org/wiki/Berkeley_DB) library. This implemenation should work equally well on all platforms since it's a pure java implementation.
 
 ###### LevelDB Store
 
@@ -831,7 +826,7 @@ Apollo provides a web based interface for administrators to inspect the runtime 
 
 The web interface will display the status of the the connectors and show attached connections. It will also allow you to drill into each configured virtual host and view the topics and queues being used.
 
-Please see the [Management API](management-Index/Site/NavigationIndex/Site/Navigation/Index/Site/Navigation/api) documentation for more information on how to use the web based interface as a RESTful API.
+Please see the [Management API](management-api.md) documentation for more information on how to use the web based interface as a RESTful API.
 
 ### Exporting/Importing Stores
 
@@ -842,8 +837,8 @@ Exporting compresses all the data in a virtual host's message store in a zip arc
 
 The stores which support exporting and importing are:
 
-*   [BDB Store](#BDB_Store)
-*   [LevelDB Store](#LevelDB_Store)
+*   [BDB Store](#bdb-store)
+*   [LevelDB Store](#leveldb-store)
 
 The broker must be stopped before using the import or export commands. Be careful when importing an archive, since it will first purge the message store of any data!
 
@@ -863,6 +858,6 @@ Messaging Protocols Manuals
 ---------------------------
 
 *   [STOMP Protocol Manual](stomp-manual)
-*   [AMQP Protocol Manual](amqp-manual)
+*   AMQP Protocol Manual
 *   [OpenWire Protocol Manual](openwire-manual)
 *   [MQTT Protocol Manual](mqtt-manual)

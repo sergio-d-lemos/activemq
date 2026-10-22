@@ -20,7 +20,6 @@ Some notable new features in this release
 API
 ---
 
-Check out the API for this release [here](/components/cms/api_docs/activemqcpp-2.2.1/)
 
 Download Here
 -------------

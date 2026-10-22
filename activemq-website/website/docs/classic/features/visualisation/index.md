@@ -8,13 +8,13 @@ Inspired greatly by [Gregor and Erik's great talk at TSSJS 2006](http://www.ente
 
 ### Connection visualisation
 
-There is a `<connectionDotFilePlugin/>` broker plugin which generates a [DOT file](http://www.graphviz.org/) such as [this example](assets/ActiveMQConnections.dot) representing the connections, sessions, producers, consumers and the destinations they are using.
+There is a `<connectionDotFilePlugin/>` broker plugin which generates a [DOT file](http://www.graphviz.org/) such as [this example](pathname:///assets/ActiveMQConnections.dot) representing the connections, sessions, producers, consumers and the destinations they are using.
 
 ![](/img/ActiveMQConnections.png)
 
 ### Destination visualisation
 
-There is a `<destinationDotFilePlugin/>` broker plugin which generates a [DOT file](http://www.graphviz.org/) such as [this example](assets/ActiveMQDestinations.dot) whenever a destination is created or destroyed in the broker. You can then turn this dot file into a nicely rendered image such as the one below.
+There is a `<destinationDotFilePlugin/>` broker plugin which generates a [DOT file](http://www.graphviz.org/) such as [this example](pathname:///assets/ActiveMQDestinations.dot) whenever a destination is created or destroyed in the broker. You can then turn this dot file into a nicely rendered image such as the one below.
 
 ![](/img/ActiveMQDestinations.png)
 

@@ -197,7 +197,7 @@ under the assembly module run :
 ```
 maven server -Dconfig=xbean:file:src/release/conf/activemq.xml
 ```
-If your [classpath is set up correctly](../overview/faq/configuration) you can achieve the same thing from the command line
+If your [classpath is set up correctly](/components/classic/documentation/overview/faq/configuration) you can achieve the same thing from the command line
 ```
 java org.apache.activemq.broker.Main xbean:file:src/release/conf/activemq.xml
 ```

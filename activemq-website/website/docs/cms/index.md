@@ -15,10 +15,10 @@ Read more in the dedicated [CMS API overview](/components/cms/overview).
 *   [Example](/components/cms/example)
 
 ### API Reference {#api}
-*   [ActiveMQ-CPP 3.9.x](/components/cms/api_docs/activemqcpp-3.9.0/html/index.html)
-*   [ActiveMQ-CPP 3.6.x](/components/cms/api_docs/activemqcpp-3.6.0/html/index.html)
-*   [ActiveMQ-CPP 3.4.x](/components/cms/api_docs/activemqcpp-3.4.0/html/index.html)
-*   [ActiveMQ-CPP 3.3.x](/components/cms/api_docs/activemqcpp-3.3.0/html/index.html)
+*   [ActiveMQ-CPP 3.9.x](pathname:///components/cms/api_docs/activemqcpp-3.9.0/html/index.html)
+*   [ActiveMQ-CPP 3.6.x](pathname:///components/cms/api_docs/activemqcpp-3.6.0/html/index.html)
+*   [ActiveMQ-CPP 3.4.x](pathname:///components/cms/api_docs/activemqcpp-3.4.0/html/index.html)
+*   [ActiveMQ-CPP 3.3.x](pathname:///components/cms/api_docs/activemqcpp-3.3.0/html/index.html)
 
 ### Connectivity
 

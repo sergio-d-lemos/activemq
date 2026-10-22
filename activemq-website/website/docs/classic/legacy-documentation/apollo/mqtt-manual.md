@@ -5,29 +5,24 @@ slug: /mqtt-manual
 
        
 
-*   [Apollo 1.7.1](index.html)
-*   [Developers](developers)
-*   [Community](Community/index.html)
-*   [Download](../../overview/download)
-
 Apollo 1.7.1 MQTT Protocol Manual
 =================================
 
-*   [The MQTT Protocol](#The_MQTT_Protocol)
-*   *   [MQTT Protocol Options](#MQTT_Protocol_Options)
-    *   [Client Libraries](#Client_Libraries)
-    *   [Connecting](#Connecting)
-    *   [Destination Types](#Destination_Types)
-    *   [Clean Sessions](#Clean_Sessions)
-    *   [Topic Retained Messages](#Topic_Retained_Messages)
-    *   [Last Will and Testament Message](#Last_Will_and_Testament_Message)
-    *   [Reliable Messaging](#Reliable_Messaging)
-    *   *   [At Most Once](#At_Most_Once)
-        *   [At Least Once](#At_Least_Once)
-        *   [Exactly Once](#Exactly_Once)
-    *   [Wildcard Subscriptions](#Wildcard_Subscriptions)
-    *   [Keep Alive](#Keep_Alive)
-    *   [Destination Name Restrictions](#Destination_Name_Restrictions)
+*   [The MQTT Protocol](#the-mqtt-protocol)
+*   *   [MQTT Protocol Options](#mqtt-protocol-options)
+    *   [Client Libraries](#client-libraries)
+    *   [Connecting](#connecting)
+    *   [Destination Types](#destination-types)
+    *   [Clean Sessions](#clean-sessions)
+    *   [Topic Retained Messages](#topic-retained-messages)
+    *   [Last Will and Testament Message](#last-will-and-testament-message)
+    *   [Reliable Messaging](#reliable-messaging)
+    *   *   [At Most Once](#at-most-once)
+        *   [At Least Once](#at-least-once)
+        *   [Exactly Once](#exactly-once)
+    *   [Wildcard Subscriptions](#wildcard-subscriptions)
+    *   [Keep Alive](#keep-alive)
+    *   [Destination Name Restrictions](#destination-name-restrictions)
 
 The MQTT Protocol
 -----------------
@@ -105,7 +100,7 @@ The Apollo distribution ships with an `examples` directory where you can find so
 
 The default broker configuration secures access to the broker so that only the `admin` user can connect. The default password for the `admin` user is `password`.
 
-MQTT clients cannot specify a Virtual Host (see [the section on Virtual Hosts in the user guide](user-manual.md#Virtual_Hosts)) so the default virtual host will be used. This is usually the first Virtual Host defined in the Apollo.xml configuration file.
+MQTT clients cannot specify a Virtual Host (see [the section on Virtual Hosts in the user guide](user-manual.md#virtual-hosts)) so the default virtual host will be used. This is usually the first Virtual Host defined in the Apollo.xml configuration file.
 
 ### Destination Types
 

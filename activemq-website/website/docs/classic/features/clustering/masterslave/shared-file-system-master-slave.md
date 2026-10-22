@@ -10,7 +10,7 @@ If you have a SAN or shared file system it can be used to provide _high availabi
 
 > Ensure your shared file locks work
 > 
-> Note that the requirements of this failover system are a distributed file system like a SAN for which exclusive file locks work reliably. If you do not have such a thing available then consider using [MasterSlave](index) instead which implements something similar but working on commodity hardware using local file systems which ActiveMQ does the replication.
+> Note that the requirements of this failover system are a distributed file system like a SAN for which exclusive file locks work reliably. If you do not have such a thing available then consider using [MasterSlave](./index.md) instead which implements something similar but working on commodity hardware using local file systems which ActiveMQ does the replication.
 > 
 > > **OCFS2 Warning**
 > > 

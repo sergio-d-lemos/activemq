@@ -7,7 +7,7 @@ slug: /building
 Building ActiveMQ from Source
 -----------------------------
 
-ActiveMQ uses [Maven](http://maven.apache.org/) as its build and management tool. If you don't fancy using Maven you can use your IDE directly or [Download](../overview/download) a distribution or JAR.
+ActiveMQ uses [Maven](http://maven.apache.org/) as its build and management tool. If you don't fancy using Maven you can use your IDE directly or [Download](/components/classic/download) a distribution or JAR.
 
 ### Prequisites
 

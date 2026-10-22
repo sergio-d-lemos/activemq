@@ -5,7 +5,7 @@ displayed_sidebar: docs
 ---
 
 
-*   [Download](../overview/download) a binary distribution of ActiveMQ and unpack it into some directory.
+*   [Download](/components/classic/download) a binary distribution of ActiveMQ and unpack it into some directory.
 
 *   To run an ActiveMQ broker, type the following commands from the directory in which you have just unpacked the ActiveMQ distribution.
 ```

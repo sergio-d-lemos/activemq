@@ -5,30 +5,25 @@ slug: /openwire-manual
 
        
 
-*   [Apollo 1.7.1](index.html)
-*   [Developers](developers)
-*   [Community](Community/index.html)
-*   [Download](../../overview/download)
-
 Apollo 1.7.1 OpenWire Protocol Manual
 =====================================
 
-*   [Using the OpenWire Protocol](#Using_the_OpenWire_Protocol)
-*   *   [OpenWire Protocol Options](#OpenWire_Protocol_Options)
-    *   [Protocol Detection (different that open-wire vesion detection)](#Protocol_Detection__different_that_open-wire_vesion_detection_)
-    *   [Client Libraries](#Client_Libraries)
-    *   [Broker features available using the OpenWire protocol](#Broker_features_available_using_the_OpenWire_protocol)
-    *   *   [Destination Types](#Destination_Types)
-        *   [Wildcard Subscriptions](#Wildcard_Subscriptions)
-        *   [Composite Destinations](#Composite_Destinations)
-        *   [Exclusive Consumer](#Exclusive_Consumer)
-        *   [Temporary Destinations](#Temporary_Destinations)
-        *   [Message Selectors](#Message_Selectors)
-        *   [Browing Subscription](#Browing_Subscription)
-        *   [Transactions](#Transactions)
-    *   [OpenWire protocol details](#OpenWire_protocol_details)
-    *   [OpenWire features to be documented](#OpenWire_features_to_be_documented)
-    *   [Unsupported OpenWire features:](#Unsupported_OpenWire_features:)
+*   [Using the OpenWire Protocol](#using-the-openwire-protocol)
+*   *   [OpenWire Protocol Options](#openwire-protocol-options)
+    *   [Protocol Detection (different that open-wire vesion detection)](#protocol-detection-different-that-open-wire-vesion-detection)
+    *   [Client Libraries](#client-libraries)
+    *   [Broker features available using the OpenWire protocol](#broker-features-available-using-the-openwire-protocol)
+    *   *   [Destination Types](#destination-types)
+        *   [Wildcard Subscriptions](#wildcard-subscriptions)
+        *   [Composite Destinations](#composite-destinations)
+        *   [Exclusive Consumer](#exclusive-consumer)
+        *   [Temporary Destinations](#temporary-destinations)
+        *   [Message Selectors](#message-selectors)
+        *   [Browing Subscription](#browing-subscription)
+        *   [Transactions](#transactions)
+    *   [OpenWire protocol details](#openwire-protocol-details)
+    *   [OpenWire features to be documented](#openwire-features-to-be-documented)
+    *   [Unsupported OpenWire features:](#unsupported-openwire-features)
 
 Using the OpenWire Protocol
 ---------------------------
@@ -236,6 +231,6 @@ You will get bad/undefined behaviour if you try to use any of the following Open
 *   [Message Groups using JMSXGroupID](http://activemq.apache.org/Features/Consumer Features/message-groups)
 *   [Subscription recovery/retroactive consumer](http://activemq.apache.org/Features/Consumer Features/retroactive-consumer)
 *   [Exclusive Consumer with Priority](http://activemq.apache.orgFeatures/Consumer Features/exclusive-consumer)
-*   [Virtual Destinations](http://activemq.apache.orgFeatures/Destination Features/Features/Destination Features/virtual-destinations)
+*   [Virtual Destinations](/components/classic/documentation/virtual-destinations)
 
-You can use Durable Subscriptions and/or [Mirrored Queues](user-manual.md#Mirrored_Queues) to get the same/similar behaviour that [Virtual Destinations](http://activemq.apache.orgFeatures/Destination Features/Features/Destination Features/virtual-destinations) provide.
+You can use Durable Subscriptions and/or [Mirrored Queues](user-manual.md#mirrored-queues) to get the same/similar behaviour that [Virtual Destinations](/components/classic/documentation/virtual-destinations) provide.

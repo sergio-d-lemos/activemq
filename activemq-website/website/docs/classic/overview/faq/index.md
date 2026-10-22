@@ -3,7 +3,7 @@ title: "FAQ"
 slug: /faq
 ---
 
-Here are a list of commonly asked questions and answers. If you have any questions which are not on this list, please [contact us](contact).
+Here are a list of commonly asked questions and answers. If you have any questions which are not on this list, please [contact us](/contact).
 
 ### General
 
@@ -98,8 +98,8 @@ Questions on using Apache ActiveMQ
 *   [How do I unack the message with Stomp](how-do-i-unack-the-message-with-stomp)
 *   [How do I use ActiveMQ using in JVM messaging](how-do-i-use-activemq-classic-using-in-jvm-messaging)
 *   [How do I use durable subscribers in a network of brokers](how-do-i-use-durable-subscribers-in-a-network-of-brokers)
-*   [How do I use Ivy with ActiveMQ](how-do-i-use-ivy-with-activemq-classic-classic)
-*   [How do I use log4j JMS appender with ActiveMQ](how-do-i-use-log4j-jms-appender-with-activemq-classic-classic)
+*   [How do I use Ivy with ActiveMQ](how-do-i-use-ivy-with-activemq-classic)
+*   [How do I use log4j JMS appender with ActiveMQ](how-do-i-use-log4j-jms-appender-with-activemq-classic)
 *   [How do I use SSL](how-do-i-use-ssl)
 *   [How do Message Groups compare to Selectors](how-do-message-groups-compare-to-selectors)
 *   [How do multiple transports work](how-do-multiple-transports-work)
@@ -154,7 +154,7 @@ Questions relating to long term persistence of messages.
 
 ### Errors
 
-Questions on specific kinds of errors. If you have seen a specific exception then check the [Exceptions](errors/Exceptions)
+Questions on specific kinds of errors. If you have seen a specific exception then check the [Exceptions](/components/classic/documentation/overview/faq/errors/exceptions)
 
 *   [Could not find PacketReader for packet type - UNKNOWN PACKET TYPE](could-not-find-packetreader-for-packet-type-unknown-packet-type)
 *   Exceptions

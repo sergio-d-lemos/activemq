@@ -17,7 +17,7 @@ This is the first official release of the C++ Messaging Service (CMS)!! CMS prov
 API
 ---
 
-Check out the API for this release [here](/components/cms/api_docs/cms-1.0/index.html)
+Check out the API for this release [here](pathname:///components/cms/api_docs/cms-1.0/index.html)
 
 Download Here
 -------------

@@ -85,7 +85,7 @@ e.g.
   </property>
 </bean>
 ```
-The `PooledConnectionFactory` supports the pooling of Connection, Session and MessageProducer instances so it can be used with tools like [Camel](http://camel.apache.org/activemq.html) and Spring's [JmsTemplate and MessagListenerContainer](index) . Connections, sessions and producers are returned to a pool after use so that they can be reused later without having to undergo the cost of creating them again.
+The `PooledConnectionFactory` supports the pooling of Connection, Session and MessageProducer instances so it can be used with tools like [Camel](http://camel.apache.org/activemq.html) and Spring's JmsTemplate and MessagListenerContainer . Connections, sessions and producers are returned to a pool after use so that they can be reused later without having to undergo the cost of creating them again.
 
 Note: while the `PooledConnectionFactory` does allow the creation of a collection of active consumers, it does not 'pool' consumers. Pooling makes sense for connections, sessions and producers, which can be seldom-used resources, are expensive to create and can remain idle a minimal cost. Consumers, on the other hand, are usually just created at startup and left going, handling incoming messages as they come. When a consumer is complete, it's preferred to shut down it down rather than leave it idle and return it to a pool for later reuse: this is because, even if the consumer is idle, ActiveMQ will keep delivering messages to the consumer's prefetch buffer, where they'll get held up until the consumer is active again.
 

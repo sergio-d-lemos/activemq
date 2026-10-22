@@ -7,9 +7,9 @@ slug: /jboss-integration
 Integrating Apache ActiveMQ with JBoss
 ======================================
 
-Integration with application servers is a common scenario in the enterprise Java world, especially when it comes to messaging. ActiveMQ is a JMS 1.1 compliant, open source, Apache Licensed, message oriented middleware (MOM) with [many](changes-in-40), [many](new-features-in-41) features far beyond the JMS specification. ActiveMQ offers many different [points of connectivity](../..), many [cross language clients](cross-language-clients) and many [pluggable transport protocols](protocols) including integration with any J2EE 1.4 application server.
+Integration with application servers is a common scenario in the enterprise Java world, especially when it comes to messaging. ActiveMQ is a JMS 1.1 compliant, open source, Apache Licensed, message oriented middleware (MOM) with [many](changes-in-40), [many](new-features-in-41) features far beyond the JMS specification. ActiveMQ offers many different [points of connectivity](../../index.md), many [cross language clients](cross-language-clients) and many [pluggable transport protocols](protocols) including integration with any J2EE 1.4 application server.
 
-One of the application servers in the open source world is JBoss. A very common requirement is to configure ActiveMQ as the messaging infrastructure within JBoss. Although there is [a bit of documentation](index) on this integration, this article seeks to provide much more detail and explanation. So if you have a need to integrate ActiveMQ with JBoss, this article is for you.
+One of the application servers in the open source world is JBoss. A very common requirement is to configure ActiveMQ as the messaging infrastructure within JBoss. Although there is a bit of documentation on this integration, this article seeks to provide much more detail and explanation. So if you have a need to integrate ActiveMQ with JBoss, this article is for you.
 
 This article explains how to configure JBoss to start up ActiveMQ as part of its lifecycle and how to configure the ActiveMQ resource adapter to handle the messaging and transactionality between ActiveMQ and JBoss.
 
@@ -18,7 +18,7 @@ Requirements
 
 Below are the software requirements for this article with links to download each:
 
-*   [Apache ActiveMQ 4.0.1+](../../../overview/download)
+*   [Apache ActiveMQ 4.0.1+](/components/classic/download)
 *   [JBoss 4.0.4+](http://sourceforge.net/project/showfiles.php?group_id=22866&package_id=16942&release_id=416591)
 *   [Sun Java 1.5+](http://www.java.com/en/download/index.jsp)
 *   [Apache Ant 1.6+](http://ant.apache.org/bindownload.cgi)
@@ -699,7 +699,7 @@ Below are the configurations for use with both Spring 1.x and Spring 2.x:
 
 [Modified](integrating-apache-activemq-classic-with-jboss)
 
-File [amq-spring-1.2.6.tgz](integrating-apache-activemq-classic-with-jboss.data/amq-spring-1.2.6.tgz?api=v2 "Download")
+File amq-spring-1.2.6.tgz
 
 Oct 03, 2007 by [Bruce Snyder](https://cwiki.apache.org/confluence/display/~bsnyder)
 
@@ -710,7 +710,7 @@ Labels
 
 Preview
 
-File [amq-spring-2.0.tgz](integrating-apache-activemq-classic-with-jboss.data/amq-spring-2.0.tgz?api=v2 "Download")
+File amq-spring-2.0.tgz
 
 Oct 03, 2007 by [Bruce Snyder](https://cwiki.apache.org/confluence/display/~bsnyder)
 
@@ -721,5 +721,5 @@ Labels
 
 Preview
 
-[Download All](/confluence/pages/downloadallattachments.action?pageId=67786 "Download all the latest versions of attachments on this page as single zip file.")
+Download All
 

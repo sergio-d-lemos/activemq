@@ -8,7 +8,7 @@ The ActiveMQ Web Console is a web based administration tool for working with Act
 
 ### Running the Web Console on ActiveMQ 5.0 or later
 
-We have integrated the Web Console into the binary distribution. So [Download](../overview/download) a binary distribution then follow the instructions for [Version 5 Run Broker](run-broker). Then you can point your web browser at the URL
+We have integrated the Web Console into the binary distribution. So [Download](/components/classic/download) a binary distribution then follow the instructions for [Version 5 Run Broker](run-broker). Then you can point your web browser at the URL
 
 *   [http://localhost:8161/admin](http://localhost:8161/admin)
 
@@ -83,7 +83,7 @@ The Web Console has many features relative to it's tabs as shown in the followin
 
 Tab|Features
 ---|---
-Home|[System Usage](producer-flow-control#ProducerFlowControl-Systemusage)
+Home|[System Usage](producer-flow-control#system-usage)
 Queues|
 Topics|[Viewing Advisory Messages](advisory-message)
 Subscribers|

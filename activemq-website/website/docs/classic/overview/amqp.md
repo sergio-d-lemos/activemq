@@ -7,7 +7,7 @@ ActiveMQ supports the [AMQP 1.0](https://www.oasis-open.org/committees/tc_home.p
 
 > **Availability**
 > 
-> Available from ActiveMQ version [5.8](activemq-580-release) onward.
+> Available from ActiveMQ version [5.8](/components/classic/download/classic-05-08-00) onward.
 
 ### Enabling the ActiveMQ Broker for AMQP
 
@@ -35,7 +35,7 @@ Example:
 ```
 <transportConnector name="amqp+nio" uri="amqp+nio://localhost:5672"/>
 ```
-This transport uses the [NIO transport](configuring-transports#TheNIOTransport) underneath and will generally use much less threads than the standard connector. This connector can help if you want to use [large number of queues](how-do-i-configure-10s-of-1000s-of-queues-in-a-single-broker)
+This transport uses the [NIO transport](configuring-transports#the-nio-transport) underneath and will generally use much less threads than the standard connector. This connector can help if you want to use [large number of queues](how-do-i-configure-10s-of-1000s-of-queues-in-a-single-broker)
 
 ### Enabling AMQP over SSL
 

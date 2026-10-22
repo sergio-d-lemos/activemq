@@ -13,11 +13,11 @@ In ActiveMQ 4, we are using a new xml format to configure the broker.
 
 The following xsd describes the syntax of the broker configuration file.
 
-[activemq-4.0.xsd](configuring-brokers.data/activemq-4.0.xsd?version=1&modificationDate=1133701454000&api=v2)
+activemq-4.0.xsd
 
 And here is the reference documentation for that xsd file.
 
-[activemq-4.0.xsd.html](configuring-brokers.data/activemq-4.0.xsd.html?version=1&modificationDate=1133701442000&api=v2)
+activemq-4.0.xsd.html
 
 ### Example
 ```

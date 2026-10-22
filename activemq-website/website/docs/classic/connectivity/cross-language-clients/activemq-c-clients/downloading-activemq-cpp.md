@@ -4,7 +4,7 @@ slug: /downloading-activemq-cpp
 ---
 
 
-ActiveMQ CPP distributions are source-only. To get the source bundle for a particular release, go [here](../../../overview/download). Follow the instructions here only if you want the bleeding edge from trunk.
+ActiveMQ CPP distributions are source-only. To get the source bundle for a particular release, go [here](/components/cms/download). Follow the instructions here only if you want the bleeding edge from trunk.
 
 Web Browsing of Git
 -------------------

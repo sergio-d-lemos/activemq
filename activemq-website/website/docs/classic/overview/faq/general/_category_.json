@@ -1,4 +1,7 @@
-
 {
-  "label": "General"
+  "label": "General",
+  "link": {
+    "type": "generated-index",
+    "slug": "/overview/faq/general"
+  }
 }

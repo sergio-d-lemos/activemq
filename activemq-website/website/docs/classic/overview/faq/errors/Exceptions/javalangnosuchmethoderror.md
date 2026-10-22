@@ -2,8 +2,7 @@
 title: "java.lang.NoSuchMethodError"
 slug: /javalangnosuchmethoderror
 ---
-
- [FAQ](../..) > [Errors](..) > [Exceptions](.) > [java.lang.NoSuchMethodError](javalangnosuchmethoderror)
+[FAQ](../../index.md) > [Errors](/components/classic/documentation/overview/faq/errors) > [Exceptions](/components/classic/documentation/overview/faq/errors/exceptions) > java.lang.NoSuchMethodError
 
 
 If you get an error like

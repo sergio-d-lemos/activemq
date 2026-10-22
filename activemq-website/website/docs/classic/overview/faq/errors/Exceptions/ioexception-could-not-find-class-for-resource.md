@@ -2,8 +2,7 @@
 title: "IOException - could not find class for resource"
 slug: /ioexception-could-not-find-class-for-resource
 ---
-
- [FAQ](../..) > [Errors](..) > [Exceptions](.) > [IOException - could not find class for resource](source)
+[FAQ](../../index.md) > [Errors](/components/classic/documentation/overview/faq/errors) > [Exceptions](/components/classic/documentation/overview/faq/errors/exceptions) > IOException - could not find class for resource
 
 
 If you get an exception looking like this

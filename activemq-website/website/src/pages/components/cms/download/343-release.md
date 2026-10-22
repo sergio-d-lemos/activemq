@@ -16,7 +16,7 @@ API
 
 This release is based on the CMS 2.4 API.
 
-Check out the API for this release [here](/components/cms/api_docs/activemqcpp-3.4.0/html/index.html)
+Check out the API for this release [here](pathname:///components/cms/api_docs/activemqcpp-3.4.0/html/index.html)
 
 Download Here
 -------------

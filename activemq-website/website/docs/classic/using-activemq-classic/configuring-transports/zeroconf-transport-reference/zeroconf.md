@@ -17,5 +17,5 @@ based tools can be used in conjunction with this discovery agent.
 You can use ZeroConf with ActiveMQ's [Discovery](discovery) mechanism. For more details see
 
 *   [Discovery](discovery)
-*   [ZeroConf Transport Reference](index)
+*   ZeroConf Transport Reference
 

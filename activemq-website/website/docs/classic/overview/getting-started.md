@@ -74,7 +74,7 @@ This section of the Getting Started Guide explains how to install binary and sou
 This procedure explains how to download and install the binary distribution on a Windows system.
 
 1.  Download the latest release  
-    (see [Download](download) -\> "The latest stable release" -> "apache-activemq-x.x.x-bin.zip")
+    (see [Download](/components/classic/download) -\> "The latest stable release" -> "apache-activemq-x.x.x-bin.zip")
 2.  Extract the files from the ZIP file into a directory of your choice.
 3.  Proceed to the [Starting ActiveMQ](#starting-activemq) section of this document.
 4.  Following start-up, go to the [Testing the Installation](#testing-the-installation) section of this document.
@@ -84,7 +84,7 @@ This procedure explains how to download and install the binary distribution on a
 This procedure explains how to download and install the source distribution on a Windows system.
 
 1.  Download the latest release  
-    (see [Download](download) -\> "The latest stable release" -> "apache-activemq-x.x.x-source-release.zip")
+    (see [Download](/components/classic/download) -\> "The latest stable release" -> "apache-activemq-x.x.x-source-release.zip")
 2.  Extract ActiveMQ from the ZIP file into a directory of your choice.
 3.    
     The recommended method of building ActiveMQ is the following:
@@ -143,7 +143,7 @@ This procedure explains how to download and install the binary distribution on a
 **NOTE:** There are several alternative ways to perform this type of installation.
 
 1.  Download the activemq zipped tarball file to the Unix machine, using either a browser or a tool, i.e., wget, scp, ftp, etc. for example:  
-    (see [Download](download) -\> "The latest stable release")
+    (see [Download](/components/classic/download) -\> "The latest stable release")
     ```
     wget http://activemq.apache.org/path/tofile/apache-activemq-x.x.x-bin.tar.gz
     ```
@@ -184,7 +184,7 @@ Now you can proceed to [Starting ActiveMQ](#starting-activemq) and [Testing the 
 This procedure explains how to download and install the source distribution on a Unix system. This procedure assumes the Unix machine has a browser. Please see the previous [Unix Binary Installation](#unix-binary-installation) section for details on how to install ActiveMQ without a browser.
 
 1.  Download the latest source release  
-    (see [Download](download) -\> "The latest stable release" -> "activemq-parent-x.x.x-source-release.zip")
+    (see [Download](/components/classic/download) -\> "The latest stable release" -> "activemq-parent-x.x.x-source-release.zip")
 2.  Extract the files from the ZIP file into a directory of your choice. For example:
     ```
     tar zxvf activemq.x.x-src.tar.gz
@@ -351,5 +351,5 @@ Additional Resources
 
 If you are new to using ActiveMQ, running the [Web Samples](web-samples) or the [Examples](examples) is a good next step to learn more about ActiveMQ.
 
-The commercial providers listed on the [issues](issues) page may also have additional documentation, examples, tutorials, etc... that can help you get started.
+The commercial providers listed on the [issues](/support#commercial-support) page may also have additional documentation, examples, tutorials, etc... that can help you get started.
 

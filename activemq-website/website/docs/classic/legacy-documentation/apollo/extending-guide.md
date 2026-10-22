@@ -5,21 +5,16 @@ slug: /extending-guide
 
        
 
-*   [Apollo 1.7.1](index.html)
-*   [Developers](developers)
-*   [Community](Community/index.html)
-*   [Download](../../overview/download)
-
 Apollo 1.7.1 Extending Guide
 ============================
 
-*   [Overview](#Overview)
-*   *   [Adding your Extensions to the Apollo Class Path](#Adding_your_Extensions_to_the_Apollo_Class_Path)
-    *   [Extension Discovery](#Extension_Discovery)
-    *   [Extending the Data Model](#Extending_the_Data_Model)
-    *   *   [Polymorphic Data/Configuraiton objects Objects](#Polymorphic_Data_Configuraiton_objects_Objects)
-    *   [Using a custom `VirtualHost` implementation](#Using_a_custom__code_VirtualHost__code__implementation)
-    *   [Plugging into the Broker Lifecycle](#Plugging_into_the_Broker_Lifecycle)
+*   [Overview](#overview)
+*   *   [Adding your Extensions to the Apollo Class Path](#adding-your-extensions-to-the-apollo-class-path)
+    *   [Extension Discovery](#extension-discovery)
+    *   [Extending the Data Model](#extending-the-data-model)
+    *   *   [Polymorphic Data/Configuraiton objects Objects](#polymorphic-dataconfiguraiton-objects-objects)
+    *   [Using a custom `VirtualHost` implementation](#using-a-custom-virtualhost-implementation)
+    *   [Plugging into the Broker Lifecycle](#plugging-into-the-broker-lifecycle)
 
 Overview
 --------
@@ -38,27 +33,27 @@ Apollo discovers your extensions by looking for extension resource files in all 
     org.apache.activemq.apollo.broker.protocol.UdpProtocolFactory
     org.apache.activemq.apollo.broker.protocol.RawProtocolFactory
 
-All three of the the listed classes implement the [`ProtocolFactory`](api/apollo-broker/index.html#org.apache.activemq.apollo.broker.protocol.ProtocolFactory) interface. Here's a list of extension points supported by Apollo:
+All three of the the listed classes implement the `ProtocolFactory` interface. Here's a list of extension points supported by Apollo:
 
-*   Data Model: `META-INF/services/org.apache.activemq.apollo/dto-module.index` → [`org.apache.activemq.apollo.util.DtoModule`](api/apollo-util/index.html#org.apache.activemq.apollo.util.DtoModule)
+*   Data Model: `META-INF/services/org.apache.activemq.apollo/dto-module.index` → `org.apache.activemq.apollo.util.DtoModule`
     
-*   Transports: `META-INF/services/org.apache.activemq.apollo/transport-factory.index` → [`org.apache.activemq.apollo.broker.transport.TransportFactory.Provider`](api/apollo-broker/index.html#org.apache.activemq.apollo.broker.transport.TransportFactory$$Provider)
+*   Transports: `META-INF/services/org.apache.activemq.apollo/transport-factory.index` → `org.apache.activemq.apollo.broker.transport.TransportFactory.Provider`
     
-*   Protocols: `META-INF/services/org.apache.activemq.apollo/protocol-factory.index` → [`org.apache.activemq.apollo.broker.protocol.ProtocolFactory`](api/apollo-broker/index.html#org.apache.activemq.apollo.broker.protocol.ProtocolFactory)
+*   Protocols: `META-INF/services/org.apache.activemq.apollo/protocol-factory.index` → `org.apache.activemq.apollo.broker.protocol.ProtocolFactory`
     
-*   Broker Factories: `META-INF/services/org.apache.activemq.apollo/broker-factory.index` → [`org.apache.activemq.apollo.broker.BrokerFactoryTrait`](api/apollo-broker/index.html#org.apache.activemq.apollo.broker.BrokerFactoryTrait)
+*   Broker Factories: `META-INF/services/org.apache.activemq.apollo/broker-factory.index` → `org.apache.activemq.apollo.broker.BrokerFactoryTrait`
     
-*   Connectors: `META-INF/services/org.apache.activemq.apollo/connector-factory.index` → [`org.apache.activemq.apollo.broker.ConnectorFactory`](api/apollo-broker/index.html#org.apache.activemq.apollo.broker.ConnectorFactory)
+*   Connectors: `META-INF/services/org.apache.activemq.apollo/connector-factory.index` → `org.apache.activemq.apollo.broker.ConnectorFactory`
     
-*   Virtual Hosts: `META-INF/services/org.apache.activemq.apollo/virtual-host-factory.index` → [`org.apache.activemq.apollo.broker.VirtualHostFactory`](api/apollo-broker/index.html#org.apache.activemq.apollo.broker.VirtualHostFactory)
+*   Virtual Hosts: `META-INF/services/org.apache.activemq.apollo/virtual-host-factory.index` → `org.apache.activemq.apollo.broker.VirtualHostFactory`
     
-*   Route Listeners: `META-INF/services/org.apache.activemq.apollo/router-listener-factory.index` → [`org.apache.activemq.apollo.broker.RouterListenerFactory`](api/apollo-broker/index.html#org.apache.activemq.apollo.broker.RouterListenerFactory)
+*   Route Listeners: `META-INF/services/org.apache.activemq.apollo/router-listener-factory.index` → `org.apache.activemq.apollo.broker.RouterListenerFactory`
     
-*   Stores: `META-INF/services/org.apache.activemq.apollo/store-factory.index` → [`org.apache.activemq.apollo.broker.store.StoreFactory`](api/apollo-broker/index.html#org.apache.activemq.apollo.broker.store.StoreFactory)
+*   Stores: `META-INF/services/org.apache.activemq.apollo/store-factory.index` → `org.apache.activemq.apollo.broker.store.StoreFactory`
     
 *   Web Admin Components: `META-INF/services/org.apache.activemq.apollo/web-module.index` → `org.apache.activemq.apollo.web.WebModule`
     
-*   Web Servers → `META-INF/services/org.apache.activemq.apollo/web-server-factory.index`→ [`org.apache.activemq.apollo.broker.web.WebServerFactory`](api/apollo-broker/index.html#org.apache.activemq.apollo.broker.web.WebServerFactory)
+*   Web Servers → `META-INF/services/org.apache.activemq.apollo/web-server-factory.index`→ `org.apache.activemq.apollo.broker.web.WebServerFactory`
     
 
 ### Extending the Data Model
@@ -87,25 +82,25 @@ Example `META-INF/services/org.apache.activemq.apollo/dto-module.index` resource
 
 The following objects in the Apollo data model can be extended:
 
-*   [`VirtualHostDTO`](api/apollo-dto/org/apache/activemq/apollo/dto/VirtualHostDTO.html)
-*   [`ConnectorTypeDTO`](api/apollo-dto/org/apache/activemq/apollo/dto/ConnectorTypeDTO.html)
-*   [`ConnectionStatusDTO`](api/apollo-dto/org/apache/activemq/apollo/dto/ConnectionStatusDTO.html)
-*   [`ProtocolDTO`](api/apollo-dto/org/apache/activemq/apollo/dto/ProtocolDTO.html)
-*   [`StoreDTO`](api/apollo-dto/org/apache/activemq/apollo/dto/StoreDTO.html)
-*   [`StoreStatusDTO`](api/apollo-dto/org/apache/activemq/apollo/dto/StoreStatusDTO.html)
+*   `VirtualHostDTO`
+*   `ConnectorTypeDTO`
+*   `ConnectionStatusDTO`
+*   `ProtocolDTO`
+*   `StoreDTO`
+*   `StoreStatusDTO`
 
 ### Using a custom `VirtualHost` implementation
 
 Virtual hosts control the lifescycle of destinations and how producers and consumers are connected to those destinations. You can subclass the default virtual host implemenation to override the default behaviour that Apollo provides.
 
-To create your own VirtualHost extension, you first extend the [`org.apache.activemq.apollo.broker.VirtualHost`](api/apollo-broker/index.html#org.apache.activemq.apollo.broker.VirtualHost) class and override it's implemenation suite your needs. Example:
+To create your own VirtualHost extension, you first extend the `org.apache.activemq.apollo.broker.VirtualHost` class and override it's implemenation suite your needs. Example:
 
     package example;
     class MyVirtualHost(broker: Broker, id:String) extends VirtualHost(broker, id) {
       // ... todo: override
     }
 
-Then, to allow an `apollo.xml` configration file you your extended version of the virtual host you need to extend the [`VirtualHostDTO`](api/apollo-dto/org/apache/activemq/apollo/dto/VirtualHostDTO.html) class to define a new XML emlement for your new virtual host type.
+Then, to allow an `apollo.xml` configration file you your extended version of the virtual host you need to extend the `VirtualHostDTO` class to define a new XML emlement for your new virtual host type.
 
     package example;
     @XmlRootElement(name = "my_virtual_host")
@@ -116,7 +111,7 @@ Then, to allow an `apollo.xml` configration file you your extended version of th
       public Boolean trace;
     }
 
-Since this is extending the data model, we follow the direction in the ['Extending the Data Model'](#Extending_the_Data_Model) section of this guide and add a `Module` class:
+Since this is extending the data model, we follow the direction in the ['Extending the Data Model'](#extending-the-data-model) section of this guide and add a `Module` class:
 
     package example;
     class Module extends DtoModule {
@@ -148,7 +143,7 @@ and a `META-INF/services/org.apache.activemq.apollo/virtual-host-factory.index` 
 
 ### Plugging into the Broker Lifecycle
 
-You can implement custom [Service](api/apollo-util/index.html#org.apache.activemq.apollo.util.Service) objects which get started / stopped when the broker starts and stops. Once you have packaged your custom service, and added it to the Apollo class path, you can update the `apollo.xml` to add the service so it gets started when apollo starts:
+You can implement custom Service objects which get started / stopped when the broker starts and stops. Once you have packaged your custom service, and added it to the Apollo class path, you can update the `apollo.xml` to add the service so it gets started when apollo starts:
 
     
     <service id='myservice' kind='org.example.MyService'/>

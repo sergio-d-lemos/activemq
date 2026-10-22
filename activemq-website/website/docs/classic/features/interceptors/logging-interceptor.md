@@ -6,7 +6,7 @@ slug: /logging-interceptor
 Logging Interceptor
 -------------------
 
-The Logging Interceptor is a pretty trivial [Interceptor](index) which just logs to [Jakarta Commons Logging](http://jakarta.apache.org/commons/logging/) or [log4j](http://logging.apache.org/log4j/docs/) as messages are sent or acknowledged on a broker.
+The Logging Interceptor is a pretty trivial [Interceptor](./index.md) which just logs to [Jakarta Commons Logging](http://jakarta.apache.org/commons/logging/) or [log4j](http://logging.apache.org/log4j/docs/) as messages are sent or acknowledged on a broker.
 
 The default logging level used is **INFO**. If you want to increase/reduce the logging you can use [change it via commons logging or log4j](how-do-i-change-the-logging).
 

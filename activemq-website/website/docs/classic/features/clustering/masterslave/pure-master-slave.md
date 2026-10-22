@@ -7,14 +7,14 @@ slug: /pure-master-slave
 > 
 > The LevelDB store has been removed from production.
 > This page only serves as an archival page for previous releases.
-> Use [shared storage master/slave](index) instead.
+> Use [shared storage master/slave](./shared-file-system-master-slave.md) instead.
 
 
 ### Pure Master Slave
 
 > This feature has been deprecated and will be removed in version 5.8
 > 
-> This feature will be removed in 5.8 as it has not evolved to be production ready. You are advised to use [shared storage master/slave](index) or the [Replicated LevelDB Store](replicated-leveldb-store). See [AMQ-4165](https://issues.apache.org/jira/browse/AMQ-4165)
+> This feature will be removed in 5.8 as it has not evolved to be production ready. You are advised to use [shared storage master/slave](./shared-file-system-master-slave.md) or the [Replicated LevelDB Store](replicated-leveldb-store). See [AMQ-4165](https://issues.apache.org/jira/browse/AMQ-4165)
 
 A Pure Master Slave configuration provides a basic shared nothing, fully replicated topology which does not depend on a shared file system or shared database.
 

@@ -1,3 +1,7 @@
 {
-  "label": "JMS"
+  "label": "JMS",
+  "link": {
+    "type": "generated-index",
+    "slug": "/overview/faq/jms"
+  }
 }

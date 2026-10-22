@@ -21,7 +21,7 @@ slug: /changes-in-40
 *   [Per Destination Policies](per-destination-policies) allow you configure the behavior of destinations.
 *   The broker now supports per destination plugable [Dispatch Policies](dispatch-policies) so that you can choose the distribution algorithm used to send messages to a consumer.
 *   The broker now supports two new types of connectors:
-    *   [The JMS Connector](the-jms-connector) is used to establish connection to external JMS providers so that messages can be bridged between the system.
+    *   [The JMS Connector](jms-to-jms-bridge) is used to establish connection to external JMS providers so that messages can be bridged between the system.
     *   [The Proxy Connector](the-proxy-connector). Is used to proxy connections to another broker.
 *   [Slow Consumer Handling](slow-consumer-handling) allows you to discard old messages for slow consumers on non-durable topics to avoid slowing down fast consumers
 *   You can now specify [Destination Options](destination-options) that allow you to do extend configuration of consumers.

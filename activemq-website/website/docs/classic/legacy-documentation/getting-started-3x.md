@@ -53,9 +53,9 @@ This procedure explains how to download and install the source distribution on a
 **NOTE:** ActiveMQ can be run on a Java 1.4.x system, however, Java 1.5 is required to compile/build ActiveMQ.
 
 1.  From a browser, navigate to [ActiveMQ.apache.org](http://ActiveMQ.apache.org).
-2.  Click the [Download](#GettingStarted3.x-Download) link in the navigation pane (the left pane).
-3.  Click the [ActiveMQ 3.x Release](#GettingStarted3.x-ActiveMQ3.xRelease) link under the "Latest Releases" section. This brings up another page.
-4.  Under the [Download Here](#GettingStarted3.x-DownloadHere) section, select the desired distribution (if necessary, scroll down to see the "Download Here" section).  
+2.  Click the Download link in the navigation pane (the left pane).
+3.  Click the ActiveMQ 3.x Release link under the "Latest Releases" section. This brings up another page.
+4.  Under the Download Here section, select the desired distribution (if necessary, scroll down to see the "Download Here" section).  
     For a source distribution, the filename will be similar to: activemq-x.x-src.zip.
 5.  Extract ActiveMQ from the ZIP file into a directory of your choice.
 6.  Build ActiveMQ using Maven 1.0.2 or greater and Java 1.5.
@@ -80,7 +80,7 @@ This procedure explains how to download and install the source distribution on a
     
     **NOTE:** Working directories get created relative to the current directory. To create the working directories in the proper place, ActiveMQ must be launched from its home/installation directory.
     
-9.  Proceed to the [Testing the Installation](#GettingStarted3.x-TestingtheInstallation) section.
+9.  Proceed to the [Testing the Installation](#testing-the-installation) section.
 
 **NOTE:** Working directories get created relative to the current directory. To create the working directories in the proper place, ActiveMQ must be launched from its home/installation directory.
 
@@ -147,14 +147,14 @@ OR If the Unix machine does NOT have a browser, tools such as wget, scp, or ftp 
 
 #### Unix Source Installation
 
-This procedure explains how to download and install the source distribution on a Unix system. This procedure assumes the Unix machine has a browser. Please see the previous [Unix Binary Installation](#GettingStarted3.x-UnixBinaryInstallation) section for details on how to install ActiveMQ without a browser.
+This procedure explains how to download and install the source distribution on a Unix system. This procedure assumes the Unix machine has a browser. Please see the previous [Unix Binary Installation](#unix-binary-installation) section for details on how to install ActiveMQ without a browser.
 
 **NOTE:** ActiveMQ can be run on a Java 1.4.x system, however, Java 1.5 is required to compile/build ActiveMQ.
 
 1.  From a browser, navigate to [activemq.apache.org](http://activemq.apache.org).
-2.  Click the [Download](#GettingStarted3.x-Download) link in the navigation pane (the left pane).
-3.  Click the [ActiveMQ 3.x Release](#GettingStarted3.x-ActiveMQ3.xRelease) link under the "Latest Releases" section. This brings up a new page.
-4.  Under the [Download Here](#GettingStarted3.x-DownloadHere) section, select the desired distribution (if necessary, scroll down to see the "Download Here" section).  
+2.  Click the Download link in the navigation pane (the left pane).
+3.  Click the ActiveMQ 3.x Release link under the "Latest Releases" section. This brings up a new page.
+4.  Under the Download Here section, select the desired distribution (if necessary, scroll down to see the "Download Here" section).  
     For a source distribution, the filename will be similar to: activemq-x.x-src.tar.gz.
 5.  Extract the files from the ZIP file into a directory of your choice. For example:
     
@@ -187,8 +187,8 @@ This procedure explains how to download and install the latest developer's snaps
 **NOTE:** ActiveMQ can be run on a Java 1.4.x system, however, Java 5 is required to compile/build ActiveMQ.
 
 1.  From a browser, navigate to [activemq.apache.org](http://activemq.apache.org).
-2.  Click the [Download](#GettingStarted3.x-Download) link in the navigation pane (the left pane).
-3.  Click the [Current development SNAPSHOT release](#GettingStarted3.x-CurrentdevelopmentSNAPSHOTrelease) link.
+2.  Click the Download link in the navigation pane (the left pane).
+3.  Click the Current development SNAPSHOT release link.
 4.  Select the version of ActiveMQ to download (you may have to scroll down to see the ActiveMQ snapshots). The filename will be similar to: activemq-x.x.x-tar.gz or activemq-x.x.x-src.tar.gz.
 5.  Extract the files from the gzip file into a directory of your choice. For example:
     
@@ -202,10 +202,10 @@ This procedure explains how to download and install the latest developer's snaps
     cd [activemq_install_dir]/bin where [activemq_install_dir] is the directory in which ActiveMQ was installed. chmod 755 activemq
     ```
     
-    #For a binary snapshot, proceed to the [Starting ActiveMQ](#GettingStarted3.x-StartingActiveMQ) section of this document.  
-    #If a source snapshot was downloaded perform steps 6 - 8 of the [Unix Source Installation](#GettingStarted3.x-UnixSourceInstallation) procedure.
+    #For a binary snapshot, proceed to the [Starting ActiveMQ](#starting-activemq) section of this document.  
+    #If a source snapshot was downloaded perform steps 6 - 8 of the [Unix Source Installation](#unix-source-installation) procedure.
     
-7.  Proceed to the [Testing the Installation](#GettingStarted3.x-TestingtheInstallation) section.
+7.  Proceed to the [Testing the Installation](#testing-the-installation) section.
 
 Starting ActiveMQ
 -----------------
@@ -300,7 +300,7 @@ See the [Initial Configuration](../using-activemq-classic/initial-configuration.
 
 If you want to use JNDI to connect to your JMS provider then please view the [JNDI Support](../connectivity/containers/jndi-support.md "JNDI Support"). If you are a Spring user you should read about [Spring Support](../connectivity/containers/spring-support/index.md "Spring Support")
 
-After the installation, ActiveMQ is running with a basic configuration. For details on configuring options, please see refer to the [Configuration](../overview/faq/configuration "Configuration") section.
+After the installation, ActiveMQ is running with a basic configuration. For details on configuring options, please see refer to the [Configuration](/components/classic/documentation/overview/faq/configuration "Configuration") section.
 
 Additional Resources
 --------------------

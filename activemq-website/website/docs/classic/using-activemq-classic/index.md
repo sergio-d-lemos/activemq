@@ -32,7 +32,7 @@ To help you get started using Apache ActiveMQ you may wish to start off with the
 * [LDAP Broker Discovery Mechanism](ldap-broker-discovery-mechanism)  
 * [Examples](version-5-examples)
 *   [Getting Started](version-5-getting-started)
-    *   [Monitoring ActiveMQ](monitoring-activemq-classic)
+    *   [Monitoring ActiveMQ](how-can-i-monitor-activemq-classic)
 *   [Hello World](version-5-hello-world)
 *   [Initial Configuration](version-5-initial-configuration)
 *   [Installation](version-5-installation)

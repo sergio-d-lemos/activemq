@@ -2,8 +2,7 @@
 title: "java.lang.OutOfMemory"
 slug: /javalangoutofmemory
 ---
-
- [FAQ](../..) > [Errors](..) > [Exceptions](.) > [java.lang.OutOfMemory](javalangoutofmemory)
+[FAQ](../../index.md) > [Errors](/components/classic/documentation/overview/faq/errors) > [Exceptions](/components/classic/documentation/overview/faq/errors/exceptions) > java.lang.OutOfMemory
 
 
 Ok, this is manageable. It is possible to configure just about all of the memory utilisation of ActiveMQ. The first thing to determine is what part of the system is running out of memory. Is it the JVM, the broker, the consumers or the producers?

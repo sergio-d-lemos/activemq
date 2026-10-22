@@ -9,7 +9,7 @@ Running an ActiveMQ Broker
 
 Note if you want to use an **embedded broker** then see [How do I embed a Broker inside a Connection](how-do-i-embed-a-broker-inside-a-connection)
 
-The [binary distribution](../overview/download) of ActiveMQ comes with a script called 'activemq' which allows you to run a broker.  
+The [binary distribution](/components/classic/download) of ActiveMQ comes with a script called 'activemq' which allows you to run a broker.  
 For details regarding the activemq init script file review  [Unix Shell Script](unix-shell-script)  and  [ActiveMQ Command Line Tools Reference](activemq-classic-command-line-tools-reference)
 
 Typing the following will run an ActiveMQ Broker using the out of the box configuration in the foreground

@@ -5,25 +5,20 @@ slug: /management-api
 
         /\* <![CDATA[ */ table.reference tr th { text-align:left; } tr.even { background-color: #eee; } table.reference tr td { text-align:left; padding: .4em; vertical-align:top; font-size:90%; } table.reference tr td p { margin: 0 0 .5em 0; } td.methods { font-weight:bold; } /* ]]> */  
 
-*   [Apollo 1.7.1](index.html)
-*   [Developers](developers)
-*   [Community](Community/index.html)
-*   [Download](../../overview/download)
-
 Apollo 1.7.1 Management API
 ===========================
 
-*   [Overview](#Overview)
-*   *   [Authentication](#Authentication)
-    *   [JSON Representation](#JSON_Representation)
-    *   [Response Codes](#Response_Codes)
-    *   [Working with Tabular Results](#Working_with_Tabular_Results)
-*   [Route Reference](#Route_Reference)
-*   *   [Broker Management](#Broker_Management)
-    *   [Virtual Host Management](#Virtual_Host_Management)
-    *   [Connection Management](#Connection_Management)
-    *   [Broker Configuration Management](#Broker_Configuration_Management)
-    *   [Session Management](#Session_Management)
+*   [Overview](#overview)
+*   *   [Authentication](#authentication)
+    *   [JSON Representation](#json-representation)
+    *   [Response Codes](#response-codes)
+    *   [Working with Tabular Results](#working-with-tabular-results)
+*   [Route Reference](#route-reference)
+*   *   [Broker Management](#broker-management)
+    *   [Virtual Host Management](#virtual-host-management)
+    *   [Connection Management](#connection-management)
+    *   [Broker Configuration Management](#broker-configuration-management)
+    *   [Session Management](#session-management)
 
 Overview
 --------
@@ -86,7 +81,7 @@ Example:
     $ curl -u "admin:password" \
     'http://localhost:61680/broker/connections.json'
 
-Results in a [Data Page](./api/apollo-dto/org/apache/activemq/apollo/dto/DataPageDTO.html) :
+Results in a Data Page :
 
     
     {

@@ -5,11 +5,6 @@ slug: /module-organization
 
 Module Organization
 
-*   [Apollo 1.7.1](index.html)
-*   [Developers](developers)
-*   [Community](Community/index.html)
-*   [Download](../../overview/download)
-
 
 
 Module Organization

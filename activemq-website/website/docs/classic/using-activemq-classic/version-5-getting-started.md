@@ -40,7 +40,7 @@ This section of the Getting Started Guide explains how to install binary and sou
 This procedure explains how to download and install the binary distribution on a Windows system.
 
 1.  From a browser, navigate to [activemq.apache.org/](http://activemq.apache.org/).
-2.  Click the [Download](../overview/download) link in the navigation pane (the left pane).
+2.  Click the [Download](/components/classic/download) link in the navigation pane (the left pane).
 3.  Select the latest distribution (for older releases, click the link to the archives).  
     For a binary distribution, the filename will be similar to: `activemq-x.x.x.zip`.
 4.  Extract the files from the ZIP file into a directory of your choice.
@@ -54,7 +54,7 @@ This procedure explains how to download and install the source distribution on a
 **NOTE:** ActiveMQ requires Java 7 to run and to build
 
 1.  From a browser, navigate to [activemq.apache.org/](http://activemq.apache.org/).
-2.  Click the [Download](../overview/download) link in the navigation pane (the left pane).
+2.  Click the [Download](/components/classic/download) link in the navigation pane (the left pane).
 3.  Select the latest distribution (for older releases, click the link to the archives).  
     For a source distribution, the filename will be similar to: `activemq-x.x-src.zip`.
 4.  Extract ActiveMQ from the ZIP file into a directory of your choice.
@@ -104,7 +104,7 @@ This procedure explains how to download and install the latest developer's snaps
 **NOTE:** ActiveMQ requires Java 7 to run and to build
 
 1.  From a browser, navigate to [activemq.apache.org/](http://activemq.apache.org/).
-2.  Click the [Download](../overview/download) link in the navigation pane (the left pane).
+2.  Click the [Download](/components/classic/download) link in the navigation pane (the left pane).
 3.  Click the Maven ActiveMQ SNAPSHOT link.
 4.  Select the version of ActiveMQ to download
 5.  Extract the files from the ZIP file into a directory of your choice.
@@ -144,7 +144,7 @@ This procedure explains how to download and install the source distribution on a
 **NOTE:** ActiveMQ requires Java 7 to run and to build
 
 1.  From a browser, navigate to [activemq.apache.org/](http://activemq.apache.org/).
-2.  Click the [Download](../overview/download) link in the navigation pane (the left pane).
+2.  Click the [Download](/components/classic/download) link in the navigation pane (the left pane).
 3.  Click the Maven ActiveMQ SNAPSHOT link.
 4.  Select the version of ActiveMQ to download  
     For a source distribution, the filename will be similar to: `activemq-x.x-src.tar.gz`.
@@ -363,7 +363,7 @@ See the [Initial Configuration](initial-configuration) for details of which jars
 
 If you want to use JNDI to connect to your JMS provider then please view the [JNDI Support](jndi-support). If you are a Spring user you should read about [Spring Support](spring-support)
 
-After the installation, ActiveMQ is running with a basic configuration. For details on configuring options, please see refer to the [Configuration](../overview/faq/configuration) section.
+After the installation, ActiveMQ is running with a basic configuration. For details on configuring options, please see refer to the [Configuration](/components/classic/documentation/overview/faq/configuration) section.
 
 Additional Resources
 --------------------

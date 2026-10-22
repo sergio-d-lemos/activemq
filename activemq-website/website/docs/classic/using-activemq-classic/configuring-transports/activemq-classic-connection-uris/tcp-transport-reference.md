@@ -64,5 +64,5 @@ See [Configuring Wire Formats](configuring-wire-formats) for more information.
 
 ##### Differentiated Services or Types of Service
 
-There is support for setting Differentiated Services - as outlined in [IETF RCF 2475](http://tools.ietf.org/html/rfc2475). In order to configure the broker so that all outgoing packets from the broker match the DSCP values set on incoming packets - you will need to apply IP Tables scripts - found [here](tcp-transport-reference.data/brokerConfig.tar.gz?version=1&modificationDate=1273219000000&api=v2).
+There is support for setting Differentiated Services - as outlined in [IETF RCF 2475](http://tools.ietf.org/html/rfc2475). In order to configure the broker so that all outgoing packets from the broker match the DSCP values set on incoming packets - you will need to apply IP Tables scripts - found here.
 

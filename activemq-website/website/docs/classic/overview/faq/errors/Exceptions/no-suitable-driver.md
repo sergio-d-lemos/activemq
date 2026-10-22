@@ -2,8 +2,7 @@
 title: "No suitable driver"
 slug: /no-suitable-driver
 ---
-
- [FAQ](../..) > [Errors](..) > [Exceptions](.) > [No suitable driver](no-suitable-driver)
+[FAQ](../../index.md) > [Errors](/components/classic/documentation/overview/faq/errors) > [Exceptions](/components/classic/documentation/overview/faq/errors/exceptions) > No suitable driver
 
 
 ### Symptoms

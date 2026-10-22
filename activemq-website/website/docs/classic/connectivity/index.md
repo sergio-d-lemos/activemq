@@ -27,7 +27,7 @@ Apache ActiveMQ is designed to support a large number if [Cross Language Clients
     *   [WebLogic Integration](weblogic-integration)
     *   [zOS](zos)
 *   [Cross Language Clients](cross-language-clients)
-    *   [ActiveMQ C++ Clients](./cross-language-clients/activemq-c-clients)
+    *   [ActiveMQ C++ Clients](/components/cms)
     *   [C Integration](c-integration)
     *   [Delphi and FreePascal](delphi-and-freepascal)
 *   [JMS to JMS Bridge](jms-to-jms-bridge)

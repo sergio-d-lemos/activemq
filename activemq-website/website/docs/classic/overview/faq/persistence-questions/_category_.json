@@ -1,3 +1,7 @@
 {
-  "label": "Persistence Questions"
+  "label": "Persistence Questions",
+  "link": {
+    "type": "generated-index",
+    "slug": "/overview/faq/persistence-questions"
+  }
 }

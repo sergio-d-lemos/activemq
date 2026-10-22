@@ -18,7 +18,7 @@ Requirements
 
 Below are the software requirements for this article with links to download each:
 
-*   [Apache ActiveMQ 4.0.1+](../../overview/download)
+*   [Apache ActiveMQ 4.0.1+](/components/classic/download)
 *   [JBoss 4.0.4+](http://sourceforge.net/project/showfiles.php?group_id=22866&package_id=16942&release_id=416591)
 *   [Sun Java 1.5+](http://www.java.com/en/download/index.jsp)
 *   [Apache Ant 1.6+](http://ant.apache.org/bindownload.cgi)
@@ -699,7 +699,7 @@ Below are the configurations for use with both Spring 1.x and Spring 2.x:
 
 [Modified](integrating-apache-activemq-classic-with-jboss.md?sortBy=date&sortOrder=descending)
 
-File [amq-spring-1.2.6.tgz](integrating-apache-activemq-classic-with-jboss.data/amq-spring-1.2.6.tgz?api=v2 "Download")
+File amq-spring-1.2.6.tgz
 
 Oct 03, 2007 by [Bruce Snyder](https://cwiki.apache.org/confluence/display/~bsnyder)
 
@@ -710,7 +710,7 @@ Labels
 
 Preview
 
-File [amq-spring-2.0.tgz](integrating-apache-activemq-classic-with-jboss.data/amq-spring-2.0.tgz?api=v2 "Download")
+File amq-spring-2.0.tgz
 
 Oct 03, 2007 by [Bruce Snyder](https://cwiki.apache.org/confluence/display/~bsnyder)
 
@@ -721,5 +721,5 @@ Labels
 
 Preview
 
-[Download All](/confluence/pages/downloadallattachments.action?pageId=67786 "Download all the latest versions of attachments on this page as single zip file.")
+Download All
 

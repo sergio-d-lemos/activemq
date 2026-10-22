@@ -1,3 +1,7 @@
 {
-  "label": "Building FAQs"
+  "label": "Building FAQs",
+  "link": {
+    "type": "generated-index",
+    "slug": "/overview/faq/building-faqs"
+  }
 }

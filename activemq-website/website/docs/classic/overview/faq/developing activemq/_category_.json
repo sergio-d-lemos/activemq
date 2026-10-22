@@ -1,3 +1,7 @@
 {
-  "label": "Developing ActiveMQ"
+  "label": "Developing ActiveMQ",
+  "link": {
+    "type": "generated-index",
+    "slug": "/overview/faq/developing-activemq"
+  }
 }

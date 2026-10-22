@@ -5,11 +5,6 @@ slug: /performance-scaling
 
        
 
-*   [Apollo 1.7.1](index.html)
-*   [Developers](developers)
-*   [Community](Community/index.html)
-*   [Download](../../overview/download)
-
 Performance and Scaling
 =======================
 
