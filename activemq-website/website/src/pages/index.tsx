@@ -19,6 +19,7 @@
 
 import clsx from 'clsx';
 import Layout from '@theme/Layout';
+import Head from '@docusaurus/Head';
 import Link from '@docusaurus/Link';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faCode, faEnvelope, faBug, faInfoCircle, faDownload, faBook} from '@fortawesome/free-solid-svg-icons';
@@ -26,9 +27,18 @@ import styles from './index.module.css';
 import HomepageFeatures from '../components/HomepageFeatures';
 import LatestReleases from '../components/LatestReleases';
 
+const TITLE = 'Apache ActiveMQ – Open Source Multi-Protocol Java Message Broker';
+const DESCRIPTION = 'Apache ActiveMQ is the most popular open source, multi-protocol, Java-based message broker. '
+    + 'Connect clients over JMS, AMQP, MQTT, STOMP and OpenWire.';
+
 export default function Home() {
     return (
-        <Layout title='Welcome'>
+        <Layout description={DESCRIPTION}>
+            {/* Layout would format a title as "<title> | Apache ActiveMQ", so the homepage sets its own. */}
+            <Head>
+                <title>{TITLE}</title>
+                <meta property="og:title" content={TITLE} />
+            </Head>
             <header className={clsx('hero', styles.heroBanner)}>
                 <div className="container">
                     <div className={styles.heroContent}>
