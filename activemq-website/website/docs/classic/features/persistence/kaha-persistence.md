@@ -1,5 +1,6 @@
 ---
 title: "Kaha Persistence"
+description: "Learn what Kaha persistence is in ActiveMQ and how to configure the kahaPersistenceAdapter in broker XML for ActiveMQ 5.0 and later or 4.1 and earlier."
 slug: /kaha-persistence
 ---
 

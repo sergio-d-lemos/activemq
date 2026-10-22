@@ -1,5 +1,6 @@
 ---
 title: "Connection Configuration URI"
+description: "Set ActiveMQ Classic JMS connection options on the broker URL with the jms. prefix, e.g. useAsyncSend, optimizeAcknowledge, prefetchPolicy and redeliveryPolicy."
 slug: /connection-configuration-uri
 ---
 

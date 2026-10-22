@@ -1,5 +1,6 @@
 ---
 title: "Web Samples"
+description: "Older ActiveMQ web samples page covering REST, Ajax and WebSockets demos, and how to start them from 5.8 onwards with the activemq-demo.xml configuration file."
 slug: /web-samples
 displayed_sidebar: docs
 ---

@@ -1,5 +1,6 @@
 ---
 title: "SSL Transport Reference"
+description: "Connect to ActiveMQ Classic over ssl://, set SSLServerSocket options via transport. and socket., configure ActiveMQSslConnectionFactory and hostname validation."
 slug: /ssl-transport-reference
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: "ZeroConf"
+description: "ZeroConf (Bonjour) service discovery support in ActiveMQ Classic, implemented with jmDNS for broker discovery and deprecated for removal from ActiveMQ 5.8."
 slug: /zeroconf
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: "Configure Brokers"
+description: "Configure an ActiveMQ Classic 5 broker with XBean XML: the default activemq.xml with destination policies, KahaDB, systemUsage and transport connectors."
 slug: /configure-version-5-brokers
 ---
 

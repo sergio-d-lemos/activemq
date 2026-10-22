@@ -1,5 +1,6 @@
 ---
 title: "Configuring Transports"
+description: "Choose an ActiveMQ Classic transport URI, from tcp://, vm://, nio:// and ssl:// to AMQP, MQTT, STOMP, failover: and discovery, plus TransportConnector options."
 slug: /configuring-transports
 displayed_sidebar: docs
 ---

@@ -4,7 +4,7 @@ Pending items only, most important first. Already done: redirects for the old UR
 
 ## High impact
 
-1. **Write meta descriptions.** 0 of the 540 doc pages set `description:` in their frontmatter. Docusaurus falls back to the first paragraph, which gives descriptions like *"…why its so interesting to work on (smile)"*. That `(smile)` is a leftover Confluence emoticon code, and 11 files still contain these. Start with the pages that get the most traffic: getting started, configuration, transports, persistence, and security.
+1. **Write meta descriptions.** 76 of the 540 doc pages now set `description:`: getting started, everything under `using-activemq-classic/` (configuration and transports), persistence and security. The Confluence emoticons are gone. Of the remaining 464 pages, 280 fall back to a description under 70 characters (e.g. `*   Overview`, or empty), and 45 pages share 15 identical descriptions. Next: features, connectivity, FAQ, then the NMS and CMS docs.
 
 2. **Fix duplicate and placeholder titles.** 4 pages are literally titled `"Title"`: `legacy-documentation/chat.md` and the Apollo `user-manual`, `verification` and `stomp-manual` pages. 13 titles appear twice, including `AMQP`, `MQTT`, `Configuring Transports` and the JBoss integration page, plus `Hello World`, `Installation` and others shared with the hidden ActiveMQ 4 pages. Give each page a distinct, descriptive title, e.g. "MQTT Protocol Support in ActiveMQ Classic" rather than just "MQTT". Duplicate titles also show up as duplicate Pagefind results.
 

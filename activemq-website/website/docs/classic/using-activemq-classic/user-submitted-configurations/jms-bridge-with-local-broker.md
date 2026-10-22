@@ -1,5 +1,6 @@
 ---
 title: "JMS Bridge With Local Broker"
+description: "Sample ActiveMQ Classic jmsBridgeConnectors config using a jmsQueueConnector with inbound and outbound queue bridges and selectors against the local broker."
 slug: /jms-bridge-with-local-broker
 ---
 

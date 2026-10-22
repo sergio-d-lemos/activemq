@@ -1,5 +1,6 @@
 ---
 title: "JMS Bridge With Oracle AQ"
+description: "Bridge Oracle AQ queues and topics into ActiveMQ Classic using Camel routes and AQjmsFactory connection factories, plus PL/SQL to create the Oracle AQ queue."
 slug: /jms-bridge-with-oracle-aq
 ---
 

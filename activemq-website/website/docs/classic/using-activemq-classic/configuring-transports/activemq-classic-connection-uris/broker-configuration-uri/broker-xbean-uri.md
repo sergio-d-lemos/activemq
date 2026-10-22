@@ -1,5 +1,6 @@
 ---
 title: "Broker XBean URI"
+description: "Start an ActiveMQ Classic broker from an XML configuration with the xbean: URI, pointing at an activemq.xml on the classpath, on the file system or at a URL."
 slug: /broker-xbean-uri
 ---
 

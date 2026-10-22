@@ -1,5 +1,6 @@
 ---
 title: "Run Broker"
+description: "Run an ActiveMQ 4.x broker as a Unix service, with the Java Service Wrapper, in a servlet engine, J2EE 1.4 server or Maven, and reconnect clients via failover."
 slug: /run-broker
 displayed_sidebar: docs
 ---

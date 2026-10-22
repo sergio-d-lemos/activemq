@@ -1,5 +1,6 @@
 ---
 title: "Examples"
+description: "Older ActiveMQ examples page: the producer and consumer command line tools added in 5.12, activemq-all jar and Karaf commands, and Ant examples."
 slug: /examples
 displayed_sidebar: docs
 ---

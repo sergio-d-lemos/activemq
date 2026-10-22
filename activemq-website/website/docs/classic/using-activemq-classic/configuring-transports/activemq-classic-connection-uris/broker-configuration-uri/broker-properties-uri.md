@@ -1,5 +1,6 @@
 ---
 title: "Broker Properties URI"
+description: "Configure and start an ActiveMQ Classic broker from a properties file using the properties: URI, loaded from the classpath, a local file or a remote URL."
 slug: /broker-properties-uri
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: "UDP Transport Reference"
+description: "Connect to an ActiveMQ Classic broker over raw UDP with udp://hostname:port and set datagramSize, trace and wireFormat options on this unreliable transport."
 slug: /udp-transport-reference
 ---
 

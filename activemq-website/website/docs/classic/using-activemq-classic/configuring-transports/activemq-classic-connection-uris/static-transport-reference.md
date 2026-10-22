@@ -1,5 +1,6 @@
 ---
 title: "Static Transport Reference"
+description: "Discover brokers in ActiveMQ Classic from a fixed static:(uri1,uri2) list with reconnect and backoff options, and why clients should use failover: instead."
 slug: /static-transport-reference
 ---
 

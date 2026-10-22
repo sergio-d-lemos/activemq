@@ -1,5 +1,6 @@
 ---
 title: "Broker Configuration URI"
+description: "Compare the xbean:, broker: and properties: URI schemes for configuring an ActiveMQ Classic broker, and when to avoid Spring and XML dependencies."
 slug: /broker-configuration-uri
 ---
 

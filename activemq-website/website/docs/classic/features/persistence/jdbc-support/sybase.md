@@ -1,5 +1,6 @@
 ---
 title: "Sybase"
+description: "Configure an ActiveMQ Classic JDBC dataSource for Sybase ASE with jConnect or jTDS, and use a separate lockDataSource to stop the transaction log growing."
 slug: /sybase
 ---
 

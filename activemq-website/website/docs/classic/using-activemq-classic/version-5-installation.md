@@ -1,5 +1,6 @@
 ---
 title: "Installation"
+description: "Quick ActiveMQ Classic install: unpack the binary distribution, start the broker with the bin/activemq script, then explore XML configuration and JNDI."
 slug: /version-5-installation
 ---
 

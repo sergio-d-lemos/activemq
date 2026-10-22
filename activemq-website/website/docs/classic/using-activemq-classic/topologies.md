@@ -1,5 +1,6 @@
 ---
 title: "Topologies"
+description: "Legacy overview of ActiveMQ deployment topologies: in-VM vm:// transport, client-server over TCP or SSL, embedded brokers, multicast peer-to-peer and JXTA."
 slug: /topologies
 displayed_sidebar: docs
 ---

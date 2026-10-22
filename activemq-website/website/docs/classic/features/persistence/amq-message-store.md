@@ -1,5 +1,6 @@
 ---
 title: "AMQ Message Store"
+description: "Configure the ActiveMQ Classic AMQ Message Store with amqPersistenceAdapter: journal data logs, Kaha reference store, properties, directory layout and recovery."
 slug: /amq-message-store
 ---
 

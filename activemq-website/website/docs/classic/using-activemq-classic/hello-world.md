@@ -1,5 +1,6 @@
 ---
 title: "Hello World"
+description: "Legacy ActiveMQ Hello World: a Java JMS example with concurrent producer and consumer threads using ActiveMQConnectionFactory and vm://localhost."
 slug: /hello-world
 displayed_sidebar: docs
 ---

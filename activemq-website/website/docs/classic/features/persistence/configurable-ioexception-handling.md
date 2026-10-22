@@ -1,5 +1,6 @@
 ---
 title: "Configurable IOException Handling"
+description: "Tune how ActiveMQ Classic reacts to disk and JDBC failures with DefaultIOExceptionHandler properties, or plug in your own IOExceptionHandler implementation."
 slug: /configurable-ioexception-handling
 ---
 

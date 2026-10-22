@@ -1,5 +1,6 @@
 ---
 title: "JDBC Support"
+description: "Use JDBC databases such as Oracle, MySQL, PostgreSQL, DB2 or Derby for ActiveMQ Classic persistence, with JDBCAdapter auto-discovery and custom SQL DDL."
 slug: /jdbc-support
 ---
 

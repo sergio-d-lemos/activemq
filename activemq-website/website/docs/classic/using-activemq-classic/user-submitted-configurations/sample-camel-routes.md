@@ -1,5 +1,6 @@
 ---
 title: "Sample Camel Routes"
+description: "Sample Apache Camel routes embedded in an ActiveMQ Classic broker: topic-to-queue bridging and content-based routing with JUEL and XPath filters and choice."
 slug: /sample-camel-routes
 ---
 

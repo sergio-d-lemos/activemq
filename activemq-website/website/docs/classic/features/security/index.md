@@ -1,5 +1,6 @@
 ---
 title: "Security"
+description: "Secure ActiveMQ Classic with JAAS or simple authentication, authorizationPlugin ACLs, LDAP, broker-to-broker credentials and message-level authorization."
 slug: /security
 ---
 

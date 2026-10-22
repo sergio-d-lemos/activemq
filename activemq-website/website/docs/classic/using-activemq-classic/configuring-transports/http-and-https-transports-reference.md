@@ -1,5 +1,6 @@
 ---
 title: "HTTP and HTTPs Transports Reference"
+description: "Tunnel ActiveMQ Classic traffic through firewalls with the http:// and https:// transports, the sendStackTrace option and required client dependencies."
 slug: /http-and-https-transports-reference
 ---
 

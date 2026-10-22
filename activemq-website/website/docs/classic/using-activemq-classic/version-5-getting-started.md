@@ -1,5 +1,6 @@
 ---
 title: "Getting Started"
+description: "Step-by-step ActiveMQ Classic install on Windows and Unix from binary, source or snapshot, then start, test on port 61616, monitor and stop the broker."
 slug: /version-5-getting-started
 ---
 

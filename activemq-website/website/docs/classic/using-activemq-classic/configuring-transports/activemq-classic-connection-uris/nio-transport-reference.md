@@ -1,5 +1,6 @@
 ---
 title: "NIO Transport Reference"
+description: "Use the nio:// transport in ActiveMQ Classic for scalable server-side connections, including +nio protocol variants and tuning SelectorManager thread pools."
 slug: /nio-transport-reference
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: "VM Transport Reference"
+description: "Embed an ActiveMQ Classic broker in the JVM with vm://brokerName, using create, waitForStart and broker.* options, the vm:(broker:...) syntax and brokerConfig."
 slug: /vm-transport-reference
 ---
 

@@ -111,7 +111,7 @@ A common configuration option for a network of brokers is to establish a network
   <networkConnector uri="masterslave:(tcp://host1:61616,tcp://host2:61616,tcp://..)"/>
 </networkConnectors>
 ```
-The URIs are listed in order for: MASTER,SLAVE1,SLAVE2...SLAVE![(thumbs down)](https://cwiki.apache.org/confluence/s/en_GB/5997/6f42626d00e36f53fe51440403446ca61552e2a2.1/_/images/icons/emoticons/thumbs_down.png)
+The URIs are listed in order for: MASTER,SLAVE1,SLAVE2...SLAVE(n)
 
 The same configuration options for `static:` are available for `masterslave:`
 

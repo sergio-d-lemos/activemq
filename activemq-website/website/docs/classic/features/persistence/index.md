@@ -1,5 +1,6 @@
 ---
 title: "Persistence"
+description: "Overview of ActiveMQ Classic message persistence options: KahaDB, LevelDB (removed in 5.17.0), AMQ store, JDBC with the journal, and disabling persistence."
 slug: /persistence
 ---
 

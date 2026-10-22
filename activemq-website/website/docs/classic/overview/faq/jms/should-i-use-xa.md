@@ -13,7 +13,7 @@ A common use of JMS is to consume messages from a queue or topic, process them u
 
 If you are using more than one resource; e.g. reading a JMS message and writing to a database, you really should use XA - its purpose is to provide atomic transactions for multiple transactional resources. For example there is a small window from when you complete updating the database and your changes are committed up to the point at which you commit/acknowledge the message; if there is a network/hardware/process failure inside that window, the message will be redelivered and you may end up processing duplicates.
 
-The problem with XA is it can be a bit slow; as the XA protocol requires multiple syncs to disk to ensure it can always recover properly under every possible failure scenario. This adds significant cost (in terms of latency, performance, resources and complexity). Also quite a few EJB servers and databases don't actually properly support XA! ![(smile)](https://cwiki.apache.org/confluence/s/en_GB/5997/6f42626d00e36f53fe51440403446ca61552e2a2.1/_/images/icons/emoticons/smile.png)
+The problem with XA is it can be a bit slow; as the XA protocol requires multiple syncs to disk to ensure it can always recover properly under every possible failure scenario. This adds significant cost (in terms of latency, performance, resources and complexity). Also quite a few EJB servers and databases don't actually properly support XA!
 
 Be Careful
 

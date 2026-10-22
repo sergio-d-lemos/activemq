@@ -1,5 +1,6 @@
 ---
 title: "Getting Started with ActiveMQ"
+description: "Install ActiveMQ Classic 5.x on Windows or Unix from binary, source or Homebrew, then start, test, monitor and stop the broker with the activemq script."
 slug: /getting-started
 ---
 

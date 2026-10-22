@@ -1,5 +1,6 @@
 ---
 title: "JMS Bridge With Remote TIBCO Broker"
+description: "Bridge ActiveMQ Classic queues to a remote TIBCO EMS server using jmsBridgeConnectors and a TibjmsQueueConnectionFactory with inbound and outbound bridges."
 slug: /jms-bridge-with-remote-tibco-broker
 ---
 

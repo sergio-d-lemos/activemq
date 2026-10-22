@@ -1,5 +1,6 @@
 ---
 title: "Encrypted passwords"
+description: "Encrypt passwords for ActiveMQ Classic config files with the encrypt command, ENC() values in credentials-enc.properties and a Jasypt property placeholder."
 slug: /encrypted-passwords
 ---
 

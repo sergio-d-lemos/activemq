@@ -1,5 +1,6 @@
 ---
 title: "Configuring Wire Formats"
+description: "Tune the OpenWire wire format in ActiveMQ Classic with wireFormat. URI options like cacheEnabled, maxInactivityDuration, maxFrameSize and tightEncodingEnabled."
 slug: /configuring-wire-formats
 ---
 

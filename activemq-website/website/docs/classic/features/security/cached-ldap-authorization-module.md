@@ -1,5 +1,6 @@
 ---
 title: "Cached LDAP Authorization Module"
+description: "Set up the ActiveMQ Classic cachedLDAPAuthorizationMap to load destination permissions from Apache DS or OpenLDAP, with LDIF samples and push or pull updates."
 slug: /cached-ldap-authorization-module
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: "Peer Transport Reference"
+description: "Build a peer-to-peer network of embedded ActiveMQ Classic brokers with the peer:// transport, using the peer://peer-group/brokerName?brokerOptions syntax."
 slug: /peer-transport-reference
 ---
 

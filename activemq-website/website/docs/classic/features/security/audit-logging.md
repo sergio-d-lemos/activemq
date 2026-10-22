@@ -1,5 +1,6 @@
 ---
 title: "Audit Logging"
+description: "Turn on ActiveMQ Classic audit logging with the org.apache.activemq.audit property to record JMX and Web Console management actions, users and IP addresses."
 slug: /audit-logging
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: "ZeroConf Transport Reference"
+description: "Locate ActiveMQ Classic brokers with the zeroconf:serviceName transport, which uses a ZeroConf discovery agent, and set discoveryUri on the broker."
 slug: /zeroconf-transport-reference
 ---
 

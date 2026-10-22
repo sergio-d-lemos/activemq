@@ -1,5 +1,6 @@
 ---
 title: "Periodically checking disk limits"
+description: "Since 5.12.0, ActiveMQ Classic can re-check store and temp disk limits at runtime; set schedulePeriodForDiskUsageCheck on the broker to enable it."
 slug: /periodically-checking-disk-limits
 ---
 

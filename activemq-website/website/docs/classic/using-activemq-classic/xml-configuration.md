@@ -1,5 +1,6 @@
 ---
 title: "Xml Configuration"
+description: "Legacy ActiveMQ XML configuration guide using XBean and Spring, with a sample activemq.xml and how to start brokers with xbean: URIs in ActiveMQ 4.x and 3.x."
 slug: /xml-configuration
 displayed_sidebar: docs
 ---

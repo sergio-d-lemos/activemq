@@ -1,5 +1,6 @@
 ---
 title: "TCP Transport Reference"
+description: "Tune the ActiveMQ Classic tcp:// transport on clients and connectors: connectionTimeout, soTimeout, tcpNoDelay, keepAlive and the transport. prefix."
 slug: /tcp-transport-reference
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: "Configuring Brokers"
+description: "Legacy ActiveMQ 4.x guide to the XML broker configuration format, with the activemq-4.0.xsd schema and a journaledJDBC and multicast example."
 slug: /configuring-brokers
 displayed_sidebar: docs
 ---

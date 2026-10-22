@@ -1,5 +1,6 @@
 ---
 title: "Topologies"
+description: "Compare ActiveMQ Classic deployment topologies: in-VM messaging with vm://, client-server over TCP and SSL, embedded brokers, multicast peer-to-peer and JXTA."
 slug: /version-5-topologies
 ---
 

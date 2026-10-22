@@ -1,5 +1,6 @@
 ---
 title: "Complex Single Broker Configuration (STOMP only)"
+description: "Locked-down STOMP-only ActiveMQ broker config with predefined queues, simple authentication and authorization, a Jetty JAAS secured Web Console and JMX."
 slug: /complex-single-broker-configuration-stomp-only
 ---
 

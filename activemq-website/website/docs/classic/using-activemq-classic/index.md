@@ -1,5 +1,6 @@
 ---
 title: "Using ActiveMQ"
+description: "Index of ActiveMQ Classic user guides: broker and transport configuration, connection URIs, transport references, examples, installation and tuning."
 slug: /using-activemq-classic
 ---
 

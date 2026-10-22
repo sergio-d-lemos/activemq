@@ -1,5 +1,6 @@
 ---
 title: "Discovery Transport Reference"
+description: "Use the ActiveMQ Classic discovery: transport to find brokers through a discovery agent such as multicast://default, with reconnect and backoff options."
 slug: /discovery-transport-reference
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: "Configuring Transports"
+description: "Learn which ActiveMQ Classic transports to use, such as AUTO, VM, TCP, NIO, SSL, HTTP, failover: and fanout:, plus wire formats and server-side settings."
 slug: /configuring-version-5-transports
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: "Installation"
+description: "Legacy ActiveMQ installation steps: download and unpack the binary distribution, run the activemq script from bin, and point it at an XML configuration file."
 slug: /installation
 displayed_sidebar: docs
 ---

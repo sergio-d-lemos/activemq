@@ -1,5 +1,6 @@
 ---
 title: "Known Bad OS and JVM Combinations"
+description: "Known operating system and JVM combinations that cause problems with ActiveMQ Classic, such as a Red Hat AS 2.1 and j2sdk1.4.0_01 journal startup failure."
 slug: /known-bad-os-and-jvm-combinations
 ---
 

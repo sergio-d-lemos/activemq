@@ -1,5 +1,6 @@
 ---
 title: "XBean XML Reference 4.1"
+description: "Old XBean XML reference for ActiveMQ 4.1 listing broker config elements such as JDBC adapters, persistence adapters, plugins and policies."
 slug: /xbean-xml-reference-41
 ---
 

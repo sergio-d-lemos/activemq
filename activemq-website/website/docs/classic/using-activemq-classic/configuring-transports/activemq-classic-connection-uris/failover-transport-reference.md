@@ -1,5 +1,6 @@
 ---
 title: "Failover Transport Reference"
+description: "Configure failover:(uri1,uri2) in ActiveMQ Classic: reconnect options, randomize, timeout, priorityBackup, nested options and broker-side cluster updates."
 slug: /failover-transport-reference
 ---
 

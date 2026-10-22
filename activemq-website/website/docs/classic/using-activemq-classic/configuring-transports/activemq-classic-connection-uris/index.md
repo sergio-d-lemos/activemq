@@ -1,5 +1,6 @@
 ---
 title: "ActiveMQ Connection URIs"
+description: "Overview of ActiveMQ Classic connection URIs: VM, TCP, NIO, SSL, UDP and HTTP transports, failover:, fanout:, discovery and TransportConnector options."
 slug: /activemq-classic-connection-uris
 ---
 

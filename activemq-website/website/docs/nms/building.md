@@ -94,7 +94,7 @@ Alternatively, you can use the NUnit graphical interface to load the appropriate
 
 ## IDE Tips
 
-If you are on windows then you probably want to use Visual Studio 2008; we highly recommend using [ReSharper](http://www.jetbrains.com/resharper/) as well, - its a shame there is not a distro for OS X and Linux ![(sad)](https://cwiki.apache.org/confluence/s/en_GB/5997/6f42626d00e36f53fe51440403446ca61552e2a2.1/_/images/icons/emoticons/sad.png).
+If you are on windows then you probably want to use Visual Studio 2008; we highly recommend using [ReSharper](http://www.jetbrains.com/resharper/) as well, - its a shame there is not a distro for OS X and Linux.
 
 ### Using [MonoDevelop](http://monodevelop.com/) to edit C#
 

@@ -1,5 +1,6 @@
 ---
 title: "Pluggable storage lockers"
+description: "Choose a storage locker for shared-storage ActiveMQ Classic brokers: Shared File Locker, Database Locker or Lease Database Locker with KahaDB or JDBC."
 slug: /pluggable-storage-lockers
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: "Run Broker"
+description: "Start an ActiveMQ Classic broker with bin/activemq console and broker:, xbean: or properties: URIs, run it in J2EE or Maven, and reconnect with failover:."
 slug: /version-5-run-broker
 ---
 

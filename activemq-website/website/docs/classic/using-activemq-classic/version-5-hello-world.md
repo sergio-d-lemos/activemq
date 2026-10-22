@@ -1,5 +1,6 @@
 ---
 title: "Hello World"
+description: "Java Hello World for ActiveMQ Classic: concurrent JMS producers and consumers exchanging TextMessages on a queue via ActiveMQConnectionFactory and vm://."
 slug: /version-5-hello-world
 ---
 

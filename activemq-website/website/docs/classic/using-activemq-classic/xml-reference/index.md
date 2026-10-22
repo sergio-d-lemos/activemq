@@ -1,5 +1,6 @@
 ---
 title: "Xml Reference"
+description: "Find ActiveMQ Classic XML schema (XSD) references, declare the correct namespace in Spring configs, and fix 5.4 validation errors by ordering elements."
 slug: /xml-reference
 ---
 

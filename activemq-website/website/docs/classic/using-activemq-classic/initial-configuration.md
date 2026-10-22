@@ -1,5 +1,6 @@
 ---
 title: "Initial Configuration"
+description: "Legacy ActiveMQ setup notes: activemq-all.jar or individual JARs to put on the classpath, KahaDB or JDBC persistence, and disabling persistence."
 slug: /initial-configuration
 displayed_sidebar: docs
 ---

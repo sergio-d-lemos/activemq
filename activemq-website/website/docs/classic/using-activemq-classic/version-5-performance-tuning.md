@@ -1,5 +1,6 @@
 ---
 title: "Performance Tuning"
+description: "Improve ActiveMQ Classic throughput with useAsyncSend, larger consumer prefetch sizes, optimizeAcknowledge batching and alwaysSessionAsync=false."
 slug: /version-5-performance-tuning
 ---
 

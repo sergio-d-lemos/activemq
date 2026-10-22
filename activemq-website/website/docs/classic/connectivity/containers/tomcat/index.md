@@ -81,7 +81,7 @@ Also, don't forget to put ActiveMQ and dependent jars to tomcat shared lib direc
 
 ### Creating destinations in Tomcat 5.5 or later
 
-This is completely untested but should work ![(smile)](https://cwiki.apache.org/confluence/s/en_GB/5997/6f42626d00e36f53fe51440403446ca61552e2a2.1/_/images/icons/emoticons/smile.png)
+This is completely untested but should work
 
 <Context>
     ...

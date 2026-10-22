@@ -1,5 +1,6 @@
 ---
 title: "Multicast Transport Reference"
+description: "Connect to ActiveMQ Classic over multicast://address:port, with options for group, datagramSize, timeToLive and loopBackMode, plus multicast://default examples."
 slug: /multicast-transport-reference
 ---
 

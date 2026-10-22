@@ -1,5 +1,6 @@
 ---
 title: "ActiveMQ InactivityMonitor"
+description: "How the ActiveMQ Classic InactivityMonitor detects dead connections using KeepAliveInfo, and how to tune or disable it with maxInactivityDuration."
 slug: /activemq-classic-inactivitymonitor
 ---
 

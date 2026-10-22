@@ -1,5 +1,6 @@
 ---
 title: "Initial Configuration"
+description: "Find which JARs ActiveMQ Classic 5 needs on the classpath, from activemq-all.jar to activemq-broker and activemq-client, plus persistence options."
 slug: /version-5-initial-configuration
 ---
 

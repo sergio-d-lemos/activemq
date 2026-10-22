@@ -1,5 +1,6 @@
 ---
 title: "Fanout Transport Reference"
+description: "Replicate messages to several ActiveMQ Classic brokers with the fanout: transport, covering fanOutQueues, minAckCount and reconnect options with discovery."
 slug: /fanout-transport-reference
 ---
 

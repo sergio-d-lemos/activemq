@@ -1,5 +1,6 @@
 ---
 title: "JMS and JDBC operations in one transaction"
+description: "Spring example running JMS and JDBC work in one XA transaction with ActiveMQ, Jencks, the Geronimo transaction manager and an Enhydra PostgreSQL data source."
 slug: /jms-and-jdbc-operations-in-one-transaction
 ---
 

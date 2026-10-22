@@ -1,5 +1,6 @@
 ---
 title: "JMS Bridge With Remote Broker"
+description: "Sample ActiveMQ Classic jmsQueueConnector bridging queues with a remote ActiveMQ broker over a failover URL, using inbound and outbound bridges with selectors."
 slug: /jms-bridge-with-remote-broker
 ---
 

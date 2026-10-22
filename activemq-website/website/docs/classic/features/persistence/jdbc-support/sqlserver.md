@@ -1,5 +1,6 @@
 ---
 title: "SQLServer"
+description: "ActiveMQ Classic JDBC persistence examples for Microsoft SQL Server 2000 and 2005 drivers and jTDS, plus Windows TCP registry tweaks for connection starvation."
 slug: /sqlserver
 ---
 

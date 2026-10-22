@@ -1,5 +1,6 @@
 ---
 title: "LDAP Broker Discovery Mechanism"
+description: "Let ActiveMQ Classic brokers discover network connections from an LDAP v3 directory with ldapNetworkConnector, including server support and examples."
 slug: /ldap-broker-discovery-mechanism
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: "XML Configuration"
+description: "Configure the ActiveMQ Classic broker with XBean and Spring XML: an annotated activemq.xml with destination policies, KahaDB, systemUsage and connectors."
 slug: /version-5-xml-configuration
 ---
 

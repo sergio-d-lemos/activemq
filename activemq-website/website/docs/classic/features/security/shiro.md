@@ -1,5 +1,6 @@
 ---
 title: "Shiro"
+description: "Secure ActiveMQ Classic with the Apache Shiro plugin: ini users and roles, hashed passwords, a custom Environment or SecurityManager, and the filter design."
 slug: /shiro
 ---
 

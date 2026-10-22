@@ -1,5 +1,6 @@
 ---
 title: "Virtual Threads"
+description: "Enable virtual threads in ActiveMQ Classic 6.3.0+ on JDK 25 with the virtualThreadTaskRunner broker attribute, and see the tech preview's benefits and status."
 slug: /virtual-threads
 ---
 

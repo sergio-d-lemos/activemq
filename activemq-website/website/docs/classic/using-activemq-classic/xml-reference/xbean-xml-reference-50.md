@@ -1,5 +1,6 @@
 ---
 title: "XBean XML Reference 5.0"
+description: "Legacy XBean XML reference for ActiveMQ 5.0 covering broker config elements, from networkConnector and amqPersistenceAdapter to policyEntry."
 slug: /xbean-xml-reference-50
 ---
 

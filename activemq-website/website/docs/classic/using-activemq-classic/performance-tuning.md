@@ -1,5 +1,6 @@
 ---
 title: "Performance Tuning"
+description: "Legacy ActiveMQ tuning tips: async sends with useAsyncSend, consumer prefetch defaults, optimizeAcknowledge batching and alwaysSessionAsync."
 slug: /performance-tuning
 displayed_sidebar: docs
 ---

@@ -1,5 +1,6 @@
 ---
 title: "Web Samples"
+description: "Run the ActiveMQ Classic web samples for REST and Ajax messaging from the activemq-web-demo module by starting the broker and opening localhost:8161/demo."
 slug: /version-5-web-samples
 ---
 

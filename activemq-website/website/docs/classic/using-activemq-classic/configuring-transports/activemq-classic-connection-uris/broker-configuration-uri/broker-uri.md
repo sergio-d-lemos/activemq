@@ -1,5 +1,6 @@
 ---
 title: "Broker URI"
+description: "Use the broker: URI syntax to start an ActiveMQ Classic broker with transport and network connectors plus options such as persistent, useJmx and brokerName."
 slug: /broker-uri
 ---
 

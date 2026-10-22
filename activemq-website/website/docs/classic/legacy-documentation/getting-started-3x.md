@@ -84,7 +84,6 @@ This procedure explains how to download and install the source distribution on a
 
 **NOTE:** Working directories get created relative to the current directory. To create the working directories in the proper place, ActiveMQ must be launched from its home/installation directory.
 
-![](https://cwiki.apache.org/confluence/images/icons/emoticons/forbidden.gif)
 
 > **Warning**  
 > 
@@ -244,7 +243,6 @@ bin/activemq OR bin/activemq &gt; /tmp/smlog 2&gt;&amp;1 &amp;; Note: /tmp/smlog
 
 **NOTE:** Working directories get created relative to the current directory. To create working directories in the proper place, ActiveMQ must be launched from its home/installation directory.
 
-![](https://cwiki.apache.org/confluence/images/icons/emoticons/forbidden.gif)
 
 > **Warning**  
 > 

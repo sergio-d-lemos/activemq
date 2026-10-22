@@ -1,5 +1,6 @@
 ---
 title: "Examples"
+description: "Send and consume test messages with the ActiveMQ Classic 5.12+ producer and consumer commands, including transacted, CLIENT_ACKNOWLEDGE and durable modes."
 slug: /version-5-examples
 ---
 

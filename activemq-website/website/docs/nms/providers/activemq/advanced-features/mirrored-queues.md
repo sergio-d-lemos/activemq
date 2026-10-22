@@ -5,7 +5,7 @@ title: "NMS.ActiveMQ Mirrored Queues"
 Mirrored Queues
 ---------------
 
-Queues provide an excellent reliable and high performance [load balancing mechanism](/components/classic/documentation/how-does-a-queue-compare-to-a-topic). Each message placed on a queue can only be successfully processed by a single consumer. This is a good thing! ![(smile)](https://cwiki.apache.org/confluence/s/en_GB/5997/6f42626d00e36f53fe51440403446ca61552e2a2.1/_/images/icons/emoticons/smile.png). However sometimes you want to monitor what messages flow between the producers and consumers on a queue.
+Queues provide an excellent reliable and high performance [load balancing mechanism](/components/classic/documentation/how-does-a-queue-compare-to-a-topic). Each message placed on a queue can only be successfully processed by a single consumer. This is a good thing!. However sometimes you want to monitor what messages flow between the producers and consumers on a queue.
 
 To do this you can use [Virtual Destinations](/components/classic/documentation/virtual-destinations) to setup a virtual Queue which forwards the message to multiple physical queues. However enabling this for every single queue in your system can be painful.
 

@@ -1,5 +1,6 @@
 ---
 title: "User Submitted Configurations"
+description: "Community-shared ActiveMQ Classic configuration examples: STOMP-only broker, JMS and JDBC in one transaction, JMS bridges to TIBCO and Oracle AQ, Camel routes."
 slug: /user-submitted-configurations
 ---
 
