@@ -37,8 +37,6 @@ function ordinal(day: number): string {
 /**
  * Formats a date the way the Jekyll `date_to_string: "ordinal", "US"` filter
  * did, e.g. "May 31st, 2026", or "October 22nd, 2025" with long month names.
- *
- * Also imported by the scripts/, so it must not import anything itself.
  */
 export function formatDate(date: Date | string, month: 'short' | 'long' = 'short'): string {
   // Blog metadata dates reach the client serialized as ISO strings.
