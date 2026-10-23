@@ -19,6 +19,8 @@
 
 import React from 'react';
 import clsx from 'clsx';
+import Link from '@docusaurus/Link';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 import type {Props} from '@theme/Footer/Layout';
 
 export default function FooterLayout({
@@ -35,9 +37,9 @@ export default function FooterLayout({
       <div className="container container-fluid">
         <div className="footer__community text--center margin-bottom--lg">
           <p>
-            Enjoy the benefits of open source by <a href="/contributing">contributing to a code-base</a>,
-            asking a question on one of our <a href="/contact#mailing">mailing lists</a>,
-            or <a href="/issues">reporting a bug or requesting a feature</a>.
+            Enjoy the benefits of open source by <Link to="/contributing">contributing to a code-base</Link>,
+            asking a question on one of our <Link to="/contact#mailing">mailing lists</Link>,
+            or <Link to="/issues">reporting a bug or requesting a feature</Link>.
             When you participate, we all win. That's the power of community. That's the power of open source.
           </p>
         </div>
@@ -54,7 +56,7 @@ export default function FooterLayout({
             </div>
             <div className="footer__col footer__logo">
               <a href="https://www.apache.org">
-                <img src="/img/Apache_PoweredBy.png" alt="Powered by Apache" className="footer__logo" />
+                <img src={useBaseUrl('/img/Apache_PoweredBy.png')} alt="Powered by Apache" className="footer__logo" />
               </a>
             </div>
           </div>

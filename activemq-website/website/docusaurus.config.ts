@@ -63,8 +63,9 @@ const config: Config = {
   tagline: 'Flexible & Powerful Open Source Multi-Protocol Messaging',
   favicon: 'img/favicon.png',
 
-  url: 'https://activemq.apache.org/',
-  baseUrl: '/',
+  // Overridable so preview builds (e.g. the GitHub Pages workflow) can be served from another location.
+  url: process.env.DOCUSAURUS_URL ?? 'https://activemq.apache.org/',
+  baseUrl: process.env.DOCUSAURUS_BASE_URL ?? '/',
   // Matches the original Jekyll site: pages are served as /page rather than /page/.
   trailingSlash: false,
 

@@ -66,7 +66,7 @@ Core library overview
 
 The core layer of the library provides a very simple interface – data in, messages out.
 
-<img src="/img/Core Library Usage.JPG" alt="Core Library Usage" />
+![Core Library Usage](</img/Core Library Usage.JPG>)
 
 When the returned file descriptor from the transport layer's connect() call reads active in the application's event loop, the application reads available data and passes that to the library. The library itself has an internal buffer that will deliver a message when one has been fully accumulated. The purpose of this disconnect is that the core library **will not make any blocking I/O calls – or any system calls at all for that matter**. This satisfies the portability goal, as well as ensuring that a single-threaded application can use this library without the potential for losing control of its thread.
 
@@ -95,7 +95,7 @@ BrokerSession library overview
 
 The higher level library's interface offers a much simpler and more direct API to the developer than the first layer, as a result of having an internal thread to process data from the ActiveMQ broker.
 
-<img src="/img/BrokerSession Library Usage.JPG" alt="BrokerSession Library Usage" />
+![BrokerSession Library Usage](</img/BrokerSession Library Usage.JPG>)
 
 Since the BrokerSession library contains a copy of the core library, ActiveMQ-specific code is kept encapsulated there. The code in the BrokerSession library does the legwork of managing the core library and broker communication for the application. The use of a background thread to do this and deliver incoming messages to the message consumers greatly simplifies application development.
 

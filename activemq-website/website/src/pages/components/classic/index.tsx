@@ -20,12 +20,14 @@
 import clsx from 'clsx';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faDownload, faBook} from '@fortawesome/free-solid-svg-icons';
 import styles from './index.module.css';
 // The page body stays authored as Markdown; the leading underscore keeps the
 // pages plugin from turning it into a route of its own.
 import Content from './_content.md';
+import MDXContent from '@theme/MDXContent';
 
 export default function ClassicHome() {
     return (
@@ -46,7 +48,7 @@ export default function ClassicHome() {
                             </div>
                         </div>
                         <div className={styles.heroLogo}>
-                            <img src="/img/activemq_logo_white_vertical.png" alt="Apache ActiveMQ" />
+                            <img src={useBaseUrl('/img/activemq_logo_white_vertical.png')} alt="Apache ActiveMQ" />
                         </div>
                     </div>
                 </div>
@@ -54,7 +56,9 @@ export default function ClassicHome() {
             <main>
                 <section className={styles.description}>
                     <div className="container">
-                        <Content />
+                        <MDXContent>
+                            <Content />
+                        </MDXContent>
                     </div>
                 </section>
             </main>

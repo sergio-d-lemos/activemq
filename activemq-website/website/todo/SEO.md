@@ -32,5 +32,4 @@ Pending items only, most important first. Already done: redirects for the old UR
 11. **Keywords and headings:** doc pages usually repeat the title as their H1. Adding terms like "ActiveMQ Classic" and "JMS broker" to H1s and intros helps with long-tail searches.
 12. **External redirects:** follow the 6 external redirects in `.htaccess` (Artemis, Camel) to confirm the destinations exist (also tracked in `htaccess.md`).
 13. **Download page:** `src/pages/download.md` is thin (just three links) and has a typo: "you wish you download". Add a sentence or two about each component so it isn't treated as a thin page.
-
 #1 and #2 are next.

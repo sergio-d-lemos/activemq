@@ -20,6 +20,7 @@
 import clsx from 'clsx';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faDownload, faInfoCircle, faBook} from '@fortawesome/free-solid-svg-icons';
 import styles from './index.module.css';
@@ -45,7 +46,7 @@ export default function CmsHome() {
                             </div>
                         </div>
                         <div className={styles.heroLogo}>
-                            <img src="/img/activemq_logo_white_vertical.png" alt="Apache ActiveMQ" />
+                            <img src={useBaseUrl('/img/activemq_logo_white_vertical.png')} alt="Apache ActiveMQ" />
                         </div>
                     </div>
                 </div>
