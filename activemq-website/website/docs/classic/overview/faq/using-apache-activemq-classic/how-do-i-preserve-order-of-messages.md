@@ -3,9 +3,6 @@ title: "How do I preserve order of messages"
 slug: /how-do-i-preserve-order-of-messages
 ---
 
- [FAQ](..) > [Using Apache ActiveMQ](.) > [How do I preserve order of messages](how-do-i-preserve-order-of-messages)
-
-
 ActiveMQ will preserve the order of messages sent by a single producer to all consumers on a topic. If there is a single consumer on a queue then the order of messages sent by a single producer will be preserved as well.
 
 If you have multiple consumers on a single queue the consumers will compete for messages and ActiveMQ will load balance across them, so order will be lost. For background on the issue and how it can be solved see

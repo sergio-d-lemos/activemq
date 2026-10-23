@@ -3,9 +3,6 @@ title: "Should I deploy the broker inside my JVM or AppServer"
 slug: /should-i-deploy-the-broker-inside-my-jvm-or-appserver
 ---
 
- [FAQ](..) > [Using Apache ActiveMQ](.) > [Should I deploy the broker inside my JVM or AppServer](should-i-deploy-the-broker-inside-my-jvm-or-appserver)
-
-
 You can deploy the ActiveMQ Broker inside your JVM or Application Server. Whether you do or not has pros and cons depending on how many JVMs you have and what your backup & recovery policy is.
 
 ### Advantages of embedding the broker

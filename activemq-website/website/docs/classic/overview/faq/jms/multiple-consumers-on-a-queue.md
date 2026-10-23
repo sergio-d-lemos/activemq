@@ -3,9 +3,6 @@ title: "Multiple consumers on a queue"
 slug: /multiple-consumers-on-a-queue
 ---
 
- [FAQ](..) > [JMS](.) > [Multiple consumers on a queue](multiple-consumers-on-a-queue)
-
-
 If you want to consume concurrently from a queue, then you must use a different session for each consumer.
 
 This is because you must have a session per thread. The JMS contract is that only 1 session is used by one thread at once - which if you're using consumers means that only 1 consumer can receive messages at once if using the same session. So if you want concurrent consumption of messages, you need to use different sessions for each consumer.

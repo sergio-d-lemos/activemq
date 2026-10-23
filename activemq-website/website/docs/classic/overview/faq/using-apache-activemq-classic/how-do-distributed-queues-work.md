@@ -3,9 +3,6 @@ title: "How do distributed queues work"
 slug: /how-do-distributed-queues-work
 ---
 
- [FAQ](..) > [Using Apache ActiveMQ](.) > [How do distributed queues work](how-do-distributed-queues-work)
-
-
 There are various [Topologies](topologies) that you can employ with ActiveMQ, where clients are connected to message brokers in various ways like
 
 *   peer based

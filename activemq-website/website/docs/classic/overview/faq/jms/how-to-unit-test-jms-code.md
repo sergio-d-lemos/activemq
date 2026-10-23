@@ -3,9 +3,6 @@ title: "How To Unit Test JMS Code"
 slug: /how-to-unit-test-jms-code
 ---
 
- [FAQ](..) > [JMS](.) > [How To Unit Test JMS Code](how-to-unit-test-jms-code)
-
-
 When unit testing code with JMS you'll typically want to avoid the overhead of running separate proceses; plus you'll want to increase startup time as fast as possible as you tend to run unit tests often and want immediate feedback. Also persistence can often cause problems - as previous test case results can adversely affect future test case runs - so you often need to purge queues on startup.
 
 So when unit testing JMS code we recommend the following

@@ -3,9 +3,6 @@ title: "Should I deploy Enterprise Integration Patterns in the broker or another
 slug: /should-i-deploy-enterprise-integration-patterns-in-the-broker-or-another-application
 ---
 
- [FAQ](..) > [Using Apache ActiveMQ](.) > [Should I deploy Enterprise Integration Patterns in the broker or another application](should-i-deploy-enterprise-integration-patterns-in-the-broker-or-another-application)
-
-
 Should I deploy Enterprise Integration Patterns in the broker or another application
 ------------------------------------------------------------------------------------
 

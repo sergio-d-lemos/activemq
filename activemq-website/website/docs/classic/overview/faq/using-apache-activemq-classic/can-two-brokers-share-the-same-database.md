@@ -3,9 +3,6 @@ title: "Can two brokers share the same database"
 slug: /can-two-brokers-share-the-same-database
 ---
 
- [FAQ](..) > [Using Apache ActiveMQ](.) > [Can two brokers share the same database](can-two-brokers-share-the-same-database)
-
-
 Can two brokers share the same database
 ---------------------------------------
 

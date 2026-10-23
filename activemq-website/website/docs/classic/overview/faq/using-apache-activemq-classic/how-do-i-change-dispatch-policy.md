@@ -3,9 +3,6 @@ title: "How do I change dispatch policy"
 slug: /how-do-i-change-dispatch-policy
 ---
 
- [FAQ](..) > [Using Apache ActiveMQ](.) > [How do I change dispatch policy](how-do-i-change-dispatch-policy)
-
-
 This is much simpler and more powerful in ActiveMQ 4.0 - you can configure different [Dispatch Policies](dispatch-policies) directly.
 
 For now in ActiveMQ 3.x we have a [PrefetchPolicy configuration](what-is-the-prefetch-limit-for). This allows a certain number of messages to be dispatched to a consumer before they are acknowledged. This feature is to achieve high performance; the higher the value the less likely it is that a client has to wait for messages to arrive before processing the message and so the higher the throughput.

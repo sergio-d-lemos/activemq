@@ -3,9 +3,6 @@ title: "Can I use ActiveMQ 5.x or later on Java 1.4"
 slug: /can-i-use-activemq-classic-5x-or-later-on-java-14
 ---
 
- [FAQ](..) > [Using Apache ActiveMQ](.) > [Can I use ActiveMQ 5.x or later on Java 1.4](can-i-use-activemq-classic-5x-or-later-on-java-14)
-
-
 Can I use ActiveMQ 5.0 or later on Java 1.4?
 --------------------------------------------
 

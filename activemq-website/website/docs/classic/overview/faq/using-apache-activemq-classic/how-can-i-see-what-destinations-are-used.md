@@ -3,9 +3,6 @@ title: "How can I see what destinations are used?"
 slug: /how-can-i-see-what-destinations-are-used
 ---
 
- [FAQ](..) > [Using ActiveMQ](.) > [How can I see what destinations are used?](how-can-i-see-what-destinations-are-used)
-
-
 The easiest way is to use [JMX](jmx) by pointing your JMX console or JConsole at the broker JVM.
 
 You can also get all of the active destinations from the broker using Java code via [getDestinations()](http://activemq.apache.org/components/classic/documentation/maven/apidocs/org/apache/activemq/broker/region/Region.html#getDestinations-org.apache.activemq.command.ActiveMQDestination-).

@@ -3,9 +3,6 @@ title: "How do durable queues and topics work"
 slug: /how-do-durable-queues-and-topics-work
 ---
 
- [FAQ](..) > [JMS](.) > [How do durable queues and topics work](how-do-durable-queues-and-topics-work)
-
-
 Durable queues keep messages around persistently for any suitable consumer to consume them. Durable queues do not need to concern themselves with which consumer is going to consume the messages at some point in the future. There is just one copy of a message that any consumer in the future can consume.
 
 Durable topics however are different as they must logically persist an instance of each suitable message for every durable consumer - since each durable consumer gets their own copy of the message.

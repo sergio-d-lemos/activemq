@@ -3,9 +3,6 @@ title: "How do I use log4j JMS appender with ActiveMQ"
 slug: /how-do-i-use-log4j-jms-appender-with-activemq-classic
 ---
 
- [FAQ](..) > [Using Apache ActiveMQ](.) > [How do I use log4j JMS appender with ActiveMQ](how-do-i-use-log4j-jms-appender-with-activemq-classic)
-
-
 [Log4j JMS appender](http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/net/JMSAppender.html) can be used to send your log messages to JMS broker. To use ActiveMQ as a destination of your messages, you need to configure JMS appender properly. The code sample below shows example configuration:
 ```
 log4j.rootLogger=INFO, stdout, jms

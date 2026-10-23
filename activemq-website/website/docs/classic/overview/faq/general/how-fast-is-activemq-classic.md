@@ -3,9 +3,6 @@ title: "How fast is ActiveMQ"
 slug: /how-fast-is-activemq-classic
 ---
 
- [FAQ](..) > [General](.) > [How fast is ActiveMQ](how-fast-is-activemq-classic)
-
-
 How fast is ActiveMQ?
 -----------------------------
 

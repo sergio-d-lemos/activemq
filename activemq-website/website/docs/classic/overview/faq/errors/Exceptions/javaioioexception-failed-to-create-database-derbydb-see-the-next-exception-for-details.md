@@ -2,8 +2,6 @@
 title: "java.io.IOException Failed to create database 'derbydb', see the next exception for details"
 slug: /javaioioexception-failed-to-create-database-derbydb-see-the-next-exception-for-details
 ---
-[FAQ](../../index.md) > [Errors](/components/classic/documentation/overview/faq/errors) > [Exceptions](/components/classic/documentation/overview/faq/errors/exceptions) > java.io.IOException Failed to create database 'derbydb', see the next exception for details
-
 
 If you get an error like this
 ```

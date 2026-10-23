@@ -3,9 +3,6 @@ title: "How do I purge a queue"
 slug: /how-do-i-purge-a-queue
 ---
 
- [FAQ](..) > [Using Apache ActiveMQ](.) > [How do I purge a queue](how-do-i-purge-a-queue)
-
-
 A frequent requirement is to purge a queue (i.e. delete all the messages on it).
 
 ### Solution

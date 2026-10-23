@@ -3,9 +3,6 @@ title: "How does ConnectionFactory relate to the Broker"
 slug: /how-does-connectionfactory-relate-to-the-broker
 ---
 
- [FAQ](..) > [JMS](.) > [How does ConnectionFactory relate to the Broker](how-does-connectionfactory-relate-to-the-broker)
-
-
 How does ConnectionFactory relate to the Broker?
 ------------------------------------------------
 

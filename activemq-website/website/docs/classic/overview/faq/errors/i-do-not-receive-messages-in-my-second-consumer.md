@@ -3,9 +3,6 @@ title: "I do not receive messages in my second consumer"
 slug: /i-do-not-receive-messages-in-my-second-consumer
 ---
 
- [FAQ](..) > [Errors](.) > [I do not receive messages in my second consumer](i-do-not-receive-messages-in-my-second-consumer)
-
-
 ### Scenario
 
 *   You send 100 messages to a queue.

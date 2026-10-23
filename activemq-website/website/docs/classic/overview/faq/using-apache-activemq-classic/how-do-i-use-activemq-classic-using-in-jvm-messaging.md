@@ -3,9 +3,6 @@ title: "How do I use ActiveMQ using in JVM messaging"
 slug: /how-do-i-use-activemq-classic-using-in-jvm-messaging
 ---
 
- [FAQ](..) > [Using Apache ActiveMQ](.) > [How do I use ActiveMQ using in JVM messaging](how-do-i-use-activemq-classic-using-in-jvm-messaging)
-
-
 ### For ActiveMQ 3.x/4.x
 
 To use pure in-memory messaging you just need to set the broker URL to be

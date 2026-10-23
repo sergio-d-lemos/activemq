@@ -3,8 +3,6 @@ title: "What is the difference between persistent and non-persistent delivery?"
 slug: /what-is-the-difference-between-persistent-and-non-persistent-delivery
 ---
 
- [FAQ](..) > [Persistence Questions](.) > [What is the difference between persistent and non-persistent delivery](what-is-the-difference-between-persistent-and-non-persistent-delivery)
-
 What is the difference between persistent and non-persistent delivery?
 ----------------------------------------------------------------------
 

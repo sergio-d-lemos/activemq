@@ -2,8 +2,6 @@
 title: "certificate_unknown"
 slug: /certificateunknown
 ---
-[FAQ](../../index.md) > [Errors](/components/classic/documentation/overview/faq/errors) > [Exceptions](/components/classic/documentation/overview/faq/errors/exceptions) > certificate_unknown
-
 
 If you get an error something like this...
 ```

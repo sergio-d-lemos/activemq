@@ -3,9 +3,6 @@ title: "The vm transport starts a broker before my configured broker starts"
 slug: /the-vm-transport-starts-a-broker-before-my-configured-broker-starts
 ---
 
- [FAQ](..) > [Errors](.) > [The vm transport starts a broker before my configured broker starts](the-vm-transport-starts-a-broker-before-my-configured-broker-starts)
-
-
 ### Scenario
 
 You are using the **vm:** transport and a broker is auto-started for you so that your configured embedded broker doesn't start.

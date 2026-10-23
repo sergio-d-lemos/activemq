@@ -3,9 +3,6 @@ title: "Should I use transactions"
 slug: /should-i-use-transactions
 ---
 
- [FAQ](..) > [JMS](.) > [Should I use transactions](should-i-use-transactions)
-
-
 There are four main approaches as to a client can consume messages. They are:
 
 1.  Auto-acknowledgement

@@ -3,9 +3,6 @@ title: "How do I get started with JMS"
 slug: /how-do-i-get-started-with-jms
 ---
 
- [FAQ](..) > [JMS](.) > [How do I get started with JMS](.)
-
-
 How do I get started with JMS
 -----------------------------
 

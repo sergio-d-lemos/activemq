@@ -3,9 +3,6 @@ title: "How can I monitor the connection with the broker"
 slug: /how-can-i-monitor-the-connection-with-the-broker
 ---
 
- [FAQ](..) > [Using Apache ActiveMQ](.) > [How can I monitor the connection with the broker](how-can-i-monitor-the-connection-with-the-broker)
-
-
 How can I monitor the connection with the broker
 ------------------------------------------------
 

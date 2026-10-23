@@ -3,9 +3,6 @@ title: "How do I embed a Broker inside a Connection"
 slug: /how-do-i-embed-a-broker-inside-a-connection
 ---
 
- [FAQ](..) > [Using Apache ActiveMQ](.) > [How do I embed a Broker inside a Connection](how-do-i-embed-a-broker-inside-a-connection)
-
-
 In many messaging topologies there are JMS Brokers (server side) and a JMS client side. Often it makes sense to deploy a broker within your JVM. This allows you to optimise away a network hop; making the networking of JMS as efficient as pure RMI, but with all the usual JMS features of location independence, reliability, load balancing etc.
 
 There are various ways to embed a broker in ActiveMQ depending on if you are using Java, Spring, XBean or using the ActiveMQConnectionFactory .

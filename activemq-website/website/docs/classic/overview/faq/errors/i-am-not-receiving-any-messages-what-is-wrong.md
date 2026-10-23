@@ -3,9 +3,6 @@ title: "I am not receiving any messages, what is wrong"
 slug: /i-am-not-receiving-any-messages-what-is-wrong
 ---
 
- [FAQ](..) > [Errors](.) > [I am not receiving any messages, what is wrong](i-am-not-receiving-any-messages-what-is-wrong)
-
-
 ### I am not receiving any messages - what is wrong?
 
 A _very_ common gotcha when working with JMS is forgetting to start the JMS connection, creating a consumer and not having it receive any messages. I myself have tripped up over this one many many times!

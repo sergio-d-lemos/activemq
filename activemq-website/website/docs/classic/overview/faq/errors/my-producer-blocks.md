@@ -3,9 +3,6 @@ title: "My producer blocks"
 slug: /my-producer-blocks
 ---
 
- [FAQ](..) > [Errors](.) > [My producer blocks](my-producer-blocks)
-
-
 What can I do if my producer blocks sending a message?
 ------------------------------------------------------
 

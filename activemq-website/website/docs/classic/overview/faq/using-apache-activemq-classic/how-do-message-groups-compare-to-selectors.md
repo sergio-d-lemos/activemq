@@ -3,9 +3,6 @@ title: "How do Message Groups compare to Selectors"
 slug: /how-do-message-groups-compare-to-selectors
 ---
 
- [FAQ](..) > [Using Apache ActiveMQ](.) > [How do Message Groups compare to Selectors](how-do-message-groups-compare-to-selectors)
-
-
 Selectors are just filters. Message Groups are a way of grouping messages together to the same consumer to partition your application or insure ordering is maintained.
 
 Now you could implement message groups by hand, by having each consumer use its own selector for a specific header. e.g. if you had consumers A, B, C; you could use the values "A", "B", "C" as values of the JMSXGroupID header (or any other header name you like).

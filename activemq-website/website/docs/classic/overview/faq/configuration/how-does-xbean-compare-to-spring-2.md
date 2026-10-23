@@ -3,9 +3,6 @@ title: "How does XBean compare to Spring 2"
 slug: /how-does-xbean-compare-to-spring-2
 ---
 
- [FAQ](..) > [Configuration](.) > [How does XBean compare to Spring 2](how-does-xbean-compare-to-spring-2)
-
-
 Spring 2.0 has introduced the ability to handle custom XML languages inside the spring.xml. This is something we developed [XBean](http://geronimo.apache.org/xbean/) for way back in the Spring 1.x days.
 
 The Spring hook requires component developers to write their own XML handling, processing DOMs and so forth. On various projects like ActiveMQ, Jencks, Jetty, ServiceMix, XFire - we didn't want to have to spend time hand-crafting parsing of XML code. So XBean is used to auto-create the parsing code along with an XSD and reference documentation for how to configure these services in custom XML languages.

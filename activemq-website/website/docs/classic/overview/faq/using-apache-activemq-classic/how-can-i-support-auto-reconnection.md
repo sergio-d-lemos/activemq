@@ -3,9 +3,6 @@ title: "How can I support auto reconnection"
 slug: /how-can-i-support-auto-reconnection
 ---
 
- [FAQ](..) > [Using Apache ActiveMQ](.) > [How can I support auto reconnection](how-can-i-support-auto-reconnection)
-
-
 How can I support auto reconnection?
 ------------------------------------
 

@@ -3,9 +3,6 @@ title: "How do I disable persistence"
 slug: /how-do-i-disable-persistence
 ---
 
- [FAQ](..) > [Configuration](.) > [How do I disable persistence](persistence)
-
-
 There are three main ways to disable persistence, such as for unit testing JMS code
 
 1.  Set the NON_PERSISTENT message delivery flag on your MessageProducer

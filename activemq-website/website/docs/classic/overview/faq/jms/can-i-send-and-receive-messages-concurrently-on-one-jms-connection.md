@@ -3,9 +3,6 @@ title: "Can I send and receive messages concurrently on one JMS Connection"
 slug: /can-i-send-and-receive-messages-concurrently-on-one-jms-connection
 ---
 
- [FAQ](..) > [JMS](.) > [Can I send and receive messages concurrently on one JMS Connection](can-i-send-and-receive-messages-concurrently-on-one-jms-connection)
-
-
 Absolutely!
 
 Strictly speaking each producer being used concurrently should be using a separate session (though in ActiveMQ it'll probably work fine if you just use one session for all publishers).

@@ -3,9 +3,6 @@ title: "How do I use JMS efficiently"
 slug: /how-do-i-use-jms-efficiently
 ---
 
- [FAQ](..) > [JMS](.) > [How do I use JMS efficiently](how-do-i-use-jms-efficiently)
-
-
 How do I use JMS efficiently?
 -----------------------------
 

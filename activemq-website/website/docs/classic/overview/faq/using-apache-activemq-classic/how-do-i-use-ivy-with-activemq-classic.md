@@ -3,8 +3,6 @@ title: "How do I use Ivy with ActiveMQ"
 slug: /how-do-i-use-ivy-with-activemq-classic
 ---
 
- [FAQ](..) > [Using Apache ActiveMQ](.) > [How do I use Ivy with ActiveMQ](how-do-i-use-ivy-with-activemq-classic)
-
 ```
 <ivyconf>
         <!--loads properties file as ivy variables, 0..n-->

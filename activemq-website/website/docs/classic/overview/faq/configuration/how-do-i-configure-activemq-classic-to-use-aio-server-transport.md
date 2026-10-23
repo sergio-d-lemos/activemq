@@ -3,9 +3,6 @@ title: "How do I configure ActiveMQ to use AIO server transport"
 slug: /how-do-i-configure-activemq-classic-to-use-aio-server-transport
 ---
 
- [FAQ](..) > [Configuration](.) > [How do I configure ActiveMQ to use AIO server transport](how-do-i-configure-activemq-classic-to-use-aio-server-transport)
-
-
 For Windows XP:
 
 1. Download AIO (Asynchronous IO for Java) from IBM ([http://www.alphaworks.ibm.com/tech/aio4j](http://www.alphaworks.ibm.com/tech/aio4j)).

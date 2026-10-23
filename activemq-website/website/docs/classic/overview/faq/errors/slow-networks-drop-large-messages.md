@@ -3,9 +3,6 @@ title: "Slow networks drop large messages"
 slug: /slow-networks-drop-large-messages
 ---
 
- [FAQ](..) > [Errors](.) > [Slow networks drop large messages](slow-networks-drop-large-messages)
-
-
 Note
 
 This article only applies to older versions of ActiveMQ, i.e. 5.3 and 5.4.0. From 5.4.2 onwards this issue has been adressed in the bugs [AMQ-2511](https://issues.apache.org/jira/browse/AMQ-2511) and [AMQ-2088](https://issues.apache.org/jira/browse/AMQ-2088).

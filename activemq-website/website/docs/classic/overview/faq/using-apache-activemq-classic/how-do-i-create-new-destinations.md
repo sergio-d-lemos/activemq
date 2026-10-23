@@ -3,9 +3,6 @@ title: "How do I create new destinations"
 slug: /how-do-i-create-new-destinations
 ---
 
- [FAQ](..) > [Using Apache ActiveMQ](.) > [How do I create new destinations](how-do-i-create-new-destinations)
-
-
 In ActiveMQ you do **not** have to create destinations up front before you can use them. The ActiveMQ broker auto-creates the physical resources associated with a destination on demand (i.e. when messages are sent to a new destination on a broker).
 
 This means that a client can create a new Queue or Topic dynamically either by

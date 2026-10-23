@@ -3,9 +3,6 @@ title: "How do I make messages durable"
 slug: /how-do-i-make-messages-durable
 ---
 
- [FAQ](..) > [JMS](.) > [How do I make messages durable](how-do-i-make-messages-durable)
-
-
 Durability of messages is defined by the [MessagerProducer](http://java.sun.com/j2ee/1.4/docs/api/javax/jms/MessageProducer.html). You can explicitly configure the durability via the [setDeliveryMode() method](http://java.sun.com/j2ee/1.4/docs/api/javax/jms/MessageProducer.html#setDeliveryMode(int)). e.g.
 ```
 MessageProducer producer = ...;

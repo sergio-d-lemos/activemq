@@ -169,7 +169,7 @@ Questions on specific kinds of errors. If you have seen a specific exception the
     *   [JAXB 2.0 API is being loaded from the bootstrap classloader, but this RI () needs 2.1 API.](jaxb-20-api-is-being-loaded-from-the-bootstrap-classloader-but-this-ri-needs-21-api)
     *   [JAXB 2.0 API is being loaded from the bootstrap classloader, but this RI (xxx) needs 2.1 API](jaxb-20-api-is-being-loaded-from-the-bootstrap-classloader-but-this-ri-xxx-needs-21-api)
     *   [Journal is already opened by this application](journal-is-already-opened-by-this-application)
-    *   [NoClassDefFoundError - org.springframework.core.io.Resource](source)
+    *   [NoClassDefFoundError - org.springframework.core.io.Resource](noclassdeffounderror-orgspringframeworkcoreioresource)
     *   [No suitable driver](no-suitable-driver)
 *   [I am having problems with the Spring JmsTemplate](i-am-having-problems-with-the-spring-jmstemplate)
 *   [I am not receiving any messages, what is wrong](i-am-not-receiving-any-messages-what-is-wrong)

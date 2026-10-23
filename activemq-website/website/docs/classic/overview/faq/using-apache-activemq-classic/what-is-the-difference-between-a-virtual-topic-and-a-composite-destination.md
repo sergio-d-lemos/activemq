@@ -3,9 +3,6 @@ title: "What is the difference between a Virtual Topic and a Composite Destinati
 slug: /what-is-the-difference-between-a-virtual-topic-and-a-composite-destination
 ---
 
- [FAQ](..) > [Using Apache ActiveMQ](.) > [What is the difference between a Virtual Topic and a Composite Destination](what-is-the-difference-between-a-virtual-topic-and-a-composite-destination)
-
-
 What is the difference between a Virtual Topic and a Composite Destination
 --------------------------------------------------------------------------
 

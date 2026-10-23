@@ -3,9 +3,6 @@ title: "What platforms does ActiveMQ support"
 slug: /what-platforms-does-activemq-classic-support
 ---
 
- [FAQ](..) > [General](.) > [What platforms does ActiveMQ support](what-platforms-does-activemq-classic-support)
-
-
 What platforms does ActiveMQ Support?
 ---------------------------------------------
 

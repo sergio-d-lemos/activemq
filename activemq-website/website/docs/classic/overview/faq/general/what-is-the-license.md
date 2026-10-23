@@ -3,9 +3,6 @@ title: "What is the license"
 slug: /what-is-the-license
 ---
 
- [FAQ](..) > [General](.) > [What is the license](what-is-the-license)
-
-
 What is the license?
 --------------------
 

@@ -3,9 +3,6 @@ title: "How Do Transactions Work"
 slug: /how-do-transactions-work
 ---
 
- [FAQ](..) > [Using Apache ActiveMQ](.) > [How Do Transactions Work](how-do-transactions-work)
-
-
 There are two levels of transaction support in ActiveMQ:
 
 *   JMS Transactions - the `commit()`/`rollback()` methods on a Session (which is like doing `commit()`/`rollback()` on a JDBC connection)

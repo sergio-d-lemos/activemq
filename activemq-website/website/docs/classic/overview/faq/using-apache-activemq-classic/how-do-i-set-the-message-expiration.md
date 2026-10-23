@@ -3,9 +3,6 @@ title: "How do I set the message expiration"
 slug: /how-do-i-set-the-message-expiration
 ---
 
- [FAQ](..) > [Using Apache ActiveMQ](.) > [How do I set the message expiration](how-do-i-set-the-message-expiration)
-
-
 JMSExpiration on a message is set by the MessageProducer in JMS - either via
 
 *   [producer.setTimeToLive()](http://java.sun.com/j2ee/1.4/docs/api/javax/jms/MessageProducer.html#setTimeToLive(long))

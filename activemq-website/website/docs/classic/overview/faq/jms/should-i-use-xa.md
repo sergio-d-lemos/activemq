@@ -3,9 +3,6 @@ title: "Should I use XA"
 slug: /should-i-use-xa
 ---
 
- [FAQ](..) > [JMS](.) > [Should I use XA](should-i-use-xa)
-
-
 Should I use XA transactions (two phase commit?)
 ------------------------------------------------
 

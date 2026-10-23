@@ -3,9 +3,6 @@ title: "ActiveMQ Command Line Tools Reference"
 slug: /activemq-classic-command-line-tools-reference
 ---
 
- [FAQ](..) > [Using Apache ActiveMQ](.) > [ActiveMQ Command Line Tools Reference](activemq-classic-command-line-tools-reference)
-
-
 Command Line Tools
 ==================
 

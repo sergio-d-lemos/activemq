@@ -3,9 +3,6 @@ title: "Can I modify messages on a queue"
 slug: /can-i-modify-messages-on-a-queue
 ---
 
- [FAQ](..) > [JMS](.) > [Can I modify messages on a queue](can-i-modify-messages-on-a-queue)
-
-
 Can I modify messages on a queue?
 ---------------------------------
 

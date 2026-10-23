@@ -3,9 +3,6 @@ title: "How can I enable detailed logging"
 slug: /how-can-i-enable-detailed-logging
 ---
 
- [FAQ](..) > [Configuration](.) > [How can I enable detailed logging](how-can-i-enable-detailed-logging)
-
-
 How can I enable detailed logging
 ---------------------------------
 

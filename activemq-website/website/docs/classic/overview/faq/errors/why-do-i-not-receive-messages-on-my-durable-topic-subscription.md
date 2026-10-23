@@ -3,9 +3,6 @@ title: "Why do I not receive messages on my durable topic subscription"
 slug: /why-do-i-not-receive-messages-on-my-durable-topic-subscription
 ---
 
- [FAQ](..) > [Errors](.) > [Why do I not receive messages on my durable topic subscription](why-do-i-not-receive-messages-on-my-durable-topic-subscription)
-
-
 You follow these steps
 
 1.  Create a durable topic subscription

@@ -3,9 +3,6 @@ title: "What is the difference between discovery, multicast and zeroconf"
 slug: /what-is-the-difference-between-discovery-multicast-and-zeroconf
 ---
 
- [FAQ](..) > [Using Apache ActiveMQ](.) > [What is the difference between discovery, multicast and zeroconf](what-is-the-difference-between-discovery-multicast-and-zeroconf)
-
-
 Discovery refers to either a client (producer or consumer) establishing a 'transport connector' to the broker or a broker establishing 'network connector' to another broker without explicit static configuration of broker (IP or hostname).
 
 The scheme 'multicast' refers to either listening for or advertising discovery events on a multicast address. zeroconf is similar to multicast, except for protocol specific to Apple's Rendezvous (bonjour).

@@ -3,9 +3,6 @@ title: "How does ActiveMQ compare to Mantaray"
 slug: /how-does-activemq-classic-compare-to-mantaray
 ---
 
- [FAQ](..) > [General](.) > [How does ActiveMQ compare to Mantaray](how-does-activemq-classic-compare-to-mantaray)
-
-
 We are obviously biased, and will tell you "just use ActiveMQ!" But Mantaray is an OK JMS provider. The interesting thing about MantaRay is it can support a peer-based network, just as ActiveMQ does with its [peer transport](peer-transport-reference).
 
 We [benchmark](performance) against Mantaray and other open source JMS providers and in our tests (in which we try to be as objective as possible) ActiveMQ exhibits higher performance in most scenarios.

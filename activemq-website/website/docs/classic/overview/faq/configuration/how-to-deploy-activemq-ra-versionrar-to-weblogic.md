@@ -3,9 +3,6 @@ title: "How to deploy activemq-ra-version.rar to weblogic"
 slug: /how-to-deploy-activemq-ra-versionrar-to-weblogic
 ---
 
- [FAQ](..) > [Configuration](.) > [How to deploy activemq-ra-version.rar to weblogic](how-to-deploy-activemq-ra-versionrar-to-weblogic)
-
-
 ### This is a guide on how to deploy ActiveMQ's resouce adapter to weblogic 9.1.
 
 1.  Create a new domain in weblogic using the configuration wizard (Start menu BEA Products -> Tools -> configuration Wizard ).

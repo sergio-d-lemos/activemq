@@ -3,8 +3,6 @@ title: "How should I package applications using Camel and ActiveMQ"
 slug: /how-should-i-package-applications-using-camel-and-activemq-classic
 ---
 
- [FAQ](..) > [Using Apache ActiveMQ](.) > [How should I package applications using Camel and ActiveMQ](how-should-i-package-applications-using-camel-and-activemq-classic)
-
 How should I package applications using Camel and ActiveMQ
 ----------------------------------------------------------
 

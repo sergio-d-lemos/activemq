@@ -3,9 +3,6 @@ title: "How does ActiveMQ compare to JBossMQ"
 slug: /how-does-activemq-classic-compare-to-jbossmq
 ---
 
- [FAQ](..) > [General](.) > [How does ActiveMQ compare to JBossMQ](how-does-activemq-classic-compare-to-jbossmq)
-
-
 There are some similarities between the two; they both support JMS 1.1 and run inside [JBoss 4.x](jboss-integration).
 
 However ActiveMQ does offer some specific differences and advantages (at least from our perspective)

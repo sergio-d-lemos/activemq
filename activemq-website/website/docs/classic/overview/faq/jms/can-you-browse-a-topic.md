@@ -3,9 +3,6 @@ title: "Can you browse a topic"
 slug: /can-you-browse-a-topic
 ---
 
- [FAQ](..) > [JMS](.) > [Can you browse a topic](can-you-browse-a-topic)
-
-
 You can browse queues, can you browse a topic?
 
 No. But then consuming messages on a topic does not affect any other consumers, so you don't need to 'browse' per se, just subscribe.

@@ -3,9 +3,6 @@ title: "Could not find PacketReader for packet type - UNKNOWN PACKET TYPE"
 slug: /could-not-find-packetreader-for-packet-type-unknown-packet-type
 ---
 
- [FAQ](..) > [Errors](.) > [Could not find PacketReader for packet type - UNKNOWN PACKET TYPE](could-not-find-packetreader-for-packet-type-unknown-packet-type)
-
-
 ### Error
 ```
 Could not find PacketReader for packet type: UNKNOWN PACKET TYPE: -102

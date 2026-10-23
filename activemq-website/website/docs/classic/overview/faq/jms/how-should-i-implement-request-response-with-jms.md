@@ -3,9 +3,6 @@ title: "How should I implement request response with JMS"
 slug: /how-should-i-implement-request-response-with-jms
 ---
 
- [FAQ](..) > [JMS](.) > [How should I implement request response with JMS](how-should-i-implement-request-response-with-jms)
-
-
 How should I implement request response with JMS?
 -------------------------------------------------
 

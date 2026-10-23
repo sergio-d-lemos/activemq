@@ -3,9 +3,6 @@ title: "How do I configure distributed queues or topics"
 slug: /how-do-i-configure-distributed-queues-or-topics
 ---
 
- [FAQ](..) > [Configuration](.) > [How do I configure distributed queues or topics](how-do-i-configure-distributed-queues-or-topics)
-
-
 How do I configure distributed queues or topics
 -----------------------------------------------
 

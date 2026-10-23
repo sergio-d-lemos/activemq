@@ -3,9 +3,6 @@ title: "How does a Queue compare to a Topic"
 slug: /how-does-a-queue-compare-to-a-topic
 ---
 
- [FAQ](..) > [JMS](.) > [How does a Queue compare to a Topic](how-does-a-queue-compare-to-a-topic)
-
-
 ### Topics
 
 In JMS a Topic implements _publish and subscribe_ semantics. When you publish a message it goes to all the subscribers who are interested - so zero to many subscribers will receive a copy of the message. Only subscribers who had an active subscription at the time the broker receives the message will get a copy of the message.

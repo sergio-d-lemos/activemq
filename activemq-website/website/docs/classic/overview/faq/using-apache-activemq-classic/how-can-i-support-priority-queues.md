@@ -3,9 +3,6 @@ title: "How can I support priority queues"
 slug: /how-can-i-support-priority-queues
 ---
 
- [FAQ](..) > [Using Apache ActiveMQ](.) > [How can I support priority queues](how-can-i-support-priority-queues)
-
-
 How can I support priority queues?
 ----------------------------------
 

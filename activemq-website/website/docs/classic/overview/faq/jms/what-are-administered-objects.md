@@ -3,9 +3,6 @@ title: "What are administered objects"
 slug: /what-are-administered-objects
 ---
 
- [FAQ](..) > [JMS](.) > [What are administered objects](what-are-administered-objects)
-
-
 What are administered objects?
 ------------------------------
 

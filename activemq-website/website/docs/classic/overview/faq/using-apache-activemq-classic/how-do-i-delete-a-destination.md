@@ -3,9 +3,6 @@ title: "How do I delete a destination"
 slug: /how-do-i-delete-a-destination
 ---
 
- [FAQ](..) > [Using Apache ActiveMQ](.) > [How do I delete a destination](how-do-i-delete-a-destination)
-
-
 How do I delete a destination
 -----------------------------
 
