@@ -117,8 +117,6 @@ const config: Config = {
 
   plugins: [
     [
-      // Release pages live with the release data rather than in src/pages,
-      // but keep being served next to the download page.
       '@docusaurus/plugin-content-pages',
       {
         id: 'classic-releases',
@@ -126,6 +124,7 @@ const config: Config = {
         routeBasePath: 'components/classic/download',
       },
     ],
+    // Documentation for each component is separately configured
     [
       '@docusaurus/plugin-content-docs',
       {
@@ -160,10 +159,8 @@ const config: Config = {
         editUrl: 'https://github.com/apache/activemq-website/tree/main/',
       },
     ],
+    // Client-side search
     [
-      // Client-side full-text search. The index is generated from the built
-      // HTML by Pagefind after `docusaurus build`; see staticDirectories for
-      // using it with the dev server.
       'docusaurus-plugin-pagefind',
       {
         forceLanguage: 'en',

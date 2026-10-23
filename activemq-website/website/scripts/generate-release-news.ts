@@ -39,7 +39,7 @@
  * - Apache.NMS.API and Apache.NMS.AMQP: src/data/nmsReleases.ts.
  *
  * Only pages declaring a `release_date` are releases; older pages without one
- * are kept for reference but are not announced, as on the original Jekyll site.
+ * are kept for reference but are not announced.
  */
 
 import fs from 'node:fs';
